@@ -1,0 +1,500 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar 15 21:44:45 2019
+# Process ID: 5908
+# Current directory: E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1
+# Command line: vivado.exe -log div_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source div_gen_0.tcl
+# Log file: E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1/div_gen_0.vds
+# Journal file: E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source div_gen_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/rzeczy/IP_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/vivado-library'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/ip_repo'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'e:/ip_repo/dvi2rgb_v1_8'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'e:/vivado-library/ip/dvi2rgb'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.3/data/ip'.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'digilentinc.com:ip:rgb2vga:1.0'. The one found in IP location 'e:/vivado-library/ip/rgb2vga_v1_0' will take precedence over the same IP in location e:/ip_repo/rgb2vga_v1_0
+WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'digilentinc.com:interface:tmds:1.0'. The one found in location 'e:/vivado-library/if/tmds_v1_0/tmds.xml' will take precedence over the same Interface in location 'e:/ip_repo/tmds_v1_0/tmds.xml'
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 304.176 ; gain = 50.754
+Command: synth_design -top div_gen_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5400 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 423.035 ; gain = 96.219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [e:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:73]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 43 - type: integer 
+	Parameter ALGORITHM_TYPE bound to: 3 - type: integer 
+	Parameter DIVISOR_WIDTH bound to: 52 - type: integer 
+	Parameter DIVIDEND_WIDTH bound to: 53 - type: integer 
+	Parameter SIGNED_B bound to: 1 - type: integer 
+	Parameter DIVCLK_SEL bound to: 1 - type: integer 
+	Parameter FRACTIONAL_B bound to: 1 - type: integer 
+	Parameter FRACTIONAL_WIDTH bound to: 29 - type: integer 
+	Parameter C_HAS_DIV_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVISOR_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVISOR_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_DIVISOR_TDATA_WIDTH bound to: 56 - type: integer 
+	Parameter C_S_AXIS_DIVISOR_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVIDEND_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVIDEND_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_DIVIDEND_TDATA_WIDTH bound to: 56 - type: integer 
+	Parameter C_S_AXIS_DIVIDEND_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 88 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'div_gen_v5_1_14' declared at 'e:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/ip/div_gen_0/hdl/div_gen_v5_1_vh_rfs.vhd:13859' bound to instance 'U0' of component 'div_gen_v5_1_14' [e:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:147]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (35#1) [e:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:73]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized78 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized78 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized78 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized88 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized88 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized88 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized86 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized86 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized86 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized74 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized74 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized74 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized74 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized74 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized84 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized84 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized84 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized84 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized84 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized82 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized82 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized82 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized80 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized80 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized80 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized80 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized80 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized76 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized76 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized76 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized72 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized70 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized56 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized56 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized56 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized54 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized54 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized54 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized12 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized12 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized12 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized36 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized36 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized36 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized50 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized50 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized50 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized48 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized48 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized48 has unconnected port SINIT
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[50]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[49]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[48]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[47]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[46]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[45]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[44]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[43]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[42]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[41]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[40]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[39]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[38]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[37]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[36]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[35]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[34]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[33]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[32]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[31]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[30]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[29]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[28]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[27]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[26]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[25]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[24]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[23]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[22]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[21]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[20]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[19]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[18]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[17]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[16]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[15]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[14]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[13]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[12]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 800.047 ; gain = 473.230
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 800.047 ; gain = 473.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 800.047 ; gain = 473.230
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 255 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/ip/div_gen_0/div_gen_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 843.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  FDE => FDRE: 13 instances
+  RAMB16 => RAMB18E1: 1 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 844.406 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 845.969 ; gain = 2.688
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 845.969 ; gain = 519.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 845.969 ; gain = 519.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 845.969 ; gain = 519.152
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 845.969 ; gain = 519.152
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (delay__parameterized13) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (delay__parameterized13) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (delay__parameterized13) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (delay__parameterized13) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (delay__parameterized13) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized13) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized13) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[25]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[26]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[27]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[28]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[29]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[30]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[31]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[32]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[33]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[34]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[35]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[36]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[37]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[38]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[39]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[40]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.first_q_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.first_q_reg[52] )
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][25]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][26]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][27]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][28]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][29]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][30]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][31]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][32]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][33]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][8]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][34]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][9]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][35]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][10]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][36]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][11]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][37]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][12]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][38]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][13]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][39]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][14]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][40]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_x_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_prescaler /\gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_subtract_delay.subtract_delay/d1.dout_i_reg[0] )
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_prescaler/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[2].use_subtract_delay.subtract_delay/d1.dout_i_reg[0]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_prescaler/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_subtract_delay.subtract_delay/d1.dout_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/NEW_CODE.ND_DEL.delay_line_reg[16]' (FD) to 'U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/NEW_CODE.ND_DEL.nd_d1_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_flow_ctrl/nd_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[2].pipe_reg[2][52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_prescaler /\gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_subtract_delay.subtract_delay/d1.dout_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[3].pipe_reg[3][52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[4].pipe_reg[4][52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_denom_est_bypass/opt_has_pipe.i_pipe[5].pipe_reg[5][52] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 845.969 ; gain = 519.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:01:36 . Memory (MB): peak = 922.551 ; gain = 595.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:37 . Memory (MB): peak = 938.871 ; gain = 612.055
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:01:40 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:01:40 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    44|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     3|
+|4     |DSP48E1_2 |     7|
+|5     |DSP48E1_3 |     8|
+|6     |LUT1      |    32|
+|7     |LUT2      |   139|
+|8     |LUT3      |   337|
+|9     |LUT4      |    74|
+|10    |LUT5      |   146|
+|11    |LUT6      |   319|
+|12    |MUXCY     |   118|
+|13    |MUXF7     |     4|
+|14    |MUXF8     |     2|
+|15    |RAMB16    |     1|
+|16    |SRL16E    |   316|
+|17    |SRLC32E   |     2|
+|18    |XORCY     |   104|
+|19    |FDE       |    13|
+|20    |FDRE      |  2217|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 955.266 ; gain = 628.449
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:01:31 . Memory (MB): peak = 955.266 ; gain = 582.527
+Synthesis Optimization Complete : Time (s): cpu = 00:01:35 ; elapsed = 00:01:42 . Memory (MB): peak = 955.266 ; gain = 628.449
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 305 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 956.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 45 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 31 instances
+  FDE => FDRE: 13 instances
+  RAMB16 => RAMB18E1: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+103 Infos, 103 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:46 . Memory (MB): peak = 956.281 ; gain = 640.930
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 956.281 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1/div_gen_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP div_gen_0, cache-ID = be69ebf1c769e0ad
+INFO: [Coretcl 2-1174] Renamed 181 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 956.281 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1/div_gen_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file div_gen_0_utilization_synth.rpt -pb div_gen_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 15 21:46:46 2019...

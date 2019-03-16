@@ -1,0 +1,478 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Mar 10 18:53:06 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tor_wizyjny_dvi2rgb_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of tor_wizyjny_dvi2rgb_0_1 from digilentinc.com:ip:dvi2rgb:1.8 (Rev. 5) to digilentinc.com:ip:dvi2rgb:1.9 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Mar 10 17:05:34 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tor_wizyjny_dvi2rgb_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of tor_wizyjny_dvi2rgb_0_1 from digilentinc.com:ip:dvi2rgb:1.8 (Rev. 5) to digilentinc.com:ip:dvi2rgb:1.9 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Mar 10 16:34:20 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tor_wizyjny_dvi2rgb_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of tor_wizyjny_dvi2rgb_0_0 (digilentinc.com:ip:dvi2rgb:1.9 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:22 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tor_wizyjny_rgb2dvi_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of tor_wizyjny_rgb2dvi_0_1 (digilentinc.com:ip:rgb2dvi:1.4 (Rev. 7)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:22 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'tor_wizyjny_dvi2rgb_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of tor_wizyjny_dvi2rgb_0_1 (digilentinc.com:ip:dvi2rgb:1.9 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:21 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'sub_8m8'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of sub_8m8 (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:19 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'sub_52m52'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of sub_52m52 (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:17 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'rgb2ycbcr_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of rgb2ycbcr_0 (user.org:user:rgb2ycbcr:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:17 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mult_9t9'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of mult_9t9 (xilinx.com:ip:mult_gen:12.0 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:14 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mult_26t26'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of mult_26t26 (xilinx.com:ip:mult_gen:12.0 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:13 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'frame_delay_sim'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of frame_delay_sim (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:11 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'div_gen_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of div_gen_0 (xilinx.com:ip:div_gen:5.1 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:09 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'delayLineBRAM'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of delayLineBRAM (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:03 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'add_26p18'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of add_26p18 (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Mar  8 20:59:03 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'accumulator_adder'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of accumulator_adder (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:15 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'sub_8m8'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of sub_8m8 (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:14 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'sub_52m52'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of sub_52m52 (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:13 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'rgb2ycbcr_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of rgb2ycbcr_0 (user.org:user:rgb2ycbcr:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:12 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'frame_delay_sim'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of frame_delay_sim (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:11 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'div_gen_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of div_gen_0 (xilinx.com:ip:div_gen:5.1) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:09 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'delayLineBRAM'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of delayLineBRAM (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:05 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'add_26p18'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of add_26p18 (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Mar  7 00:50:03 2019
+| Host         : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7k70tfbv676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'accumulator_adder'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of accumulator_adder (xilinx.com:ip:c_addsub:12.0 (Rev. 12)) to Vivado generation flows.
+

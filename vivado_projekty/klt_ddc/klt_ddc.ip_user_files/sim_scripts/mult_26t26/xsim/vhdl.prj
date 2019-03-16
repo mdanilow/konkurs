@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../klt_ddc.srcs/sources_1/ip/mult_26t26/sim/mult_26t26.vhd" \
+
+nosort

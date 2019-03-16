@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar 15 21:48:31 2019
+# Process ID: 5132
+# Current directory: E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/add_26p18_synth_1
+# Command line: vivado.exe -log add_26p18.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source add_26p18.tcl
+# Log file: E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/add_26p18_synth_1/add_26p18.vds
+# Journal file: E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/add_26p18_synth_1\vivado.jou
+#-----------------------------------------------------------
+source add_26p18.tcl -notrace

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="div_gen_0_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/div_gen_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sub_52m52_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/sub_52m52_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="add_26p18_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/add_26p18_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sub_8m8_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/sub_8m8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="frame_delay_sim_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/frame_delay_sim_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="accumulator_adder_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/accumulator_adder_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="delayLineBRAM_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/delayLineBRAM_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rgb2ycbcr_0_synth_1" LaunchDir="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.runs/rgb2ycbcr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
