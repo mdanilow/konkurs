@@ -2,8 +2,9 @@
 verilog xil_defaultlib  --include "../../../../klt_ddc.srcs/sources_1/bd/tor_wizyjny/ipshared/85a3" \
 "../../../../klt_ddc.srcs/sources_1/ip/delayLineBRAM/sim/delayLineBRAM.v" \
 "../../../../klt_ddc.srcs/sources_1/new/context_2x2.v" \
+"../../../../klt_ddc.srcs/sources_1/new/context_3x3.v" \
 "../../../../klt_ddc.srcs/sources_1/imports/moduly/delayLinieBRAM_WP.v" \
-"../../../../klt_ddc.srcs/sources_1/new/tb_hdmi_old.v" \
+"../../../../klt_ddc.srcs/sim_1/imports/tb_src/hdmi_in.v" \
 "../../../../klt_ddc.srcs/sim_1/new/tb_pyramid.v" \
 
 # compile glbl module

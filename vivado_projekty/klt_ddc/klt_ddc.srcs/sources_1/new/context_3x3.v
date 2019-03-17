@@ -22,7 +22,7 @@
 
 module context_3x3 #(
     
-    parameter H_SIZE = 800 //83 //1650
+    parameter H_SIZE = 800//800 //83 //1650
 )
 (
 
@@ -78,6 +78,7 @@ module context_3x3 #(
     begin
         
         D11 <= {synch_pixel_in, synch_de_in, synch_h_sync_in, synch_v_sync_in};
+        //D11 <= {pixel_in, de_in, h_sync_in, v_sync_in};
         D12 <= D11;
         D13 <= D12;
         D21 <= line1_out;

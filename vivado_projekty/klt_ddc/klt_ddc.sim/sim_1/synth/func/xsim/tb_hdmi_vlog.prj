@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../klt_ddc.srcs/sources_1/bd/tor_wizyjny/ipshared/85a3" \
+"tb_hdmi_func_synth.v" \
+"../../../../../klt_ddc.srcs/sources_1/new/context_3x3.v" \
+"../../../../../klt_ddc.srcs/sources_1/imports/moduly/delayLinieBRAM_WP.v" \
+"../../../../../klt_ddc.srcs/sim_1/imports/tb_src/hdmi_in.v" \
+"../../../../../klt_ddc.srcs/sim_1/imports/tb_src/hdmi_out.v" \
+"../../../../../klt_ddc.srcs/sources_1/new/in_roi_check.v" \
+"../../../../../klt_ddc.srcs/sources_1/new/klt_integrator.v" \
+"../../../../../klt_ddc.srcs/sources_1/new/linsolve.v" \
+"../../../../../klt_ddc.srcs/sources_1/imports/moduly/modul_puz.v" \
+"../../../../../klt_ddc.srcs/sources_1/new/pixel_position.v" \
+"../../../../../klt_ddc.srcs/sources_1/new/point_tracker.v" \
+"../../../../../klt_ddc.srcs/sources_1/imports/moduly/puz.v" \
+"../../../../../klt_ddc.srcs/sources_1/imports/moduly/wysw_box.v" \
+"../../../../../klt_ddc.srcs/sim_1/imports/tb_src/tb_hdmi.v" \
+
+# Do not sort compile order
+nosort

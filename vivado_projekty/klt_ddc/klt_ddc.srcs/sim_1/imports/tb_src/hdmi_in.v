@@ -33,12 +33,12 @@ module hdmi_in(
 //for now supports VGA 640x480 60Hz only
   //horizontal
   parameter hr=640; //resolution
-  parameter hbp=48; //back porch
+  parameter hbp=47; //back porch
   parameter hfp=16; //front porch
   parameter hs=96;  //sync len
   //vertical
   parameter vr=480; //resolution
-  parameter vbp=33; //back porch
+  parameter vbp=33; //back porch 
   parameter vfp=10; //front porch
   parameter vs=2;   //sync len
 //-----------------------------------------------
@@ -50,7 +50,8 @@ module hdmi_in(
   reg h_enable=1'b0;
   reg v_enable=1'b0;
   reg [10:0]hcounter=0;
-  reg [10:0]vcounter=480;  //64+1;//480+7
+  //reg [10:0]vcounter=64+1;
+  reg [10:0]vcounter=480+7;
 //-----------------------------------------------
   reg [7:0]red;
   reg [7:0]green;

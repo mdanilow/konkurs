@@ -22,7 +22,7 @@
 
 module context_2x2 #(
     
-    parameter H_SIZE = 800 //83 //1650
+    parameter H_SIZE = 800//800 //83 //1650
 )
 (
 
@@ -89,9 +89,9 @@ module context_2x2 #(
     
     assign context_valid = D11[2]&D12[2]&D21[2]&D22[2];
     
-    assign A11 = D11;
-    assign A12 = D12;
-    assign A21 = D21;
-    assign A22 = D22;  
+    assign A11 = D11[10-:8];
+    assign A12 = D12[10-:8];
+    assign A21 = D21[10-:8];
+    assign A22 = D22[10-:8];  
 endmodule
 

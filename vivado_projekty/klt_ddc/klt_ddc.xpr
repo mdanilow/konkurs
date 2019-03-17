@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="39" Path="E:/rzeczy/vivado_projekty/klt_ddc/klt_ddc.xpr">
+<Project Version="7" Minor="39" Path="E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5485c5837faa4ed59fc9d024dcbc8822"/>
@@ -37,7 +37,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zybo-z7-20"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="219"/>
+    <Option Name="WTXSimLaunchSim" Val="241"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -81,7 +81,7 @@
       <File Path="$PSRCDIR/sources_1/new/context_3x3.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/new/context_3x3.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/new/context_3x3.v"/>
           <Attr Name="ImportTime" Val="1544903084"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -101,7 +101,7 @@
       <File Path="$PSRCDIR/sources_1/new/in_roi_check.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/new/in_roi_check.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/new/in_roi_check.v"/>
           <Attr Name="ImportTime" Val="1548218797"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -111,7 +111,7 @@
       <File Path="$PSRCDIR/sources_1/new/klt_integrator.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/new/klt_integrator.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/new/klt_integrator.v"/>
           <Attr Name="ImportTime" Val="1546011856"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -121,7 +121,7 @@
       <File Path="$PSRCDIR/sources_1/new/linsolve.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/new/linsolve.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/new/linsolve.v"/>
           <Attr Name="ImportTime" Val="1548218797"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -221,18 +221,17 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/new/tb_pyramid.v">
+      <File Path="$PSRCDIR/sim_1/imports/tb_src/hdmi_in.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sim_1/imports/tb_src/hdmi_in.v"/>
+          <Attr Name="ImportTime" Val="1544124052"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/tb_src/hdmi_in.v">
+      <File Path="$PSRCDIR/sim_1/new/tb_pyramid.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../tor_wizyjny/tor_wizyjny.srcs/sim_1/imports/tb_src/hdmi_in.v"/>
-          <Attr Name="ImportTime" Val="1544124052"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -241,7 +240,7 @@
       <File Path="$PSRCDIR/sim_1/imports/tb_src/hdmi_out.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../tor_wizyjny/tor_wizyjny.srcs/sim_1/imports/tb_src/hdmi_out.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sim_1/imports/tb_src/hdmi_out.v"/>
           <Attr Name="ImportTime" Val="1542725851"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -251,7 +250,7 @@
       <File Path="$PSRCDIR/sim_1/imports/tb_src/tb_hdmi.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../tor_wizyjny/tor_wizyjny.srcs/sim_1/imports/tb_src/tb_hdmi.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sim_1/imports/tb_src/tb_hdmi.v"/>
           <Attr Name="ImportTime" Val="1544124282"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -266,6 +265,7 @@
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="xsim.simulate.runtime" Val="50000us"/>
+        <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
@@ -284,7 +284,7 @@
       <File Path="$PSRCDIR/sources_1/ip/delayLineBRAM/delayLineBRAM.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM.xci"/>
           <Attr Name="ImportTime" Val="1544464448"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -300,7 +300,7 @@
       <File Path="$PSRCDIR/sources_1/ip/div_gen_0/div_gen_0.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/div_gen_0/div_gen_0.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/div_gen_0/div_gen_0.xci"/>
           <Attr Name="ImportTime" Val="1548209327"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -316,7 +316,7 @@
       <File Path="$PSRCDIR/sources_1/ip/sub_52m52/sub_52m52.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/sub_52m52/sub_52m52.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_52m52/sub_52m52.xci"/>
           <Attr Name="ImportTime" Val="1546013103"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -332,7 +332,7 @@
       <File Path="$PSRCDIR/sources_1/ip/mult_26t26/mult_26t26.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/mult_26t26/mult_26t26.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/mult_26t26/mult_26t26.xci"/>
           <Attr Name="ImportTime" Val="1546014725"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -348,7 +348,7 @@
       <File Path="$PSRCDIR/sources_1/ip/add_26p18/add_26p18.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/add_26p18/add_26p18.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/add_26p18/add_26p18.xci"/>
           <Attr Name="ImportTime" Val="1544979033"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -364,7 +364,7 @@
       <File Path="$PSRCDIR/sources_1/ip/mult_9t9/mult_9t9.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/mult_9t9/mult_9t9.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/mult_9t9/mult_9t9.xci"/>
           <Attr Name="ImportTime" Val="1544981784"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -380,7 +380,7 @@
       <File Path="$PSRCDIR/sources_1/ip/sub_8m8/sub_8m8.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8.xci"/>
           <Attr Name="ImportTime" Val="1544982592"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -396,7 +396,7 @@
       <File Path="$PSRCDIR/sources_1/ip/frame_delay_sim/frame_delay_sim.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/frame_delay_sim/frame_delay_sim.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/frame_delay_sim/frame_delay_sim.xci"/>
           <Attr Name="ImportTime" Val="1544904490"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -412,7 +412,7 @@
       <File Path="$PSRCDIR/sources_1/ip/accumulator_adder/accumulator_adder.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../klt/klt.srcs/sources_1/ip/accumulator_adder/accumulator_adder.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/accumulator_adder/accumulator_adder.xci"/>
           <Attr Name="ImportTime" Val="1548215587"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -458,11 +458,12 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
@@ -486,9 +487,7 @@
     </Run>
     <Run Id="div_gen_0_synth_1" Type="Ft3:Synth" SrcSet="div_gen_0" Part="xc7z020clg400-1" ConstrsSet="div_gen_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/div_gen_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -497,9 +496,7 @@
     </Run>
     <Run Id="sub_52m52_synth_1" Type="Ft3:Synth" SrcSet="sub_52m52" Part="xc7z020clg400-1" ConstrsSet="sub_52m52" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/sub_52m52_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -508,9 +505,7 @@
     </Run>
     <Run Id="mult_26t26_synth_1" Type="Ft3:Synth" SrcSet="mult_26t26" Part="xc7z020clg400-1" ConstrsSet="mult_26t26" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mult_26t26_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -519,9 +514,7 @@
     </Run>
     <Run Id="add_26p18_synth_1" Type="Ft3:Synth" SrcSet="add_26p18" Part="xc7z020clg400-1" ConstrsSet="add_26p18" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/add_26p18_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -530,9 +523,7 @@
     </Run>
     <Run Id="mult_9t9_synth_1" Type="Ft3:Synth" SrcSet="mult_9t9" Part="xc7z020clg400-1" ConstrsSet="mult_9t9" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mult_9t9_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -541,9 +532,7 @@
     </Run>
     <Run Id="sub_8m8_synth_1" Type="Ft3:Synth" SrcSet="sub_8m8" Part="xc7z020clg400-1" ConstrsSet="sub_8m8" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/sub_8m8_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -552,9 +541,7 @@
     </Run>
     <Run Id="frame_delay_sim_synth_1" Type="Ft3:Synth" SrcSet="frame_delay_sim" Part="xc7z020clg400-1" ConstrsSet="frame_delay_sim" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/frame_delay_sim_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -563,9 +550,7 @@
     </Run>
     <Run Id="accumulator_adder_synth_1" Type="Ft3:Synth" SrcSet="accumulator_adder" Part="xc7z020clg400-1" ConstrsSet="accumulator_adder" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/accumulator_adder_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -574,9 +559,7 @@
     </Run>
     <Run Id="rgb2ycbcr_0_synth_1" Type="Ft3:Synth" SrcSet="rgb2ycbcr_0" Part="xc7z020clg400-1" ConstrsSet="rgb2ycbcr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rgb2ycbcr_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -649,9 +632,7 @@
     </Run>
     <Run Id="div_gen_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="div_gen_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="div_gen_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -667,9 +648,7 @@
     </Run>
     <Run Id="sub_52m52_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="sub_52m52" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="sub_52m52_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -685,9 +664,7 @@
     </Run>
     <Run Id="mult_26t26_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mult_26t26" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mult_26t26_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -703,9 +680,7 @@
     </Run>
     <Run Id="add_26p18_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="add_26p18" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="add_26p18_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -721,9 +696,7 @@
     </Run>
     <Run Id="mult_9t9_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mult_9t9" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mult_9t9_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -739,9 +712,7 @@
     </Run>
     <Run Id="sub_8m8_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="sub_8m8" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="sub_8m8_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -757,9 +728,7 @@
     </Run>
     <Run Id="frame_delay_sim_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="frame_delay_sim" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="frame_delay_sim_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -775,9 +744,7 @@
     </Run>
     <Run Id="accumulator_adder_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="accumulator_adder" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="accumulator_adder_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -793,9 +760,7 @@
     </Run>
     <Run Id="rgb2ycbcr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="rgb2ycbcr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="rgb2ycbcr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
