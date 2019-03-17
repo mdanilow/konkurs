@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.sim/sim_1/behav/xsim/xsim.dir/tb_pyramid_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sun Mar 17 05:14:48 2019" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Sun Mar 17 05:22:49 2019" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "82e14c6f-ecda-43a4-9f69-b974bb3c9b9b" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "5485c5837faa4ed59fc9d024dcbc8822" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "49" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "53" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 7 , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Service Pack 1  (build 7601)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz" -context "user_environment"
@@ -36,7 +36,7 @@ webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Processes -value "618" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "26" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "1.15_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "58624_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 2005181385 -regid "" -xml E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.sim/sim_1/behav/xsim/xsim.dir/tb_pyramid_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.sim/sim_1/behav/xsim/xsim.dir/tb_pyramid_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.sim/sim_1/behav/xsim/xsim.dir/tb_pyramid_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "1.22_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "58628_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3625486801 -regid "" -xml E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.sim/sim_1/behav/xsim/xsim.dir/tb_pyramid_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.sim/sim_1/behav/xsim/xsim.dir/tb_pyramid_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/konkurs/vivado_projekty/klt_ddc/klt_ddc.sim/sim_1/behav/xsim/xsim.dir/tb_pyramid_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
