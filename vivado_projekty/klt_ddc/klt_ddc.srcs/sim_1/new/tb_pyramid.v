@@ -53,6 +53,11 @@ module tb_pyramid(
     wire [7 : 0] left_int;
     wire [7 : 0] right_int;
     
+    wire clk_2x;
+    wire [7 : 0] pixel_2x;
+    wire [9 : 0] A11pA12;
+    wire [9 : 0] A21pA22;
+    wire [9 : 0] sum;
     
     assign center_int = center[10-:8];
     assign up_int = up[10-:8];
@@ -87,6 +92,23 @@ module tb_pyramid(
         .A21(A21),
         .A22(A22)
     );
+    
+    
+    scale2x scaled2x(
+    
+        .clk(rx_pclk),
+        .A11(A11),
+        .A12(A12),
+        .A21(A21),
+        .A22(A22),
+
+        .clk_2x(clk_2x),
+        .pixel_out(pixel_2x),
+        .A11pA12_out(A11pA12),
+        .A21pA22_out(A21pA22),
+        .sum_out(sum)
+    );
+    
     
     context_3x3 cont(
     

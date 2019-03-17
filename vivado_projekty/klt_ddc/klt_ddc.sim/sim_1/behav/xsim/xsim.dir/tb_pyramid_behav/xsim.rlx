@@ -1,8 +1,8 @@
 
 { 
-    crc :  7658873842219412083  , 
+    crc :  6482477071077755583  , 
     ccp_crc :  0  , 
-    cmdline : " -wto 5485c5837faa4ed59fc9d024dcbc8822 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_pyramid_behav xil_defaultlib.tb_pyramid xil_defaultlib.glbl" , 
+    cmdline : " -wto 5485c5837faa4ed59fc9d024dcbc8822 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_2 -L xil_defaultlib -L xbip_utils_v3_0_9 -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_pyramid_behav xil_defaultlib.tb_pyramid xil_defaultlib.glbl" , 
     buildDate : "Dec  7 2018" , 
     buildTime : "00:33:28" , 
     linkCmd : "E:\\Xilinx\\Vivado\\2018.3\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/tb_pyramid_behav/xsimk.exe\"   \"xsim.dir/tb_pyramid_behav/obj/xsim_0.win64.obj\" \"xsim.dir/tb_pyramid_behav/obj/xsim_1.win64.obj\" -L\"E:\\Xilinx\\Vivado\\2018.3\\lib\\win64.o\" -lrdi_simulator_kernel  -lrdi_simbridge_kernel" , 
