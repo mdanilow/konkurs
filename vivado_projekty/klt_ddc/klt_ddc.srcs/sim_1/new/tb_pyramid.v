@@ -36,6 +36,8 @@ module tb_pyramid(
     
     wire context_2x2_valid;
     wire context_3x3_valid;
+    wire context_2x2_vsync;
+    wire context_2x2_hsync;
     wire [7 : 0] A11;
     wire [7 : 0] A12;
     wire [7 : 0] A21;
@@ -55,9 +57,13 @@ module tb_pyramid(
     
     wire clk_2x;
     wire [7 : 0] pixel_2x;
+    wire de_2x;
+    wire hsync_2x;
+    wire vsync_2x;
     wire [9 : 0] A11pA12;
     wire [9 : 0] A21pA22;
     wire [9 : 0] sum;
+    wire [7 : 0] round_sum;
     
     assign center_int = center[10-:8];
     assign up_int = up[10-:8];
@@ -87,6 +93,8 @@ module tb_pyramid(
         .v_sync_in(rx_vsync),
         
         .context_valid(context_2x2_valid),
+        .A11_vsync(context_2x2_vsync),
+        .A11_hsync(context_2x2_hsync),
         .A11(A11),
         .A12(A12),
         .A21(A21),
@@ -97,6 +105,9 @@ module tb_pyramid(
     scale2x scaled2x(
     
         .clk(rx_pclk),
+        .de_in(context_2x2_valid),
+        .hsync_in(context_2x2_hsync),
+        .vsync_in(context_2x2_vsync),
         .A11(A11),
         .A12(A12),
         .A21(A21),
@@ -104,6 +115,10 @@ module tb_pyramid(
 
         .clk_2x(clk_2x),
         .pixel_out(pixel_2x),
+        .round_sum_out(round_sum),
+        .de_out(de_2x),
+        .hsync_out(hsync_2x),
+        .vsync_out(vsync_2x),
         .A11pA12_out(A11pA12),
         .A21pA22_out(A21pA22),
         .sum_out(sum)

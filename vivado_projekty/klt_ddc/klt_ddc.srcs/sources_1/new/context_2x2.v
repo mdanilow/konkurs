@@ -33,6 +33,8 @@ module context_2x2 #(
     input v_sync_in,
     
     output context_valid,
+    output A11_hsync,
+    output A11_vsync,
     output [7 : 0] A11,
     output [7 : 0] A12,
     output [7 : 0] A21,
@@ -93,5 +95,8 @@ module context_2x2 #(
     assign A12 = D21[10-:8];
     assign A21 = D12[10-:8];
     assign A22 = D11[10-:8];  
+    
+    assign A11_vsync = D22[0];
+    assign A11_hsync = D22[1];
 endmodule
 

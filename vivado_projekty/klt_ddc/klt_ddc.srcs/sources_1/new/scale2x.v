@@ -33,6 +33,7 @@ module scale2x(
     
     output clk_2x,
     output [7 : 0] pixel_out,
+    output [7 : 0] round_sum_out,
     output de_out,
     output hsync_out,
     output vsync_out,
@@ -45,7 +46,9 @@ module scale2x(
     wire [9 : 0] A11pA12;
     wire [9 : 0] A21pA22;
     wire [9 : 0] sum;
+    wire [7 : 0] round_sum;
     
+    reg [7 : 0] output_reg = 0;
     reg clk_2x_reg = 0;
     
     
@@ -53,6 +56,13 @@ module scale2x(
     begin
         
         clk_2x_reg <= ~clk_2x_reg;
+    end
+    
+    
+    always @(posedge clk_2x)
+    begin
+        
+        output_reg <= round_sum;
     end
 
 
@@ -82,10 +92,26 @@ module scale2x(
         .S(sum)
     ); 
     
+    
+    modul_puz #(
+        
+        .N(3),
+        .DELAY(2)
+    )
+    synch_delay(
+        
+        .clk(clk),
+        .in({de_in, hsync_in, vsync_in}),
+        .out({de_out, hsync_out, vsync_out})
+    );
+    
+    
     assign sum_out = sum;
-    assign pixel_out = sum[9-:8];
+    assign round_sum = sum[1] ? (sum[9-:8] + 1) : sum[9-:8];
     assign clk_2x = clk_2x_reg;
+    assign pixel_out = output_reg;
     
     assign A11pA12_out = A11pA12;
     assign A21pA22_out = A21pA22;
+    assign round_sum_out = round_sum;
 endmodule
