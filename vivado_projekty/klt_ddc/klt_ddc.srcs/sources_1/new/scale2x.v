@@ -40,9 +40,13 @@ module scale2x(
     
     output [9 : 0] A11pA12_out,
     output [9 : 0] A21pA22_out,
-    output [9 : 0] sum_out
+    output [9 : 0] sum_out,
+    output ignore_row
 );
-
+    
+    wire hsync_in_delayed;
+    wire de_in_delayed;
+    
     wire [9 : 0] A11pA12;
     wire [9 : 0] A21pA22;
     wire [9 : 0] sum;
@@ -50,10 +54,31 @@ module scale2x(
     
     reg [7 : 0] output_reg = 0;
     reg clk_2x_reg = 0;
+    reg ignore_this_row = 0;
+    
+    //state machine for ignoring every even row
+    reg [1 : 0] state = 0;
+    
+    
+    always @(posedge hsync_in)
+    begin
+    
+        if(state == 2)
+            ignore_this_row <= ~ignore_this_row;       
+    end
     
     
     always @(posedge clk)
     begin
+    
+        if(vsync_out)
+        begin
+            state <= 1;     //new frame
+            ignore_this_row <= 0;
+        end
+            
+        if(state == 1 && de_in)
+            state <= 2;     //correct row start
         
         clk_2x_reg <= ~clk_2x_reg;
     end
@@ -102,7 +127,7 @@ module scale2x(
         
         .clk(clk),
         .in({de_in, hsync_in, vsync_in}),
-        .out({de_out, hsync_out, vsync_out})
+        .out({de_in_delayed, hsync_in_delayed, vsync_out})
     );
     
     
@@ -110,8 +135,11 @@ module scale2x(
     assign round_sum = sum[1] ? (sum[9-:8] + 1) : sum[9-:8];
     assign clk_2x = clk_2x_reg;
     assign pixel_out = output_reg;
+    assign de_out = de_in_delayed & ~ignore_this_row;
+    assign hsync_out = hsync_in_delayed & ~ignore_this_row;
     
     assign A11pA12_out = A11pA12;
     assign A21pA22_out = A21pA22;
     assign round_sum_out = round_sum;
+    assign ignore_row = ignore_this_row;
 endmodule

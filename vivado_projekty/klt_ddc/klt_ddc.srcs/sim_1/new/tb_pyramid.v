@@ -64,6 +64,7 @@ module tb_pyramid(
     wire [9 : 0] A21pA22;
     wire [9 : 0] sum;
     wire [7 : 0] round_sum;
+    wire ignore_row;
     
     assign center_int = center[10-:8];
     assign up_int = up[10-:8];
@@ -121,7 +122,8 @@ module tb_pyramid(
         .vsync_out(vsync_2x),
         .A11pA12_out(A11pA12),
         .A21pA22_out(A21pA22),
-        .sum_out(sum)
+        .sum_out(sum),
+        .ignore_row(ignore_row)
     );
     
     
