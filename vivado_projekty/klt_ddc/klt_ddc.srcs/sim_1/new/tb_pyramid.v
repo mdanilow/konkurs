@@ -106,24 +106,16 @@ module tb_pyramid(
     scale2x scaled2x(
     
         .clk(rx_pclk),
-        .de_in(context_2x2_valid),
-        .hsync_in(context_2x2_hsync),
-        .vsync_in(context_2x2_vsync),
-        .A11(A11),
-        .A12(A12),
-        .A21(A21),
-        .A22(A22),
+        .pixel_in(rx_red),
+        .de_in(rx_de),
+        .hsync_in(rx_hsync),
+        .vsync_in(rx_vsync),
 
         .clk_2x(clk_2x),
         .pixel_out(pixel_2x),
-        .round_sum_out(round_sum),
         .de_out(de_2x),
         .hsync_out(hsync_2x),
-        .vsync_out(vsync_2x),
-        .A11pA12_out(A11pA12),
-        .A21pA22_out(A21pA22),
-        .sum_out(sum),
-        .ignore_row(ignore_row)
+        .vsync_out(vsync_2x)
     );
     
     

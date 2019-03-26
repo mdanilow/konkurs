@@ -23,29 +23,28 @@
 module scale2x(
     
     input clk,
-    input [7 : 0] A11,
-    input [7 : 0] A12,
-    input [7 : 0] A21,
-    input [7 : 0] A22,
+    input [7 : 0] pixel_in,
     input de_in,
     input hsync_in,
     input vsync_in,
     
     output clk_2x,
     output [7 : 0] pixel_out,
-    output [7 : 0] round_sum_out,
     output de_out,
     output hsync_out,
-    output vsync_out,
-    
-    output [9 : 0] A11pA12_out,
-    output [9 : 0] A21pA22_out,
-    output [9 : 0] sum_out,
-    output ignore_row
+    output vsync_out
 );
     
+    wire context_2x2_vsync;
+    wire context_2x2_hsync;
+    wire context_2x2_valid;
     wire hsync_in_delayed;
     wire de_in_delayed;
+    
+    wire [7 : 0] A11;
+    wire [7 : 0] A12;
+    wire [7 : 0] A21;
+    wire [7 : 0] A22;
     
     wire [9 : 0] A11pA12;
     wire [9 : 0] A21pA22;
@@ -60,7 +59,7 @@ module scale2x(
     reg [1 : 0] state = 0;
     
     
-    always @(posedge hsync_in)
+    always @(posedge context_2x2_hsync)
     begin
     
         if(state == 2)
@@ -77,7 +76,7 @@ module scale2x(
             ignore_this_row <= 0;
         end
             
-        if(state == 1 && de_in)
+        if(state == 1 && context_2x2_valid)
             state <= 2;     //correct row start
         
         clk_2x_reg <= ~clk_2x_reg;
@@ -89,6 +88,24 @@ module scale2x(
         
         output_reg <= round_sum;
     end
+    
+    
+    context_2x2 con(
+    
+        .clk(clk),
+        .pixel_in(pixel_in),
+        .de_in(de_in),
+        .h_sync_in(hsync_in),
+        .v_sync_in(vsync_in),
+        
+        .context_valid(context_2x2_valid),
+        .A11_vsync(context_2x2_vsync),
+        .A11_hsync(context_2x2_hsync),
+        .A11(A11),
+        .A12(A12),
+        .A21(A21),
+        .A22(A22)
+    );
 
 
     adder_10p10e10 A11pA12_adder(
@@ -126,20 +143,14 @@ module scale2x(
     synch_delay(
         
         .clk(clk),
-        .in({de_in, hsync_in, vsync_in}),
+        .in({context_2x2_valid, context_2x2_hsync, context_2x2_vsync}),
         .out({de_in_delayed, hsync_in_delayed, vsync_out})
     );
     
     
-    assign sum_out = sum;
     assign round_sum = sum[1] ? (sum[9-:8] + 1) : sum[9-:8];
     assign clk_2x = clk_2x_reg;
     assign pixel_out = output_reg;
     assign de_out = de_in_delayed & ~ignore_this_row;
     assign hsync_out = hsync_in_delayed & ~ignore_this_row;
-    
-    assign A11pA12_out = A11pA12;
-    assign A21pA22_out = A21pA22;
-    assign round_sum_out = round_sum;
-    assign ignore_row = ignore_this_row;
 endmodule
