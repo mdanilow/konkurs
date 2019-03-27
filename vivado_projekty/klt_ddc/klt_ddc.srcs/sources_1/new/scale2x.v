@@ -20,7 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module scale2x(
+module scale2x #(
+    
+    parameter H_SIZE = 800, //800 //83 //1650
+    parameter CLK_PHASE = 0
+)
+(
     
     input clk,
     input [7 : 0] pixel_in,
@@ -32,7 +37,17 @@ module scale2x(
     output [7 : 0] pixel_out,
     output de_out,
     output hsync_out,
-    output vsync_out
+    output vsync_out,
+    
+    output [7 : 0] A11,
+    output [7 : 0] A12,
+    output [7 : 0] A21,
+    output [7 : 0] A22,
+    output context_2x2_valid,
+    output [9 : 0] A11pA12,
+    output [9 : 0] A21pA22,
+    output [9 : 0] sum,
+    output [7 : 0] round_sum
 );
     
     wire context_2x2_vsync;
@@ -52,7 +67,7 @@ module scale2x(
     wire [7 : 0] round_sum;
     
     reg [7 : 0] output_reg = 0;
-    reg clk_2x_reg = 0;
+    reg clk_2x_reg = CLK_PHASE;
     reg ignore_this_row = 0;
     
     //state machine for ignoring every even row
@@ -90,7 +105,11 @@ module scale2x(
     end
     
     
-    context_2x2 con(
+    context_2x2 #(
+        
+        .H_SIZE(H_SIZE)
+    )
+    con(
     
         .clk(clk),
         .pixel_in(pixel_in),
