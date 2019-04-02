@@ -90,22 +90,22 @@ for f = 1:400
         y0 = y0 + d(2);
         x0 = x0 + d(1);
         
-        if(f == 2 || f == 61 || f == 100 || f == 123 || f == 179 || f == 317)
-            
-            imshow(frame);
-            hold on;
-            rectangle('Position', [round(x0), round(y0), winLength, winHeight], 'LineWidth', 3, 'EdgeColor', 'r');
-            hold off;
-            frame = insertShape(frame, 'Rectangle', [round(x0), round(y0), winLength, winHeight], 'LineWidth', 4, 'Color', 'r');
-            imwrite(frame, ['klt_', num2str(floor(f/100)), num2str(floor(mod(f, 100)/10)), num2str(mod(f,10)), '.png']);
-            ginput(1);
-        end
+%         if(f == 2 || f == 61 || f == 100 || f == 123 || f == 179 || f == 317)
+%             
+%             imshow(frame);
+%             hold on;
+%             rectangle('Position', [round(x0), round(y0), winLength, winHeight], 'LineWidth', 3, 'EdgeColor', 'r');
+%             hold off;
+%             frame = insertShape(frame, 'Rectangle', [round(x0), round(y0), winLength, winHeight], 'LineWidth', 4, 'Color', 'r');
+%             imwrite(frame, ['klt_', num2str(floor(f/100)), num2str(floor(mod(f, 100)/10)), num2str(mod(f,10)), '.png']);
+%             ginput(1);
+%         end
         
-%         imshow(frame);
-%         hold on;
-%         rectangle('Position', [round(x0), round(y0), winLength, winHeight], 'LineWidth', 3, 'EdgeColor', 'r');
-%         hold off;
-%         ginput(1);
+        imshow(frame);
+        hold on;
+        rectangle('Position', [round(x0), round(y0), winLength, winHeight], 'LineWidth', 3, 'EdgeColor', 'r');
+        hold off;
+        ginput(1);
 
         prev_gray_frame = gray_frame;
     end

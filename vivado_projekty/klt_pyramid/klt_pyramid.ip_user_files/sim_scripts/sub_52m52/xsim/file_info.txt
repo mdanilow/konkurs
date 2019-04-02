@@ -1,0 +1,1 @@
+sub_52m52.vhd,vhdl,xil_defaultlib,../../../../klt.srcs/sources_1/ip/sub_52m52/sim/sub_52m52.vhd,
