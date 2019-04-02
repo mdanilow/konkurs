@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="mult_26t26_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1552682683">
-  <File Type="PA-TCL" Name="mult_26t26.tcl"/>
   <File Type="REPORTS-TCL" Name="mult_26t26_reports.tcl"/>
+  <File Type="PA-TCL" Name="mult_26t26.tcl"/>
+  <File Type="RDS-DCP" Name="mult_26t26.dcp"/>
   <File Type="RDS-RDS" Name="mult_26t26.vds"/>
   <File Type="RDS-UTIL" Name="mult_26t26_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mult_26t26_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="mult_26t26.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mult_26t26">
     <File Path="$PSRCDIR/sources_1/ip/mult_26t26/mult_26t26.xci">
       <FileInfo>

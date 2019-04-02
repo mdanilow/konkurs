@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="sub_8m8_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1552682683">
-  <File Type="PA-TCL" Name="sub_8m8.tcl"/>
   <File Type="REPORTS-TCL" Name="sub_8m8_reports.tcl"/>
+  <File Type="PA-TCL" Name="sub_8m8.tcl"/>
+  <File Type="RDS-DCP" Name="sub_8m8.dcp"/>
   <File Type="RDS-RDS" Name="sub_8m8.vds"/>
   <File Type="RDS-UTIL" Name="sub_8m8_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="sub_8m8_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="sub_8m8.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/sub_8m8">
     <File Path="$PSRCDIR/sources_1/ip/sub_8m8/sub_8m8.xci">
       <FileInfo>
