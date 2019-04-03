@@ -8,8 +8,8 @@ height = 480;
 
 g = double(zeros(2, 1));
 
-xsc = 307;
-ysc = 290;
+xsc = 300;
+ysc = 300;
 winLength = 20;
 winHeight = 20;
 x0 = xsc - winLength/2;
@@ -42,17 +42,17 @@ for f = 1:400
 
             for col = x0:1:x0+winLength
                 
-%                 row_ = floor(row);
-%                 col_ = floor(col);
-%                 display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(gray_frame(row_, col_)), ' left: ', num2str(gray_frame(row_, col_-1)), ' right: ', num2str(gray_frame(row_, col_+1)), ' up: ', num2str(gray_frame(row_-1, col_)), ' down: ', num2str(gray_frame(row_+1, col_))]);
+                row_ = floor(row);
+                col_ = floor(col);
+                display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(gray_frame(row_, col_)), ' left: ', num2str(gray_frame(row_, col_-1)), ' right: ', num2str(gray_frame(row_, col_+1)), ' up: ', num2str(gray_frame(row_-1, col_)), ' down: ', num2str(gray_frame(row_+1, col_))]);
 
                 if(interpolation_on == 1)
                     Ix = (interpolation(col+1, row, prev_gray_frame) - interpolation(col-1, row, prev_gray_frame));
                     Iy = (interpolation(col, row+1, prev_gray_frame) - interpolation(col, row-1, prev_gray_frame));
                     dI = interpolation(col, row, prev_gray_frame) - interpolation(col, row, gray_frame);
                 else
-                    row_ = round(row);
-                    col_ = round(col);
+                    row_ = floor(row);
+                    col_ = floor(col);
 %                     Ix = (double(gray_frame(row_, col_+1)) - double(gray_frame(row_, col_-1)))/2;
 %                     Iy = (double(gray_frame(row_+1, col_)) - double(gray_frame(row_-1, col_)))/2;
                     Ix = (double(gray_frame(row_, col_+1)) - double(gray_frame(row_, col_-1)));
@@ -111,7 +111,7 @@ for f = 1:400
         
         imshow(frame);
         hold on;
-        rectangle('Position', [round(x0), round(y0), winLength, winHeight], 'LineWidth', 3, 'EdgeColor', 'r');
+        rectangle('Position', [floor(x0), floor(y0), winLength, winHeight], 'LineWidth', 3, 'EdgeColor', 'r');
         hold off;
         ginput(1);
 

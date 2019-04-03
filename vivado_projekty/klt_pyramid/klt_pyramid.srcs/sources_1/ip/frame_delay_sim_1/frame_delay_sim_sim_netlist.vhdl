@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Tue Apr  2 21:30:59 2019
--- Host        : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+-- Date        : Wed Apr  3 12:16:31 2019
+-- Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               e:/rzeczy/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim_1/frame_delay_sim_sim_netlist.vhdl
+--               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim_1/frame_delay_sim_sim_netlist.vhdl
 -- Design      : frame_delay_sim
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -137,8 +137,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"00000",
       SRVAL_B => X"00000",
-      WRITE_MODE_A => "NO_CHANGE",
-      WRITE_MODE_B => "NO_CHANGE",
+      WRITE_MODE_A => "READ_FIRST",
+      WRITE_MODE_B => "READ_FIRST",
       WRITE_WIDTH_A => 18,
       WRITE_WIDTH_B => 18
     )
@@ -412,7 +412,7 @@ entity frame_delay_sim_blk_mem_gen_v8_4_1 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.5696 mW";
+  attribute C_EST_POWER_SUMMARY of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.77035 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is "kintex7";
   attribute C_HAS_AXI_ID : integer;
@@ -502,7 +502,7 @@ entity frame_delay_sim_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_DEPTH_B : integer;
   attribute C_WRITE_DEPTH_B of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is 1000;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is "NO_CHANGE";
+  attribute C_WRITE_MODE_A of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is "READ_FIRST";
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of frame_delay_sim_blk_mem_gen_v8_4_1 : entity is "READ_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
@@ -692,7 +692,7 @@ architecture STRUCTURE of frame_delay_sim is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.5696 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.77035 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "kintex7";
   attribute C_HAS_AXI_ID : integer;
@@ -782,7 +782,7 @@ architecture STRUCTURE of frame_delay_sim is
   attribute C_WRITE_DEPTH_B : integer;
   attribute C_WRITE_DEPTH_B of U0 : label is 1000;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of U0 : label is "NO_CHANGE";
+  attribute C_WRITE_MODE_A of U0 : label is "READ_FIRST";
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of U0 : label is "READ_FIRST";
   attribute C_WRITE_WIDTH_A : integer;

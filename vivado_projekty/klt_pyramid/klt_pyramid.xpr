@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="E:/rzeczy/vivado_projekty/klt_pyramid/klt_pyramid.xpr">
+<Project Version="7" Minor="38" Path="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a6e86397ddca48019c2dcbbc70e9262d"/>
@@ -32,20 +32,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="147"/>
+    <Option Name="WTXSimLaunchSim" Val="151"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="37"/>
-    <Option Name="WTModelSimExportSim" Val="37"/>
-    <Option Name="WTQuestaExportSim" Val="37"/>
-    <Option Name="WTIesExportSim" Val="37"/>
-    <Option Name="WTVcsExportSim" Val="37"/>
-    <Option Name="WTRivieraExportSim" Val="37"/>
-    <Option Name="WTActivehdlExportSim" Val="37"/>
+    <Option Name="WTXSimExportSim" Val="38"/>
+    <Option Name="WTModelSimExportSim" Val="38"/>
+    <Option Name="WTQuestaExportSim" Val="38"/>
+    <Option Name="WTIesExportSim" Val="38"/>
+    <Option Name="WTVcsExportSim" Val="38"/>
+    <Option Name="WTRivieraExportSim" Val="38"/>
+    <Option Name="WTActivehdlExportSim" Val="38"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -121,7 +121,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/pixel_position.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/pixel_position.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../klt_ddc/klt_ddc.srcs/sources_1/new/pixel_position.v"/>
           <Attr Name="ImportTime" Val="1551650620"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -130,7 +130,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/point_tracker.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/point_tracker.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../klt_ddc/klt_ddc.srcs/sources_1/new/point_tracker.v"/>
           <Attr Name="ImportTime" Val="1551591434"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -148,7 +148,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/moduly/wysw_box.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/imports/moduly/wysw_box.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../klt_ddc/klt_ddc.srcs/sources_1/imports/moduly/wysw_box.v"/>
           <Attr Name="ImportTime" Val="1551820522"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -157,7 +157,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/moduly/klt_tracker.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/imports/moduly/klt_tracker.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../klt_ddc/klt_ddc.srcs/sources_1/imports/moduly/klt_tracker.v"/>
           <Attr Name="ImportTime" Val="1551856052"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -438,9 +438,7 @@
     </Run>
     <Run Id="frame_delay_sim_synth_1" Type="Ft3:Synth" SrcSet="frame_delay_sim" Part="xc7k70tfbv676-1" ConstrsSet="frame_delay_sim" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/frame_delay_sim_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -449,9 +447,7 @@
     </Run>
     <Run Id="rgb2ycbcr_0_synth_1" Type="Ft3:Synth" SrcSet="rgb2ycbcr_0" Part="xc7k70tfbv676-1" ConstrsSet="rgb2ycbcr_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rgb2ycbcr_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -460,9 +456,7 @@
     </Run>
     <Run Id="accumulator_adder_synth_1" Type="Ft3:Synth" SrcSet="accumulator_adder" Part="xc7k70tfbv676-1" ConstrsSet="accumulator_adder" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/accumulator_adder_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -585,9 +579,7 @@
     </Run>
     <Run Id="frame_delay_sim_impl_1" Type="Ft2:EntireDesign" Part="xc7k70tfbv676-1" ConstrsSet="frame_delay_sim" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="frame_delay_sim_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -603,9 +595,7 @@
     </Run>
     <Run Id="rgb2ycbcr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k70tfbv676-1" ConstrsSet="rgb2ycbcr_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="rgb2ycbcr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -621,9 +611,7 @@
     </Run>
     <Run Id="accumulator_adder_impl_1" Type="Ft2:EntireDesign" Part="xc7k70tfbv676-1" ConstrsSet="accumulator_adder" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="accumulator_adder_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Apr  2 21:30:59 2019
-// Host        : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+// Date        : Wed Apr  3 12:16:31 2019
+// Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               e:/rzeczy/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim_1/frame_delay_sim_sim_netlist.v
+//               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim_1/frame_delay_sim_sim_netlist.v
 // Design      : frame_delay_sim
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -81,7 +81,7 @@ module frame_delay_sim
   (* C_EN_SAFETY_CKT = "0" *) 
   (* C_EN_SHUTDOWN_PIN = "0" *) 
   (* C_EN_SLEEP_PIN = "0" *) 
-  (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     2.5696 mW" *) 
+  (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     2.77035 mW" *) 
   (* C_FAMILY = "kintex7" *) 
   (* C_HAS_AXI_ID = "0" *) 
   (* C_HAS_ENA = "0" *) 
@@ -126,7 +126,7 @@ module frame_delay_sim
   (* C_WEB_WIDTH = "1" *) 
   (* C_WRITE_DEPTH_A = "1000" *) 
   (* C_WRITE_DEPTH_B = "1000" *) 
-  (* C_WRITE_MODE_A = "NO_CHANGE" *) 
+  (* C_WRITE_MODE_A = "READ_FIRST" *) 
   (* C_WRITE_MODE_B = "READ_FIRST" *) 
   (* C_WRITE_WIDTH_A = "11" *) 
   (* C_WRITE_WIDTH_B = "11" *) 
@@ -388,8 +388,8 @@ module frame_delay_sim_blk_mem_gen_prim_wrapper
     .SIM_DEVICE("7SERIES"),
     .SRVAL_A(18'h00000),
     .SRVAL_B(18'h00000),
-    .WRITE_MODE_A("NO_CHANGE"),
-    .WRITE_MODE_B("NO_CHANGE"),
+    .WRITE_MODE_A("READ_FIRST"),
+    .WRITE_MODE_B("READ_FIRST"),
     .WRITE_WIDTH_A(18),
     .WRITE_WIDTH_B(18)) 
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram 
@@ -455,7 +455,7 @@ endmodule
 (* C_DISABLE_WARN_BHV_COLL = "0" *) (* C_DISABLE_WARN_BHV_RANGE = "0" *) (* C_ELABORATION_DIR = "./" *) 
 (* C_ENABLE_32BIT_ADDRESS = "0" *) (* C_EN_DEEPSLEEP_PIN = "0" *) (* C_EN_ECC_PIPE = "0" *) 
 (* C_EN_RDADDRA_CHG = "0" *) (* C_EN_RDADDRB_CHG = "0" *) (* C_EN_SAFETY_CKT = "0" *) 
-(* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     2.5696 mW" *) 
+(* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     2.77035 mW" *) 
 (* C_FAMILY = "kintex7" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) 
 (* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
 (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
@@ -470,7 +470,7 @@ endmodule
 (* C_USE_BRAM_BLOCK = "0" *) (* C_USE_BYTE_WEA = "0" *) (* C_USE_BYTE_WEB = "0" *) 
 (* C_USE_DEFAULT_DATA = "0" *) (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) 
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
-(* C_WRITE_DEPTH_A = "1000" *) (* C_WRITE_DEPTH_B = "1000" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
+(* C_WRITE_DEPTH_A = "1000" *) (* C_WRITE_DEPTH_B = "1000" *) (* C_WRITE_MODE_A = "READ_FIRST" *) 
 (* C_WRITE_MODE_B = "READ_FIRST" *) (* C_WRITE_WIDTH_A = "11" *) (* C_WRITE_WIDTH_B = "11" *) 
 (* C_XDEVICEFAMILY = "kintex7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module frame_delay_sim_blk_mem_gen_v8_4_1

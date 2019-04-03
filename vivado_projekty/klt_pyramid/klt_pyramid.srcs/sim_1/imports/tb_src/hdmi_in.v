@@ -130,9 +130,9 @@ begin
 	 //TB only
 	 vsc=vsc+1;
 
-    //rgbfile = $fopen("E:/rzeczy/obrazki/image_rand.ppm","rb");
-    //rgbfile = $fopen({"E:/rzeczy/matlab/pudelko/res_640_480/frame_", vsc[5:0]/10+8'h30, vsc[5:0]%10+8'h30, ".ppm"},"rb");
-    rgbfile = $fopen({"E:/rzeczy/matlab/pudelko/res_640_480/frame_", vsc/100+8'h30, (vsc%100)/10+8'h30, vsc%10+8'h30, ".ppm"},"rb");
+   
+    //rgbfile = $fopen({"E:/rzeczy/matlab/pudelko/res_640_480/frame_", vsc/100+8'h30, (vsc%100)/10+8'h30, vsc%10+8'h30, ".ppm"},"rb");
+    rgbfile = $fopen({"C:/konkurs/matlab/pudelko/res_640_480/frame_", vsc/100+8'h30, (vsc%100)/10+8'h30, vsc%10+8'h30, ".ppm"},"rb");
 
 	 // read header file
 	 for(i=0;i<15;i=i+1)

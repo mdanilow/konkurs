@@ -37,10 +37,19 @@ module klt_tracker #(
     output [23 : 0] pixel_out,
     output context_valid,
     output [7 : 0] centerpx,
-    output [7 : 0] uppx,
-    output [7 : 0] downpx,
     output [11 : 0] x_pos,
-    output [10 : 0] y_pos
+    output [10 : 0] y_pos,
+    output in_roi,
+    output dx_valid,
+    output [7 : 0] prev_frame_pixel,
+    output [11 : 0] point_x0,
+    output [10 : 0] point_y0,
+    output [25 : 0] G11,
+    output [25 : 0] G12,
+    output [25 : 0] G21,
+    output [25 : 0] G22,
+    output [25 : 0] b1,
+    output [25 : 0] b2
 );
     
     wire gray_de;

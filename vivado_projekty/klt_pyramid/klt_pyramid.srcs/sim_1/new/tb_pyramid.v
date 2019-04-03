@@ -35,10 +35,19 @@ module tb_pyramid(
     wire [23 : 0] klt_tracker_out;
     wire context_valid;
     wire [7 : 0] centerpx;
-    wire [7 : 0] uppx;
-    wire [7 : 0] downpx;
     wire [11 : 0] x_pos;
     wire [10 : 0] y_pos;
+    wire dx_valid;
+    wire [11 : 0] point_x0;
+    wire [10 : 0] point_y0;
+    wire in_roi;
+    wire [7 : 0] prev_frame_pixel;
+    wire [25 : 0] G11;
+    wire [25 : 0] G12;
+    wire [25 : 0] G21;
+    wire [25 : 0] G22;
+    wire [25 : 0] b1;
+    wire [25 : 0] b2;
         
     hdmi_in file_input(
     
@@ -65,10 +74,18 @@ module tb_pyramid(
         .pixel_out(klt_tracker_out),
         .context_valid(context_valid),
         .centerpx(centerpx),
-        .uppx(uppx),
-        .downpx(downpx),
         .x_pos(x_pos),
-        .y_pos(y_pos)
+        .y_pos(y_pos),
+        .in_roi(in_roi),
+        .dx_valid(dx_valid),
+        .prev_frame_pixel(prev_frame_pixel),
+        .point_x0(point_x0),
+        .point_y0(point_y0),
+        .G11(G11),
+        .G12(G12),
+        .G22(G22),
+        .b1(b1),
+        .b2(b2)
     );
     
     
