@@ -44,7 +44,7 @@ for f = 1:400
                 
                 row_ = floor(row);
                 col_ = floor(col);
-                display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(gray_frame(row_, col_)), ' left: ', num2str(gray_frame(row_, col_-1)), ' right: ', num2str(gray_frame(row_, col_+1)), ' up: ', num2str(gray_frame(row_-1, col_)), ' down: ', num2str(gray_frame(row_+1, col_))]);
+                display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(prev_gray_frame(row_, col_)), ' left: ', num2str(gray_frame(row_, col_-1)), ' right: ', num2str(gray_frame(row_, col_+1)), ' up: ', num2str(gray_frame(row_-1, col_)), ' down: ', num2str(gray_frame(row_+1, col_))]);
 
                 if(interpolation_on == 1)
                     Ix = (interpolation(col+1, row, prev_gray_frame) - interpolation(col-1, row, prev_gray_frame));
