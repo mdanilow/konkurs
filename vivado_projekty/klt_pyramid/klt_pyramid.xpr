@@ -164,7 +164,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../IP_repo/component.xml">
+      <File Path="$PPRDIR/../../IP_repo/klt_tracker/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>

@@ -653,9 +653,9 @@
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-04-03T14:08:10Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-04-03T14:17:11Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="nsn-intra.net:user:klt_tracker:1.0_ARCHIVE_LOCATION">c:/konkurs/IP_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="nsn-intra.net:user:klt_tracker:1.0_ARCHIVE_LOCATION">c:/konkurs/IP_repo/klt_tracker</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
