@@ -111,24 +111,21 @@ module in_roi_check #(
     
     
     //update roi position
-    always @(posedge d_ready_del)
+    always @(posedge clk)
     begin
         
-        if(enable == 1 && updated_in_this_frame == 0)
+        if(d_ready_del == 1 && enable == 1 && updated_in_this_frame == 0)
         begin
         
             updated_in_this_frame <= 1;
             x0 <= x_acc_sum;
             y0 <= y_acc_sum;
         end  
-    end
-    
-    
-    always @(negedge center_vsync_in)
-    begin
         
-        updated_in_this_frame <= 0;
+        if(center_vsync_in == 1)
+            updated_in_this_frame <= 0;
     end
+    
     
     assign x0_int = x0[29 +: 12];
     assign y0_int = y0[29 +: 11];

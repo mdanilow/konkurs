@@ -1,0 +1,103 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 32
+License: Customer
+
+Current time: 	Thu Apr 04 18:34:11 CEST 2019
+Time zone: 	Central European Time (Europe/Belgrade)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 3
+Available disk space: 141 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	danilowi
+User home directory: C:/Users/danilowi
+User working directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/danilowi/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/danilowi/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/danilowi/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/vivado.log
+Vivado journal file location: 	C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/vivado.jou
+Engine tmp dir: 	C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/.Xil/Vivado-32-N-5CD6281M34
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 27012@eshwlic52.emea.nsn-net.net;27012@eshwlic51.emea.nsn-net.net;27012@eshwlic50.emea.nsn-net.net;27012@vmlic10.emea.nsn-net.net
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	173 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 491 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// bx (ck):  Reading simulation file 'C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_pyramid_behav.wdb' : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 55 MB (+55179kb) [00:00:12]
+// [Engine Memory]: 462 MB (+332966kb) [00:00:12]
+// Tcl Message: open_wave_database {C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_pyramid_behav.wdb} 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 492 MB. GUI used memory: 41 MB. Current time: 4/4/19 6:34:14 PM CEST
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// [Engine Memory]: 497 MB (+12156kb) [00:00:17]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 573 MB (+53660kb) [00:00:19]
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// [GUI Memory]: 60 MB (+2018kb) [00:00:23]
+// Tcl Message: current_fileset: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 757.344 ; gain = 89.961 
+// [GUI Memory]: 64 MB (+1551kb) [00:00:23]
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: open_wave_database: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 757.344 ; gain = 89.961 
+dismissDialog("Reading simulation file 'C:\\konkurs\\vivado_projekty\\klt_pyramid\\klt_pyramid.sim\\sim_1\\behav\\xsim\\tb_pyramid_behav.wdb'"); // bx (ck)
+// TclEventType: STOP_PROGRESS_DIALOG
+// [GUI Memory]: 67 MB (+82kb) [00:04:23]
+// [GUI Memory]: 71 MB (+338kb) [00:28:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 576 MB. GUI used memory: 40 MB. Current time: 4/4/19 7:04:14 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 576 MB. GUI used memory: 38 MB. Current time: 4/4/19 7:34:19 PM CEST

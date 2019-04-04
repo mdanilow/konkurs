@@ -34,25 +34,18 @@ module linsolve(
     
     output x_output_valid,
     output y_output_valid,
-    output [71 : 0] x,
-    output [71 : 0] y,
+    output signed [87 : 0] x,
+    output signed [87 : 0] y,
     
     output [52 : 0] _2_ed_minus_bf_output,
     output [52 : 0] _2_af_minus_ec_output,
     output [51 : 0] ad_minus_bc_output,
-    output [51 : 0] ad_out,
-    output [51 : 0] bc_out,
-    output [51 : 0] ed_out,
-    output [51 : 0] bf_out,
-    output [51 : 0] af_out,
-    output [51 : 0] ec_out,
     
-    output division_start,
-    output division_reset_out
+    output division_start
 );
 
-    wire  [51 : 0] ad;
-    wire  [51 : 0] bc;
+    wire [51 : 0] ad;
+    wire [51 : 0] bc;
 
     wire  [51 : 0] ed;
     wire  [51 : 0] bf;
@@ -60,16 +53,15 @@ module linsolve(
     wire [51 : 0] af;
     wire [51 : 0] ec;
     
-    wire [51 : 0] ad_minus_bc;
+    wire signed [51 : 0] ad_minus_bc;
     wire [51 : 0] ed_minus_bf;  //x
     wire [51 : 0] af_minus_ec;  //y
     
-    wire [52 : 0] _2_ed_minus_bf;
-    wire [52 : 0] _2_af_minus_ec;
+    wire signed [52 : 0] _2_ed_minus_bf;
+    wire signed [52 : 0] _2_af_minus_ec;
     
-    wire [55 : 0] ad_minus_bc_56;
-    wire [55 : 0] _2_ed_minus_bf_56;
-    wire [55 : 0] _2_af_minus_ec_56;
+    wire signed [87 : 0] x_div;
+    wire signed [87 : 0] y_div;
     
     wire ready_to_divide;
     wire data_valid_delayed;
@@ -187,10 +179,10 @@ module linsolve(
     );
     
     
-    div_gen_0 x_div(
+    div_gen_0 x_divider(
         
-        .aclken(ready_to_divide),
-        .aresetn(division_reset),
+//        .aclken(ready_to_divide),
+//        .aresetn(division_reset),
         .aclk(clk),
         
         .s_axis_divisor_tdata(ad_minus_bc),
@@ -199,15 +191,15 @@ module linsolve(
         .s_axis_divisor_tvalid(ready_to_divide),
         .s_axis_dividend_tvalid(ready_to_divide),
         
-        .m_axis_dout_tdata(x),
+        .m_axis_dout_tdata(x_div),
         .m_axis_dout_tvalid(x_output_valid)
     );
     
     
-    div_gen_0 y_div(
+    div_gen_0 y_divider(
         
-        .aclken(ready_to_divide),
-        .aresetn(division_reset),
+//        .aclken(ready_to_divide),
+//        .aresetn(division_reset),
         .aclk(clk),
         
         .s_axis_divisor_tdata(ad_minus_bc),
@@ -216,9 +208,16 @@ module linsolve(
         .s_axis_divisor_tvalid(ready_to_divide),
         .s_axis_dividend_tvalid(ready_to_divide),
         
-        .m_axis_dout_tdata(y),
+        .m_axis_dout_tdata(y_div),
         .m_axis_dout_tvalid(y_output_valid)
     );
+    
+    
+//    assign x = {x_div[71:16], x_div[14:0]};
+//    assign y = {y_div[71:16], y_div[14:0]};
+
+    assign x = x_div;
+    assign y = y_div;
     
     
     assign ready_to_divide = (data_valid_delayed & division_reset) ? 1 : 0;
@@ -234,15 +233,7 @@ module linsolve(
 //    assign _2_ed_minus_bf_56 = (_2_ed_minus_bf[52] == 1) ? {3'b111, _2_ed_minus_bf} : {3'b000, _2_ed_minus_bf};
 //    assign _2_af_minus_ec_56 = (_2_af_minus_ec[52] == 1) ? {3'b111, _2_af_minus_ec} : {3'b000, _2_af_minus_ec};
     
-    assign ad_out = ad;
-    assign bc_out = bc;
-    assign ed_out = ed;
-    assign bf_out = bf;
-    assign af_out = af;
-    assign ec_out = ec;
-    
     assign division_reset = ~end_of_frame;
     assign division_start = ready_to_divide;
-    assign division_reset_out = division_reset;
         
 endmodule

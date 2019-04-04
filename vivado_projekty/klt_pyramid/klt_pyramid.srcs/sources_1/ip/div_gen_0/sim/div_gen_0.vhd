@@ -59,8 +59,6 @@ USE div_gen_v5_1_13.div_gen_v5_1_13;
 ENTITY div_gen_0 IS
   PORT (
     aclk : IN STD_LOGIC;
-    aclken : IN STD_LOGIC;
-    aresetn : IN STD_LOGIC;
     s_axis_divisor_tvalid : IN STD_LOGIC;
     s_axis_divisor_tready : OUT STD_LOGIC;
     s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(55 DOWNTO 0);
@@ -68,7 +66,7 @@ ENTITY div_gen_0 IS
     s_axis_dividend_tready : OUT STD_LOGIC;
     s_axis_dividend_tdata : IN STD_LOGIC_VECTOR(55 DOWNTO 0);
     m_axis_dout_tvalid : OUT STD_LOGIC;
-    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(71 DOWNTO 0)
+    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(87 DOWNTO 0)
   );
 END div_gen_0;
 
@@ -120,13 +118,13 @@ ARCHITECTURE div_gen_0_arch OF div_gen_0 IS
       m_axis_dout_tready : IN STD_LOGIC;
       m_axis_dout_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_dout_tlast : OUT STD_LOGIC;
-      m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(71 DOWNTO 0)
+      m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(87 DOWNTO 0)
     );
   END COMPONENT div_gen_v5_1_13;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_dout_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DOUT TDATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_dout_tvalid: SIGNAL IS "XIL_INTERFACENAME M_AXIS_DOUT, TDATA_NUM_BYTES 9, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_dout_tvalid: SIGNAL IS "XIL_INTERFACENAME M_AXIS_DOUT, TDATA_NUM_BYTES 11, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_dout_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DOUT TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_dividend_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_DIVIDEND TDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_dividend_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_DIVIDEND TREADY";
@@ -136,18 +134,14 @@ ARCHITECTURE div_gen_0_arch OF div_gen_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_divisor_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_DIVISOR TREADY";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_divisor_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_DIVISOR, TDATA_NUM_BYTES 7, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_divisor_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_DIVISOR TVALID";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aresetn: SIGNAL IS "XIL_INTERFACENAME aresetn_intf, POLARITY ACTIVE_LOW";
-  ATTRIBUTE X_INTERFACE_INFO OF aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 aresetn_intf RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aclken: SIGNAL IS "XIL_INTERFACENAME aclken_intf, POLARITY ACTIVE_LOW";
-  ATTRIBUTE X_INTERFACE_INFO OF aclken: SIGNAL IS "xilinx.com:signal:clockenable:1.0 aclken_intf CE";
   ATTRIBUTE X_INTERFACE_PARAMETER OF aclk: SIGNAL IS "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF S_AXIS_DIVIDEND:S_AXIS_DIVISOR:M_AXIS_DOUT, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken, FREQ_HZ 1000000, PHASE 0.000";
   ATTRIBUTE X_INTERFACE_INFO OF aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 aclk_intf CLK";
 BEGIN
   U0 : div_gen_v5_1_13
     GENERIC MAP (
       C_XDEVICEFAMILY => "kintex7",
-      C_HAS_ARESETN => 1,
-      C_HAS_ACLKEN => 1,
+      C_HAS_ARESETN => 0,
+      C_HAS_ACLKEN => 0,
       C_LATENCY => 43,
       ALGORITHM_TYPE => 3,
       DIVISOR_WIDTH => 52,
@@ -155,7 +149,7 @@ BEGIN
       SIGNED_B => 1,
       DIVCLK_SEL => 1,
       FRACTIONAL_B => 1,
-      FRACTIONAL_WIDTH => 16,
+      FRACTIONAL_WIDTH => 29,
       C_HAS_DIV_BY_ZERO => 0,
       C_THROTTLE_SCHEME => 3,
       C_TLAST_RESOLUTION => 0,
@@ -167,13 +161,13 @@ BEGIN
       C_HAS_S_AXIS_DIVIDEND_TLAST => 0,
       C_S_AXIS_DIVIDEND_TDATA_WIDTH => 56,
       C_S_AXIS_DIVIDEND_TUSER_WIDTH => 1,
-      C_M_AXIS_DOUT_TDATA_WIDTH => 72,
+      C_M_AXIS_DOUT_TDATA_WIDTH => 88,
       C_M_AXIS_DOUT_TUSER_WIDTH => 1
     )
     PORT MAP (
       aclk => aclk,
-      aclken => aclken,
-      aresetn => aresetn,
+      aclken => '1',
+      aresetn => '1',
       s_axis_divisor_tvalid => s_axis_divisor_tvalid,
       s_axis_divisor_tready => s_axis_divisor_tready,
       s_axis_divisor_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),

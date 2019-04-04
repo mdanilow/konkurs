@@ -91,8 +91,6 @@ architecture tb of tb_div_gen_0 is
 
   -- General inputs
   signal aclk               : std_logic := '0';  -- the master clock
-  signal aclken             : std_logic := '1';  -- clock enable
-  signal aresetn            : std_logic := '1';  -- synchronous active low reset, overrides aclken
 
   -- Slave channel DIVIDEND inputs
   signal s_axis_dividend_tvalid    : std_logic := '0';  -- TVALID for channel A
@@ -108,14 +106,14 @@ architecture tb of tb_div_gen_0 is
   signal dividend : std_logic_vector(52 downto 0) := (others => '0');
   signal divisor  : std_logic_vector(51 downto 0) := (others => '0');
   signal quotient : std_logic_vector(52 downto 0) := (others => '0');
-  signal fractional : std_logic_vector(15 downto 0) := (others => '0');
+  signal fractional : std_logic_vector(28 downto 0) := (others => '0');
   -----------------------------------------------------------------------
   -- DUT output signals
   -----------------------------------------------------------------------
 
   -- Master channel DOUT outputs
   signal m_axis_dout_tvalid : std_logic := '0';  -- TVALID for channel DOUT
-  signal m_axis_dout_tdata  : std_logic_vector(71 downto 0) := (others => '0');  -- TDATA for channel DOUT
+  signal m_axis_dout_tdata  : std_logic_vector(87 downto 0) := (others => '0');  -- TDATA for channel DOUT
 
   -----------------------------------------------------------------------
   -- Testbench signals
@@ -181,8 +179,6 @@ begin
   dut : entity work.div_gen_0
     port map (
       aclk                => aclk,
-      aclken              => aclken,
-      aresetn             => aresetn,
       s_axis_dividend_tvalid     => s_axis_dividend_tvalid,
       s_axis_dividend_tdata      => s_axis_dividend_tdata,
       s_axis_divisor_tvalid     => s_axis_divisor_tvalid,
@@ -213,46 +209,6 @@ begin
   end process clock_gen;
 
   -----------------------------------------------------------------------
-  -- Generate clock enable
-  -----------------------------------------------------------------------
-
-  -- Disable the clock for 20 clock cycles starting in cycle 100.
-  -- Keep the clock enable tied high for the rest of the test.
-  aclken_gen : process
-  begin
-    aclken <= '1';
-    -- Drive clock enable T_HOLD time after rising edge of clock
-    wait until rising_edge(aclk);
-    wait for T_HOLD;
-    -- Clock enable goes low in cycle 100, goes high 20 cycles later
-    wait for CLOCK_PERIOD * 100;
-    aclken <= '0';
-    wait for CLOCK_PERIOD * 20;
-    aclken <= '1';
-    wait;
-  end process aclken_gen;
-
-  -----------------------------------------------------------------------
-  -- Generate reset
-  -----------------------------------------------------------------------
-
-  -- Reset the core in cycle 200. Hold the reset active for 2 clock
-  -- cycles, as recommended in the Divider Generator Datasheet.
-  aresetn_gen : process
-  begin
-    aresetn <= '1';  -- inactive (aresetn is active low)
-    -- Drive reset T_HOLD time after rising edge of clock
-    wait until rising_edge(aclk);
-    wait for T_HOLD;
-    -- Reset goes low (active) in cycle 200, goes high 2 cycles later
-    wait for CLOCK_PERIOD * 200;
-    aresetn <= '0';
-    wait for CLOCK_PERIOD * 2;
-    aresetn <= '1';
-    wait;
-  end process aresetn_gen;
-
-  -----------------------------------------------------------------------
   -- Generate inputs
   -----------------------------------------------------------------------
 
@@ -270,7 +226,7 @@ begin
     loop
 
       -- Drive inputs T_HOLD time after rising edge of clock
-      wait until rising_edge(aclk) and aresetn = '1' and aclken = '1';
+      wait until rising_edge(aclk);
       wait for T_HOLD;
 
       -- Drive AXI TVALID signals to demonstrate different types of operation
@@ -366,7 +322,7 @@ begin
     -- Instead, check the protocol of the DOUT channel:
     -- check that the payload is valid (not X) when TVALID is high
 
-    if m_axis_dout_tvalid = '1' and aresetn = '1' and aclken = '1' then
+    if m_axis_dout_tvalid = '1' then
       if is_x(m_axis_dout_tdata) then
         report "ERROR: m_axis_dout_tdata is invalid when m_axis_dout_tvalid is high" severity error;
         check_ok := false;
@@ -385,8 +341,8 @@ begin
 
   divisor  <= s_axis_divisor_tdata(51 downto 0);
   dividend <= s_axis_dividend_tdata(52 downto 0);
-  fractional <= m_axis_dout_tdata(15 downto 0);
-  quotient <= m_axis_dout_tdata(68 downto 16);
+  fractional <= m_axis_dout_tdata(28 downto 0);
+  quotient <= m_axis_dout_tdata(81 downto 29);
 
 end tb;
 

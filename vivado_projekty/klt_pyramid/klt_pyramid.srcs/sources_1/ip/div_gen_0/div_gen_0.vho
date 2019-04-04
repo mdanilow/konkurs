@@ -55,8 +55,6 @@
 COMPONENT div_gen_0
   PORT (
     aclk : IN STD_LOGIC;
-    aclken : IN STD_LOGIC;
-    aresetn : IN STD_LOGIC;
     s_axis_divisor_tvalid : IN STD_LOGIC;
     s_axis_divisor_tready : OUT STD_LOGIC;
     s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(55 DOWNTO 0);
@@ -64,7 +62,7 @@ COMPONENT div_gen_0
     s_axis_dividend_tready : OUT STD_LOGIC;
     s_axis_dividend_tdata : IN STD_LOGIC_VECTOR(55 DOWNTO 0);
     m_axis_dout_tvalid : OUT STD_LOGIC;
-    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(71 DOWNTO 0)
+    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(87 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -76,8 +74,6 @@ END COMPONENT;
 your_instance_name : div_gen_0
   PORT MAP (
     aclk => aclk,
-    aclken => aclken,
-    aresetn => aresetn,
     s_axis_divisor_tvalid => s_axis_divisor_tvalid,
     s_axis_divisor_tready => s_axis_divisor_tready,
     s_axis_divisor_tdata => s_axis_divisor_tdata,

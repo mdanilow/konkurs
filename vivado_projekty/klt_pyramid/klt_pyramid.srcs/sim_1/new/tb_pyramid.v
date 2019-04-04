@@ -49,8 +49,11 @@ module tb_pyramid(
     wire [25 : 0] G22;
     wire [25 : 0] b1;
     wire [25 : 0] b2;
-    wire [9 : 0] write_addr_test;
-    wire [9 : 0] read_addr_test;
+    wire [52 : 0] ed_minus_bf;
+    wire [52 : 0] af_minus_ec;
+    wire [51 : 0] ad_minus_bc;
+    wire [87 : 0] dx;
+    wire [87 : 0] dy;
         
     hdmi_in file_input(
     
@@ -90,8 +93,11 @@ module tb_pyramid(
         .G22(G22),
         .b1(b1),
         .b2(b2),
-        .write_addr_test(write_addr_test),
-        .read_addr_test(read_addr_test)
+        .ed_minus_bf(ed_minus_bf),
+        .af_minus_ec(af_minus_ec),
+        .ad_minus_bc(ad_minus_bc),
+        .dx(dx),
+        .dy(dy)
     );
     
     

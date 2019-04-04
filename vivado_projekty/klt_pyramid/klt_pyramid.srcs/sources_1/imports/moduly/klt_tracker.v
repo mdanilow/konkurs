@@ -35,26 +35,27 @@ module klt_tracker #(
     input [23 : 0] pixel_in,
     
     output [23 : 0] pixel_out,
-    output [11 : 0] point_x0,
-    output [10 : 0] point_y0
-//    output context_valid,
-//    output [7 : 0] centerpx,
-//    output [11 : 0] x_pos,
-//    output [10 : 0] y_pos,
-//    output in_roi,
-//    output in_extended_roi,
-//    output dx_valid,
-//    output [7 : 0] prev_frame_pixel,
-//    output [11 : 0] point_x0,
-//    output [10 : 0] point_y0,
-//    output [25 : 0] G11,
-//    output [25 : 0] G12,
-//    output [25 : 0] G21,
-//    output [25 : 0] G22,
-//    output [25 : 0] b1,
-//    output [25 : 0] b2,
-//    output [9 : 0] read_addr_test,
-//    output [9 : 0] write_addr_test
+    output [11 : 0] point_x0,       //center of tracked roi
+    output [10 : 0] point_y0,
+    output context_valid,
+    output [7 : 0] centerpx,
+    output [11 : 0] x_pos,
+    output [10 : 0] y_pos,
+    output in_roi,
+    output in_extended_roi,
+    output dx_valid,
+    output [7 : 0] prev_frame_pixel,
+    output [25 : 0] G11,
+    output [25 : 0] G12,
+    output [25 : 0] G21,
+    output [25 : 0] G22,
+    output [25 : 0] b1,
+    output [25 : 0] b2,
+    output [52 : 0] ed_minus_bf,
+    output [52 : 0] af_minus_ec,
+    output [51 : 0] ad_minus_bc,
+    output [87 : 0] dx,
+    output [87 : 0] dy
 );
     
     wire gray_de;
@@ -77,7 +78,7 @@ module klt_tracker #(
     wire [87 : 0] dx;
     wire [87 : 0] dy;
     
-    wire [11 : 0] point_x0;
+    wire [11 : 0] point_x0; //center of tracked ROI
     wire [10 : 0] point_y0;
     wire in_extended_roi;
     wire in_roi;
@@ -116,14 +117,14 @@ module klt_tracker #(
     context(
     
         .clk(rx_pclk),
-        .pixel_in(gray_pixel),
-        .de_in(gray_de),
-        .h_sync_in(gray_hsync),
-        .v_sync_in(gray_vsync),
-//        .pixel_in(pixel_in[23 -: 8]),
-//        .de_in(rx_de),
-//        .h_sync_in(rx_hsync),
-//        .v_sync_in(rx_vsync),
+//        .pixel_in(gray_pixel),
+//        .de_in(gray_de),
+//        .h_sync_in(gray_hsync),
+//        .v_sync_in(gray_vsync),
+        .pixel_in(pixel_in[23 -: 8]),
+        .de_in(rx_de),
+        .h_sync_in(rx_hsync),
+        .v_sync_in(rx_vsync),
         
         .context_valid(context_valid),
         .center(center),
@@ -218,11 +219,11 @@ module klt_tracker #(
         
         .x_output_valid(dx_valid),
         .x(dx),
-        .y(dy)
+        .y(dy),
         
-//        ._2_ed_minus_bf_output(ed_minus_bf),
-//        ._2_af_minus_ec_output(af_minus_ec),
-//        .ad_minus_bc_output(ad_minus_bc)
+        ._2_ed_minus_bf_output(ed_minus_bf),
+        ._2_af_minus_ec_output(af_minus_ec),
+        .ad_minus_bc_output(ad_minus_bc)
     );
     
     
@@ -233,7 +234,7 @@ module klt_tracker #(
         .hsync_in(rx_hsync),
         .vsync_in(rx_vsync),
         .pixel_in(pixel_in),
-        .x0(point_x0 - 4'd10),
+        .x0(point_x0 - 4'd10), //module takes left-up corner of box
         .y0(point_y0 - 4'd10),
         .width(11'd21),
         .height(11'd21),

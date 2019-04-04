@@ -26,7 +26,7 @@ module wysw_box(
     input de_in,
     input hsync_in,
     input vsync_in,
-    input [11 : 0] x0,
+    input [11 : 0] x0,  //left-up corner of box
     input [10 : 0] y0,
     input [10 : 0] width,
     input [10 : 0] height,
