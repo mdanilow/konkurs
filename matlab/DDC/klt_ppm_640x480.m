@@ -83,20 +83,20 @@ for f = 1:400
         af = G(1, 1)*b(2);
         ec = b(1)*G(2, 1);
 
-        dw_ed_m_bf = 2*(ed - bf);
-        dw_af_m_ec = 2*(af - ec);
-        ad_m_bc = ad - bc;
+        dw_ed_m_bf = 2*(ed - bf)
+        dw_af_m_ec = 2*(af - ec)
+        ad_m_bc = ad - bc
 
         d(1) = dw_ed_m_bf / ad_m_bc;
-        d(2) = dw_af_m_ec / ad_m_bc;
+        d(2) = dw_af_m_ec / ad_m_bc
         
 %         d = linsolve(G, b)
         
         x0 = x0 + d(1);
         y0 = y0 + d(2);
         
-        x0_ = floor(x0)
-        y0_ = floor(y0)
+        x0_ = floor(x0) + 10
+        y0_ = floor(y0) + 10
         
 %         if(f == 2 || f == 61 || f == 100 || f == 123 || f == 179 || f == 317)
 %             

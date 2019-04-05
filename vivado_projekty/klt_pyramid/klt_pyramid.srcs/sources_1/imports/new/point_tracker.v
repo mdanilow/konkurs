@@ -31,38 +31,34 @@ module previous_roi_buffer #(
     input [10 : 0] center_pixel,   
     input in_roi,
     input in_extended_roi,
-//    input roi_end,
-//    input center_vsync,     //next frame flag
-//    input [11 : 0] point_x0,
-//    input [10 : 0] point_y0,
+    input roi_end,
+    input center_vsync,     //next frame flag
+    input [11 : 0] point_x0,
+    input [10 : 0] point_y0,
+    input first_frame,
     
     output [7 : 0] prev_frame_pixel,
     
     output [9 : 0] read_addr_test,
-    output [9 : 0] write_addr_test 
-//    output [7 : 0] first_read_addr_test,
-//    output [8 : 0] read_pixels_cnt_test
+    output [9 : 0] write_addr_test,
+    output [9 : 0] read_offset,
+    output [11 : 0] delta_x0,
+    output [10 : 0] delta_y0
 );
 
     localparam WRITE_ADDR_LIM = 624; //( 2*(NEIGH_SIZE+BORDER_WIDTH) + 1 )^2 - 1;
-//    localparam READ_ADDR_LIM = 440; //( 2*NEIGH_SIZE + 1 )^2 - 1;
 
     reg [9 : 0] write_addr = 0;
-//    reg [9 : 0] read_addr = 0;
-    reg [11 : 0] prev_frame_x0 = 0;
-    reg [10 : 0] prev_frame_y0 = 0;
-    reg [8 : 0] read_pixels_cnt = 0;
+    reg [9 : 0] read_offset = 0;  //because roi position changes from frame to frame, we need to start reading from diffrent location
+    reg [11 : 0] prev_point_x0 = 0;
+    reg [10 : 0] prev_point_y0 = 0;
     
+    wire [11 : 0] delta_x0;
+    wire [10 : 0] delta_y0;
     wire [9 : 0] read_addr;
-//    wire [11 : 0] new_x0;
-//    wire [10 : 0] new_y0;
-//    wire [2 : 0] delta_point_x0;    //point_x0 - prev_frame_x0
-//    wire [2 : 0] delta_point_y0; 
     wire [10 : 0] read_pixel;
-//    wire [7 : 0] first_read_addr;
 
-//    wire [7 : 0] delta_y_times_25;  //first read address: 52 + 25*delta_y + delta_x
-    
+
     always @(posedge clk)
     begin
         
@@ -75,45 +71,28 @@ module previous_roi_buffer #(
                 
             else
                 write_addr <= write_addr + 1;
-        end
-        
-//        //reading process
-//        if(in_roi)
-//        begin
-            
-//            read_pixels_cnt <= read_pixels_cnt + 1;
-//            read_addr <= read_addr + 1;
-//        end    
+        end 
     end
     
     
-//    always @(posedge roi_end)
-//    begin
-    
-//        prev_frame_x0 <= point_x0;
-//        prev_frame_y0 <= point_y0; 
-//    end
-    
-    
-//    //update first read address for frame after this vsync
-//    always @(posedge center_vsync)
-//    begin
-    
-//        read_addr <= first_read_addr;
-//    end
-    
-    
-//    //compute first address for NEIGH_SIZE = 10, BORDER_WIDTH = 2
-//    //start
-//    delta_y_times_25_xd mult_first_addr(
-    
-//        .A(delta_point_y0),
-//        .B(5'd25),
+    //update read_offset for next frame
+    always @(point_x0, point_y0)
+    begin
         
-//        .P(delta_y_times_25)
-//    );
-//    //end
+        if(first_frame == 0)
+            read_offset <= delta_x0 + delta_y0*(NEIGH_SIZE + NEIGH_SIZE + BORDER_WIDTH + BORDER_WIDTH + 1);   
+    end
     
+    
+    always @(posedge roi_end)
+    begin
+    
+        prev_point_x0 <= point_x0;
+        prev_point_y0 <= point_y0; 
+    end
+    
+    
+    //BRAM
     frame_delay_sim mem(
 
         .addra(write_addr),
@@ -127,15 +106,11 @@ module previous_roi_buffer #(
     );
 
     
-    assign read_addr = write_addr + 2;  //because bram has 2 clock cycles read latency
-//    assign first_read_addr = 6'd52 + delta_y_times_25 + delta_point_x0;
-//    assign delta_point_x0 = point_x0 - prev_frame_x0;
-//    assign delta_point_y0 = point_y0 - prev_frame_y0;
+    assign read_addr = write_addr + read_offset + 2;  //because bram has 2 clock cycles read latency
     assign prev_frame_pixel = read_pixel[10 : 3];
+    assign delta_x0 = point_x0 - prev_point_x0;
+    assign delta_y0 = point_y0 - prev_point_y0;
     
-//    assign first_read_addr_test = first_read_addr;
     assign read_addr_test = read_addr;
-    assign write_addr_test = write_addr;
-//    assign read_pixels_cnt_test = read_pixels_cnt;
-    
+    assign write_addr_test = write_addr; 
 endmodule

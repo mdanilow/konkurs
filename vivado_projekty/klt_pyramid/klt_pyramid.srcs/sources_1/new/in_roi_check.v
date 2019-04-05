@@ -114,7 +114,7 @@ module in_roi_check #(
     always @(posedge clk)
     begin
         
-        if(d_ready_del == 1 && enable == 1 && updated_in_this_frame == 0)
+        if(center_vsync_in == 0 && d_ready_del == 1 && enable == 1 && updated_in_this_frame == 0)
         begin
         
             updated_in_this_frame <= 1;
@@ -122,7 +122,7 @@ module in_roi_check #(
             y0 <= y_acc_sum;
         end  
         
-        if(center_vsync_in == 1)
+        else if(center_vsync_in == 1)
             updated_in_this_frame <= 0;
     end
     

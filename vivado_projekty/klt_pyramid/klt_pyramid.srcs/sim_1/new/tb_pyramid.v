@@ -34,6 +34,7 @@ module tb_pyramid(
     
     wire [23 : 0] klt_tracker_out;
     wire context_valid;
+    wire [10 : 0] center;
     wire [7 : 0] centerpx;
     wire [11 : 0] x_pos;
     wire [10 : 0] y_pos;
@@ -54,6 +55,16 @@ module tb_pyramid(
     wire [51 : 0] ad_minus_bc;
     wire [87 : 0] dx;
     wire [87 : 0] dy;
+    wire [9 : 0] write_addr_test;
+    wire [9 : 0] read_addr_test;
+    wire [9 : 0] read_offset;
+    wire [11 : 0] delta_x0;
+    wire [10 : 0] delta_y0;
+    wire center_vsync;
+    wire first_frame;
+    
+    assign center_vsync = center[0];
+    assign centerpx = center[10 -: 8];
         
     hdmi_in file_input(
     
@@ -79,7 +90,7 @@ module tb_pyramid(
         
         .pixel_out(klt_tracker_out),
         .context_valid(context_valid),
-        .centerpx(centerpx),
+        .center(center),
         .x_pos(x_pos),
         .y_pos(y_pos),
         .in_roi(in_roi),
@@ -97,7 +108,13 @@ module tb_pyramid(
         .af_minus_ec(af_minus_ec),
         .ad_minus_bc(ad_minus_bc),
         .dx(dx),
-        .dy(dy)
+        .dy(dy),
+        .write_addr_test(write_addr_test),
+        .read_addr_test(read_addr_test),
+        .read_offset(read_offset),
+        .delta_x0(delta_x0),
+        .delta_y0(delta_y0),
+        .first_frame(first_frame)
     );
     
     

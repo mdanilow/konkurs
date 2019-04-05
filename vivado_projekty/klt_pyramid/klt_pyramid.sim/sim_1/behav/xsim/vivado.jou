@@ -2,12 +2,13 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Apr  4 18:33:48 2019
-# Process ID: 32
+# Start of session at: Fri Apr  5 11:57:09 2019
+# Process ID: 15024
 # Current directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17616 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_pyramid_behav.wdb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14716 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\klt640x480_red.wdb
 # Log file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/vivado.log
 # Journal file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_wave_database {C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_pyramid_behav.wdb}
+open_wave_database {C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\klt640x480_red.wdb}
+add_wave {{/tb_pyramid/centerpx}} {{/tb_pyramid/x_pos}} {{/tb_pyramid/y_pos}} {{/tb_pyramid/dx_valid}} {{/tb_pyramid/point_x0}} {{/tb_pyramid/point_y0}} {{/tb_pyramid/in_roi}} {{/tb_pyramid/in_extended_roi}} {{/tb_pyramid/prev_frame_pixel}} {{/tb_pyramid/G11}} {{/tb_pyramid/G12}} {{/tb_pyramid/G21}} {{/tb_pyramid/G22}} {{/tb_pyramid/b1}} {{/tb_pyramid/b2}} {{/tb_pyramid/ed_minus_bf}} {{/tb_pyramid/af_minus_ec}} {{/tb_pyramid/ad_minus_bc}} {{/tb_pyramid/dx}} {{/tb_pyramid/dy}} 

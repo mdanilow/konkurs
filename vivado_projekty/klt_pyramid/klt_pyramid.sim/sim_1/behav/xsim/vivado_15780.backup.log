@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Apr  5 11:38:39 2019
+# Process ID: 15780
+# Current directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20416 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_pyramid_behav.wdb
+# Log file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/vivado.log
+# Journal file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_wave_database {C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_pyramid_behav.wdb}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+current_fileset: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 720.664 ; gain = 42.676
+open_wave_database: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 731.566 ; gain = 53.578
+add_wave {{/tb_pyramid/rx_vsync}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pyramid/dx}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pyramid/dy}} 
+add_wave: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 763.910 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pyramid/dx_valid}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pyramid/point_x0}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_pyramid/point_y0}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 11:44:45 2019...

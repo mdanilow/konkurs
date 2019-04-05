@@ -38,7 +38,7 @@ module klt_tracker #(
     output [11 : 0] point_x0,       //center of tracked roi
     output [10 : 0] point_y0,
     output context_valid,
-    output [7 : 0] centerpx,
+    output [10 : 0] center,
     output [11 : 0] x_pos,
     output [10 : 0] y_pos,
     output in_roi,
@@ -55,7 +55,13 @@ module klt_tracker #(
     output [52 : 0] af_minus_ec,
     output [51 : 0] ad_minus_bc,
     output [87 : 0] dx,
-    output [87 : 0] dy
+    output [87 : 0] dy,
+    output [9 : 0] write_addr_test,
+    output [9 : 0] read_addr_test,
+    output [9 : 0] read_offset,
+    output [11 : 0] delta_x0,
+    output [10 : 0] delta_y0,
+    output first_frame
 );
     
     wire gray_de;
@@ -174,10 +180,18 @@ module klt_tracker #(
         .center_pixel(center),
         .in_roi(in_roi),
         .in_extended_roi(in_extended_roi),
+        .roi_end(roi_end),
+        .center_vsync(center[0]),
+        .point_x0(point_x0),
+        .point_y0(point_y0),
+        .first_frame(first_frame),
     
-        .prev_frame_pixel(prev_frame_pixel)
-//        .write_addr_test(write_addr_test),
-//        .read_addr_test(read_addr_test)
+        .prev_frame_pixel(prev_frame_pixel),
+        .write_addr_test(write_addr_test),
+        .read_addr_test(read_addr_test),
+        .delta_x0(delta_x0),
+        .delta_y0(delta_y0),
+        .read_offset(read_offset)
     );
     
     
@@ -242,5 +256,4 @@ module klt_tracker #(
         .pixel_out(pixel_out)
     );
     
-    assign centerpx = center[10 : 3];
 endmodule

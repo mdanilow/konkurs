@@ -39,9 +39,7 @@ module linsolve(
     
     output [52 : 0] _2_ed_minus_bf_output,
     output [52 : 0] _2_af_minus_ec_output,
-    output [51 : 0] ad_minus_bc_output,
-    
-    output division_start
+    output [51 : 0] ad_minus_bc_output
 );
 
     wire [51 : 0] ad;
@@ -65,7 +63,6 @@ module linsolve(
     
     wire ready_to_divide;
     wire data_valid_delayed;
-    wire division_reset;
     
     modul_puz #(
     
@@ -220,9 +217,9 @@ module linsolve(
     assign y = y_div;
     
     
-    assign ready_to_divide = (data_valid_delayed & division_reset) ? 1 : 0;
+    assign ready_to_divide = (data_valid_delayed & ~end_of_frame) ? 1 : 0; //xd
     
-    assign _2_ed_minus_bf = {ed_minus_bf, 1'b0};
+    assign _2_ed_minus_bf = {ed_minus_bf, 1'b0};    //multiply by 2
     assign _2_af_minus_ec = {af_minus_ec, 1'b0};
     
     assign _2_ed_minus_bf_output = _2_ed_minus_bf;
@@ -232,8 +229,4 @@ module linsolve(
 //    assign ad_minus_bc_56 = (ad_minus_bc[51] == 1) ? {4'b1111, ad_minus_bc} : {4'b0000, ad_minus_bc};
 //    assign _2_ed_minus_bf_56 = (_2_ed_minus_bf[52] == 1) ? {3'b111, _2_ed_minus_bf} : {3'b000, _2_ed_minus_bf};
 //    assign _2_af_minus_ec_56 = (_2_af_minus_ec[52] == 1) ? {3'b111, _2_af_minus_ec} : {3'b000, _2_af_minus_ec};
-    
-    assign division_reset = ~end_of_frame;
-    assign division_start = ready_to_divide;
-        
 endmodule
