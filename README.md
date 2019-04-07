@@ -1,6 +1,8 @@
 # konkurs
 Skin color tracking system with HTTP PTZ camera control via Zybo Ethernet port. Camera used in this project is AXIS V5915 PTZ.
+
 Project vivado_projekty/klt_ddc is currently deprecated
+
 Project vivado_projekty/klt_pyramid is multiscale Kanade-Lucas-Tomasi feature tracking algorithm and is currently under tests.
 
 
