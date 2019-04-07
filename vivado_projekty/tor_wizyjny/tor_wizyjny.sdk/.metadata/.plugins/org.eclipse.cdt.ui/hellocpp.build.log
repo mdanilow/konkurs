@@ -1,0 +1,8 @@
+16:20:52 **** Incremental Build of configuration Debug for project hellocpp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: *** No rule to make target 'platform.o', needed by 'hellocpp.elf'.  Stop.
+
+16:20:52 Build Finished (took 315ms)
+

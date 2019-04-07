@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# 
+# Start of session at: Tue Nov 13 17:05:09 2018
+# Process ID: 26225
+# Current directory: /home/inzynier/rzeczy/tor_wizyjny/tor_wizyjny.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/inzynier/rzeczy/tor_wizyjny/tor_wizyjny.sdk/webtalk/webtalk.log
+# Journal file: /home/inzynier/rzeczy/tor_wizyjny/tor_wizyjny.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

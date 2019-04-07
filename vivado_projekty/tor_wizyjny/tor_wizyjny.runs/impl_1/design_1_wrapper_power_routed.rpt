@@ -1,0 +1,364 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date             : Fri Nov 16 16:21:55 2018
+| Host             : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xc7z010clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.954        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.825        |
+| Device Static (W)        | 0.129        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 62.5         |
+| Junction Temperature (C) | 47.5         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.012 |       13 |       --- |             --- |
+| Slice Logic              |     0.003 |     4008 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     1227 |     17600 |            6.97 |
+|   CARRY4                 |    <0.001 |      103 |      4400 |            2.34 |
+|   Register               |    <0.001 |     1900 |     35200 |            5.40 |
+|   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
+|   Others                 |    <0.001 |      341 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |       43 |     17600 |            0.24 |
+|   LUT as Shift Register  |    <0.001 |       63 |      6000 |            1.05 |
+| Signals                  |     0.003 |     3127 |       --- |             --- |
+| MMCM                     |     0.106 |        1 |         2 |           50.00 |
+| PLL                      |     0.110 |        1 |         2 |           50.00 |
+| DSPs                     |     0.002 |       10 |        80 |           12.50 |
+| I/O                      |     0.032 |       39 |       100 |           39.00 |
+| PS7                      |     1.556 |        1 |       --- |             --- |
+| Static Power             |     0.129 |          |           |                 |
+| Total                    |     1.954 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.042 |       0.034 |      0.008 |
+| Vccaux    |       1.800 |     0.139 |       0.130 |      0.009 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.737 |       0.703 |      0.033 |
+| Vccpaux   |       1.800 |     0.085 |       0.074 |      0.010 |
+| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.458 |       0.456 |      0.002 |
+| Vcco_mio0 |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco_mio1 |       1.800 |     0.004 |       0.003 |      0.001 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------------------------------+-------------------------------------------------------------+-----------------+
+| Clock                           | Domain                                                      | Constraint (ns) |
++---------------------------------+-------------------------------------------------------------+-----------------+
+| CLKFBIN                         | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/CLKFBIN              |            15.0 |
+| CLK_OUT_5x_hdmi_clk             | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk  |             3.0 |
+| PixelClk_int                    | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/oSyncStages_reg[1]   |            15.0 |
+| clk_fpga_0                      | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| clk_out1_design_1_clk_wiz_0_0   | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0     |             5.0 |
+| clk_out1_design_1_clk_wiz_0_0_1 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0     |             5.0 |
+| clkfbout_design_1_clk_wiz_0_0   | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0     |             8.0 |
+| clkfbout_design_1_clk_wiz_0_0_1 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0     |             8.0 |
+| hdmi_in_clk_p                   | hdmi_in_clk_p                                               |            15.0 |
+| sys_clk_pin                     | sys_clock                                                   |             8.0 |
+| sys_clock                       | sys_clock                                                   |             8.0 |
++---------------------------------+-------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------------------------------------+-----------+
+| Name                                                                                | Power (W) |
++-------------------------------------------------------------------------------------+-----------+
+| design_1_wrapper                                                                    |     1.825 |
+|   design_1_i                                                                        |     1.825 |
+|     bin_mask_0                                                                      |    <0.001 |
+|       inst                                                                          |    <0.001 |
+|     centroid_0                                                                      |     0.004 |
+|       inst                                                                          |     0.004 |
+|         delay                                                                       |    <0.001 |
+|           genblk1[0].puz_i                                                          |    <0.001 |
+|         divx                                                                        |     0.002 |
+|           inst                                                                      |     0.002 |
+|             instance_name                                                           |     0.001 |
+|               U0                                                                    |     0.001 |
+|                 i_mult                                                              |     0.001 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.001 |
+|                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|         divy                                                                        |     0.002 |
+|           inst                                                                      |     0.002 |
+|             instance_name                                                           |     0.001 |
+|               U0                                                                    |     0.001 |
+|                 i_mult                                                              |     0.001 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.001 |
+|                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|     clk_wiz_0                                                                       |     0.110 |
+|       inst                                                                          |     0.110 |
+|     dvi2rgb_0                                                                       |     0.146 |
+|       U0                                                                            |     0.146 |
+|         DataDecoders[0].DecoderX                                                    |     0.012 |
+|           ChannelBondX                                                              |    <0.001 |
+|             pFIFO_reg_0_31_0_5                                                      |    <0.001 |
+|             pFIFO_reg_0_31_6_9                                                      |    <0.001 |
+|           InputSERDES_X                                                             |     0.010 |
+|           PhaseAlignX                                                               |    <0.001 |
+|           SyncBaseOvf                                                               |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|           SyncBaseRst                                                               |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|         DataDecoders[1].DecoderX                                                    |     0.012 |
+|           ChannelBondX                                                              |    <0.001 |
+|             pFIFO_reg_0_31_0_5                                                      |    <0.001 |
+|             pFIFO_reg_0_31_6_9                                                      |    <0.001 |
+|           InputSERDES_X                                                             |     0.010 |
+|           PhaseAlignX                                                               |    <0.001 |
+|           SyncBaseOvf                                                               |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|           SyncBaseRst                                                               |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|         DataDecoders[2].DecoderX                                                    |     0.012 |
+|           ChannelBondX                                                              |    <0.001 |
+|             pFIFO_reg_0_31_0_5                                                      |    <0.001 |
+|             pFIFO_reg_0_31_6_9                                                      |    <0.001 |
+|           InputSERDES_X                                                             |     0.010 |
+|           PhaseAlignX                                                               |    <0.001 |
+|           SyncBaseOvf                                                               |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|           SyncBaseRst                                                               |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|         GenerateBUFG.ResyncToBUFG_X                                                 |    <0.001 |
+|         GenerateDDC.DDC_EEPROM                                                      |     0.002 |
+|           I2C_SlaveController                                                       |     0.001 |
+|             GlitchF_SCL                                                             |    <0.001 |
+|             GlitchF_SDA                                                             |    <0.001 |
+|             SyncSCL                                                                 |    <0.001 |
+|             SyncSDA                                                                 |    <0.001 |
+|         LockLostReset                                                               |    <0.001 |
+|           SyncAsyncx                                                                |    <0.001 |
+|         TMDS_ClockingX                                                              |     0.109 |
+|           LockLostReset                                                             |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|           MMCM_LockSync                                                             |    <0.001 |
+|           RdyLostReset                                                              |    <0.001 |
+|             SyncAsyncx                                                              |    <0.001 |
+|     mux_0                                                                           |    <0.001 |
+|     parameter_register_0                                                            |     0.002 |
+|       inst                                                                          |     0.002 |
+|         parameter_register_v1_0_S00_AXI_inst                                        |     0.002 |
+|     processing_system7_0                                                            |     1.557 |
+|       inst                                                                          |     1.557 |
+|     ps7_0_axi_periph                                                                |     0.005 |
+|       s00_couplers                                                                  |     0.005 |
+|         auto_pc                                                                     |     0.005 |
+|           inst                                                                      |     0.005 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                                    |     0.005 |
+|               RD.ar_channel_0                                                       |     0.001 |
+|                 ar_cmd_fsm_0                                                        |    <0.001 |
+|                 cmd_translator_0                                                    |    <0.001 |
+|                   incr_cmd_0                                                        |    <0.001 |
+|                   wrap_cmd_0                                                        |    <0.001 |
+|               RD.r_channel_0                                                        |    <0.001 |
+|                 rd_data_fifo_0                                                      |    <0.001 |
+|                 transaction_fifo_0                                                  |    <0.001 |
+|               SI_REG                                                                |     0.001 |
+|                 ar.ar_pipe                                                          |    <0.001 |
+|                 aw.aw_pipe                                                          |    <0.001 |
+|                 b.b_pipe                                                            |    <0.001 |
+|                 r.r_pipe                                                            |    <0.001 |
+|               WR.aw_channel_0                                                       |    <0.001 |
+|                 aw_cmd_fsm_0                                                        |    <0.001 |
+|                 cmd_translator_0                                                    |    <0.001 |
+|                   incr_cmd_0                                                        |    <0.001 |
+|                   wrap_cmd_0                                                        |    <0.001 |
+|               WR.b_channel_0                                                        |    <0.001 |
+|                 bid_fifo_0                                                          |    <0.001 |
+|                 bresp_fifo_0                                                        |    <0.001 |
+|     rgb2vga_0                                                                       |    <0.001 |
+|       U0                                                                            |    <0.001 |
+|     rgb2ycbcr_0                                                                     |    <0.001 |
+|       inst                                                                          |    <0.001 |
+|         A21                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             i_mult                                                                  |    <0.001 |
+|               gDSP.gDSP_only.iDSP                                                   |    <0.001 |
+|         A22                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             i_mult                                                                  |    <0.001 |
+|               gDSP.gDSP_only.iDSP                                                   |    <0.001 |
+|         A23                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             i_mult                                                                  |    <0.001 |
+|               gDSP.gDSP_only.iDSP                                                   |    <0.001 |
+|         A31                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             i_mult                                                                  |    <0.001 |
+|               gDSP.gDSP_only.iDSP                                                   |    <0.001 |
+|         A32                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             i_mult                                                                  |    <0.001 |
+|               gDSP.gDSP_only.iDSP                                                   |    <0.001 |
+|         A33                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             i_mult                                                                  |    <0.001 |
+|               gDSP.gDSP_only.iDSP                                                   |    <0.001 |
+|         S21                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             xst_addsub                                                              |    <0.001 |
+|               i_baseblox.i_baseblox_addsub                                          |    <0.001 |
+|                 no_pipelining.the_addsub                                            |    <0.001 |
+|                   i_lut6.i_lut6_addsub                                              |    <0.001 |
+|                     i_q.i_simple.qreg                                               |    <0.001 |
+|         S22                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             xst_addsub                                                              |    <0.001 |
+|               i_baseblox.i_baseblox_addsub                                          |    <0.001 |
+|                 no_pipelining.the_addsub                                            |    <0.001 |
+|                   i_lut6.i_lut6_addsub                                              |    <0.001 |
+|                     i_q.i_simple.qreg                                               |    <0.001 |
+|         S23                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             xst_addsub                                                              |    <0.001 |
+|               i_baseblox.i_baseblox_addsub                                          |    <0.001 |
+|                 no_pipelining.the_addsub                                            |    <0.001 |
+|                   i_lut6.i_lut6_addsub                                              |    <0.001 |
+|                     i_q.i_simple.qreg                                               |    <0.001 |
+|         S31                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             xst_addsub                                                              |    <0.001 |
+|               i_baseblox.i_baseblox_addsub                                          |    <0.001 |
+|                 no_pipelining.the_addsub                                            |    <0.001 |
+|                   i_lut6.i_lut6_addsub                                              |    <0.001 |
+|                     i_q.i_simple.qreg                                               |    <0.001 |
+|         S32                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             xst_addsub                                                              |    <0.001 |
+|               i_baseblox.i_baseblox_addsub                                          |    <0.001 |
+|                 no_pipelining.the_addsub                                            |    <0.001 |
+|                   i_lut6.i_lut6_addsub                                              |    <0.001 |
+|                     i_q.i_simple.qreg                                               |    <0.001 |
+|         S33                                                                         |    <0.001 |
+|           U0                                                                        |    <0.001 |
+|             xst_addsub                                                              |    <0.001 |
+|               i_baseblox.i_baseblox_addsub                                          |    <0.001 |
+|                 no_pipelining.the_addsub                                            |    <0.001 |
+|                   i_lut6.i_lut6_addsub                                              |    <0.001 |
+|                     i_q.i_simple.qreg                                               |    <0.001 |
+|         delay_Cb1                                                                   |    <0.001 |
+|           genblk1[0].puz_i                                                          |    <0.001 |
+|         delay_Cr1                                                                   |    <0.001 |
+|           genblk1[0].puz_i                                                          |    <0.001 |
+|         sync_delay                                                                  |    <0.001 |
+|           genblk1[4].puz_i                                                          |    <0.001 |
+|           genblk1[5].puz_i                                                          |    <0.001 |
+|     rst_ps7_0_100M                                                                  |    <0.001 |
+|       U0                                                                            |    <0.001 |
+|         EXT_LPF                                                                     |    <0.001 |
+|           ACTIVE_LOW_AUX.ACT_LO_AUX                                                 |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT                                                 |    <0.001 |
+|         SEQ                                                                         |    <0.001 |
+|           SEQ_COUNTER                                                               |    <0.001 |
+|     wysw_0                                                                          |    <0.001 |
+|       inst                                                                          |    <0.001 |
+|     xlconcat_0                                                                      |     0.000 |
+|     xlconstant_0                                                                    |     0.000 |
+|     xlconstant_1                                                                    |     0.000 |
+|     xlconstant_2                                                                    |     0.000 |
+|   hdmi_in_ddc_scl_iobuf                                                             |     0.000 |
+|   hdmi_in_ddc_sda_iobuf                                                             |     0.000 |
++-------------------------------------------------------------------------------------+-----------+
+
+

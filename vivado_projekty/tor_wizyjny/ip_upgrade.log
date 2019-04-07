@@ -1,0 +1,460 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 19:39:58 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_wysw_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_wysw_0_0 (user.org:user:wysw:1.0 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 18:53:13 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_wysw_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_wysw_0_0 (user.org:user:wysw:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 18:47:18 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_parameter_register_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_parameter_register_0_0 (user.org:user:parameter_register:1.0) from (Rev. 6) to (Rev. 7)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_parameter_register_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'H_SIZE'
+
+-Upgrade has added port 'x'
+
+-Upgrade has added port 'y'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 17:31:09 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'median5x5_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of median5x5_0 (user.org:user:median5x5:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 17:31:09 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_median5x5_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_median5x5_0_2 (user.org:user:median5x5:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 17:25:24 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'median5x5_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of median5x5_0 (user.org:user:median5x5:1.0) from (Rev. 4) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 17:02:05 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'median5x5_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of median5x5_0 (user.org:user:median5x5:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'median5x5_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'H_SIZE'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 17:02:04 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_median5x5_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_median5x5_0_0 (user.org:user:median5x5:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_median5x5_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'H_SIZE'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 16:59:12 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'median5x5_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of median5x5_0 (user.org:user:median5x5:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'median5x5_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'H_SIZE'
+
+
+3. Customization warnings
+-------------------------
+
+Parameter 'H_SIZE' is no longer present on the upgraded IP 'median5x5_0', and cannot be set to '83'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv user.org:user:median5x5:1.0 -user_name median5x5_0
+set_property -dict "\
+  CONFIG.Component_Name {median5x5_0} \
+  CONFIG.clk.ASSOCIATED_BUSIF {} \
+  CONFIG.clk.ASSOCIATED_RESET {} \
+  CONFIG.clk.CLK_DOMAIN {} \
+  CONFIG.clk.FREQ_HZ {100000000} \
+  CONFIG.clk.PHASE {0.000} " [get_ips median5x5_0]
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 16:59:11 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_parameter_register_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_parameter_register_0_0 (user.org:user:parameter_register:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_parameter_register_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'H_SIZE'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 16:59:11 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_median5x5_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_median5x5_0_0 (user.org:user:median5x5:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_median5x5_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'H_SIZE'
+
+
+3. Customization warnings
+-------------------------
+
+Parameter 'H_SIZE' is no longer present on the upgraded IP 'design_1_median5x5_0_0', and cannot be set to '1664'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv user.org:user:median5x5:1.0 -user_name design_1_median5x5_0_0
+set_property -dict "\
+  CONFIG.Component_Name {design_1_median5x5_0_0} \
+  CONFIG.clk.ASSOCIATED_BUSIF {} \
+  CONFIG.clk.ASSOCIATED_RESET {} \
+  CONFIG.clk.CLK_DOMAIN {design_1_dvi2rgb_0_0_PixelClk} \
+  CONFIG.clk.FREQ_HZ {100000000} \
+  CONFIG.clk.PHASE {0.000} " [get_ips design_1_median5x5_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 15:37:26 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_parameter_register_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_parameter_register_0_0 (user.org:user:parameter_register:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Nov 15 15:15:02 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_parameter_register_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_parameter_register_0_0 (user.org:user:parameter_register:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_parameter_register_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'Ta'
+
+-Upgrade has added port 'Tb'
+
+-Upgrade has added port 'Tc'
+
+-Upgrade has added port 'Td'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Nov 13 17:02:51 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_parameter_register_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_parameter_register_0_0 (user.org:user:parameter_register:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_parameter_register_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'led'
+
+-Upgrade has added port 'sw'
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Nov 13 16:56:44 2018
+| Host         : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_parameter_register_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_parameter_register_0_0 (user.org:user:parameter_register:1.0) from (Rev. 1) to (Rev. 2)
+
