@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Apr  5 11:57:09 2019
-# Process ID: 15024
+# Start of session at: Fri Apr  5 19:20:01 2019
+# Process ID: 3052
 # Current directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14716 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\klt640x480_red.wdb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7540 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\klt640x480_red.wdb
 # Log file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/vivado.log
 # Journal file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim\vivado.jou
 #-----------------------------------------------------------
@@ -14,6 +14,11 @@ open_wave_database {C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_wave_database: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 754.738 ; gain = 61.656
-add_wave {{/tb_pyramid/centerpx}} {{/tb_pyramid/x_pos}} {{/tb_pyramid/y_pos}} {{/tb_pyramid/dx_valid}} {{/tb_pyramid/point_x0}} {{/tb_pyramid/point_y0}} {{/tb_pyramid/in_roi}} {{/tb_pyramid/in_extended_roi}} {{/tb_pyramid/prev_frame_pixel}} {{/tb_pyramid/G11}} {{/tb_pyramid/G12}} {{/tb_pyramid/G21}} {{/tb_pyramid/G22}} {{/tb_pyramid/b1}} {{/tb_pyramid/b2}} {{/tb_pyramid/ed_minus_bf}} {{/tb_pyramid/af_minus_ec}} {{/tb_pyramid/ad_minus_bc}} {{/tb_pyramid/dx}} {{/tb_pyramid/dy}} 
-add_wave: Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 788.215 ; gain = 0.000
+current_fileset: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 764.082 ; gain = 91.797
+open_wave_database: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 764.082 ; gain = 91.797
+add_wave {{/tb_pyramid/x_pos}} {{/tb_pyramid/y_pos}} {{/tb_pyramid/point_x0}} {{/tb_pyramid/point_y0}} {{/tb_pyramid/in_roi}} {{/tb_pyramid/in_extended_roi}} 
+add_wave: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 778.094 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 19:22:37 2019...

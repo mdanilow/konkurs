@@ -61,7 +61,9 @@ module klt_tracker #(
     output [9 : 0] read_offset,
     output [11 : 0] delta_x0,
     output [10 : 0] delta_y0,
-    output first_frame
+    output first_frame,
+    output [11 : 0] latched_x0,
+    output [10 : 0] latched_y0
 );
     
     wire gray_de;
@@ -170,7 +172,9 @@ module klt_tracker #(
         .y0_int_out(point_y0),
         .in_roi(in_roi),
         .in_extended_roi(in_extended_roi),
-        .roi_end(roi_end)
+        .roi_end(roi_end),
+        .latched_x0_int(latched_x0),
+        .latched_y0_int(latched_y0)
     );
     
     

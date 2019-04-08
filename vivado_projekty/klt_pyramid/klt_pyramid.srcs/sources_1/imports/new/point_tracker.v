@@ -52,11 +52,15 @@ module previous_roi_buffer #(
     reg [9 : 0] read_offset = 0;  //because roi position changes from frame to frame, we need to start reading from diffrent location
     reg [11 : 0] prev_point_x0 = 0;
     reg [10 : 0] prev_point_y0 = 0;
+    reg read_write_flag = 0; //0 - read from A, write to B; 1 - read from B, write to A; changed every vsync
     
     wire [11 : 0] delta_x0;
     wire [10 : 0] delta_y0;
     wire [9 : 0] read_addr;
-    wire [10 : 0] read_pixel;
+    wire [10 : 0] read_pixel_A;
+    wire [10 : 0] read_pixel_B;
+    wire write_enable_A;
+    wire write_enable_B;
 
 
     always @(posedge clk)
@@ -92,22 +96,45 @@ module previous_roi_buffer #(
     end
     
     
+    //multiplex between BRAMs
+    always @(posedge center_vsync)
+    begin
+        
+        read_write_flag <= ~read_write_flag;
+    end
+    
+    
     //BRAM
-    frame_delay_sim mem(
+    frame_delay_sim memA(
 
         .addra(write_addr),
         .clka(clk),
         .dina(center_pixel),
-        .wea(in_extended_roi),
+        .wea(write_enable_A),
         
-        .addrb(read_addr), 
+        .addrb(read_addr + 2), //because bram has 2 clock cycles read latency
         .clkb(clk),
-        .doutb(read_pixel)
+        .doutb(read_pixel_A)
+    );
+    
+    //BRAM
+    frame_delay_sim memB(
+
+        .addra(write_addr),
+        .clka(clk),
+        .dina(center_pixel),
+        .wea(write_enable_B),
+        
+        .addrb(read_addr + 2), //because bram has 2 clock cycles read latency
+        .clkb(clk),
+        .doutb(read_pixel_B)
     );
 
     
-    assign read_addr = write_addr + read_offset + 2;  //because bram has 2 clock cycles read latency
-    assign prev_frame_pixel = read_pixel[10 : 3];
+    assign read_addr = ((write_addr + read_offset) >= 10'd0) ? (write_addr + read_offset) : 10'd0;
+    assign prev_frame_pixel = read_write_flag ? read_pixel_B[10 : 3] : read_pixel_A[10 : 3];
+    assign write_enable_A = read_write_flag ? in_extended_roi : 1'b0;
+    assign write_enable_B = read_write_flag ? 1'b0 : in_extended_roi;
     assign delta_x0 = point_x0 - prev_point_x0;
     assign delta_y0 = point_y0 - prev_point_y0;
     

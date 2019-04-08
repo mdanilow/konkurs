@@ -66,8 +66,8 @@ for f = 1:400
                 db = [dI*Ix;
                       dI*Iy];
                      
-                G = G + dG;
-                b = b + db;
+                G = G + dG
+                b = b + db
                 
 
             end

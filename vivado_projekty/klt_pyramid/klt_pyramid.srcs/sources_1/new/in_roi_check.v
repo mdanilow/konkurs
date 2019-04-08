@@ -41,7 +41,9 @@ module in_roi_check #(
     output [10 : 0] y0_int_out,
     output in_roi,
     output in_extended_roi,
-    output roi_end
+    output roi_end,
+    output [11 : 0] latched_x0_int,
+    output [10 : 0] latched_y0_int
 );
     
     wire d_ready_del;
@@ -53,6 +55,8 @@ module in_roi_check #(
     
     reg [87 : 0] x0 = {59'd300, 29'b0};
     reg [87 : 0] y0 = {59'd300, 29'b0};
+    reg [11 : 0] latched_x0_int = 0;        //x0, y0 are updated a moment after we leave ROI, but we want to have pre-update coords for valid in_extended_roi flag generation
+    reg [10 : 0] latched_y0_int = 0;
     
     wire [87 : 0] x_acc_sum;
     wire [87 : 0] y_acc_sum;
@@ -123,7 +127,12 @@ module in_roi_check #(
         end  
         
         else if(center_vsync_in == 1)
+        begin
+            
+            latched_x0_int <= x0_int;
+            latched_y0_int <= y0_int;
             updated_in_this_frame <= 0;
+        end
     end
     
     
@@ -134,6 +143,6 @@ module in_roi_check #(
     
     assign roi_end = roi_end_reg;
     assign in_roi = (x_pos >= x0_int - NEIGH_SIZE) && (x_pos <= x0_int + NEIGH_SIZE) && (y_pos >= y0_int - NEIGH_SIZE) && (y_pos <= y0_int + NEIGH_SIZE);
-    assign in_extended_roi = (x_pos >= x0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (x_pos <= x0_int + (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos >= y0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos <= y0_int + (NEIGH_SIZE + BORDER_WIDTH));
+    assign in_extended_roi = (x_pos >= latched_x0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (x_pos <= latched_x0_int + (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos >= latched_y0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos <= latched_y0_int + (NEIGH_SIZE + BORDER_WIDTH));
     
 endmodule

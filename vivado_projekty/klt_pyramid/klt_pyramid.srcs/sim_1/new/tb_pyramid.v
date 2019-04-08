@@ -62,6 +62,8 @@ module tb_pyramid(
     wire [10 : 0] delta_y0;
     wire center_vsync;
     wire first_frame;
+    wire [11 : 0] latched_x0;
+    wire [10 : 0] latched_y0;
     
     assign center_vsync = center[0];
     assign centerpx = center[10 -: 8];
@@ -114,7 +116,9 @@ module tb_pyramid(
         .read_offset(read_offset),
         .delta_x0(delta_x0),
         .delta_y0(delta_y0),
-        .first_frame(first_frame)
+        .first_frame(first_frame),
+        .latched_x0(latched_x0),
+        .latched_y0(latched_y0)
     );
     
     
