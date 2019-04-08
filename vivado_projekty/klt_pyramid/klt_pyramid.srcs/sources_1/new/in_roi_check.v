@@ -52,6 +52,7 @@ module in_roi_check #(
     
     reg roi_end_reg = 0;
     reg roi_end_impulse_state = 0;
+    reg roi_ended = 0;
     
     reg [87 : 0] x0 = {59'd300, 29'b0};
     reg [87 : 0] y0 = {59'd300, 29'b0};
@@ -64,7 +65,7 @@ module in_roi_check #(
     wire [11 : 0] x0_int;
     wire [10 : 0] y0_int;
     
-    //roi_end generation
+    //roi_end impulse generation
     always @(negedge clk)
     begin
         
@@ -133,6 +134,12 @@ module in_roi_check #(
             latched_y0_int <= y0_int;
             updated_in_this_frame <= 0;
         end
+        
+        if(roi_end == 1)
+            roi_ended <= 1;
+            
+        if(center_vsync_in == 1)
+            roi_ended <= 0;
     end
     
     
@@ -142,7 +149,7 @@ module in_roi_check #(
     assign y0_int_out = y0_int;
     
     assign roi_end = roi_end_reg;
-    assign in_roi = (x_pos >= x0_int - NEIGH_SIZE) && (x_pos <= x0_int + NEIGH_SIZE) && (y_pos >= y0_int - NEIGH_SIZE) && (y_pos <= y0_int + NEIGH_SIZE);
+    assign in_roi = (x_pos >= x0_int - NEIGH_SIZE) && (x_pos <= x0_int + NEIGH_SIZE) && (y_pos >= y0_int - NEIGH_SIZE) && (y_pos <= y0_int + NEIGH_SIZE) && (roi_ended == 0);
     assign in_extended_roi = (x_pos >= latched_x0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (x_pos <= latched_x0_int + (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos >= latched_y0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos <= latched_y0_int + (NEIGH_SIZE + BORDER_WIDTH));
     
 endmodule

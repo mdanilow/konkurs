@@ -63,7 +63,8 @@ module klt_tracker #(
     output [10 : 0] delta_y0,
     output first_frame,
     output [11 : 0] latched_x0,
-    output [10 : 0] latched_y0
+    output [10 : 0] latched_y0,
+    output roi_end
 );
     
     wire gray_de;

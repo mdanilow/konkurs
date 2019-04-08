@@ -44,7 +44,7 @@ for f = 1:400
                 
                 row_ = floor(row);
                 col_ = floor(col);
-                display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(prev_gray_frame(row_, col_)), ' left: ', num2str(gray_frame(row_, col_-1)), ' right: ', num2str(gray_frame(row_, col_+1)), ' up: ', num2str(gray_frame(row_-1, col_)), ' down: ', num2str(gray_frame(row_+1, col_))]);
+                display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(prev_gray_frame(row_, col_))]);
 
                 if(interpolation_on == 1)
                     Ix = (interpolation(col+1, row, prev_gray_frame) - interpolation(col-1, row, prev_gray_frame));
@@ -66,9 +66,10 @@ for f = 1:400
                 db = [dI*Ix;
                       dI*Iy];
                      
-                G = G + dG
-                b = b + db
+                G = G + dG;
+                b = b + db;
                 
+                display(['G11: ', num2str(G(1, 1)), ' G12: ', num2str(G(1, 2)), ' G22: ', num2str(G(2, 2)), ' b1: ', num2str(b(1)), ' b2: ', num2str(b(2))]);
 
             end
         end
