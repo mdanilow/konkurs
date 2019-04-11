@@ -1,15 +1,7 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim_1/sim/frame_delay_sim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module frame_delay_sim
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/delayLineBRAM/sim/delayLineBRAM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module delayLineBRAM
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0/sim/modul_puz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module modul_puz
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0/sim/puz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module puz
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0/sim/rgb2ycbcr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rgb2ycbcr
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0/sim/rgb2ycbcr_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rgb2ycbcr_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/context_2x2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module context_2x2
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/new/context_3x3.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module context_3x3
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/delayLinieBRAM_WP.v" into library xil_defaultlib
@@ -50,7 +42,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyra
 INFO: [VRFC 10-311] analyzing module linsolve
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/modul_puz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module modul_puz
-WARNING: [VRFC 10-2845] overwriting previous definition of module modul_puz [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/modul_puz.v:23]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/new/pixel_position.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pixel_position
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/new/point_tracker.v" into library xil_defaultlib
@@ -60,8 +51,20 @@ WARNING: [VRFC 10-1315] redeclaration of ansi port delta_x0 is not allowed [C:/k
 WARNING: [VRFC 10-1315] redeclaration of ansi port delta_y0 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/new/point_tracker.v:58]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/puz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module puz
-WARNING: [VRFC 10-2845] overwriting previous definition of module puz [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/puz.v:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scale2x
+WARNING: [VRFC 10-1315] redeclaration of ansi port context_2x2_valid is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:55]
+WARNING: [VRFC 10-1315] redeclaration of ansi port A11 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:59]
+WARNING: [VRFC 10-1315] redeclaration of ansi port A12 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:60]
+WARNING: [VRFC 10-1315] redeclaration of ansi port A21 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:61]
+WARNING: [VRFC 10-1315] redeclaration of ansi port A22 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:62]
+WARNING: [VRFC 10-1315] redeclaration of ansi port A11pA12 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:64]
+WARNING: [VRFC 10-1315] redeclaration of ansi port A21pA22 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:65]
+WARNING: [VRFC 10-1315] redeclaration of ansi port sum is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:66]
+WARNING: [VRFC 10-1315] redeclaration of ansi port round_sum is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/konkurs/vivado_projekty/klt_ddc/klt_ddc.srcs/sources_1/new/scale2x.v:67]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/wysw_box.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module wysw_box
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sim_1/new/tb_pyramid.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sim_1/imports/new/tb_pyramid.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_pyramid
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/adder_10p10e10/sim/adder_10p10e10.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity adder_10p10e10

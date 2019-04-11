@@ -7,8 +7,7 @@ vhdl xil_defaultlib  \
 "../../../../klt_pyramid.srcs/sources_1/ip/mult_9t9/sim/mult_9t9.vhd" \
 "../../../../klt_pyramid.srcs/sources_1/ip/sub_8m8/sim/sub_8m8.vhd" \
 "../../../../klt_pyramid.srcs/sources_1/ip/accumulator_adder/sim/accumulator_adder.vhd" \
-"../../../../klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0/src/mult_gen_0/sim/mult_gen_0.vhd" \
-"../../../../klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0/src/c_addsub_0/sim/c_addsub_0.vhd" \
+"../../../../klt_pyramid.srcs/sources_1/ip/adder_10p10e10/sim/adder_10p10e10.vhd" \
 
 # Do not sort compile order
 nosort

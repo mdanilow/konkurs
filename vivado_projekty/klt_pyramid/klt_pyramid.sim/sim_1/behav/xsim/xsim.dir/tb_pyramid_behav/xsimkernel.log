@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_pyramid_behav/xsimk.exe -simmode gui -wdb tb_pyramid_behav.wdb -simrunnum 0 -socket 57570
+Design successfully loaded
+Design Loading Memory Usage: 6432 KB (Peak: 6432 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 876440 KB (Peak: 876440 KB)
+Simulation CPU Usage: 131952 ms

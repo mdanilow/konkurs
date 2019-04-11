@@ -1,19 +1,19 @@
 clear all;
 close all;
 
-filename = 'pudelko.mp4';
 interpolation_on = 0;
-winLength = 21;
-winHeight = 21;
 
 Lm = 2;
 
-% v = VideoReader(filename);
-% noFrames = v.NumberOfFrames;
-% width = v.width;
-% height = v.height;
+xsc = 300;
+ysc = 300;
+winLength = 20;
+winHeight = 20;
+x0 = xsc - winLength/2;
+y0 = ysc - winHeight/2;
+x1 = x0 + winLength;
+y1 = y0 + winHeight;
 
-% v = VideoReader(filename);
 g = double(zeros(2, 1));
 
 %iterate over frames
@@ -22,9 +22,11 @@ for f = 1:400
     f
     
     frame = imread(['../pudelko/res_640_480/frame_', num2str(floor(f/100)), num2str(floor(mod(f, 100)/10)), num2str(mod(f,10)), '.ppm']);
-    %frame = readFrame(v);
-    gray_frame = rgb2gray(frame);
+    gray_frame = frame(:, :, 1);
     
+%     gray_frame_L1 = scaledown(gray_frame);
+%     gray_frame_L2 = scaledown(gray_frame_L1);
+%     gray_frame_L3 = scaledown(gray_frame_L2);
     gray_frame_L1 = imresize(gray_frame, 0.5, 'bilinear');
     gray_frame_L2 = imresize(gray_frame_L1, 0.5, 'bilinear');
     gray_frame_L3 = imresize(gray_frame_L2, 0.5, 'bilinear');
@@ -34,10 +36,7 @@ for f = 1:400
     
     if f == 1
         
-        diff = abs(scaledown(gray_frame) - gray_frame_L1);
-        
         imshow(frame);
-        [x0, y0] = ginput(1);
 
     elseif f > 1
     
@@ -79,11 +78,11 @@ for f = 1:400
                         Iy = (interpolation(col, row+1, level_prev_frame) - interpolation(col, row-1, level_prev_frame))/2;
                         dI = interpolation(col, row, level_prev_frame) - interpolation(col + pyramidal_guess_x, row + pyramidal_guess_y, level_frame);
                     else
-                        row_ = round(row);
-                        col_ = round(col);
+                        row_ = floor(row);
+                        col_ = floor(col);
                         Ix = (double(level_prev_frame(row_, col_+1)) - double(level_prev_frame(row_, col_-1)))/2;
                         Iy = (double(level_prev_frame(row_+1, col_)) - double(level_prev_frame(row_-1, col_)))/2;  
-                        dI = double(level_prev_frame(row_, col_)) - double(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x)));
+                        dI = double(level_prev_frame(row_, col_)) - double(level_frame(row_ + floor(pyramidal_guess_y), col_ + floor(pyramidal_guess_x)));
                     end
                     
                     dG = [Ix^2, Ix*Iy;
@@ -118,18 +117,18 @@ for f = 1:400
 %             frame = insertShape(frame, 'Rectangle', [round(xsc), round(ysc), l, h], 'LineWidth', 4, 'Color', 'r');
 %             imwrite(frame, ['klt_pyramid_', num2str(floor(f/100)), num2str(floor(mod(f, 100)/10)), num2str(mod(f,10)), '.png']);
 %             ginput(1);
-              imshow(frame);
-              hold on;
-              rectangle('Position', [x0, y0, winLength, winHeight], 'LineWidth', 2, 'EdgeColor', 'r');
-              hold off;
-              ginput(1);
+%               imshow(frame);
+%               hold on;
+%               rectangle('Position', [x0, y0, winLength, winHeight], 'LineWidth', 2, 'EdgeColor', 'r');
+%               hold off;
+%               ginput(1);
         end
         
-%         imshow(frame);
-%         hold on;
-%         rectangle('Position', [x0, y0, winLength, winHeight], 'LineWidth', 2, 'EdgeColor', 'r');
-%         hold off;
-%         ginput(1);
+        imshow(frame);
+        hold on;
+        rectangle('Position', [floor(x0), floor(y0), winLength, winHeight], 'LineWidth', 2, 'EdgeColor', 'r');
+        hold off;
+        ginput(1);
     end
 
     prev_gray_frame = gray_frame;
