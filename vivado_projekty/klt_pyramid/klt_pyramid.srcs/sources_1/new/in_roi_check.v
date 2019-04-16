@@ -27,6 +27,8 @@ module in_roi_check #(
     parameter BORDER_WIDTH = 2
 )
 (  
+    input [11 : 0] set_x0,
+    input [10 : 0] set_y0,
     input enable,
     input reset_position,
     input center_vsync_in,
@@ -54,8 +56,8 @@ module in_roi_check #(
     reg roi_end_impulse_state = 0;
     reg roi_ended = 0;
     
-    reg [87 : 0] x0 = {59'd300, 29'b0};
-    reg [87 : 0] y0 = {59'd300, 29'b0};
+    reg [87 : 0] x0 = {59'd82, 1'b1, 28'b0};   //72.5
+    reg [87 : 0] y0 = {59'd82, 1'b1, 28'b0};    //72.5
     reg [11 : 0] latched_x0_int = 0;        //x0, y0 are updated a moment after we leave ROI, but we want to have pre-update coords for valid in_extended_roi flag generation
     reg [10 : 0] latched_y0_int = 0;
     
@@ -119,7 +121,14 @@ module in_roi_check #(
     always @(posedge clk)
     begin
         
-        if(center_vsync_in == 0 && d_ready_del == 1 && enable == 1 && updated_in_this_frame == 0)
+        if(reset_position == 1)
+        begin
+            
+            x0 <= set_x0;
+            y0 <= set_y0;
+        end
+        
+        else if(center_vsync_in == 0 && d_ready_del == 1 && enable == 1 && updated_in_this_frame == 0)
         begin
         
             updated_in_this_frame <= 1;
@@ -143,8 +152,8 @@ module in_roi_check #(
     end
     
     
-    assign x0_int = x0[29 +: 12];
-    assign y0_int = y0[29 +: 11];
+    assign x0_int = x0[28] ? (x0[29 +: 12] + 1) : x0[29 +: 12];
+    assign y0_int = y0[28] ? (y0[29 +: 11] + 1) : y0[29 +: 11];
     assign x0_int_out = x0_int;
     assign y0_int_out = y0_int;
     
