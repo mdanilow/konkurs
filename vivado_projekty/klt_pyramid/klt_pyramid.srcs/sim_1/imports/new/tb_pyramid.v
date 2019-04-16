@@ -159,7 +159,7 @@ module tb_pyramid(
         .in_roi(in_roi),
 //        .in_extended_roi(in_extended_roi),
         .dx_valid(dx_valid),
-        .prev_frame_pixel(prev_frame_pixel),
+        .prev_center_pixel(prev_frame_pixel),
         .point_x0(point_x0),
         .point_y0(point_y0),
         .G11(G11),

@@ -48,7 +48,7 @@ module klt_tracker_level #(
     output in_roi,
     output in_extended_roi,
     output dx_valid,
-    output [7 : 0] prev_frame_pixel,
+    output [7 : 0] prev_center_pixel,
     output [25 : 0] G11,
     output [25 : 0] G12,
     output [25 : 0] G21,
@@ -97,7 +97,11 @@ module klt_tracker_level #(
     wire in_roi;
     wire roi_end;
     
-    wire [7 : 0] prev_frame_pixel;
+    wire [7 : 0] prev_center_pixel;
+    wire [7 : 0] prev_left_pixel;
+    wire [7 : 0] prev_right_pixel;
+    wire [7 : 0] prev_up_pixel;
+    wire [7 : 0] prev_down_pixel;
     
     wire G_b_valid;
     wire [25 : 0] G11;
@@ -183,10 +187,15 @@ module klt_tracker_level #(
     );
     
     
-    previous_roi_buffer previous_frame_pixel(
+    prev_frame_context prev_con(
     
         .clk(rx_pclk),
         .center_pixel(center),
+        .left_pixel(left),
+        .right_pixel(right),
+        .up_pixel(up),
+        .down_pixel(down),
+        
         .in_roi(in_roi),
         .in_extended_roi(in_extended_roi),
         .roi_end(roi_end),
@@ -195,7 +204,12 @@ module klt_tracker_level #(
         .point_y0(point_y0),
         .first_frame(first_frame),
     
-        .prev_frame_pixel(prev_frame_pixel),
+        .prev_center_pixel(prev_center_pixel),
+        .prev_left_pixel(prev_left_pixel),
+        .prev_right_pixel(prev_right_pixel),
+        .prev_up_pixel(prev_up_pixel),
+        .prev_down_pixel(prev_down_pixel),
+        
         .write_addr_test(write_addr_test),
         .read_addr_test(read_addr_test),
         .delta_x0(delta_x0),
@@ -212,12 +226,13 @@ module klt_tracker_level #(
         .context_valid(context_valid),
         .first_frame(first_frame),
         .end_of_frame(center[0]),
-        .prev_center_pixel(prev_frame_pixel),
+        
+        .prev_center_pixel(prev_center_pixel),
         .center_pixel(center[10 : 3]),
-        .left_pixel(left[10 : 3]),
-        .right_pixel(right[10 : 3]),
-        .up_pixel(up[10 : 3]),
-        .down_pixel(down[10 : 3]),
+        .left_pixel(prev_left_pixel),
+        .right_pixel(prev_right_pixel),
+        .up_pixel(prev_up_pixel),
+        .down_pixel(prev_down_pixel),
         
         .data_valid(G_b_valid),
         .G11(G11),
