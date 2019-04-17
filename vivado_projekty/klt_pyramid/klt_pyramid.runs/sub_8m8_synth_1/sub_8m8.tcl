@@ -19,22 +19,23 @@ proc create_report { reportName command } {
 }
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
-create_project -in_memory -part xc7k70tfbv676-1
+create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir E:/rzeczy/vivado_projekty/klt/klt.cache/wt [current_project]
-set_property parent.project_path E:/rzeczy/vivado_projekty/klt/klt.xpr [current_project]
+set_property webtalk.parent_dir C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.cache/wt [current_project]
+set_property parent.project_path C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths e:/rzeczy/IP_repo [current_project]
-set_property ip_output_repo e:/rzeczy/vivado_projekty/klt/klt.cache/ip [current_project]
+set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
+set_property ip_repo_paths c:/konkurs/IP_repo [current_project]
+set_property ip_output_repo c:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8.xci
-set_property used_in_implementation false [get_files -all e:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_ooc.xdc]
+read_ip -quiet C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8.xci
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,12 +49,12 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 0
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1 -new_name sub_8m8 -ip [get_ips sub_8m8]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1 -new_name sub_8m8 -ip [get_ips sub_8m8]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
 
-synth_design -top sub_8m8 -part xc7k70tfbv676-1 -mode out_of_context
+synth_design -top sub_8m8 -part xc7z020clg400-1 -mode out_of_context
 
 #---------------------------------------------------------
 # Generate Checkpoint/Stub/Simulation Files For IP Cache
@@ -89,32 +90,32 @@ write_checkpoint -force -noxdef sub_8m8.dcp
 create_report "sub_8m8_synth_1_synth_report_utilization_0" "report_utilization -file sub_8m8_utilization_synth.rpt -pb sub_8m8_utilization_synth.pb"
 
 if { [catch {
-  file copy -force E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1/sub_8m8.dcp E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8.dcp
+  file copy -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1/sub_8m8.dcp C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.v
+  write_verilog -force -mode synth_stub C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.v
+  write_verilog -force -mode funcsim C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -124,47 +125,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1/sub_8m8.dcp E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8.dcp
+  file copy -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1/sub_8m8.dcp C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1/sub_8m8_stub.v E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.v
+  file rename -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1/sub_8m8_stub.v C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1/sub_8m8_stub.vhdl E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.vhdl
+  file rename -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1/sub_8m8_stub.vhdl C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1/sub_8m8_sim_netlist.v E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.v
+  file rename -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1/sub_8m8_sim_netlist.v C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1/sub_8m8_sim_netlist.vhdl E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.vhdl
+  file rename -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1/sub_8m8_sim_netlist.vhdl C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir E:/rzeczy/vivado_projekty/klt/klt.ip_user_files/ip/sub_8m8]} {
+if {[file isdir C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.ip_user_files/ip/sub_8m8]} {
   catch { 
-    file copy -force E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.v E:/rzeczy/vivado_projekty/klt/klt.ip_user_files/ip/sub_8m8
+    file copy -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.v C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.ip_user_files/ip/sub_8m8
   }
 }
 
-if {[file isdir E:/rzeczy/vivado_projekty/klt/klt.ip_user_files/ip/sub_8m8]} {
+if {[file isdir C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.ip_user_files/ip/sub_8m8]} {
   catch { 
-    file copy -force E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.vhdl E:/rzeczy/vivado_projekty/klt/klt.ip_user_files/ip/sub_8m8
+    file copy -force C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_8m8/sub_8m8_stub.vhdl C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.ip_user_files/ip/sub_8m8
   }
 }
 file delete __synthesis_is_running__

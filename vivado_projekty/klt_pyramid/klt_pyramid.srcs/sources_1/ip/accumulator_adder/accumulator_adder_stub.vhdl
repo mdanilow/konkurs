@@ -1,13 +1,13 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Tue Apr  2 21:41:19 2019
--- Host        : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+-- Date        : Wed Apr 17 21:57:25 2019
+-- Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               e:/rzeczy/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/accumulator_adder/accumulator_adder_stub.vhdl
+--               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/accumulator_adder/accumulator_adder_stub.vhdl
 -- Design      : accumulator_adder
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7k70tfbv676-1
+-- Device      : xc7z020clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Apr 16 23:51:20 2019
+# Process ID: 2344
+# Current directory: C:/konkurs/vivado_projekty/klt_pyramid
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16948 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.xpr
+# Log file: C:/konkurs/vivado_projekty/klt_pyramid/vivado.log
+# Journal file: C:/konkurs/vivado_projekty/klt_pyramid\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.xpr

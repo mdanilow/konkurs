@@ -22,10 +22,10 @@ vmap xbip_addsub_v3_0_5 riviera/xbip_addsub_v3_0_5
 vmap c_addsub_v12_0_12 riviera/c_addsub_v12_0_12
 
 vlog -work xil_defaultlib  -sv2k12 \
-"E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93 \
-"E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xbip_utils_v3_0_9 -93 \
 "../../../ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -49,7 +49,7 @@ vcom -work c_addsub_v12_0_12 -93 \
 "../../../ipstatic/hdl/c_addsub_v12_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -93 \
-"../../../../klt.srcs/sources_1/ip/sub_8m8/sim/sub_8m8.vhd" \
+"../../../../klt_pyramid.srcs/sources_1/ip/sub_8m8/sim/sub_8m8.vhd" \
 
 
 vlog -work xil_defaultlib \

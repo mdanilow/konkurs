@@ -22,10 +22,10 @@ vmap xbip_addsub_v3_0_5 modelsim_lib/msim/xbip_addsub_v3_0_5
 vmap c_addsub_v12_0_12 modelsim_lib/msim/c_addsub_v12_0_12
 
 vlog -work xil_defaultlib -64 -incr -sv \
-"E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \
-"E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work xbip_utils_v3_0_9 -64 -93 \
 "../../../ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -49,7 +49,7 @@ vcom -work c_addsub_v12_0_12 -64 -93 \
 "../../../ipstatic/hdl/c_addsub_v12_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -64 -93 \
-"../../../../klt.srcs/sources_1/ip/sub_52m52/sim/sub_52m52.vhd" \
+"../../../../klt_pyramid.srcs/sources_1/ip/sub_52m52/sim/sub_52m52.vhd" \
 
 
 vlog -work xil_defaultlib \

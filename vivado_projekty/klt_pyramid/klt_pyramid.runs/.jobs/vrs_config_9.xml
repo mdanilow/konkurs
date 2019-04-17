@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="div_gen_0_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/div_gen_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sub_52m52_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_52m52_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mult_26t26_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/mult_26t26_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="add_26p18_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/add_26p18_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mult_9t9_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/mult_9t9_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="sub_8m8_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="frame_delay_sim_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/frame_delay_sim_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="accumulator_adder_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/accumulator_adder_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="delayLineBRAM_synth_1" LaunchDir="C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/delayLineBRAM_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

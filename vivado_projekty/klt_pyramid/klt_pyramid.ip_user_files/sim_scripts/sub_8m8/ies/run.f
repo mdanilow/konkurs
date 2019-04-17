@@ -1,8 +1,8 @@
 -makelib ies_lib/xil_defaultlib -sv \
-  "E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib ies_lib/xpm \
-  "E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
+  "C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/xbip_utils_v3_0_9 \
   "../../../ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -26,7 +26,7 @@
   "../../../ipstatic/hdl/c_addsub_v12_0_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../../klt.srcs/sources_1/ip/sub_8m8/sim/sub_8m8.vhd" \
+  "../../../../klt_pyramid.srcs/sources_1/ip/sub_8m8/sim/sub_8m8.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

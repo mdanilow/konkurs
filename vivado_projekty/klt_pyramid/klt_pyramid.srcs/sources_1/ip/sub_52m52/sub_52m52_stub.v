@@ -1,13 +1,13 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Dec 28 17:05:58 2018
-// Host        : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+// Date        : Wed Apr 17 21:50:01 2019
+// Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               E:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/sub_52m52/sub_52m52_stub.v
+//               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/sub_52m52/sub_52m52_stub.v
 // Design      : sub_52m52
 // Purpose     : Stub declaration of top-level module interface
-// Device      : xc7k70tfbv676-1
+// Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.

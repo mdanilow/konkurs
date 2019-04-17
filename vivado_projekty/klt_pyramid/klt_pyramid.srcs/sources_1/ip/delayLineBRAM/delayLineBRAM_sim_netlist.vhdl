@@ -1,14 +1,14 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon Dec 10 18:55:57 2018
--- Host        : cjasny-PC running 64-bit Service Pack 1  (build 7601)
+-- Date        : Wed Apr 17 21:59:24 2019
+-- Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               e:/rzeczy/vivado_projekty/klt/klt.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM_sim_netlist.vhdl
+--               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM_sim_netlist.vhdl
 -- Design      : delayLineBRAM
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7k70tfbv676-1
+-- Device      : xc7z020clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -493,7 +493,7 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
   attribute C_EST_POWER_SUMMARY : string;
   attribute C_EST_POWER_SUMMARY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.862 mW";
   attribute C_FAMILY : string;
-  attribute C_FAMILY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "kintex7";
+  attribute C_FAMILY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "zynq";
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_ENA : integer;
@@ -589,7 +589,7 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B : integer;
   attribute C_WRITE_WIDTH_B of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 17;
   attribute C_XDEVICEFAMILY : string;
-  attribute C_XDEVICEFAMILY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "kintex7";
+  attribute C_XDEVICEFAMILY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "zynq";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
@@ -784,7 +784,7 @@ architecture STRUCTURE of delayLineBRAM is
   attribute C_EST_POWER_SUMMARY : string;
   attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.862 mW";
   attribute C_FAMILY : string;
-  attribute C_FAMILY of U0 : label is "kintex7";
+  attribute C_FAMILY of U0 : label is "zynq";
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of U0 : label is 0;
   attribute C_HAS_ENA : integer;
@@ -880,7 +880,7 @@ architecture STRUCTURE of delayLineBRAM is
   attribute C_WRITE_WIDTH_B : integer;
   attribute C_WRITE_WIDTH_B of U0 : label is 17;
   attribute C_XDEVICEFAMILY : string;
-  attribute C_XDEVICEFAMILY of U0 : label is "kintex7";
+  attribute C_XDEVICEFAMILY of U0 : label is "zynq";
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
   attribute x_interface_info : string;
   attribute x_interface_info of clka : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK";

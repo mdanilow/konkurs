@@ -1,8 +1,8 @@
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
-  "E:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
+  "C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/xbip_utils_v3_0_9 \
   "../../../ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
@@ -26,7 +26,7 @@
   "../../../ipstatic/hdl/c_addsub_v12_0_vh_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../klt.srcs/sources_1/ip/sub_52m52/sim/sub_52m52.vhd" \
+  "../../../../klt_pyramid.srcs/sources_1/ip/sub_52m52/sim/sub_52m52.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

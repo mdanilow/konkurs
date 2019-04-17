@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Dec 16 18:49:57 2018
-# Process ID: 6564
-# Current directory: E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1
+# Start of session at: Wed Apr 17 21:53:26 2019
+# Process ID: 8364
+# Current directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1
 # Command line: vivado.exe -log sub_8m8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sub_8m8.tcl
-# Log file: E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1/sub_8m8.vds
-# Journal file: E:/rzeczy/vivado_projekty/klt/klt.runs/sub_8m8_synth_1\vivado.jou
+# Log file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1/sub_8m8.vds
+# Journal file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/sub_8m8_synth_1\vivado.jou
 #-----------------------------------------------------------
 source sub_8m8.tcl -notrace
