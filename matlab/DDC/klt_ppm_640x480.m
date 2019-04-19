@@ -42,17 +42,17 @@ for f = 1:400
 
             for col = x0:1:x0+winLength
                 
-                row_ = floor(row);
-                col_ = floor(col);
-                display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(prev_gray_frame(row_, col_))]);
+                row_ = round(row);
+                col_ = round(col);
+%                 display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(prev_gray_frame(row_, col_))]);
 
                 if(interpolation_on == 1)
                     Ix = (interpolation(col+1, row, prev_gray_frame) - interpolation(col-1, row, prev_gray_frame));
                     Iy = (interpolation(col, row+1, prev_gray_frame) - interpolation(col, row-1, prev_gray_frame));
                     dI = interpolation(col, row, prev_gray_frame) - interpolation(col, row, gray_frame);
                 else
-                    row_ = floor(row);
-                    col_ = floor(col);
+%                     row_ = floor(row);
+%                     col_ = floor(col);
 %                     Ix = (double(gray_frame(row_, col_+1)) - double(gray_frame(row_, col_-1)))/2;
 %                     Iy = (double(gray_frame(row_+1, col_)) - double(gray_frame(row_-1, col_)))/2;
                     Ix = (double(gray_frame(row_, col_+1)) - double(gray_frame(row_, col_-1)));
@@ -84,9 +84,9 @@ for f = 1:400
         af = G(1, 1)*b(2);
         ec = b(1)*G(2, 1);
 
-        dw_ed_m_bf = 2*(ed - bf)
-        dw_af_m_ec = 2*(af - ec)
-        ad_m_bc = ad - bc
+        dw_ed_m_bf = 2*(ed - bf);
+        dw_af_m_ec = 2*(af - ec);
+        ad_m_bc = ad - bc;
 
         d(1) = dw_ed_m_bf / ad_m_bc;
         d(2) = dw_af_m_ec / ad_m_bc
@@ -96,8 +96,8 @@ for f = 1:400
         x0 = x0 + d(1);
         y0 = y0 + d(2);
         
-        x0_ = floor(x0) + 10
-        y0_ = floor(y0) + 10
+        x0_ = round(x0) + 10
+        y0_ = round(y0) + 10
         
 %         if(f == 2 || f == 61 || f == 100 || f == 123 || f == 179 || f == 317)
 %             

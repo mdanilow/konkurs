@@ -2,14 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Apr  5 19:20:01 2019
-# Process ID: 3052
+# Start of session at: Fri Apr 19 13:50:24 2019
+# Process ID: 4204
 # Current directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7540 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\klt640x480_red.wdb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12048 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_klt_behav.wdb
 # Log file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/vivado.log
 # Journal file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_wave_database {C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\klt640x480_red.wdb}
-add_wave {{/tb_pyramid/x_pos}} {{/tb_pyramid/y_pos}} {{/tb_pyramid/point_x0}} {{/tb_pyramid/point_y0}} {{/tb_pyramid/in_roi}} {{/tb_pyramid/in_extended_roi}} 
-close_sim
+open_wave_database {C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.sim\sim_1\behav\xsim\tb_klt_behav.wdb}

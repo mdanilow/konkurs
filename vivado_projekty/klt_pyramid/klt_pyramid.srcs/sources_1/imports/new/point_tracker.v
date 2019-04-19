@@ -22,8 +22,8 @@
 
 module previous_roi_buffer #(
     
-    parameter NEIGH_SIZE = 10,
-    parameter BORDER_WIDTH = 2
+    parameter NEIGH_SIZE = 6'd10,
+    parameter BORDER_WIDTH = 6'd2
 )
 (   
 

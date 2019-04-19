@@ -36,35 +36,35 @@ module klt_tracker #(
     
     output [23 : 0] pixel_out,
     output [11 : 0] point_x0,       //center of tracked roi
-    output [10 : 0] point_y0
-//    output context_valid,
-//    output [10 : 0] center,
-//    output [11 : 0] x_pos,
-//    output [10 : 0] y_pos,
-//    output in_roi,
-//    output in_extended_roi,
-//    output dx_valid,
-//    output [7 : 0] prev_frame_pixel,
-//    output [25 : 0] G11,
-//    output [25 : 0] G12,
-//    output [25 : 0] G21,
-//    output [25 : 0] G22,
-//    output [25 : 0] b1,
-//    output [25 : 0] b2,
-//    output [52 : 0] ed_minus_bf,
-//    output [52 : 0] af_minus_ec,
-//    output [51 : 0] ad_minus_bc,
-//    output [87 : 0] dx,
-//    output [87 : 0] dy,
-//    output [9 : 0] write_addr_test,
-//    output [9 : 0] read_addr_test,
-//    output [9 : 0] read_offset,
-//    output [11 : 0] delta_x0,
-//    output [10 : 0] delta_y0,
-//    output first_frame,
-//    output [11 : 0] latched_x0,
-//    output [10 : 0] latched_y0,
-//    output roi_end
+    output [10 : 0] point_y0,
+    output context_valid,
+    output [10 : 0] center,
+    output [11 : 0] x_pos,
+    output [10 : 0] y_pos,
+    output in_roi,
+    output in_extended_roi,
+    output dx_valid,
+    output [7 : 0] prev_frame_pixel,
+    output [25 : 0] G11,
+    output [25 : 0] G12,
+    output [25 : 0] G21,
+    output [25 : 0] G22,
+    output [25 : 0] b1,
+    output [25 : 0] b2,
+    output [52 : 0] ed_minus_bf,
+    output [52 : 0] af_minus_ec,
+    output [51 : 0] ad_minus_bc,
+    output [87 : 0] dx,
+    output [87 : 0] dy,
+    output [9 : 0] write_addr_test,
+    output [9 : 0] read_addr_test,
+    output [9 : 0] read_offset,
+    output [11 : 0] delta_x0,
+    output [10 : 0] delta_y0,
+    output first_frame,
+    output [11 : 0] latched_x0,
+    output [10 : 0] latched_y0,
+    output roi_end
 );
     
     wire context_valid;
@@ -149,9 +149,9 @@ module klt_tracker #(
         .y0_int_out(point_y0),
         .in_roi(in_roi),
         .in_extended_roi(in_extended_roi),
-        .roi_end(roi_end)
-//        .latched_x0_int(latched_x0),
-//        .latched_y0_int(latched_y0)
+        .roi_end(roi_end),
+        .latched_x0_int(latched_x0),
+        .latched_y0_int(latched_y0)
     );
     
     
@@ -167,12 +167,12 @@ module klt_tracker #(
         .point_y0(point_y0),
         .first_frame(first_frame),
     
-        .prev_frame_pixel(prev_frame_pixel)
-//        .write_addr_test(write_addr_test),
-//        .read_addr_test(read_addr_test),
-//        .delta_x0(delta_x0),
-//        .delta_y0(delta_y0),
-//        .read_offset(read_offset)
+        .prev_frame_pixel(prev_frame_pixel),
+        .write_addr_test(write_addr_test),
+        .read_addr_test(read_addr_test),
+        .delta_x0(delta_x0),
+        .delta_y0(delta_y0),
+        .read_offset(read_offset)
     );
     
     
@@ -214,11 +214,11 @@ module klt_tracker #(
         
         .x_output_valid(dx_valid),
         .x(dx),
-        .y(dy)
+        .y(dy),
         
-//        ._2_ed_minus_bf_output(ed_minus_bf),
-//        ._2_af_minus_ec_output(af_minus_ec),
-//        .ad_minus_bc_output(ad_minus_bc)
+        ._2_ed_minus_bf_output(ed_minus_bf),
+        ._2_af_minus_ec_output(af_minus_ec),
+        .ad_minus_bc_output(ad_minus_bc)
     );
     
     

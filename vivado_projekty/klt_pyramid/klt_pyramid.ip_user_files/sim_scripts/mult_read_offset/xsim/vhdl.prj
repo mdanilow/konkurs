@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../klt_pyramid.srcs/sources_1/ip/mult_read_offset/sim/mult_read_offset.vhd" \
+
+nosort
