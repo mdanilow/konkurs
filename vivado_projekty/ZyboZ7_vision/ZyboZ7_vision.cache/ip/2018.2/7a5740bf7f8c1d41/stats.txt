@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Fri Dec 21 16:40:36 UTC 2018
+VLNV: xilinx.com:ip:RGB_pack:1.0
+SynthRuntime: 54

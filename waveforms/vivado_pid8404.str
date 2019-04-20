@@ -235,3 +235,25 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 138, 178); // n (o, ck
 selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 245, 216); // n (o, ck)
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Elapsed time: 379 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 345, 152); // n (o, ck)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 40 MB. Current time: 4/20/19 3:00:35 PM CEST
+// [GUI Memory]: 92 MB (+428kb) [01:04:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 39 MB. Current time: 4/20/19 3:30:35 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 37 MB. Current time: 4/20/19 4:00:35 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 37 MB. Current time: 4/20/19 4:30:36 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 37 MB. Current time: 4/20/19 5:00:36 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 38 MB. Current time: 4/20/19 5:02:09 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 38 MB. Current time: 4/20/19 5:04:31 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 38 MB. Current time: 4/20/19 5:04:33 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 38 MB. Current time: 4/20/19 5:37:56 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 38 MB. Current time: 4/20/19 6:07:50 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 38 MB. Current time: 4/20/19 6:37:50 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 38 MB. Current time: 4/20/19 7:01:55 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
