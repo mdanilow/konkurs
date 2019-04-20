@@ -111,21 +111,6 @@ module klt_tracker_level #(
     wire [25 : 0] b1;
     wire [25 : 0] b2;
 
-
-//    rgb2ycbcr_0 rgb2gray(
-
-//        .clk(rx_pclk),
-//        .de_in(rx_de),
-//        .h_sync_in(rx_hsync),
-//        .v_sync_in(rx_vsync),
-//        .pixel_in(pixel_in),
-        
-//        .de_out(gray_de),
-//        .h_sync_out(gray_hsync),
-//        .v_sync_out(gray_vsync),
-//        .y(gray_pixel)
-//    );
-    
     
     context_3x3 #(
     
@@ -134,10 +119,6 @@ module klt_tracker_level #(
     context(
     
         .clk(rx_pclk),
-//        .pixel_in(gray_pixel),
-//        .de_in(gray_de),
-//        .h_sync_in(gray_hsync),
-//        .v_sync_in(gray_vsync),
         .pixel_in(pixel_in),
         .de_in(rx_de),
         .h_sync_in(rx_hsync),

@@ -22,8 +22,8 @@
 
 module prev_frame_context #(
     
-    parameter NEIGH_SIZE = 10,
-    parameter BORDER_WIDTH = 2
+    parameter NEIGH_SIZE = 6'd10,
+    parameter BORDER_WIDTH = 6'd2
 )
 (   
 
@@ -61,6 +61,7 @@ module prev_frame_context #(
     reg [11 : 0] prev_point_x0 = 0;
     reg [10 : 0] prev_point_y0 = 0;
     reg read_write_flag = 0; //0 - read from A, write to B; 1 - read from B, write to A; changed every vsync
+    reg synchronize_read_offset_trigger = 0;
     
     wire [11 : 0] delta_x0;
     wire [10 : 0] delta_y0;
@@ -70,6 +71,8 @@ module prev_frame_context #(
     wire write_enable_A;
     wire write_enable_B;
     wire [39 : 0] prev_frame_context;
+    wire [16 : 0] dy_times_window;
+    wire delayed_synchronize_read_offset_trigger;
 
 
     always @(posedge clk)
@@ -85,6 +88,13 @@ module prev_frame_context #(
             else
                 write_addr <= write_addr + 1;
         end 
+        
+        if(delayed_synchronize_read_offset_trigger == 1)
+        begin
+            
+            read_offset <= delta_x0 + dy_times_window;
+            synchronize_read_offset_trigger <= 0;
+        end
     end
     
     
@@ -93,7 +103,7 @@ module prev_frame_context #(
     begin
         
         if(first_frame == 0)
-            read_offset <= delta_x0 + delta_y0*(NEIGH_SIZE + NEIGH_SIZE + BORDER_WIDTH + BORDER_WIDTH + 1);   
+            synchronize_read_offset_trigger <= 1;
     end
     
     
@@ -111,6 +121,30 @@ module prev_frame_context #(
         
         read_write_flag <= ~read_write_flag;
     end
+    
+    
+    //delay trigger by multiplier latency
+    modul_puz #(
+    
+        .DELAY(1),
+        .N(1)
+    )
+    synch_offset_trigger(
+        
+        .clk(clk),
+        .in(synchronize_read_offset_trigger),
+        .out(delayed_synchronize_read_offset_trigger)
+    );
+    
+    
+    //compute read offset (delta_y0 part), latency 1
+    mult_dy_times_window yoffcomp(
+    
+        .CLK(clk),
+        .A(delta_y0),
+        .B(NEIGH_SIZE + NEIGH_SIZE + BORDER_WIDTH + BORDER_WIDTH + 1),
+        .P(dy_times_window)
+    );
     
     
     //BRAM

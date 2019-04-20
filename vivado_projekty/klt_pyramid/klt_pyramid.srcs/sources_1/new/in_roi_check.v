@@ -56,10 +56,10 @@ module in_roi_check #(
     reg roi_end_impulse_state = 0;
     reg roi_ended = 0;
     
-//    reg [87 : 0] x0 = {59'd82, 1'b1, 28'b0};   //72.5
-//    reg [87 : 0] y0 = {59'd82, 1'b1, 28'b0};    //72.5
-    reg [87 : 0] x0 = {59'd300, 29'b0};  
-    reg [87 : 0] y0 = {59'd300, 29'b0};    
+    reg [87 : 0] x0 = {59'd82, 1'b1, 28'b0};   //72.5
+    reg [87 : 0] y0 = {59'd82, 1'b1, 28'b0};    //72.5
+//    reg [87 : 0] x0 = {59'd300, 29'b0};  
+//    reg [87 : 0] y0 = {59'd300, 29'b0};    
     reg [11 : 0] latched_x0_int = 0;        //x0, y0 are updated a moment after we leave ROI, but we want to have pre-update coords for valid in_extended_roi flag generation
     reg [10 : 0] latched_y0_int = 0;
     

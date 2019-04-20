@@ -24,12 +24,12 @@ for f = 1:400
     frame = imread(['../pudelko/res_640_480/frame_', num2str(floor(f/100)), num2str(floor(mod(f, 100)/10)), num2str(mod(f,10)), '.ppm']);
     gray_frame = frame(:, :, 1);
     
-%     gray_frame_L1 = scaledown(gray_frame);
-%     gray_frame_L2 = scaledown(gray_frame_L1);
-%     gray_frame_L3 = scaledown(gray_frame_L2);
-    gray_frame_L1 = imresize(gray_frame, 0.5, 'bilinear');
-    gray_frame_L2 = imresize(gray_frame_L1, 0.5, 'bilinear');
-    gray_frame_L3 = imresize(gray_frame_L2, 0.5, 'bilinear');
+    gray_frame_L1 = scaledown(gray_frame);
+    gray_frame_L2 = scaledown(gray_frame_L1);
+    gray_frame_L3 = scaledown(gray_frame_L2);
+%     gray_frame_L1 = imresize(gray_frame, 0.5, 'bilinear');
+%     gray_frame_L2 = imresize(gray_frame_L1, 0.5, 'bilinear');
+%     gray_frame_L3 = imresize(gray_frame_L2, 0.5, 'bilinear');
     
     pyramidal_guess_x = 0;
     pyramidal_guess_y = 0;
@@ -43,10 +43,13 @@ for f = 1:400
         %piramid loop start
         for L = Lm:-1:0
             
-            L;
+            L
             
             level_x0 = x0/(2^L);
             level_y0 = y0/(2^L);
+            
+            level_x0_ = round(level_x0)
+            level_y0_ = round(level_y0)
             
             switch L
                
@@ -78,11 +81,11 @@ for f = 1:400
                         Iy = (interpolation(col, row+1, level_prev_frame) - interpolation(col, row-1, level_prev_frame))/2;
                         dI = interpolation(col, row, level_prev_frame) - interpolation(col + pyramidal_guess_x, row + pyramidal_guess_y, level_frame);
                     else
-                        row_ = floor(row);
-                        col_ = floor(col);
-                        Ix = (double(level_prev_frame(row_, col_+1)) - double(level_prev_frame(row_, col_-1)))/2;
-                        Iy = (double(level_prev_frame(row_+1, col_)) - double(level_prev_frame(row_-1, col_)))/2;  
-                        dI = double(level_prev_frame(row_, col_)) - double(level_frame(row_ + floor(pyramidal_guess_y), col_ + floor(pyramidal_guess_x)));
+                        row_ = round(row);
+                        col_ = round(col);
+                        Ix = double(level_prev_frame(row_, col_+1)) - double(level_prev_frame(row_, col_-1));
+                        Iy = double(level_prev_frame(row_+1, col_)) - double(level_prev_frame(row_-1, col_));  
+                        dI = double(level_prev_frame(row_, col_)) - double(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x)));
                     end
                     
                     dG = [Ix^2, Ix*Iy;
@@ -95,7 +98,24 @@ for f = 1:400
                 end
             end
             
-            d = linsolve(G, b);
+            G
+            b
+
+            ad = G(1, 1)*G(2, 2);
+            bc = G(1, 2)*G(2, 1);
+            ed = b(1)*G(2, 2);
+            bf = G(1, 2)*b(2);
+            af = G(1, 1)*b(2);
+            ec = b(1)*G(2, 1);
+
+            dw_ed_m_bf = 2*(ed - bf);
+            dw_af_m_ec = 2*(af - ec);
+            ad_m_bc = ad - bc;
+
+            d(1) = dw_ed_m_bf / ad_m_bc;
+            d(2) = dw_af_m_ec / ad_m_bc;
+            
+%             d = linsolve(G, b);
 
             %guess for higher level of pyramid
             if(L ~= 0)
