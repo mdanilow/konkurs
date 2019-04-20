@@ -58,12 +58,14 @@ module tb_klt(
     wire [9 : 0] write_addr_test;
     wire [9 : 0] read_addr_test;
     wire [9 : 0] read_offset;
+    wire [16 : 0] read_offset_mult;
     wire [11 : 0] delta_x0;
     wire [10 : 0] delta_y0;
     wire center_vsync;
     wire first_frame;
     wire [11 : 0] latched_x0;
     wire [10 : 0] latched_y0;
+    wire [16 : 0] dy_times_window;
     
     assign center_vsync = center[0];
     assign centerpx = center[10 -: 8];
@@ -132,11 +134,13 @@ module tb_klt(
         .write_addr_test(write_addr_test),
         .read_addr_test(read_addr_test),
         .read_offset(read_offset),
+        .read_offset_mult(read_offset_mult),
         .delta_x0(delta_x0),
         .delta_y0(delta_y0),
         .first_frame(first_frame),
         .latched_x0(latched_x0),
-        .latched_y0(latched_y0)
+        .latched_y0(latched_y0),
+        .dy_times_window(dy_times_window)
     );
     
     

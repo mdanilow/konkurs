@@ -16,3 +16,9 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
 current_fileset: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 799.445 ; gain = 97.691
 open_wave_database: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 804.176 ; gain = 102.422
+add_wave {{/tb_klt/rx_pclk}} {{/tb_klt/rx_de}} {{/tb_klt/rx_hsync}} {{/tb_klt/rx_vsync}} {{/tb_klt/rx_red}} {{/tb_klt/rx_green}} {{/tb_klt/rx_blue}} {{/tb_klt/klt_tracker_out}} {{/tb_klt/context_valid}} {{/tb_klt/center}} {{/tb_klt/centerpx}} {{/tb_klt/x_pos}} {{/tb_klt/y_pos}} {{/tb_klt/dx_valid}} {{/tb_klt/point_x0}} {{/tb_klt/point_y0}} {{/tb_klt/in_roi}} {{/tb_klt/in_extended_roi}} {{/tb_klt/prev_frame_pixel}} {{/tb_klt/G11}} {{/tb_klt/G12}} {{/tb_klt/G21}} {{/tb_klt/G22}} {{/tb_klt/b1}} {{/tb_klt/b2}} {{/tb_klt/ed_minus_bf}} {{/tb_klt/af_minus_ec}} {{/tb_klt/ad_minus_bc}} {{/tb_klt/dx}} {{/tb_klt/dy}} {{/tb_klt/write_addr_test}} {{/tb_klt/read_addr_test}} {{/tb_klt/read_offset}} {{/tb_klt/delta_x0}} {{/tb_klt/delta_y0}} {{/tb_klt/center_vsync}} {{/tb_klt/first_frame}} {{/tb_klt/latched_x0}} {{/tb_klt/latched_y0}} 
+add_wave: Time (s): cpu = 00:00:51 ; elapsed = 00:00:27 . Memory (MB): peak = 806.602 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 23:17:53 2019...

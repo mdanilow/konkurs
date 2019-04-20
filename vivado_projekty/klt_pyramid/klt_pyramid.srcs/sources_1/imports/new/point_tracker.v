@@ -41,18 +41,20 @@ module previous_roi_buffer #(
     
     output [9 : 0] read_addr_test,
     output [9 : 0] write_addr_test,
-    output [9 : 0] read_offset,
+    output [16 : 0] read_offset,
     output [11 : 0] delta_x0,
-    output [10 : 0] delta_y0
+    output [10 : 0] delta_y0,
+    output [16 : 0] dy_times_window
 );
 
     localparam WRITE_ADDR_LIM = 624; //( 2*(NEIGH_SIZE+BORDER_WIDTH) + 1 )^2 - 1;
 
     reg [9 : 0] write_addr = 0;
-    reg [9 : 0] read_offset = 0;  //because roi position changes from frame to frame, we need to start reading from diffrent location
+    reg [16 : 0] read_offset = 0;  //because roi position changes from frame to frame, we need to start reading from diffrent location
     reg [11 : 0] prev_point_x0 = 0;
     reg [10 : 0] prev_point_y0 = 0;
     reg read_write_flag = 0; //0 - read from A, write to B; 1 - read from B, write to A; changed every vsync
+    reg synchronize_read_offset_trigger = 0; //compute read_offset one clock after point_x0, point_y0 update
     
     wire [11 : 0] delta_x0;
     wire [10 : 0] delta_y0;
@@ -61,6 +63,8 @@ module previous_roi_buffer #(
     wire [10 : 0] read_pixel_B;
     wire write_enable_A;
     wire write_enable_B;
+    wire [16 : 0] dy_times_window;
+    wire delayed_synchronize_read_offset_trigger; //trigger further delayed by yoffcomp latency
 
 
     always @(posedge clk)
@@ -76,6 +80,13 @@ module previous_roi_buffer #(
             else
                 write_addr <= write_addr + 1;
         end 
+        
+        if(delayed_synchronize_read_offset_trigger == 1)
+        begin
+            
+            read_offset <= delta_x0 + dy_times_window;
+            synchronize_read_offset_trigger <= 0;
+        end
     end
     
     
@@ -84,7 +95,7 @@ module previous_roi_buffer #(
     begin
         
         if(first_frame == 0)
-            read_offset <= delta_x0 + delta_y0*(NEIGH_SIZE + NEIGH_SIZE + BORDER_WIDTH + BORDER_WIDTH + 1);   
+            synchronize_read_offset_trigger <= 1;
     end
     
     
@@ -104,6 +115,29 @@ module previous_roi_buffer #(
     end
     
     
+    //delay trigger by multiplier latency
+    modul_puz #(
+    
+        .DELAY(1),
+        .N(1)
+    )
+    synch_offset_trigger(
+        
+        .clk(clk),
+        .in(synchronize_read_offset_trigger),
+        .out(delayed_synchronize_read_offset_trigger)
+    );
+    
+    
+    //compute read offset (delta_y0 part), latency 1
+    mult_dy_times_window yoffcomp(
+    
+        .CLK(clk),
+        .A(delta_y0),
+        .B(NEIGH_SIZE + NEIGH_SIZE + BORDER_WIDTH + BORDER_WIDTH + 1),
+        .P(dy_times_window)
+    );
+      
     //BRAM
     frame_delay_sim memA(
 

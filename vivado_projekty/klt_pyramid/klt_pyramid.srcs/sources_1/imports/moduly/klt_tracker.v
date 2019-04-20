@@ -59,12 +59,14 @@ module klt_tracker #(
     output [9 : 0] write_addr_test,
     output [9 : 0] read_addr_test,
     output [9 : 0] read_offset,
+    output [16 : 0] read_offset_mult,
     output [11 : 0] delta_x0,
     output [10 : 0] delta_y0,
     output first_frame,
     output [11 : 0] latched_x0,
     output [10 : 0] latched_y0,
-    output roi_end
+    output roi_end,
+    output [16 : 0] dy_times_window
 );
     
     wire context_valid;
@@ -172,7 +174,8 @@ module klt_tracker #(
         .read_addr_test(read_addr_test),
         .delta_x0(delta_x0),
         .delta_y0(delta_y0),
-        .read_offset(read_offset)
+        .read_offset(read_offset),
+        .dy_times_window(dy_times_window)
     );
     
     
@@ -228,7 +231,7 @@ module klt_tracker #(
         .de_in(rx_de),
         .hsync_in(rx_hsync),
         .vsync_in(rx_vsync),
-        .pixel_in(pixel_in),
+        .pixel_in({pixel_in, pixel_in, pixel_in}),
         .x0(point_x0 - 4'd10), //module takes left-up corner of box
         .y0(point_y0 - 4'd10),
         .width(11'd21),
