@@ -120,7 +120,7 @@ module context_level #(
         for(row = 0; row < CONTEXT_SIZE; row = row + 1)
         begin
         
-            for(col = 1; row < CONTEXT_SIZE; col = col + 1)
+            for(col = 1; col < CONTEXT_SIZE; col = col + 1)
             begin
              
                 always @(posedge clk)

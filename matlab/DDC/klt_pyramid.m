@@ -81,13 +81,18 @@ for f = 1:400
             for row = level_y0 - NEIGH_SIZE : 1 : level_y0 + NEIGH_SIZE
                 for col = level_x0 - NEIGH_SIZE : 1 : level_x0 + NEIGH_SIZE
                     
+                    row_ = round(row);
+                    col_ = round(col);
+                    display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(level_frame(row_, col_)), ' prev_center: ', num2str(level_prev_frame(row_, col_)), ' guess_pixel: ', num2str(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x))), ]);
+
+                    
                     if(interpolation_on == 1)
                         Ix = (interpolation(col+1, row, level_prev_frame) - interpolation(col-1, row, level_prev_frame))/2;
                         Iy = (interpolation(col, row+1, level_prev_frame) - interpolation(col, row-1, level_prev_frame))/2;
                         dI = interpolation(col, row, level_prev_frame) - interpolation(col + pyramidal_guess_x, row + pyramidal_guess_y, level_frame);
                     else
-                        row_ = round(row);
-                        col_ = round(col);
+%                         row_ = round(row);
+%                         col_ = round(col);
                         Ix = double(level_prev_frame(row_, col_+1)) - double(level_prev_frame(row_, col_-1));
                         Iy = double(level_prev_frame(row_+1, col_)) - double(level_prev_frame(row_-1, col_));  
                         dI = double(level_prev_frame(row_, col_)) - double(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x)));
