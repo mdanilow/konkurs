@@ -271,19 +271,4 @@ module klt_tracker_level #(
     assign sum_level_guess_x = pyramidal_guess_x + level_guess_x;
     assign sum_level_guess_y = pyramidal_guess_y + level_guess_y;
     
-//    wysw_box box(
-    
-//        .clk(rx_pclk),
-//        .de_in(rx_de),
-//        .hsync_in(rx_hsync),
-//        .vsync_in(rx_vsync),
-//        .pixel_in(pixel_in),
-//        .x0(point_x0 - 4'd10), //module takes left-up corner of box
-//        .y0(point_y0 - 4'd10),
-//        .width(11'd21),
-//        .height(11'd21)
-        
-////        .pixel_out(pixel_out)
-//    );
-    
 endmodule

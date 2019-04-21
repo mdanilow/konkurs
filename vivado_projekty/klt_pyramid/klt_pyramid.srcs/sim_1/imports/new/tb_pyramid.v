@@ -56,24 +56,17 @@ module tb_pyramid(
     wire [87 : 0] pyramidal_guess_L2_x;
     wire [87 : 0] pyramidal_guess_L2_y;
     wire guess_valid_L2;
+    
+    wire [87 : 0] pyramidal_guess_L1_x;
+    wire [87 : 0] pyramidal_guess_L1_y;
+    wire guess_valid_L1;
 
-    wire [10 : 0] center;
     wire [10 : 0] pyramidal_guess_pixel;
     wire [7 : 0] pyramidal_guess_px;
     wire [5 : 0] pyramidal_guess_x_int;
     wire [5 : 0] pyramidal_guess_y_int;
-    wire [7 : 0] centerpx;
-    wire [11 : 0] x_pos;
-    wire [10 : 0] y_pos;
-    wire in_roi;
     wire in_extended_roi;
     wire [7 : 0] prev_frame_pixel;
-    wire [25 : 0] G11;
-    wire [25 : 0] G12;
-    wire [25 : 0] G21;
-    wire [25 : 0] G22;
-    wire [25 : 0] b1;
-    wire [25 : 0] b2;
     wire [52 : 0] ed_minus_bf;
     wire [52 : 0] af_minus_ec;
     wire [51 : 0] ad_minus_bc;
@@ -85,7 +78,46 @@ module tb_pyramid(
     wire center_vsync;
     wire first_frame;
     
+    wire [10 : 0] center;
+    wire [7 : 0] centerpx;
+    wire [25 : 0] G11;
+    wire [25 : 0] G12;
+    wire [25 : 0] G21;
+    wire [25 : 0] G22;
+    wire [25 : 0] b1;
+    wire [25 : 0] b2;
+    wire [11 : 0] x_pos;
+    wire [10 : 0] y_pos;
+    wire in_roi;
+    
+    wire [10 : 0] center_L1;
+    wire [7 : 0] centerpx_L1;
+    wire [25 : 0] G11_L1;
+    wire [25 : 0] G12_L1;
+    wire [25 : 0] G21_L1;
+    wire [25 : 0] G22_L1;
+    wire [25 : 0] b1_L1;
+    wire [25 : 0] b2_L1;
+    wire [11 : 0] x_pos_L1;
+    wire [10 : 0] y_pos_L1;
+    wire in_roi_L1;
+    
+    wire [10 : 0] center_L0;
+    wire [7 : 0] centerpx_L0;
+    wire [25 : 0] G11_L0;
+    wire [25 : 0] G12_L0;
+    wire [25 : 0] G21_L0;
+    wire [25 : 0] G22_L0;
+    wire [25 : 0] b1_L0;
+    wire [25 : 0] b2_L0;
+    wire [11 : 0] x_pos_L0;
+    wire [10 : 0] y_pos_L0;
+    wire in_roi_L0;
+    
+    
     assign centerpx = center[10 -: 8];
+    assign centerpx_L1 = center_L1[10 -: 8];
+    assign centerpx_L0 = center_L0[10 -: 8];
     assign pyramidal_guess_px = pyramidal_guess_pixel[10 -: 8];
     
     hdmi_in file_input(
@@ -187,63 +219,64 @@ module tb_pyramid(
         .x_pos(x_pos),
         .y_pos(y_pos),
         .in_roi(in_roi),
-//        .in_extended_roi(in_extended_roi),
-        .prev_center_pixel(prev_frame_pixel),
         .G11(G11),
         .G12(G12),
         .G22(G22),
         .b1(b1),
-        .b2(b2),
-        .ed_minus_bf(ed_minus_bf),
-        .af_minus_ec(af_minus_ec),
-        .ad_minus_bc(ad_minus_bc),
-        .write_addr_test(write_addr_test),
-        .read_addr_test(read_addr_test),
-        .read_offset(read_offset),
-        .delta_x0(delta_x0),
-        .delta_y0(delta_y0),
-        .first_frame(first_frame)
+        .b2(b2)
     );
     
     
-//    klt_tracker_level tracker_L1(
+    klt_tracker_level tracker_L1(
             
-//        .rx_pclk(clk_2x),
-//        .rx_de(de_2x),
-//        .rx_hsync(hsync_2x),
-//        .rx_vsync(vsync_2x),
-//        .enable_tracking(1'b1),
-//        .reset_position(1'b0),
-//        .pixel_in(pixel_2x),
+        .rx_pclk(clk_2x),
+        .rx_de(de_2x),
+        .rx_hsync(hsync_2x),
+        .rx_vsync(vsync_2x),
+        .pixel_in(pixel_2x),
+        .level_x0(point_x0_L1),
+        .level_y0(point_y0_L1),
+        .pyramidal_guess_x(pyramidal_guess_L2_x),
+        .pyramidal_guess_y(pyramidal_guess_L2_y),
+        
+        .guess_out_x(pyramidal_guess_L1_x),
+        .guess_out_y(pyramidal_guess_L1_y),
+        .guess_valid(guess_valid_L1),
       
-////        .context_valid(context_valid),
-//        .center(center_L1),
-//        .x_pos(x_pos_L1),
-//        .y_pos(y_pos_L1),
-//        .in_roi(in_roi_L1),
-////        .in_extended_roi(in_extended_roi),
-//        .dx_valid(dx_valid),
-//        .prev_center_pixel(prev_frame_pixel),
-//        .point_x0(point_x0),
-//        .point_y0(point_y0),
-//        .G11(G11),
-//        .G12(G12),
-//        .G22(G22),
-//        .b1(b1),
-//        .b2(b2)
-////        .ed_minus_bf(ed_minus_bf),
-////        .af_minus_ec(af_minus_ec),
-////        .ad_minus_bc(ad_minus_bc),
-////        .dx(dx),
-////        .dy(dy),
-////        .write_addr_test(write_addr_test),
-////        .read_addr_test(read_addr_test),
-////        .read_offset(read_offset),
-////        .delta_x0(delta_x0),
-////        .delta_y0(delta_y0),
-////        .first_frame(first_frame),
-////        .latched_x0(latched_x0),
-////        .latched_y0(latched_y0)
-//    );
+//        .context_valid(context_valid),
+        .center(center_L1),
+        .x_pos(x_pos_L1),
+        .y_pos(y_pos_L1),
+        .in_roi(in_roi_L1),
+        .G11(G11_L1),
+        .G12(G12_L1),
+        .G22(G22_L1),
+        .b1(b1_L1),
+        .b2(b2_L1)
+    );
+    
+    
+    klt_tracker_level tracker_L0(
+                
+        .rx_pclk(rx_pclk),
+        .rx_de(rx_de),
+        .rx_hsync(rx_hsync),
+        .rx_vsync(rx_vsync),
+        .pixel_in(rx_red),
+        .level_x0(point_x0_L0),
+        .level_y0(point_y0_L0),
+        .pyramidal_guess_x(pyramidal_guess_L1_x),
+        .pyramidal_guess_y(pyramidal_guess_L1_y),
+      
+        .center(center_L0),
+        .x_pos(x_pos_L0),
+        .y_pos(y_pos_L0),
+        .in_roi(in_roi_L0),
+        .G11(G11_L0),
+        .G12(G12_L0),
+        .G22(G22_L0),
+        .b1(b1_L0),
+        .b2(b2_L0)
+    );
     
 endmodule
