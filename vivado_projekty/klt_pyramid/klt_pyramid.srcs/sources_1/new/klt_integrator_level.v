@@ -29,15 +29,14 @@ module klt_integrator_level #(
     input clk,
     input in_roi,
     input roi_end,
-    input context_valid,
     input first_frame,
     input end_of_frame,
     input [7 : 0] prev_center_pixel,
-    input [7 : 0] center_pixel,
-    input [7 : 0] left_pixel,
-    input [7 : 0] right_pixel,
-    input [7 : 0] up_pixel,
-    input [7 : 0] down_pixel,
+    input [7 : 0] prev_left_pixel,
+    input [7 : 0] prev_right_pixel,
+    input [7 : 0] prev_up_pixel,
+    input [7 : 0] prev_down_pixel,
+    input [7 : 0] pyramidal_guess_pixel,
     
     output data_valid,
     output [25 : 0] G11,
@@ -100,11 +99,11 @@ reg roi_ended = 0;  //sets on roi end, clears on frame end
 always @(negedge clk)
 begin
     
-    neg_synch_center_pixel <= center_pixel;
-    neg_synch_left_pixel <= left_pixel;
-    neg_synch_right_pixel <= right_pixel;
-    neg_synch_down_pixel <= down_pixel;
-    neg_synch_up_pixel <= up_pixel;
+    neg_synch_center_pixel <= pyramidal_guess_pixel;
+    neg_synch_left_pixel <= prev_left_pixel;
+    neg_synch_right_pixel <= prev_right_pixel;
+    neg_synch_down_pixel <= prev_down_pixel;
+    neg_synch_up_pixel <= prev_up_pixel;
     neg_synch_prev_center_pixel <= prev_center_pixel;
 end
 
@@ -315,7 +314,7 @@ begin
 end
 
 
-assign integration_enable = context_valid & in_roi & ~first_frame;
+assign integration_enable = in_roi & ~first_frame;
 assign enable_computation = integration_enable | integration_enable_delay;
 assign synch_clear_computation = ~synch_enable_computation;
 

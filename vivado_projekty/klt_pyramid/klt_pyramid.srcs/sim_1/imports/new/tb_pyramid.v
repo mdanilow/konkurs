@@ -57,8 +57,11 @@ module tb_pyramid(
     wire [87 : 0] pyramidal_guess_L2_y;
     wire guess_valid_L2;
 
-    wire context_valid;
     wire [10 : 0] center;
+    wire [10 : 0] pyramidal_guess_pixel;
+    wire [7 : 0] pyramidal_guess_px;
+    wire [5 : 0] pyramidal_guess_x_int;
+    wire [5 : 0] pyramidal_guess_y_int;
     wire [7 : 0] centerpx;
     wire [11 : 0] x_pos;
     wire [10 : 0] y_pos;
@@ -83,6 +86,7 @@ module tb_pyramid(
     wire first_frame;
     
     assign centerpx = center[10 -: 8];
+    assign pyramidal_guess_px = pyramidal_guess_pixel[10 -: 8];
     
     hdmi_in file_input(
 
@@ -176,8 +180,10 @@ module tb_pyramid(
         .guess_out_y(pyramidal_guess_L2_y),
         .guess_valid(guess_valid_L2),
         
-//        .context_valid(context_valid),
         .center(center),
+        .pyramidal_guess_pixel(pyramidal_guess_pixel),
+        .pyramidal_guess_x_int(pyramidal_guess_x_int),
+        .pyramidal_guess_y_int(pyramidal_guess_y_int),
         .x_pos(x_pos),
         .y_pos(y_pos),
         .in_roi(in_roi),

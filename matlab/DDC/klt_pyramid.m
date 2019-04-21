@@ -124,9 +124,12 @@ for f = 1:400
 
             %guess for higher level of pyramid
             if(L ~= 0)
-                pyramidal_guess_x = 2*(pyramidal_guess_x + d(1))
-                pyramidal_guess_y = 2*(pyramidal_guess_y + d(2))
+                pyramidal_guess_x = 2*(pyramidal_guess_x + d(1));
+                pyramidal_guess_y = 2*(pyramidal_guess_y + d(2));
             end
+            
+            pg_x_ = round(pyramidal_guess_x)
+            pg_y_ = round(pyramidal_guess_y)
         end
         
         %solution for this frame
