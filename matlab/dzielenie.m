@@ -14,7 +14,7 @@ ad_minus_bc = 385851064231;
 ed_minus_bf_fix = fi(ed_minus_bf, 1, 53, 0);
 af_minus_ec_fix = fi(af_minus_ec, 1, 53, 0);
 ad_minus_bc_fix = fi(ad_minus_bc, 1, 52, 0);
-
+0
 edminusbfbin = ed_minus_bf_fix.bin
 afminusecbin = af_minus_ec_fix.bin
 adminusbcbin = ad_minus_bc_fix.bin

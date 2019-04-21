@@ -64,6 +64,7 @@ module linsolve(
     wire ready_to_divide;
     wire data_valid_delayed;
     
+    
     modul_puz #(
     
         .N(1),

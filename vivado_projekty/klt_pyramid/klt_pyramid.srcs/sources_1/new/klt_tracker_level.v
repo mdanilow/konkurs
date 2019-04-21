@@ -30,24 +30,22 @@ module klt_tracker_level #(
     input rx_de,
     input rx_hsync,
     input rx_vsync,
-    input enable_tracking,
-    input reset_position,
-    input [11 : 0] set_x0,
-    input [11 : 0] set_y0,
-    input [11 : 0] pyramidal_guess_x,
-    input [10 : 0] pyramidal_guess_y,
+    input [11 : 0] level_x0,
+    input [10 : 0] level_y0,
+    input [87 : 0] pyramidal_guess_x,
+    input [87 : 0] pyramidal_guess_y,
     input [7 : 0] pixel_in,
     
-    //output [23 : 0] pixel_out,
-    output [11 : 0] point_x0,       //center of tracked roi
-    output [10 : 0] point_y0,
+    output reg [87 : 0] guess_out_x = 0,
+    output reg [87 : 0] guess_out_y = 0,
+    output reg guess_valid = 0,
+    
     output context_valid,
     output [10 : 0] center,
     output [11 : 0] x_pos,
     output [10 : 0] y_pos,
     output in_roi,
     output in_extended_roi,
-    output dx_valid,
     output [7 : 0] prev_center_pixel,
     output [25 : 0] G11,
     output [25 : 0] G12,
@@ -58,23 +56,16 @@ module klt_tracker_level #(
     output [52 : 0] ed_minus_bf,
     output [52 : 0] af_minus_ec,
     output [51 : 0] ad_minus_bc,
-    output [87 : 0] dx,
-    output [87 : 0] dy,
     output [9 : 0] write_addr_test,
     output [9 : 0] read_addr_test,
     output [9 : 0] read_offset,
     output [11 : 0] delta_x0,
     output [10 : 0] delta_y0,
     output first_frame,
-    output [11 : 0] latched_x0,
-    output [10 : 0] latched_y0,
     output roi_end
 );
     
-//    wire gray_de;
-//    wire gray_hsync;
-//    wire gray_vsync;    
-//    wire [7 : 0] gray_pixel;
+    reg guess_updated_flag = 0;
     
     wire context_valid;
     wire [10 : 0] center;   //{pixel, de, h_sync, v_sync}
@@ -87,12 +78,6 @@ module klt_tracker_level #(
     wire [10 : 0] y_pos;
     wire first_frame;
     
-    wire dx_valid;
-    wire [87 : 0] dx;
-    wire [87 : 0] dy;
-    
-    wire [11 : 0] point_x0; //center of tracked ROI
-    wire [10 : 0] point_y0;
     wire in_extended_roi;
     wire in_roi;
     wire roi_end;
@@ -110,7 +95,13 @@ module klt_tracker_level #(
     wire [25 : 0] G22;
     wire [25 : 0] b1;
     wire [25 : 0] b2;
-
+    
+    wire level_guess_valid;
+    wire [87 : 0] level_guess_x;
+    wire [87 : 0] level_guess_y;
+    
+    wire [87 : 0] sum_level_guess_x;    //computed level_guess + input pyramidal_guess
+    wire [87 : 0] sum_level_guess_y;
     
     context_3x3 #(
     
@@ -146,25 +137,18 @@ module klt_tracker_level #(
     );
     
     
-    in_roi_check inroi(
+    in_roi_check_level inroi(
     
-        .enable(enable_tracking),
-        .reset_position(reset_position),
         .center_vsync_in(center[0]),
         .clk(rx_pclk),
         .x_pos(x_pos),
         .y_pos(y_pos),
-        .d_ready(dx_valid),
-        .dx(dx),
-        .dy(dy),
+        .level_x0(level_x0),
+        .level_y0(level_y0),
         
-        .x0_int_out(point_x0),
-        .y0_int_out(point_y0),
         .in_roi(in_roi),
         .in_extended_roi(in_extended_roi),
-        .roi_end(roi_end),
-        .latched_x0_int(latched_x0),
-        .latched_y0_int(latched_y0)
+        .roi_end(roi_end)
     );
     
     
@@ -181,8 +165,8 @@ module klt_tracker_level #(
         .in_extended_roi(in_extended_roi),
         .roi_end(roi_end),
         .center_vsync(center[0]),
-        .point_x0(point_x0),
-        .point_y0(point_y0),
+        .point_x0(level_x0),
+        .point_y0(level_y0),
         .first_frame(first_frame),
     
         .prev_center_pixel(prev_center_pixel),
@@ -199,7 +183,7 @@ module klt_tracker_level #(
     );
     
     
-    klt_integrator kltboy(
+    klt_integrator_level kltboy(
     
         .clk(rx_pclk),
         .in_roi(in_roi),
@@ -236,9 +220,9 @@ module klt_tracker_level #(
         .b1(b1),
         .b2(b2),
         
-        .x_output_valid(dx_valid),
-        .x(dx),
-        .y(dy),
+        .x_output_valid(level_guess_valid),
+        .x(level_guess_x),
+        .y(level_guess_y),
         
         ._2_ed_minus_bf_output(ed_minus_bf),
         ._2_af_minus_ec_output(af_minus_ec),
@@ -246,19 +230,44 @@ module klt_tracker_level #(
     );
     
     
-    wysw_box box(
+    //update pyramidal guess
+    always @(posedge rx_pclk)
+    begin
     
-        .clk(rx_pclk),
-        .de_in(rx_de),
-        .hsync_in(rx_hsync),
-        .vsync_in(rx_vsync),
-        .pixel_in(pixel_in),
-        .x0(point_x0 - 4'd10), //module takes left-up corner of box
-        .y0(point_y0 - 4'd10),
-        .width(11'd21),
-        .height(11'd21)
+        if(level_guess_valid == 1 && guess_updated_flag == 0)
+        begin
         
-//        .pixel_out(pixel_out)
-    );
+            guess_out_x <= {sum_level_guess_x[0 +: 87], 1'b0};  //multiply by 2
+            guess_out_y <= {sum_level_guess_y[0 +: 87], 1'b0};
+            guess_valid <= 1'b1;
+            guess_updated_flag <= 1;
+        end
+        
+        if(center[0] == 1)
+        begin
+            
+            guess_valid <= 1'b0;
+            guess_updated_flag <= 0;
+        end
+    end
+    
+    
+    assign sum_level_guess_x = pyramidal_guess_x + level_guess_x;
+    assign sum_level_guess_y = pyramidal_guess_y + level_guess_y;
+    
+//    wysw_box box(
+    
+//        .clk(rx_pclk),
+//        .de_in(rx_de),
+//        .hsync_in(rx_hsync),
+//        .vsync_in(rx_vsync),
+//        .pixel_in(pixel_in),
+//        .x0(point_x0 - 4'd10), //module takes left-up corner of box
+//        .y0(point_y0 - 4'd10),
+//        .width(11'd21),
+//        .height(11'd21)
+        
+////        .pixel_out(pixel_out)
+//    );
     
 endmodule

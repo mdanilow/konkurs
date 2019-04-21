@@ -5,14 +5,19 @@ interpolation_on = 0;
 
 Lm = 2;
 
-xsc = 300;
-ysc = 300;
-winLength = 20;
-winHeight = 20;
-x0 = xsc - winLength/2;
-y0 = ysc - winHeight/2;
-x1 = x0 + winLength;
-y1 = y0 + winHeight;
+NEIGH_SIZE = 10;
+
+x0 = 300;
+y0 = 290;
+
+% xsc = 300;
+% ysc = 290;
+% winLength = 20;
+% winHeight = 20;
+% x0 = xsc - winLength/2;
+% y0 = ysc - winHeight/2;
+% x1 = x0 + winLength;
+% y1 = y0 + winHeight;
 
 g = double(zeros(2, 1));
 
@@ -73,8 +78,8 @@ for f = 1:400
             b = [0;
                  0];
              
-            for row = level_y0 : 1 : level_y0 + winHeight
-                for col = level_x0 : 1 : level_x0 + winLength
+            for row = level_y0 - NEIGH_SIZE : 1 : level_y0 + NEIGH_SIZE
+                for col = level_x0 - NEIGH_SIZE : 1 : level_x0 + NEIGH_SIZE
                     
                     if(interpolation_on == 1)
                         Ix = (interpolation(col+1, row, level_prev_frame) - interpolation(col-1, row, level_prev_frame))/2;
@@ -119,8 +124,8 @@ for f = 1:400
 
             %guess for higher level of pyramid
             if(L ~= 0)
-                pyramidal_guess_x = 2*(pyramidal_guess_x + d(1));
-                pyramidal_guess_y = 2*(pyramidal_guess_y + d(2));
+                pyramidal_guess_x = 2*(pyramidal_guess_x + d(1))
+                pyramidal_guess_y = 2*(pyramidal_guess_y + d(2))
             end
         end
         
@@ -146,7 +151,7 @@ for f = 1:400
         
         imshow(frame);
         hold on;
-        rectangle('Position', [floor(x0), floor(y0), winLength, winHeight], 'LineWidth', 2, 'EdgeColor', 'r');
+        rectangle('Position', [round(x0)-NEIGH_SIZE, round(y0)-NEIGH_SIZE, 2*NEIGH_SIZE, 2*NEIGH_SIZE], 'LineWidth', 2, 'EdgeColor', 'r');
         hold off;
         ginput(1);
     end

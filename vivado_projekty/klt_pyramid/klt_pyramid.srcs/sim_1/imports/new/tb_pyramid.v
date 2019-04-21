@@ -45,15 +45,23 @@ module tb_pyramid(
     wire de_4x;
     wire hsync_4x;
     wire vsync_4x;
+    
+    wire [11 : 0] point_x0_L0;
+    wire [10 : 0] point_y0_L0;
+    wire [11 : 0] point_x0_L1;
+    wire [10 : 0] point_y0_L1;
+    wire [11 : 0] point_x0_L2;
+    wire [10 : 0] point_y0_L2;
+    
+    wire [87 : 0] pyramidal_guess_L2_x;
+    wire [87 : 0] pyramidal_guess_L2_y;
+    wire guess_valid_L2;
 
     wire context_valid;
     wire [10 : 0] center;
     wire [7 : 0] centerpx;
     wire [11 : 0] x_pos;
     wire [10 : 0] y_pos;
-    wire dx_valid;
-    wire [11 : 0] point_x0;
-    wire [10 : 0] point_y0;
     wire in_roi;
     wire in_extended_roi;
     wire [7 : 0] prev_frame_pixel;
@@ -66,8 +74,6 @@ module tb_pyramid(
     wire [52 : 0] ed_minus_bf;
     wire [52 : 0] af_minus_ec;
     wire [51 : 0] ad_minus_bc;
-    wire [87 : 0] dx;
-    wire [87 : 0] dy;
     wire [9 : 0] write_addr_test;
     wire [9 : 0] read_addr_test;
     wire [9 : 0] read_offset;
@@ -75,8 +81,6 @@ module tb_pyramid(
     wire [10 : 0] delta_y0;
     wire center_vsync;
     wire first_frame;
-    wire [11 : 0] latched_x0;
-    wire [10 : 0] latched_y0;
     
     assign centerpx = center[10 -: 8];
     
@@ -142,26 +146,43 @@ module tb_pyramid(
     );
     
     
+    pyramidal_position_controller poscon(
+    
+        .set_x0(12'd300),
+        .set_y0(11'd290),
+        
+        .point_x0_L0(point_x0_L0),
+        .point_y0_L0(point_y0_L0),
+        .point_x0_L1(point_x0_L1),
+        .point_y0_L1(point_y0_L1),
+        .point_x0_L2(point_x0_L2),
+        .point_y0_L2(point_y0_L2)
+    );
+    
+    
     klt_tracker_level tracker_L2(
         
         .rx_pclk(clk_4x),
         .rx_de(de_4x),
         .rx_hsync(hsync_4x),
         .rx_vsync(vsync_4x),
-        .enable_tracking(1'b1),
-        .reset_position(1'b0),
         .pixel_in(pixel_4x),
-      
+        .level_x0(point_x0_L2),
+        .level_y0(point_y0_L2),
+        .pyramidal_guess_x(88'b0),
+        .pyramidal_guess_y(88'b0),
+        
+        .guess_out_x(pyramidal_guess_L2_x),
+        .guess_out_y(pyramidal_guess_L2_y),
+        .guess_valid(guess_valid_L2),
+        
 //        .context_valid(context_valid),
         .center(center),
         .x_pos(x_pos),
         .y_pos(y_pos),
         .in_roi(in_roi),
 //        .in_extended_roi(in_extended_roi),
-        .dx_valid(dx_valid),
         .prev_center_pixel(prev_frame_pixel),
-        .point_x0(point_x0),
-        .point_y0(point_y0),
         .G11(G11),
         .G12(G12),
         .G22(G22),
@@ -170,16 +191,53 @@ module tb_pyramid(
         .ed_minus_bf(ed_minus_bf),
         .af_minus_ec(af_minus_ec),
         .ad_minus_bc(ad_minus_bc),
-        .dx(dx),
-        .dy(dy),
         .write_addr_test(write_addr_test),
         .read_addr_test(read_addr_test),
         .read_offset(read_offset),
         .delta_x0(delta_x0),
         .delta_y0(delta_y0),
-        .first_frame(first_frame),
-        .latched_x0(latched_x0),
-        .latched_y0(latched_y0)
+        .first_frame(first_frame)
     );
+    
+    
+//    klt_tracker_level tracker_L1(
+            
+//        .rx_pclk(clk_2x),
+//        .rx_de(de_2x),
+//        .rx_hsync(hsync_2x),
+//        .rx_vsync(vsync_2x),
+//        .enable_tracking(1'b1),
+//        .reset_position(1'b0),
+//        .pixel_in(pixel_2x),
+      
+////        .context_valid(context_valid),
+//        .center(center_L1),
+//        .x_pos(x_pos_L1),
+//        .y_pos(y_pos_L1),
+//        .in_roi(in_roi_L1),
+////        .in_extended_roi(in_extended_roi),
+//        .dx_valid(dx_valid),
+//        .prev_center_pixel(prev_frame_pixel),
+//        .point_x0(point_x0),
+//        .point_y0(point_y0),
+//        .G11(G11),
+//        .G12(G12),
+//        .G22(G22),
+//        .b1(b1),
+//        .b2(b2)
+////        .ed_minus_bf(ed_minus_bf),
+////        .af_minus_ec(af_minus_ec),
+////        .ad_minus_bc(ad_minus_bc),
+////        .dx(dx),
+////        .dy(dy),
+////        .write_addr_test(write_addr_test),
+////        .read_addr_test(read_addr_test),
+////        .read_offset(read_offset),
+////        .delta_x0(delta_x0),
+////        .delta_y0(delta_y0),
+////        .first_frame(first_frame),
+////        .latched_x0(latched_x0),
+////        .latched_y0(latched_y0)
+//    );
     
 endmodule
