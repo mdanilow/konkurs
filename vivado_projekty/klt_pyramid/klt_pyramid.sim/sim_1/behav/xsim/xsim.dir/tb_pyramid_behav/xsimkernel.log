@@ -2,3 +2,6 @@ Running: xsim.dir/tb_pyramid_behav/xsimk.exe -simmode gui -wdb tb_pyramid_behav.
 Design successfully loaded
 Design Loading Memory Usage: 49584 KB (Peak: 49584 KB)
 Design Loading CPU Usage: 218 ms
+Simulation completed
+Simulation Memory Usage: 2722352 KB (Peak: 2722352 KB)
+Simulation CPU Usage: 2293624 ms

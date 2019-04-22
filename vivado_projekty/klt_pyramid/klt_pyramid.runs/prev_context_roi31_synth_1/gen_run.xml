@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="prev_context_roi31_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1555790891">
   <File Type="PA-TCL" Name="prev_context_roi31.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="prev_context_roi31_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="prev_context_roi31_reports.tcl"/>
   <File Type="RDS-RDS" Name="prev_context_roi31.vds"/>
   <File Type="RDS-UTIL" Name="prev_context_roi31_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="prev_context_roi31_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="prev_context_roi31.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="prev_context_roi31_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="prev_context_roi31_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prev_context_roi31">
     <File Path="$PSRCDIR/sources_1/ip/prev_context_roi31/prev_context_roi31.xci">
       <FileInfo>
@@ -36,9 +33,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -39,6 +39,7 @@ module klt_tracker_level #(
     output reg [87 : 0] guess_out_x = 0,
     output reg [87 : 0] guess_out_y = 0,
     output reg guess_valid = 0,
+    output halt_me_pls,
     
     output context_valid,
     output [10 : 0] center,
@@ -162,7 +163,8 @@ module klt_tracker_level #(
         
         .in_roi(in_roi),
         .in_extended_roi(in_extended_roi),
-        .roi_end(roi_end)
+        .roi_end(roi_end),
+        .halt_me_pls(halt_me_pls)
     );
     
     

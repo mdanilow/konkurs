@@ -38,17 +38,13 @@ module in_roi_check_level #(
 
     output in_roi,
     output in_extended_roi,
-    output roi_end
+    output roi_end,
+    output halt_me_pls
 );
     
     reg roi_end_reg = 0;
     reg roi_end_impulse_state = 0;
     reg roi_ended = 0;
-    
-    reg [87 : 0] x0 = {59'd82, 1'b1, 28'b0};   //72.5
-    reg [87 : 0] y0 = {59'd82, 1'b1, 28'b0};    //72.5
-//    reg [87 : 0] x0 = {59'd300, 29'b0};  
-//    reg [87 : 0] y0 = {59'd300, 29'b0};    
 
     
     //roi_end impulse generation
@@ -85,5 +81,5 @@ module in_roi_check_level #(
     assign roi_end = roi_end_reg;
     assign in_roi = (x_pos >= level_x0 - NEIGH_SIZE) && (x_pos <= level_x0 + NEIGH_SIZE) && (y_pos >= level_y0 - NEIGH_SIZE) && (y_pos <= level_y0 + NEIGH_SIZE) && (roi_ended == 0);
     assign in_extended_roi = (x_pos >= level_x0 - (NEIGH_SIZE + BORDER_WIDTH)) && (x_pos <= level_x0 + (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos >= level_y0 - (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos <= level_y0 + (NEIGH_SIZE + BORDER_WIDTH));
-    
+    assign halt_me_pls = (y_pos == level_y0 - NEIGH_SIZE) && (x_pos >= level_x0 - NEIGH_SIZE - 2);
 endmodule

@@ -60,6 +60,9 @@ module tb_pyramid(
     wire [87 : 0] pyramidal_guess_L1_x;
     wire [87 : 0] pyramidal_guess_L1_y;
     wire guess_valid_L1;
+    
+    wire halt_L1;
+    wire halt_L0;
 
     wire [10 : 0] pyramidal_guess_pixel;
     wire [7 : 0] pyramidal_guess_px;
@@ -227,6 +230,17 @@ module tb_pyramid(
     );
     
     
+    vision_stream_halter L1_halter(
+    
+        .clk(clk_2x),
+        .pixel_in(pixel_2x),
+        .hsync_in(hsync_2x),
+        .vsync_in(vsync_2x),
+        .de_in(de_2x),
+        .halt(halt_L1)
+    );
+    
+    
     klt_tracker_level tracker_L1(
             
         .rx_pclk(clk_2x),
@@ -242,6 +256,7 @@ module tb_pyramid(
         .guess_out_x(pyramidal_guess_L1_x),
         .guess_out_y(pyramidal_guess_L1_y),
         .guess_valid(guess_valid_L1),
+        .halt_me_pls(halt_L1),
       
 //        .context_valid(context_valid),
         .center(center_L1),
