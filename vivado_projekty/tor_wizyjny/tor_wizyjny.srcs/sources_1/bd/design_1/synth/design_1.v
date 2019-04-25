@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Fri Nov 16 16:15:42 2018
-//Host        : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+//Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+//Date        : Wed Apr 24 19:32:23 2019
+//Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -32,26 +32,25 @@ module design_1
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    hdmi_hpd,
-    hdmi_in_clk_n,
-    hdmi_in_clk_p,
-    hdmi_in_data_n,
-    hdmi_in_data_p,
-    hdmi_in_ddc_scl_i,
-    hdmi_in_ddc_scl_o,
-    hdmi_in_ddc_scl_t,
-    hdmi_in_ddc_sda_i,
-    hdmi_in_ddc_sda_o,
-    hdmi_in_ddc_sda_t,
-    hdmi_out_en,
+    hdmi_rx_clk_n,
+    hdmi_rx_clk_p,
+    hdmi_rx_data_n,
+    hdmi_rx_data_p,
+    hdmi_rx_ddc_scl_i,
+    hdmi_rx_ddc_scl_o,
+    hdmi_rx_ddc_scl_t,
+    hdmi_rx_ddc_sda_i,
+    hdmi_rx_ddc_sda_o,
+    hdmi_rx_ddc_sda_t,
+    hdmi_rx_hpd,
+    hdmi_tx_clk_n,
+    hdmi_tx_clk_p,
+    hdmi_tx_data_n,
+    hdmi_tx_data_p,
+    hdmi_tx_hpd,
     led,
     sw,
-    sys_clock,
-    vga_pBlue,
-    vga_pGreen,
-    vga_pHSync,
-    vga_pRed,
-    vga_pVSync);
+    sysclk);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -73,26 +72,25 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  output [0:0]hdmi_hpd;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_in CLK_N" *) input hdmi_in_clk_n;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_in CLK_P" *) input hdmi_in_clk_p;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_in DATA_N" *) input [2:0]hdmi_in_data_n;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_in DATA_P" *) input [2:0]hdmi_in_data_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SCL_I" *) input hdmi_in_ddc_scl_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SCL_O" *) output hdmi_in_ddc_scl_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SCL_T" *) output hdmi_in_ddc_scl_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_I" *) input hdmi_in_ddc_sda_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_O" *) output hdmi_in_ddc_sda_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_in_ddc SDA_T" *) output hdmi_in_ddc_sda_t;
-  output [0:0]hdmi_out_en;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_rx CLK_N" *) input hdmi_rx_clk_n;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_rx CLK_P" *) input hdmi_rx_clk_p;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_rx DATA_N" *) input [2:0]hdmi_rx_data_n;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_rx DATA_P" *) input [2:0]hdmi_rx_data_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_rx_ddc SCL_I" *) input hdmi_rx_ddc_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_rx_ddc SCL_O" *) output hdmi_rx_ddc_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_rx_ddc SCL_T" *) output hdmi_rx_ddc_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_rx_ddc SDA_I" *) input hdmi_rx_ddc_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_rx_ddc SDA_O" *) output hdmi_rx_ddc_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 hdmi_rx_ddc SDA_T" *) output hdmi_rx_ddc_sda_t;
+  output [0:0]hdmi_rx_hpd;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx CLK_N" *) output hdmi_tx_clk_n;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx CLK_P" *) output hdmi_tx_clk_p;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_N" *) output [2:0]hdmi_tx_data_n;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_P" *) output [2:0]hdmi_tx_data_p;
+  output [0:0]hdmi_tx_hpd;
   output [3:0]led;
   input [3:0]sw;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_clk, FREQ_HZ 125000000, PHASE 0.000" *) input sys_clock;
-  output [4:0]vga_pBlue;
-  output [5:0]vga_pGreen;
-  output vga_pHSync;
-  output [4:0]vga_pRed;
-  output vga_pVSync;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYSCLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYSCLK, CLK_DOMAIN design_1_clk, FREQ_HZ 125000000, PHASE 0.000" *) input sysclk;
 
   wire [7:0]bin_mask_0_mask;
   wire [31:0]centroid_0_x;
@@ -109,10 +107,10 @@ module design_1
   wire dvi2rgb_0_vid_pHSync;
   wire dvi2rgb_0_vid_pVDE;
   wire dvi2rgb_0_vid_pVSync;
-  wire hdmi_in_1_CLK_N;
-  wire hdmi_in_1_CLK_P;
-  wire [2:0]hdmi_in_1_DATA_N;
-  wire [2:0]hdmi_in_1_DATA_P;
+  wire hdmi_rx_1_CLK_N;
+  wire hdmi_rx_1_CLK_P;
+  wire [2:0]hdmi_rx_1_DATA_N;
+  wire [2:0]hdmi_rx_1_DATA_P;
   wire mux_0_de_out;
   wire mux_0_h_sync_out;
   wire [23:0]mux_0_pixel_out;
@@ -202,11 +200,10 @@ module design_1
   wire ps7_0_axi_periph_M00_AXI_WREADY;
   wire [3:0]ps7_0_axi_periph_M00_AXI_WSTRB;
   wire ps7_0_axi_periph_M00_AXI_WVALID;
-  wire [4:0]rgb2vga_0_vga_pBlue;
-  wire [5:0]rgb2vga_0_vga_pGreen;
-  wire rgb2vga_0_vga_pHSync;
-  wire [4:0]rgb2vga_0_vga_pRed;
-  wire rgb2vga_0_vga_pVSync;
+  wire rgb2dvi_0_TMDS_CLK_N;
+  wire rgb2dvi_0_TMDS_CLK_P;
+  wire [2:0]rgb2dvi_0_TMDS_DATA_N;
+  wire [2:0]rgb2dvi_0_TMDS_DATA_P;
   wire [8:0]rgb2ycbcr_0_cb;
   wire [8:0]rgb2ycbcr_0_cr;
   wire rgb2ycbcr_0_de_out;
@@ -225,26 +222,25 @@ module design_1
   wire [0:0]xlconstant_1_dout;
   wire [0:0]xlconstant_2_dout;
 
-  assign dvi2rgb_0_DDC_SCL_I = hdmi_in_ddc_scl_i;
-  assign dvi2rgb_0_DDC_SDA_I = hdmi_in_ddc_sda_i;
-  assign hdmi_hpd[0] = xlconstant_2_dout;
-  assign hdmi_in_1_CLK_N = hdmi_in_clk_n;
-  assign hdmi_in_1_CLK_P = hdmi_in_clk_p;
-  assign hdmi_in_1_DATA_N = hdmi_in_data_n[2:0];
-  assign hdmi_in_1_DATA_P = hdmi_in_data_p[2:0];
-  assign hdmi_in_ddc_scl_o = dvi2rgb_0_DDC_SCL_O;
-  assign hdmi_in_ddc_scl_t = dvi2rgb_0_DDC_SCL_T;
-  assign hdmi_in_ddc_sda_o = dvi2rgb_0_DDC_SDA_O;
-  assign hdmi_in_ddc_sda_t = dvi2rgb_0_DDC_SDA_T;
-  assign hdmi_out_en[0] = xlconstant_1_dout;
+  assign dvi2rgb_0_DDC_SCL_I = hdmi_rx_ddc_scl_i;
+  assign dvi2rgb_0_DDC_SDA_I = hdmi_rx_ddc_sda_i;
+  assign hdmi_rx_1_CLK_N = hdmi_rx_clk_n;
+  assign hdmi_rx_1_CLK_P = hdmi_rx_clk_p;
+  assign hdmi_rx_1_DATA_N = hdmi_rx_data_n[2:0];
+  assign hdmi_rx_1_DATA_P = hdmi_rx_data_p[2:0];
+  assign hdmi_rx_ddc_scl_o = dvi2rgb_0_DDC_SCL_O;
+  assign hdmi_rx_ddc_scl_t = dvi2rgb_0_DDC_SCL_T;
+  assign hdmi_rx_ddc_sda_o = dvi2rgb_0_DDC_SDA_O;
+  assign hdmi_rx_ddc_sda_t = dvi2rgb_0_DDC_SDA_T;
+  assign hdmi_rx_hpd[0] = xlconstant_1_dout;
+  assign hdmi_tx_clk_n = rgb2dvi_0_TMDS_CLK_N;
+  assign hdmi_tx_clk_p = rgb2dvi_0_TMDS_CLK_P;
+  assign hdmi_tx_data_n[2:0] = rgb2dvi_0_TMDS_DATA_N;
+  assign hdmi_tx_data_p[2:0] = rgb2dvi_0_TMDS_DATA_P;
+  assign hdmi_tx_hpd[0] = xlconstant_2_dout;
   assign led[3:0] = parameter_register_0_led;
   assign sw_1 = sw[3:0];
-  assign sys_clock_1 = sys_clock;
-  assign vga_pBlue[4:0] = rgb2vga_0_vga_pBlue;
-  assign vga_pGreen[5:0] = rgb2vga_0_vga_pGreen;
-  assign vga_pHSync = rgb2vga_0_vga_pHSync;
-  assign vga_pRed[4:0] = rgb2vga_0_vga_pRed;
-  assign vga_pVSync = rgb2vga_0_vga_pVSync;
+  assign sys_clock_1 = sysclk;
   design_1_bin_mask_0_0 bin_mask_0
        (.Cb(rgb2ycbcr_0_cb[7:0]),
         .Cr(rgb2ycbcr_0_cr[7:0]),
@@ -267,7 +263,7 @@ module design_1
        (.clk_in1(sys_clock_1),
         .clk_out1(clk_wiz_0_clk_out1),
         .reset(xlconstant_0_dout));
-  design_1_dvi2rgb_0_0 dvi2rgb_0
+  design_1_dvi2rgb_0_1 dvi2rgb_0
        (.PixelClk(dvi2rgb_0_PixelClk),
         .RefClk(clk_wiz_0_clk_out1),
         .SCL_I(dvi2rgb_0_DDC_SCL_I),
@@ -276,10 +272,10 @@ module design_1
         .SDA_I(dvi2rgb_0_DDC_SDA_I),
         .SDA_O(dvi2rgb_0_DDC_SDA_O),
         .SDA_T(dvi2rgb_0_DDC_SDA_T),
-        .TMDS_Clk_n(hdmi_in_1_CLK_N),
-        .TMDS_Clk_p(hdmi_in_1_CLK_P),
-        .TMDS_Data_n(hdmi_in_1_DATA_N),
-        .TMDS_Data_p(hdmi_in_1_DATA_P),
+        .TMDS_Clk_n(hdmi_rx_1_CLK_N),
+        .TMDS_Clk_p(hdmi_rx_1_CLK_P),
+        .TMDS_Data_n(hdmi_rx_1_DATA_N),
+        .TMDS_Data_p(hdmi_rx_1_DATA_P),
         .aRst(xlconstant_0_dout),
         .pRst(xlconstant_0_dout),
         .vid_pData(dvi2rgb_0_vid_pData),
@@ -484,17 +480,17 @@ module design_1
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
-  design_1_rgb2vga_0_0 rgb2vga_0
+  design_1_rgb2dvi_0_0 rgb2dvi_0
        (.PixelClk(dvi2rgb_0_PixelClk),
-        .rgb_pData(mux_0_pixel_out),
-        .rgb_pHSync(mux_0_h_sync_out),
-        .rgb_pVDE(mux_0_de_out),
-        .rgb_pVSync(mux_0_v_sync_out),
-        .vga_pBlue(rgb2vga_0_vga_pBlue),
-        .vga_pGreen(rgb2vga_0_vga_pGreen),
-        .vga_pHSync(rgb2vga_0_vga_pHSync),
-        .vga_pRed(rgb2vga_0_vga_pRed),
-        .vga_pVSync(rgb2vga_0_vga_pVSync));
+        .TMDS_Clk_n(rgb2dvi_0_TMDS_CLK_N),
+        .TMDS_Clk_p(rgb2dvi_0_TMDS_CLK_P),
+        .TMDS_Data_n(rgb2dvi_0_TMDS_DATA_N),
+        .TMDS_Data_p(rgb2dvi_0_TMDS_DATA_P),
+        .aRst(1'b0),
+        .vid_pData(mux_0_pixel_out),
+        .vid_pHSync(mux_0_h_sync_out),
+        .vid_pVDE(mux_0_de_out),
+        .vid_pVSync(mux_0_v_sync_out));
   design_1_rgb2ycbcr_0_0 rgb2ycbcr_0
        (.cb(rgb2ycbcr_0_cb),
         .clk(dvi2rgb_0_PixelClk),

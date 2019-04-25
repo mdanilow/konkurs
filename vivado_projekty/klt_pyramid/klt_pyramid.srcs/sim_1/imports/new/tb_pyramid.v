@@ -62,6 +62,12 @@ module tb_pyramid(
     wire guess_valid_L1;
     
     wire halt_L1;
+    wire [7 : 0] pixel_2x_halted;
+    wire hsync_2x_halted;
+    wire vsync_2x_halted;
+    wire de_2x_halted;
+    wire clk_2x_halted;
+    
     wire halt_L0;
 
     wire [10 : 0] pyramidal_guess_pixel;
@@ -235,19 +241,27 @@ module tb_pyramid(
         .clk(clk_2x),
         .pixel_in(pixel_2x),
         .hsync_in(hsync_2x),
-        .vsync_in(vsync_2x),
+        .vsync_in(vsync_2x),    //why do we 
         .de_in(de_2x),
-        .halt(halt_L1)
+        .halt(halt_L1),
+        .start(guess_valid_L2),
+        .reset(vsync_2x),
+        
+        .clk_out(clk_2x_halted),
+        .pixel_out(pixel_2x_halted),
+        .hsync_out(hsync_2x_halted),
+        .vsync_out(vsync_2x_halted),
+        .de_out(de_2x_halted)
     );
     
     
     klt_tracker_level tracker_L1(
             
-        .rx_pclk(clk_2x),
-        .rx_de(de_2x),
-        .rx_hsync(hsync_2x),
-        .rx_vsync(vsync_2x),
-        .pixel_in(pixel_2x),
+        .rx_pclk(clk_2x_halted),
+        .rx_de(de_2x_halted),
+        .rx_hsync(hsync_2x_halted),
+        .rx_vsync(vsync_2x_halted),
+        .pixel_in(pixel_2x_halted),
         .level_x0(point_x0_L1),
         .level_y0(point_y0_L1),
         .pyramidal_guess_x(pyramidal_guess_L2_x),

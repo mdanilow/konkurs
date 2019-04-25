@@ -1,9 +1,9 @@
-15:32:20 **** Auto Build of configuration Debug for project hellocpp2 ****
+19:09:10 **** Auto Build of configuration Debug for project hellocpp2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
- 
-Building file: ../src/main.cc
-Invoking: ARM v7 g++ compiler
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../hellocpp2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main()':
 ../src/main.cc:10:5: error: 'print' was not declared in this scope
@@ -13,8 +13,7 @@ arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cort
      print("Hello Worldcpp\n\r");
      ^~~~~
      printf
-make: *** [src/main.o] Error 1
-src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] B³¹d 1
 
-15:32:20 Build Finished (took 410ms)
+19:09:13 Build Finished (took 2s.865ms)
 

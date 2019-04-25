@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Apr 20 19:29:20 2019
+//Date        : Wed Apr 24 20:20:12 2019
 //Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 //Command     : generate_target main_design.bd
 //Design      : main_design
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=4,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "main_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "main_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=main_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "main_design.hwdef" *) 
 module main_design
    (hdmi_rx_clk_n,
     hdmi_rx_clk_p,
@@ -54,29 +54,22 @@ module main_design
   wire dvi2rgb_0_DDC_SDA_O;
   wire dvi2rgb_0_DDC_SDA_T;
   wire dvi2rgb_0_PixelClk;
-  wire [23:0]dvi2rgb_0_vid_pData;
-  wire dvi2rgb_0_vid_pHSync;
-  wire dvi2rgb_0_vid_pVDE;
-  wire dvi2rgb_0_vid_pVSync;
+  wire dvi2rgb_0_RGB_ACTIVE_VIDEO;
+  wire [23:0]dvi2rgb_0_RGB_DATA;
+  wire dvi2rgb_0_RGB_HSYNC;
+  wire dvi2rgb_0_RGB_VSYNC;
   wire hdmi_rx_1_CLK_N;
   wire hdmi_rx_1_CLK_P;
   wire [2:0]hdmi_rx_1_DATA_N;
   wire [2:0]hdmi_rx_1_DATA_P;
-  wire [23:0]klt_tracker_w10b2_mu_0_pixel_out;
   wire rgb2dvi_0_TMDS_CLK_N;
   wire rgb2dvi_0_TMDS_CLK_P;
   wire [2:0]rgb2dvi_0_TMDS_DATA_N;
   wire [2:0]rgb2dvi_0_TMDS_DATA_P;
-  wire rgb2ycbcr_0_de_out;
-  wire rgb2ycbcr_0_h_sync_out;
-  wire rgb2ycbcr_0_v_sync_out;
-  wire [8:0]rgb2ycbcr_0_y;
   wire sys_clock_1;
   wire [0:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
   wire [0:0]xlconstant_2_dout;
-  wire [0:0]xlconstant_3_dout;
-  wire [0:0]xlconstant_4_dout;
 
   assign dvi2rgb_0_DDC_SCL_I = hdmi_rx_ddc_scl_i;
   assign dvi2rgb_0_DDC_SDA_I = hdmi_rx_ddc_sda_i;
@@ -114,19 +107,10 @@ module main_design
         .TMDS_Data_p(hdmi_rx_1_DATA_P),
         .aRst(xlconstant_0_dout),
         .pRst(xlconstant_0_dout),
-        .vid_pData(dvi2rgb_0_vid_pData),
-        .vid_pHSync(dvi2rgb_0_vid_pHSync),
-        .vid_pVDE(dvi2rgb_0_vid_pVDE),
-        .vid_pVSync(dvi2rgb_0_vid_pVSync));
-  main_design_klt_tracker_w10b2_mu_0_0 klt_tracker_w10b2_mu_0
-       (.enable_tracking(xlconstant_3_dout),
-        .pixel_in(rgb2ycbcr_0_y[7:0]),
-        .pixel_out(klt_tracker_w10b2_mu_0_pixel_out),
-        .reset_position(xlconstant_4_dout),
-        .rx_de(rgb2ycbcr_0_de_out),
-        .rx_hsync(rgb2ycbcr_0_h_sync_out),
-        .rx_pclk(dvi2rgb_0_PixelClk),
-        .rx_vsync(rgb2ycbcr_0_v_sync_out));
+        .vid_pData(dvi2rgb_0_RGB_DATA),
+        .vid_pHSync(dvi2rgb_0_RGB_HSYNC),
+        .vid_pVDE(dvi2rgb_0_RGB_ACTIVE_VIDEO),
+        .vid_pVSync(dvi2rgb_0_RGB_VSYNC));
   main_design_rgb2dvi_0_0 rgb2dvi_0
        (.PixelClk(dvi2rgb_0_PixelClk),
         .TMDS_Clk_n(rgb2dvi_0_TMDS_CLK_N),
@@ -134,28 +118,14 @@ module main_design
         .TMDS_Data_n(rgb2dvi_0_TMDS_DATA_N),
         .TMDS_Data_p(rgb2dvi_0_TMDS_DATA_P),
         .aRst(xlconstant_0_dout),
-        .vid_pData(klt_tracker_w10b2_mu_0_pixel_out),
-        .vid_pHSync(rgb2ycbcr_0_h_sync_out),
-        .vid_pVDE(rgb2ycbcr_0_de_out),
-        .vid_pVSync(rgb2ycbcr_0_v_sync_out));
-  main_design_rgb2ycbcr_0_0 rgb2ycbcr_0
-       (.clk(dvi2rgb_0_PixelClk),
-        .de_in(dvi2rgb_0_vid_pVDE),
-        .de_out(rgb2ycbcr_0_de_out),
-        .h_sync_in(dvi2rgb_0_vid_pHSync),
-        .h_sync_out(rgb2ycbcr_0_h_sync_out),
-        .pixel_in(dvi2rgb_0_vid_pData),
-        .v_sync_in(dvi2rgb_0_vid_pVSync),
-        .v_sync_out(rgb2ycbcr_0_v_sync_out),
-        .y(rgb2ycbcr_0_y));
+        .vid_pData(dvi2rgb_0_RGB_DATA),
+        .vid_pHSync(dvi2rgb_0_RGB_HSYNC),
+        .vid_pVDE(dvi2rgb_0_RGB_ACTIVE_VIDEO),
+        .vid_pVSync(dvi2rgb_0_RGB_VSYNC));
   main_design_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   main_design_xlconstant_1_0 xlconstant_1
        (.dout(xlconstant_1_dout));
   main_design_xlconstant_2_0 xlconstant_2
        (.dout(xlconstant_2_dout));
-  main_design_xlconstant_1_1 xlconstant_3
-       (.dout(xlconstant_3_dout));
-  main_design_xlconstant_3_0 xlconstant_4
-       (.dout(xlconstant_4_dout));
 endmodule

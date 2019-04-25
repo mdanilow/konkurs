@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-//Date        : Fri Nov 16 16:15:43 2018
-//Host        : inzynier-Vostro-460 running 64-bit Ubuntu 16.04.5 LTS
+//Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+//Date        : Wed Apr 24 19:32:24 2019
+//Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -31,22 +31,21 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    hdmi_hpd,
-    hdmi_in_clk_n,
-    hdmi_in_clk_p,
-    hdmi_in_data_n,
-    hdmi_in_data_p,
-    hdmi_in_ddc_scl_io,
-    hdmi_in_ddc_sda_io,
-    hdmi_out_en,
+    hdmi_rx_clk_n,
+    hdmi_rx_clk_p,
+    hdmi_rx_data_n,
+    hdmi_rx_data_p,
+    hdmi_rx_ddc_scl_io,
+    hdmi_rx_ddc_sda_io,
+    hdmi_rx_hpd,
+    hdmi_tx_clk_n,
+    hdmi_tx_clk_p,
+    hdmi_tx_data_n,
+    hdmi_tx_data_p,
+    hdmi_tx_hpd,
     led,
     sw,
-    sys_clock,
-    vga_pBlue,
-    vga_pGreen,
-    vga_pHSync,
-    vga_pRed,
-    vga_pVSync);
+    sysclk);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -68,22 +67,21 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [0:0]hdmi_hpd;
-  input hdmi_in_clk_n;
-  input hdmi_in_clk_p;
-  input [2:0]hdmi_in_data_n;
-  input [2:0]hdmi_in_data_p;
-  inout hdmi_in_ddc_scl_io;
-  inout hdmi_in_ddc_sda_io;
-  output [0:0]hdmi_out_en;
+  input hdmi_rx_clk_n;
+  input hdmi_rx_clk_p;
+  input [2:0]hdmi_rx_data_n;
+  input [2:0]hdmi_rx_data_p;
+  inout hdmi_rx_ddc_scl_io;
+  inout hdmi_rx_ddc_sda_io;
+  output [0:0]hdmi_rx_hpd;
+  output hdmi_tx_clk_n;
+  output hdmi_tx_clk_p;
+  output [2:0]hdmi_tx_data_n;
+  output [2:0]hdmi_tx_data_p;
+  output [0:0]hdmi_tx_hpd;
   output [3:0]led;
   input [3:0]sw;
-  input sys_clock;
-  output [4:0]vga_pBlue;
-  output [5:0]vga_pGreen;
-  output vga_pHSync;
-  output [4:0]vga_pRed;
-  output vga_pVSync;
+  input sysclk;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -106,28 +104,27 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]hdmi_hpd;
-  wire hdmi_in_clk_n;
-  wire hdmi_in_clk_p;
-  wire [2:0]hdmi_in_data_n;
-  wire [2:0]hdmi_in_data_p;
-  wire hdmi_in_ddc_scl_i;
-  wire hdmi_in_ddc_scl_io;
-  wire hdmi_in_ddc_scl_o;
-  wire hdmi_in_ddc_scl_t;
-  wire hdmi_in_ddc_sda_i;
-  wire hdmi_in_ddc_sda_io;
-  wire hdmi_in_ddc_sda_o;
-  wire hdmi_in_ddc_sda_t;
-  wire [0:0]hdmi_out_en;
+  wire hdmi_rx_clk_n;
+  wire hdmi_rx_clk_p;
+  wire [2:0]hdmi_rx_data_n;
+  wire [2:0]hdmi_rx_data_p;
+  wire hdmi_rx_ddc_scl_i;
+  wire hdmi_rx_ddc_scl_io;
+  wire hdmi_rx_ddc_scl_o;
+  wire hdmi_rx_ddc_scl_t;
+  wire hdmi_rx_ddc_sda_i;
+  wire hdmi_rx_ddc_sda_io;
+  wire hdmi_rx_ddc_sda_o;
+  wire hdmi_rx_ddc_sda_t;
+  wire [0:0]hdmi_rx_hpd;
+  wire hdmi_tx_clk_n;
+  wire hdmi_tx_clk_p;
+  wire [2:0]hdmi_tx_data_n;
+  wire [2:0]hdmi_tx_data_p;
+  wire [0:0]hdmi_tx_hpd;
   wire [3:0]led;
   wire [3:0]sw;
-  wire sys_clock;
-  wire [4:0]vga_pBlue;
-  wire [5:0]vga_pGreen;
-  wire vga_pHSync;
-  wire [4:0]vga_pRed;
-  wire vga_pVSync;
+  wire sysclk;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -151,34 +148,33 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .hdmi_hpd(hdmi_hpd),
-        .hdmi_in_clk_n(hdmi_in_clk_n),
-        .hdmi_in_clk_p(hdmi_in_clk_p),
-        .hdmi_in_data_n(hdmi_in_data_n),
-        .hdmi_in_data_p(hdmi_in_data_p),
-        .hdmi_in_ddc_scl_i(hdmi_in_ddc_scl_i),
-        .hdmi_in_ddc_scl_o(hdmi_in_ddc_scl_o),
-        .hdmi_in_ddc_scl_t(hdmi_in_ddc_scl_t),
-        .hdmi_in_ddc_sda_i(hdmi_in_ddc_sda_i),
-        .hdmi_in_ddc_sda_o(hdmi_in_ddc_sda_o),
-        .hdmi_in_ddc_sda_t(hdmi_in_ddc_sda_t),
-        .hdmi_out_en(hdmi_out_en),
+        .hdmi_rx_clk_n(hdmi_rx_clk_n),
+        .hdmi_rx_clk_p(hdmi_rx_clk_p),
+        .hdmi_rx_data_n(hdmi_rx_data_n),
+        .hdmi_rx_data_p(hdmi_rx_data_p),
+        .hdmi_rx_ddc_scl_i(hdmi_rx_ddc_scl_i),
+        .hdmi_rx_ddc_scl_o(hdmi_rx_ddc_scl_o),
+        .hdmi_rx_ddc_scl_t(hdmi_rx_ddc_scl_t),
+        .hdmi_rx_ddc_sda_i(hdmi_rx_ddc_sda_i),
+        .hdmi_rx_ddc_sda_o(hdmi_rx_ddc_sda_o),
+        .hdmi_rx_ddc_sda_t(hdmi_rx_ddc_sda_t),
+        .hdmi_rx_hpd(hdmi_rx_hpd),
+        .hdmi_tx_clk_n(hdmi_tx_clk_n),
+        .hdmi_tx_clk_p(hdmi_tx_clk_p),
+        .hdmi_tx_data_n(hdmi_tx_data_n),
+        .hdmi_tx_data_p(hdmi_tx_data_p),
+        .hdmi_tx_hpd(hdmi_tx_hpd),
         .led(led),
         .sw(sw),
-        .sys_clock(sys_clock),
-        .vga_pBlue(vga_pBlue),
-        .vga_pGreen(vga_pGreen),
-        .vga_pHSync(vga_pHSync),
-        .vga_pRed(vga_pRed),
-        .vga_pVSync(vga_pVSync));
-  IOBUF hdmi_in_ddc_scl_iobuf
-       (.I(hdmi_in_ddc_scl_o),
-        .IO(hdmi_in_ddc_scl_io),
-        .O(hdmi_in_ddc_scl_i),
-        .T(hdmi_in_ddc_scl_t));
-  IOBUF hdmi_in_ddc_sda_iobuf
-       (.I(hdmi_in_ddc_sda_o),
-        .IO(hdmi_in_ddc_sda_io),
-        .O(hdmi_in_ddc_sda_i),
-        .T(hdmi_in_ddc_sda_t));
+        .sysclk(sysclk));
+  IOBUF hdmi_rx_ddc_scl_iobuf
+       (.I(hdmi_rx_ddc_scl_o),
+        .IO(hdmi_rx_ddc_scl_io),
+        .O(hdmi_rx_ddc_scl_i),
+        .T(hdmi_rx_ddc_scl_t));
+  IOBUF hdmi_rx_ddc_sda_iobuf
+       (.I(hdmi_rx_ddc_sda_o),
+        .IO(hdmi_rx_ddc_sda_io),
+        .O(hdmi_rx_ddc_sda_i),
+        .T(hdmi_rx_ddc_sda_t));
 endmodule

@@ -74,8 +74,16 @@ module vision_stream_halter(
         
         //reading
         else if(state == 2)
+        begin
+        
             if(reset == 1)
+            begin
+                
+                write_enable <= 0;
+                read_enable <= 0;
                 state <= 0;
+            end
+        end
     end
     
     

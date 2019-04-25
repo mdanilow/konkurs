@@ -1,0 +1,19 @@
+verilog xil_defaultlib  \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/src/frame_delay_sim/sim/frame_delay_sim.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/src/delayLineBRAM/sim/delayLineBRAM.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/context_3x3.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/delayLinieBRAM_WP.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/in_roi_check.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/klt_integrator.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/linsolve.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/modul_puz.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/pixel_position.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/point_tracker.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/puz.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/wysw_box.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/klt_tracker.v" \
+"../../../../mainVideoProcessing_Zybo-Z20.srcs/sources_1/ip/klt_tracker_w10b2_mult_0/sim/klt_tracker_w10b2_mult_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

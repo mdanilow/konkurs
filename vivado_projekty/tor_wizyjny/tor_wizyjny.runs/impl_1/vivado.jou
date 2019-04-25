@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Nov 16 16:18:25 2018
-# Process ID: 11678
-# Current directory: /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/impl_1
-# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file: /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/impl_1/design_1_wrapper.vdi
-# Journal file: /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/impl_1/vivado.jou
+# Start of session at: Wed Apr 24 19:36:16 2019
+# Process ID: 21408
+# Current directory: C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

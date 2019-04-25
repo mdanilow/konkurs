@@ -24,16 +24,4 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_design_xlc
 # IP: bd/main_design/ip/main_design_xlconstant_2_0/main_design_xlconstant_2_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_design_xlconstant_2_0 || ORIG_REF_NAME==main_design_xlconstant_2_0} -quiet] -quiet
 
-# IP: bd/main_design/ip/main_design_klt_tracker_w10b2_mu_0_0/main_design_klt_tracker_w10b2_mu_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_design_klt_tracker_w10b2_mu_0_0 || ORIG_REF_NAME==main_design_klt_tracker_w10b2_mu_0_0} -quiet] -quiet
-
-# IP: bd/main_design/ip/main_design_rgb2ycbcr_0_0/main_design_rgb2ycbcr_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_design_rgb2ycbcr_0_0 || ORIG_REF_NAME==main_design_rgb2ycbcr_0_0} -quiet] -quiet
-
-# IP: bd/main_design/ip/main_design_xlconstant_1_1/main_design_xlconstant_1_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_design_xlconstant_1_1 || ORIG_REF_NAME==main_design_xlconstant_1_1} -quiet] -quiet
-
-# IP: bd/main_design/ip/main_design_xlconstant_3_0/main_design_xlconstant_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==main_design_xlconstant_3_0 || ORIG_REF_NAME==main_design_xlconstant_3_0} -quiet] -quiet
-
 # XDC: bd/main_design/main_design_ooc.xdc

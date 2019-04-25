@@ -1,7 +1,0 @@
-mult_gen_0.vhd,vhdl,xil_defaultlib,../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/src/mult_gen_0/sim/mult_gen_0.vhd,
-c_addsub_0.vhd,vhdl,xil_defaultlib,../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/src/c_addsub_0/sim/c_addsub_0.vhd,
-modul_puz.v,verilog,xil_defaultlib,../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/modul_puz.v,
-puz.v,verilog,xil_defaultlib,../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/puz.v,
-rgb2ycbcr.v,verilog,xil_defaultlib,../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/rgb2ycbcr.v,
-rgb2ycbcr_0.v,verilog,xil_defaultlib,../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/rgb2ycbcr_0.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

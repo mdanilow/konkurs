@@ -82,11 +82,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Nov 15 16:31:09 UTC 2018</spirit:value>
+            <spirit:value>Wed Apr 24 16:13:50 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:3bb78474</spirit:value>
+            <spirit:value>8:bd353b1b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

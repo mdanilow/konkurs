@@ -198,9 +198,6 @@ proc create_root_design { parentCell } {
    CONFIG.FREQ_HZ {100000000} \
  ] [get_bd_pins /dvi2rgb_0/PixelClk]
 
-  # Create instance: klt_tracker_w10b2_mu_0, and set properties
-  set klt_tracker_w10b2_mu_0 [ create_bd_cell -type ip -vlnv ja:user:klt_tracker_w10b2_mult:2.0 klt_tracker_w10b2_mu_0 ]
-
   # Create instance: rgb2dvi_0, and set properties
   set rgb2dvi_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2dvi:1.4 rgb2dvi_0 ]
   set_property -dict [ list \
@@ -208,9 +205,6 @@ proc create_root_design { parentCell } {
    CONFIG.kGenerateSerialClk {true} \
    CONFIG.kRstActiveHigh {true} \
  ] $rgb2dvi_0
-
-  # Create instance: rgb2ycbcr_0, and set properties
-  set rgb2ycbcr_0 [ create_bd_cell -type ip -vlnv user.org:user:rgb2ycbcr:1.0 rgb2ycbcr_0 ]
 
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
@@ -224,38 +218,19 @@ proc create_root_design { parentCell } {
   # Create instance: xlconstant_2, and set properties
   set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
 
-  # Create instance: xlconstant_3, and set properties
-  set xlconstant_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_3 ]
-
-  # Create instance: xlconstant_4, and set properties
-  set xlconstant_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_4 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
- ] $xlconstant_4
-
   # Create interface connections
   connect_bd_intf_net -intf_net dvi2rgb_0_DDC [get_bd_intf_ports hdmi_rx_ddc] [get_bd_intf_pins dvi2rgb_0/DDC]
+  connect_bd_intf_net -intf_net dvi2rgb_0_RGB [get_bd_intf_pins dvi2rgb_0/RGB] [get_bd_intf_pins rgb2dvi_0/RGB]
   connect_bd_intf_net -intf_net hdmi_rx_1 [get_bd_intf_ports hdmi_rx] [get_bd_intf_pins dvi2rgb_0/TMDS]
   connect_bd_intf_net -intf_net rgb2dvi_0_TMDS [get_bd_intf_ports hdmi_tx] [get_bd_intf_pins rgb2dvi_0/TMDS]
 
   # Create port connections
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins dvi2rgb_0/RefClk]
-  connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins klt_tracker_w10b2_mu_0/rx_pclk] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins rgb2ycbcr_0/clk]
-  connect_bd_net -net dvi2rgb_0_vid_pData [get_bd_pins dvi2rgb_0/vid_pData] [get_bd_pins rgb2ycbcr_0/pixel_in]
-  connect_bd_net -net dvi2rgb_0_vid_pHSync [get_bd_pins dvi2rgb_0/vid_pHSync] [get_bd_pins rgb2ycbcr_0/h_sync_in]
-  connect_bd_net -net dvi2rgb_0_vid_pVDE [get_bd_pins dvi2rgb_0/vid_pVDE] [get_bd_pins rgb2ycbcr_0/de_in]
-  connect_bd_net -net dvi2rgb_0_vid_pVSync [get_bd_pins dvi2rgb_0/vid_pVSync] [get_bd_pins rgb2ycbcr_0/v_sync_in]
-  connect_bd_net -net klt_tracker_w10b2_mu_0_pixel_out [get_bd_pins klt_tracker_w10b2_mu_0/pixel_out] [get_bd_pins rgb2dvi_0/vid_pData]
-  connect_bd_net -net rgb2ycbcr_0_de_out [get_bd_pins klt_tracker_w10b2_mu_0/rx_de] [get_bd_pins rgb2dvi_0/vid_pVDE] [get_bd_pins rgb2ycbcr_0/de_out]
-  connect_bd_net -net rgb2ycbcr_0_h_sync_out [get_bd_pins klt_tracker_w10b2_mu_0/rx_hsync] [get_bd_pins rgb2dvi_0/vid_pHSync] [get_bd_pins rgb2ycbcr_0/h_sync_out]
-  connect_bd_net -net rgb2ycbcr_0_v_sync_out [get_bd_pins klt_tracker_w10b2_mu_0/rx_vsync] [get_bd_pins rgb2dvi_0/vid_pVSync] [get_bd_pins rgb2ycbcr_0/v_sync_out]
-  connect_bd_net -net rgb2ycbcr_0_y [get_bd_pins klt_tracker_w10b2_mu_0/pixel_in] [get_bd_pins rgb2ycbcr_0/y]
+  connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins rgb2dvi_0/PixelClk]
   connect_bd_net -net sys_clock_1 [get_bd_ports sysclk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins clk_wiz_0/reset] [get_bd_pins dvi2rgb_0/aRst] [get_bd_pins dvi2rgb_0/pRst] [get_bd_pins rgb2dvi_0/aRst] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_ports hdmi_tx_hpd] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_ports hdmi_rx_hpd] [get_bd_pins xlconstant_2/dout]
-  connect_bd_net -net xlconstant_3_dout [get_bd_pins klt_tracker_w10b2_mu_0/enable_tracking] [get_bd_pins xlconstant_3/dout]
-  connect_bd_net -net xlconstant_4_dout [get_bd_pins klt_tracker_w10b2_mu_0/reset_position] [get_bd_pins xlconstant_4/dout]
 
   # Create address segments
 

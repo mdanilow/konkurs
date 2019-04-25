@@ -67,6 +67,11 @@ module tb_klt(
     wire [10 : 0] latched_y0;
     wire [16 : 0] dy_times_window;
     
+    wire gray_de;
+    wire gray_vsync;
+    wire gray_hsync;
+    wire [8 : 0] gray_pixel;
+    
     assign center_vsync = center[0];
     assign centerpx = center[10 -: 8];
         
@@ -82,6 +87,21 @@ module tb_klt(
     );
     
     
+    rgb2ycbcr_0 gray(
+    
+        .clk(rx_pclk),
+        .de_in(rx_de),
+        .h_sync_in(rx_hsync),
+        .v_sync_in(rx_vsync),
+        .pixel_in({rx_red, rx_green, rx_blue}),
+        
+        .de_out(gray_de),
+        .h_sync_out(gray_hsync),
+        .v_sync_out(gray_vsync),
+        .y(gray_pixel)
+    );
+    
+    
     klt_tracker_w10b2_mult_0 #(
     
         .H_SIZE(800)
@@ -89,12 +109,12 @@ module tb_klt(
     track(
     
         .rx_pclk(rx_pclk),
-        .rx_de(rx_de),
-        .rx_hsync(rx_hsync),
-        .rx_vsync(rx_vsync),
+        .rx_de(gray_de),
+        .rx_hsync(gray_hsync),
+        .rx_vsync(gray_vsync),
         .enable_tracking(1'b1),
         .reset_position(1'b0),
-        .pixel_in(rx_red),
+        .pixel_in(gray_pixel),
         
         .pixel_out(klt_tracker_out),
         .point_x0(point_x0),
@@ -148,8 +168,8 @@ module tb_klt(
     hdmi_out file_output (
     
         .hdmi_clk(rx_pclk), 
-        .hdmi_vs(rx_vsync), 
-        .hdmi_de(rx_de), 
+        .hdmi_vs(gray_vsync), 
+        .hdmi_de(gray_de), 
         .hdmi_data({8'b0, klt_tracker_out})
     );
 

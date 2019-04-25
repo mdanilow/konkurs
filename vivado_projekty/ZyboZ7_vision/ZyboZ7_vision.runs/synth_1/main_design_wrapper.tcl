@@ -23,32 +23,26 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/projects/ZyboZ7_vision/ZyboZ7_vision.cache/wt [current_project]
-set_property parent.project_path C:/projects/ZyboZ7_vision/ZyboZ7_vision.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property webtalk.parent_dir C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.cache/wt [current_project]
+set_property parent.project_path C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.xpr [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
-set_property ip_repo_paths {
-  c:/projects/ip_repo_vision
-  c:/konkurs/IP_repo/klt_tracker_w10b2_v2
-  c:/konkurs/IP_repo/rgb2ycbcr
-} [current_project]
-set_property ip_output_repo c:/projects/ZyboZ7_vision/ZyboZ7_vision.cache/ip [current_project]
+set_property ip_repo_paths c:/konkurs/vivado_projekty/ip_repo_vision [current_project]
+set_property ip_output_repo c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/hdl/main_design_wrapper.v
-add_files C:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/main_design.bd
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_dvi2rgb_0_0/src/dvi2rgb.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_rgb2dvi_0_0/src/rgb2dvi.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_clk_wiz_0_0/main_design_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_clk_wiz_0_0/main_design_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_clk_wiz_0_0/main_design_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_klt_tracker_w10b2_mu_0_0/src/frame_delay_sim/frame_delay_sim_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_klt_tracker_w10b2_mu_0_0/src/delayLineBRAM/delayLineBRAM_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/main_design_ooc.xdc]
+read_verilog -library xil_defaultlib C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/hdl/main_design_wrapper.v
+add_files C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/main_design.bd
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_dvi2rgb_0_0/src/dvi2rgb.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_rgb2dvi_0_0/src/rgb2dvi.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_clk_wiz_0_0/main_design_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_clk_wiz_0_0/main_design_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/ip/main_design_clk_wiz_0_0/main_design_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/main_design_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -58,8 +52,8 @@ set_property used_in_implementation false [get_files -all C:/projects/ZyboZ7_vis
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc
-set_property used_in_implementation false [get_files C:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc]
+read_xdc C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc
+set_property used_in_implementation false [get_files C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

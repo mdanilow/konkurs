@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/projects/ZyboZ7_vision/ZyboZ7_vision.xpr">
+<Project Version="7" Minor="38" Path="C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="cb6d046c74ba4276996d6eb818c15c54"/>
@@ -22,8 +22,6 @@
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo_vision"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../konkurs/IP_repo/klt_tracker_w10b2_v2"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../konkurs/IP_repo/rgb2ycbcr"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -72,12 +70,6 @@
         <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_dvi2rgb_0_0/main_design_dvi2rgb_0_0.xci">
           <Proxy FileSetName="main_design_dvi2rgb_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_klt_tracker_w10b2_mu_0_0/main_design_klt_tracker_w10b2_mu_0_0.xci">
-          <Proxy FileSetName="main_design_klt_tracker_w10b2_mu_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="main_design.bd" FileRelPathName="ip/main_design_rgb2ycbcr_0_0/main_design_rgb2ycbcr_0_0.xci">
-          <Proxy FileSetName="main_design_rgb2ycbcr_0_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/main_design/hdl/main_design_wrapper.v">
         <FileInfo>
@@ -124,18 +116,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="main_design_klt_tracker_w10b2_mu_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_design_klt_tracker_w10b2_mu_0_0">
-      <Config>
-        <Option Name="TopModule" Val="main_design_klt_tracker_w10b2_mu_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="main_design_rgb2ycbcr_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/main_design_rgb2ycbcr_0_0">
-      <Config>
-        <Option Name="TopModule" Val="main_design_rgb2ycbcr_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -176,28 +156,6 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="main_design_klt_tracker_w10b2_mu_0_0_synth_1" Type="Ft3:Synth" SrcSet="main_design_klt_tracker_w10b2_mu_0_0" Part="xc7z020clg400-1" ConstrsSet="main_design_klt_tracker_w10b2_mu_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_design_klt_tracker_w10b2_mu_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="main_design_rgb2ycbcr_0_0_synth_1" Type="Ft3:Synth" SrcSet="main_design_rgb2ycbcr_0_0" Part="xc7z020clg400-1" ConstrsSet="main_design_rgb2ycbcr_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/main_design_rgb2ycbcr_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
@@ -216,42 +174,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="main_design_dvi2rgb_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_design_dvi2rgb_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="main_design_dvi2rgb_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="main_design_klt_tracker_w10b2_mu_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_design_klt_tracker_w10b2_mu_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="main_design_klt_tracker_w10b2_mu_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="main_design_rgb2ycbcr_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="main_design_rgb2ycbcr_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="main_design_rgb2ycbcr_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>

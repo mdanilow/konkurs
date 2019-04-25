@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Sat Apr 20 17:37:24 UTC 2019
-VLNV: ja:user:klt_tracker_w10b2_mult:2.0
-SynthRuntime: 399

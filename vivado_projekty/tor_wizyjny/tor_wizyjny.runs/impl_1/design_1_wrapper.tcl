@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
@@ -67,28 +68,29 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param xicom.use_bs_reader 1
-  create_project -in_memory -part xc7z010clg400-1
-  set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
+  create_project -in_memory -part xc7z020clg400-1
+  set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/wt [current_project]
-  set_property parent.project_path /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.xpr [current_project]
+  set_property webtalk.parent_dir C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/wt [current_project]
+  set_property parent.project_path C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.xpr [current_project]
   set_property ip_repo_paths {
-  /home/inzynier/rzeczy/ip_repo/parameter_register/parameter_register_1.0
-  /home/inzynier/rzeczy/hdmi_vga_ip_repo
-  /home/inzynier/rzeczy/IP_repo
+  c:/konkurs/ip_repo/parameter_register/parameter_register_1.0
+  c:/konkurs/IP_repo/ip_repo_vision
+  c:/konkurs/IP_repo
+  C:/konkurs/IP_repo/ip_repo_vision/if
 } [current_project]
-  set_property ip_output_repo /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/ip [current_project]
+  set_property ip_output_repo C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/constrs_1/imports/inne/Zybo_HDMI.xdc
+  read_xdc C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc
   set_param project.isImplRun true
-  link_design -top design_1_wrapper -part xc7z010clg400-1
+  link_design -top design_1_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false
   write_hwdef -force -file design_1_wrapper.hwdef
   close_msg_db -file init_design.pb

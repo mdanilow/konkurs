@@ -1,0 +1,27 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port hdmi_rx -pg 1 -y 180 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 240 -defaultsOSRD
+preplace port hdmi_rx_ddc -pg 1 -y 200 -defaultsOSRD
+preplace port hdmi_tx -pg 1 -y 60 -defaultsOSRD
+preplace portBus hdmi_rx_hpd -pg 1 -y 260 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 260 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 240 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 2 -y 210 -defaultsOSRD
+preplace netloc hdmi_rx_1 1 0 2 NJ 180 NJ
+preplace netloc sys_clock_1 1 0 1 NJ
+preplace netloc rgb2dvi_0_TMDS 1 3 1 NJ
+preplace netloc dvi2rgb_0_DDC 1 2 2 NJ 200 NJ
+preplace netloc xlconstant_0_dout 1 3 1 NJ
+preplace netloc clk_wiz_0_clk_out1 1 1 1 200J
+preplace netloc dvi2rgb_0_RGB 1 2 1 420
+preplace netloc dvi2rgb_0_PixelClk 1 2 1 430
+levelinfo -pg 1 0 110 310 560 710 -top 0 -bot 320
+",
+}
+{
+   da_board_cnt: "1",
+}

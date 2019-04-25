@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Apr 20 19:30:20 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 24 20:20:16 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -655,7 +655,7 @@
     </MODULE>
     <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.8" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.8">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/projects/ip_repo_vision/ip/dvi2rgb/docs/dvi2rgb.pdf"/>
+        <DOCUMENT SOURCE="c:/konkurs/vivado_projekty/ip_repo_vision/ip/dvi2rgb/docs/dvi2rgb.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
@@ -688,28 +688,26 @@
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="vid_pData" RIGHT="0" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pData">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="pixel_in"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pData"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pVDE" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVDE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="de_in"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pVDE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pHSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pHSync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="h_sync_in"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pHSync"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pVSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVSync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="v_sync_in"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pVSync"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="clk"/>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="rx_pclk"/>
             <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
           </CONNECTIONS>
         </PORT>
@@ -735,7 +733,7 @@
             <PORTMAP LOGICAL="DATA_N" PHYSICAL="TMDS_Data_n"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="RGB" TYPE="INITIATOR" VLNV="xilinx.com:interface:vid_io:1.0">
+        <BUSINTERFACE BUSNAME="dvi2rgb_0_RGB" NAME="RGB" TYPE="INITIATOR" VLNV="xilinx.com:interface:vid_io:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="DATA" PHYSICAL="vid_pData"/>
             <PORTMAP LOGICAL="HSYNC" PHYSICAL="vid_pHSync"/>
@@ -755,62 +753,9 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/klt_tracker_w10b2_mu_0" HWVERSION="2.0" INSTANCE="klt_tracker_w10b2_mu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="klt_tracker_w10b2_mult" VLNV="ja:user:klt_tracker_w10b2_mult:2.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="H_SIZE" VALUE="800"/>
-        <PARAMETER NAME="Component_Name" VALUE="main_design_klt_tracker_w10b2_mu_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="rx_pclk" SIGIS="undef" SIGNAME="dvi2rgb_0_PixelClk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="PixelClk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rx_de" SIGIS="undef" SIGNAME="rgb2ycbcr_0_de_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="de_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rx_hsync" SIGIS="undef" SIGNAME="rgb2ycbcr_0_h_sync_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="h_sync_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rx_vsync" SIGIS="undef" SIGNAME="rgb2ycbcr_0_v_sync_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="v_sync_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="enable_tracking" SIGIS="undef" SIGNAME="xlconstant_3_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="reset_position" SIGIS="rst" SIGNAME="xlconstant_4_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconstant_4" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_in" RIGHT="0" SIGIS="undef" SIGNAME="rgb2ycbcr_0_y">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="y"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="23" NAME="pixel_out" RIGHT="0" SIGIS="undef" SIGNAME="klt_tracker_w10b2_mu_0_pixel_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pData"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="11" NAME="point_x0" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="10" NAME="point_y0" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.4" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/projects/ip_repo_vision/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="c:/konkurs/vivado_projekty/ip_repo_vision/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="true"/>
@@ -835,24 +780,24 @@
             <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="vid_pData" RIGHT="0" SIGIS="undef" SIGNAME="klt_tracker_w10b2_mu_0_pixel_out">
+        <PORT DIR="I" LEFT="23" NAME="vid_pData" RIGHT="0" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pData">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="pixel_out"/>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pData"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="vid_pVDE" SIGIS="undef" SIGNAME="rgb2ycbcr_0_de_out">
+        <PORT DIR="I" NAME="vid_pVDE" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVDE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="de_out"/>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVDE"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="vid_pHSync" SIGIS="undef" SIGNAME="rgb2ycbcr_0_h_sync_out">
+        <PORT DIR="I" NAME="vid_pHSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pHSync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="h_sync_out"/>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pHSync"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="vid_pVSync" SIGIS="undef" SIGNAME="rgb2ycbcr_0_v_sync_out">
+        <PORT DIR="I" NAME="vid_pVSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVSync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="v_sync_out"/>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVSync"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
@@ -870,7 +815,7 @@
             <PORTMAP LOGICAL="DATA_N" PHYSICAL="TMDS_Data_n"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="RGB" TYPE="TARGET" VLNV="xilinx.com:interface:vid_io:1.0">
+        <BUSINTERFACE BUSNAME="dvi2rgb_0_RGB" NAME="RGB" TYPE="TARGET" VLNV="xilinx.com:interface:vid_io:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="DATA" PHYSICAL="vid_pData"/>
             <PORTMAP LOGICAL="HSYNC" PHYSICAL="vid_pHSync"/>
@@ -879,67 +824,6 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
-    </MODULE>
-    <MODULE FULLNAME="/rgb2ycbcr_0" HWVERSION="1.0" INSTANCE="rgb2ycbcr_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2ycbcr" VLNV="user.org:user:rgb2ycbcr:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="main_design_rgb2ycbcr_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="PixelClk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="de_in" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVDE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVDE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="h_sync_in" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pHSync">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pHSync"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="v_sync_in" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVSync">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVSync"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="23" NAME="pixel_in" RIGHT="0" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pData">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pData"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="de_out" SIGIS="undef" SIGNAME="rgb2ycbcr_0_de_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="rx_de"/>
-            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pVDE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="h_sync_out" SIGIS="undef" SIGNAME="rgb2ycbcr_0_h_sync_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="rx_hsync"/>
-            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pHSync"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="v_sync_out" SIGIS="undef" SIGNAME="rgb2ycbcr_0_v_sync_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="rx_vsync"/>
-            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pVSync"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="23" NAME="ycbcr_out" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="8" NAME="y" RIGHT="0" SIGIS="undef" SIGNAME="rgb2ycbcr_0_y">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="pixel_in"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="8" NAME="cb" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="8" NAME="cr" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
     <MODULE FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
@@ -990,40 +874,6 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="hdmi_rx_hpd"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE FULLNAME="/xlconstant_3" HWVERSION="1.1" INSTANCE="xlconstant_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
-        <PARAMETER NAME="Component_Name" VALUE="main_design_xlconstant_1_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_3_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="enable_tracking"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE FULLNAME="/xlconstant_4" HWVERSION="1.1" INSTANCE="xlconstant_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="Component_Name" VALUE="main_design_xlconstant_3_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_4_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="klt_tracker_w10b2_mu_0" PORT="reset_position"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="mainBlockDesign_klt_tracker_w10b2_mu_0_0_synth_1" LaunchDir="C:/konkurs/vivado_projekty/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_klt_tracker_w10b2_mu_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/konkurs/vivado_projekty/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="mainBlockDesign_klt_tracker_w10b2_mu_0_0_synth_1"/>
+	</Run>
+</Runs>
+

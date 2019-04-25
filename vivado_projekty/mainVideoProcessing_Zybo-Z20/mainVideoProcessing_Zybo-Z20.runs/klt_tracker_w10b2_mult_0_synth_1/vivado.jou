@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Apr 25 18:26:25 2019
+# Process ID: 11000
+# Current directory: C:/konkurs/vivado_projekty/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/klt_tracker_w10b2_mult_0_synth_1
+# Command line: vivado.exe -log klt_tracker_w10b2_mult_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source klt_tracker_w10b2_mult_0.tcl
+# Log file: C:/konkurs/vivado_projekty/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/klt_tracker_w10b2_mult_0_synth_1/klt_tracker_w10b2_mult_0.vds
+# Journal file: C:/konkurs/vivado_projekty/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/klt_tracker_w10b2_mult_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source klt_tracker_w10b2_mult_0.tcl -notrace

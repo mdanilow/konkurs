@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Apr 20 19:38:33 2019
+| Date         : Wed Apr 24 20:21:58 2019
 | Host         : N-5CD6281M34 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file main_design_wrapper_utilization_synth.rpt -pb main_design_wrapper_utilization_synth.pb
 | Design       : main_design_wrapper
@@ -155,20 +155,16 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+--------------------------------------+------+
-|               Ref Name               | Used |
-+--------------------------------------+------+
-| main_design_xlconstant_3_0           |    1 |
-| main_design_xlconstant_2_0           |    1 |
-| main_design_xlconstant_1_1           |    1 |
-| main_design_xlconstant_1_0           |    1 |
-| main_design_xlconstant_0_0           |    1 |
-| main_design_rgb2ycbcr_0_0            |    1 |
-| main_design_rgb2dvi_0_0              |    1 |
-| main_design_klt_tracker_w10b2_mu_0_0 |    1 |
-| main_design_dvi2rgb_0_0              |    1 |
-| main_design_clk_wiz_0_0              |    1 |
-+--------------------------------------+------+
++----------------------------+------+
+|          Ref Name          | Used |
++----------------------------+------+
+| main_design_xlconstant_2_0 |    1 |
+| main_design_xlconstant_1_0 |    1 |
+| main_design_xlconstant_0_0 |    1 |
+| main_design_rgb2dvi_0_0    |    1 |
+| main_design_dvi2rgb_0_0    |    1 |
+| main_design_clk_wiz_0_0    |    1 |
++----------------------------+------+
 
 
 9. Instantiated Netlists

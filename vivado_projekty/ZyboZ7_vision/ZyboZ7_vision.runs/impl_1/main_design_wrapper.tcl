@@ -69,22 +69,18 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/projects/ZyboZ7_vision/ZyboZ7_vision.cache/wt [current_project]
-  set_property parent.project_path C:/projects/ZyboZ7_vision/ZyboZ7_vision.xpr [current_project]
-  set_property ip_repo_paths {
-  c:/projects/ip_repo_vision
-  c:/konkurs/IP_repo/klt_tracker_w10b2_v2
-  C:/konkurs/IP_repo/rgb2ycbcr
-} [current_project]
-  set_property ip_output_repo C:/projects/ZyboZ7_vision/ZyboZ7_vision.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.cache/wt [current_project]
+  set_property parent.project_path C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.xpr [current_project]
+  set_property ip_repo_paths C:/konkurs/vivado_projekty/ip_repo_vision [current_project]
+  set_property ip_output_repo C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/projects/ZyboZ7_vision/ZyboZ7_vision.runs/synth_1/main_design_wrapper.dcp
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  add_files -quiet C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.runs/synth_1/main_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/main_design.bd
+  add_files C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/sources_1/bd/main_design/main_design.bd
   set_param project.isImplRun false
-  read_xdc C:/projects/ZyboZ7_vision/ZyboZ7_vision.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc
+  read_xdc C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc
   set_param project.isImplRun true
   link_design -top main_design_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false
@@ -167,7 +163,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force main_design_wrapper.mmi }
   write_bitstream -force main_design_wrapper.bit 
   catch { write_sysdef -hwdef main_design_wrapper.hwdef -bitfile main_design_wrapper.bit -meminfo main_design_wrapper.mmi -file main_design_wrapper.sysdef }

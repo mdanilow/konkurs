@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/projects/ZyboZ7_vision/ZyboZ7_vision.runs/main_design_dvi2rgb_0_0_synth_1'
+HD_PWD='C:/konkurs/vivado_projekty/ZyboZ7_vision/ZyboZ7_vision.runs/main_design_dvi2rgb_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,19 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 16 16:15:44 2018" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 24 19:32:56 2019" VIVADOVERSION="2018.2">
 
-  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="hdmi_in_ddc_scl_i" SIGIS="undef"/>
-    <PORT DIR="O" NAME="hdmi_in_ddc_scl_o" SIGIS="undef"/>
-    <PORT DIR="O" NAME="hdmi_in_ddc_scl_t" SIGIS="undef"/>
-    <PORT DIR="I" NAME="hdmi_in_ddc_sda_i" SIGIS="undef"/>
-    <PORT DIR="O" NAME="hdmi_in_ddc_sda_o" SIGIS="undef"/>
-    <PORT DIR="O" NAME="hdmi_in_ddc_sda_t" SIGIS="undef"/>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_in_clk_p" SIGIS="clk"/>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_in_clk_n" SIGIS="clk"/>
-    <PORT DIR="I" LEFT="2" NAME="hdmi_in_data_p" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="2" NAME="hdmi_in_data_n" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef"/>
     <PORT DIR="IO" NAME="DDR_cke" SIGIS="undef"/>
     <PORT CLKFREQUENCY="100000000" DIR="IO" NAME="DDR_ck_n" SIGIS="clk"/>
@@ -35,50 +25,15 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef"/>
     <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef"/>
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="0" NAME="hdmi_out_en" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="0" NAME="hdmi_hpd" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconstant_2" PORT="dout"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="4" NAME="vga_pRed" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pRed">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rgb2vga_0" PORT="vga_pRed"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="5" NAME="vga_pGreen" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pGreen">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rgb2vga_0" PORT="vga_pGreen"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="4" NAME="vga_pBlue" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pBlue">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rgb2vga_0" PORT="vga_pBlue"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vga_pHSync" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pHSync">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rgb2vga_0" PORT="vga_pHSync"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="vga_pVSync" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pVSync">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="rgb2vga_0" PORT="vga_pVSync"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sysclk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="parameter_register_0" PORT="sw"/>
         <CONNECTION INSTANCE="mux_0" PORT="addr"/>
+        <CONNECTION INSTANCE="parameter_register_0" PORT="sw"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="3" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="parameter_register_0_led">
@@ -86,27 +41,33 @@
         <CONNECTION INSTANCE="parameter_register_0" PORT="led"/>
       </CONNECTIONS>
     </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_rx_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="hdmi_rx_clk_n" SIGIS="clk"/>
+    <PORT DIR="I" LEFT="2" NAME="hdmi_rx_data_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="2" NAME="hdmi_rx_data_n" RIGHT="0" SIGIS="undef"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_tx_clk_p" SIGIS="clk"/>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_tx_clk_n" SIGIS="clk"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_tx_data_p" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_tx_data_n" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="hdmi_rx_ddc_scl_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="hdmi_rx_ddc_scl_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="hdmi_rx_ddc_scl_t" SIGIS="undef"/>
+    <PORT DIR="I" NAME="hdmi_rx_ddc_sda_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="hdmi_rx_ddc_sda_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="hdmi_rx_ddc_sda_t" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="0" NAME="hdmi_rx_hpd" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="hdmi_tx_hpd" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlconstant_2" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
-    <BUSINTERFACE BUSNAME="dvi2rgb_0_DDC" NAME="hdmi_in_ddc" TYPE="INITIATOR">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="SCL_I" PHYSICAL="hdmi_in_ddc_scl_i"/>
-        <PORTMAP LOGICAL="SCL_O" PHYSICAL="hdmi_in_ddc_scl_o"/>
-        <PORTMAP LOGICAL="SCL_T" PHYSICAL="hdmi_in_ddc_scl_t"/>
-        <PORTMAP LOGICAL="SDA_I" PHYSICAL="hdmi_in_ddc_sda_i"/>
-        <PORTMAP LOGICAL="SDA_O" PHYSICAL="hdmi_in_ddc_sda_o"/>
-        <PORTMAP LOGICAL="SDA_T" PHYSICAL="hdmi_in_ddc_sda_t"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
-    <BUSINTERFACE BUSNAME="External_Interface_hdmi_in" NAME="hdmi_in" TYPE="TARGET">
-      <PORTMAPS>
-        <PORTMAP LOGICAL="CLK_P" PHYSICAL="hdmi_in_clk_p"/>
-        <PORTMAP LOGICAL="CLK_N" PHYSICAL="hdmi_in_clk_n"/>
-        <PORTMAP LOGICAL="DATA_P" PHYSICAL="hdmi_in_data_p"/>
-        <PORTMAP LOGICAL="DATA_N" PHYSICAL="hdmi_in_data_n"/>
-      </PORTMAPS>
-    </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="processing_system7_0_DDR" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR">
       <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
       <PARAMETER NAME="TIMEPERIOD_PS" VALUE="1250"/>
@@ -149,6 +110,32 @@
         <PORTMAP LOGICAL="PS_SRSTB" PHYSICAL="FIXED_IO_ps_srstb"/>
         <PORTMAP LOGICAL="PS_CLK" PHYSICAL="FIXED_IO_ps_clk"/>
         <PORTMAP LOGICAL="PS_PORB" PHYSICAL="FIXED_IO_ps_porb"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_hdmi_rx" NAME="hdmi_rx" TYPE="TARGET">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK_P" PHYSICAL="hdmi_rx_clk_p"/>
+        <PORTMAP LOGICAL="CLK_N" PHYSICAL="hdmi_rx_clk_n"/>
+        <PORTMAP LOGICAL="DATA_P" PHYSICAL="hdmi_rx_data_p"/>
+        <PORTMAP LOGICAL="DATA_N" PHYSICAL="hdmi_rx_data_n"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="rgb2dvi_0_TMDS" NAME="hdmi_tx" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK_P" PHYSICAL="hdmi_tx_clk_p"/>
+        <PORTMAP LOGICAL="CLK_N" PHYSICAL="hdmi_tx_clk_n"/>
+        <PORTMAP LOGICAL="DATA_P" PHYSICAL="hdmi_tx_data_p"/>
+        <PORTMAP LOGICAL="DATA_N" PHYSICAL="hdmi_tx_data_n"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="dvi2rgb_0_DDC" NAME="hdmi_rx_ddc" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="SCL_I" PHYSICAL="hdmi_rx_ddc_scl_i"/>
+        <PORTMAP LOGICAL="SCL_O" PHYSICAL="hdmi_rx_ddc_scl_o"/>
+        <PORTMAP LOGICAL="SCL_T" PHYSICAL="hdmi_rx_ddc_scl_t"/>
+        <PORTMAP LOGICAL="SDA_I" PHYSICAL="hdmi_rx_ddc_sda_i"/>
+        <PORTMAP LOGICAL="SDA_O" PHYSICAL="hdmi_rx_ddc_sda_o"/>
+        <PORTMAP LOGICAL="SDA_T" PHYSICAL="hdmi_rx_ddc_sda_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -829,9 +816,9 @@
             <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_sysclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
@@ -845,17 +832,17 @@
     </MODULE>
     <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.8" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.8">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="/home/inzynier/rzeczy/hdmi_vga_ip_repo/dvi2rgb_v1_8/docs/dvi2rgb.pdf"/>
+        <DOCUMENT SOURCE="c:/konkurs/IP_repo/ip_repo_vision/ip/dvi2rgb/docs/dvi2rgb.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
         <PARAMETER NAME="kRstActiveHigh" VALUE="true"/>
-        <PARAMETER NAME="kClkRange" VALUE="3"/>
+        <PARAMETER NAME="kClkRange" VALUE="1"/>
         <PARAMETER NAME="kIDLY_TapValuePs" VALUE="78"/>
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="true"/>
-        <PARAMETER NAME="kEdidFileName" VALUE="dgl_720p_cea.data"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_dvi2rgb_0_0"/>
+        <PARAMETER NAME="kEdidFileName" VALUE="dgl_1080p_cea.data"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_dvi2rgb_0_1"/>
         <PARAMETER NAME="kEnableSerialClkOutput" VALUE="false"/>
         <PARAMETER NAME="TMDS_BOARD_INTERFACE"/>
         <PARAMETER NAME="IIC_BOARD_INTERFACE"/>
@@ -878,34 +865,34 @@
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="vid_pData" RIGHT="0" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pData">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="pixel_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="pixel_in_0"/>
+            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="pixel_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pVDE" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVDE">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="de_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="de_in_0"/>
+            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="de_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pHSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pHSync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="h_sync_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="h_sync_0"/>
+            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="h_sync_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pVSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVSync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="v_sync_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="v_sync_0"/>
+            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="v_sync_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2vga_0" PORT="PixelClk"/>
-            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="clk"/>
             <CONNECTION INSTANCE="centroid_0" PORT="clk"/>
+            <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="clk"/>
             <CONNECTION INSTANCE="wysw_0" PORT="clk"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="aPixelClkLckd" SIGIS="undef"/>
@@ -922,7 +909,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="External_Interface_hdmi_in" NAME="TMDS" TYPE="TARGET" VLNV="digilentinc.com:interface:tmds:1.0">
+        <BUSINTERFACE BUSNAME="External_Interface_hdmi_rx" NAME="TMDS" TYPE="TARGET" VLNV="digilentinc.com:interface:tmds:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="TMDS_Clk_p"/>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="TMDS_Clk_n"/>
@@ -1044,22 +1031,22 @@
         <PORT DIR="I" NAME="v_sync_7" SIGIS="undef"/>
         <PORT DIR="O" LEFT="23" NAME="pixel_out" RIGHT="0" SIGIS="undef" SIGNAME="mux_0_pixel_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2vga_0" PORT="rgb_pData"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pData"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="de_out" SIGIS="undef" SIGNAME="mux_0_de_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2vga_0" PORT="rgb_pVDE"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pVDE"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="h_sync_out" SIGIS="undef" SIGNAME="mux_0_h_sync_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2vga_0" PORT="rgb_pHSync"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pHSync"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="v_sync_out" SIGIS="undef" SIGNAME="mux_0_v_sync_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rgb2vga_0" PORT="rgb_pVSync"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="vid_pVSync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1611,14 +1598,14 @@
         <PARAMETER NAME="PCW_USE_TRACE_DATA_EDGE_DETECTOR" VALUE="0"/>
         <PARAMETER NAME="PCW_TRACE_BUFFER_CLOCK_DELAY" VALUE="12"/>
         <PARAMETER NAME="PCW_USE_CROSS_TRIGGER" VALUE="0"/>
-        <PARAMETER NAME="PCW_FTM_CTI_IN0" VALUE="DISABLED"/>
-        <PARAMETER NAME="PCW_FTM_CTI_IN1" VALUE="DISABLED"/>
-        <PARAMETER NAME="PCW_FTM_CTI_IN2" VALUE="DISABLED"/>
-        <PARAMETER NAME="PCW_FTM_CTI_IN3" VALUE="DISABLED"/>
-        <PARAMETER NAME="PCW_FTM_CTI_OUT0" VALUE="DISABLED"/>
-        <PARAMETER NAME="PCW_FTM_CTI_OUT1" VALUE="DISABLED"/>
-        <PARAMETER NAME="PCW_FTM_CTI_OUT2" VALUE="DISABLED"/>
-        <PARAMETER NAME="PCW_FTM_CTI_OUT3" VALUE="DISABLED"/>
+        <PARAMETER NAME="PCW_FTM_CTI_IN0" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_FTM_CTI_IN1" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_FTM_CTI_IN2" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_FTM_CTI_IN3" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_FTM_CTI_OUT0" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_FTM_CTI_OUT1" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_FTM_CTI_OUT2" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_FTM_CTI_OUT3" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_USE_DEBUG" VALUE="0"/>
         <PARAMETER NAME="PCW_USE_CR_FABRIC" VALUE="1"/>
         <PARAMETER NAME="PCW_USE_AXI_FABRIC_IDLE" VALUE="0"/>
@@ -2433,12 +2420,12 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="parameter_register_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="parameter_register_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -3321,35 +3308,45 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/rgb2vga_0" HWVERSION="1.0" INSTANCE="rgb2vga_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2vga" VLNV="digilentinc.com:ip:rgb2vga:1.0">
+    <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.4" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="/home/inzynier/rzeczy/hdmi_vga_ip_repo/rgb2vga_v1_0/docs/rgb2vga_v1_0.pdf"/>
+        <DOCUMENT SOURCE="c:/konkurs/IP_repo/ip_repo_vision/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
-        <PARAMETER NAME="VID_IN_DATA_WIDTH" VALUE="24"/>
-        <PARAMETER NAME="kRedDepth" VALUE="5"/>
-        <PARAMETER NAME="kGreenDepth" VALUE="6"/>
-        <PARAMETER NAME="kBlueDepth" VALUE="5"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_rgb2vga_0_0"/>
+        <PARAMETER NAME="kGenerateSerialClk" VALUE="true"/>
+        <PARAMETER NAME="kClkPrimitive" VALUE="PLL"/>
+        <PARAMETER NAME="kRstActiveHigh" VALUE="true"/>
+        <PARAMETER NAME="kClkRange" VALUE="1"/>
+        <PARAMETER NAME="kD0Swap" VALUE="false"/>
+        <PARAMETER NAME="kD1Swap" VALUE="false"/>
+        <PARAMETER NAME="kD2Swap" VALUE="false"/>
+        <PARAMETER NAME="kClkSwap" VALUE="false"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_rgb2dvi_0_0"/>
+        <PARAMETER NAME="TMDS_BOARD_INTERFACE"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="rgb_pData" RIGHT="0" SIGIS="undef" SIGNAME="mux_0_pixel_out">
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="TMDS_Clk_p" SIGIS="clk"/>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="TMDS_Clk_n" SIGIS="clk"/>
+        <PORT DIR="O" LEFT="2" NAME="TMDS_Data_p" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="TMDS_Data_n" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="aRst" SIGIS="rst"/>
+        <PORT DIR="I" LEFT="23" NAME="vid_pData" RIGHT="0" SIGIS="undef" SIGNAME="mux_0_pixel_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mux_0" PORT="pixel_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rgb_pVDE" SIGIS="undef" SIGNAME="mux_0_de_out">
+        <PORT DIR="I" NAME="vid_pVDE" SIGIS="undef" SIGNAME="mux_0_de_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mux_0" PORT="de_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rgb_pHSync" SIGIS="undef" SIGNAME="mux_0_h_sync_out">
+        <PORT DIR="I" NAME="vid_pHSync" SIGIS="undef" SIGNAME="mux_0_h_sync_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mux_0" PORT="h_sync_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rgb_pVSync" SIGIS="undef" SIGNAME="mux_0_v_sync_out">
+        <PORT DIR="I" NAME="vid_pVSync" SIGIS="undef" SIGNAME="mux_0_v_sync_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mux_0" PORT="v_sync_out"/>
           </CONNECTIONS>
@@ -3359,39 +3356,22 @@
             <CONNECTION INSTANCE="dvi2rgb_0" PORT="PixelClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="4" NAME="vga_pRed" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pRed">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="vga_pRed"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="vga_pGreen" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pGreen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="vga_pGreen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="4" NAME="vga_pBlue" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pBlue">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="vga_pBlue"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="vga_pHSync" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pHSync">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="vga_pHSync"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="vga_pVSync" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pVSync">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="vga_pVSync"/>
-          </CONNECTIONS>
-        </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="vid_in" TYPE="TARGET" VLNV="xilinx.com:interface:vid_io:1.0">
+        <BUSINTERFACE BUSNAME="rgb2dvi_0_TMDS" NAME="TMDS" TYPE="INITIATOR" VLNV="digilentinc.com:interface:tmds:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="DATA" PHYSICAL="rgb_pData"/>
-            <PORTMAP LOGICAL="HSYNC" PHYSICAL="rgb_pHSync"/>
-            <PORTMAP LOGICAL="VSYNC" PHYSICAL="rgb_pVSync"/>
-            <PORTMAP LOGICAL="ACTIVE_VIDEO" PHYSICAL="rgb_pVDE"/>
+            <PORTMAP LOGICAL="CLK_P" PHYSICAL="TMDS_Clk_p"/>
+            <PORTMAP LOGICAL="CLK_N" PHYSICAL="TMDS_Clk_n"/>
+            <PORTMAP LOGICAL="DATA_P" PHYSICAL="TMDS_Data_p"/>
+            <PORTMAP LOGICAL="DATA_N" PHYSICAL="TMDS_Data_n"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="RGB" TYPE="TARGET" VLNV="xilinx.com:interface:vid_io:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DATA" PHYSICAL="vid_pData"/>
+            <PORTMAP LOGICAL="HSYNC" PHYSICAL="vid_pHSync"/>
+            <PORTMAP LOGICAL="VSYNC" PHYSICAL="vid_pVSync"/>
+            <PORTMAP LOGICAL="ACTIVE_VIDEO" PHYSICAL="vid_pVDE"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -3431,22 +3411,22 @@
         <PORT DIR="O" NAME="de_out" SIGIS="undef" SIGNAME="rgb2ycbcr_0_de_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="centroid_0" PORT="de"/>
-            <CONNECTION INSTANCE="wysw_0" PORT="de_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="de_in_1"/>
+            <CONNECTION INSTANCE="wysw_0" PORT="de_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="h_sync_out" SIGIS="undef" SIGNAME="rgb2ycbcr_0_h_sync_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="centroid_0" PORT="hsync"/>
-            <CONNECTION INSTANCE="wysw_0" PORT="hsync_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="h_sync_1"/>
+            <CONNECTION INSTANCE="wysw_0" PORT="hsync_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="v_sync_out" SIGIS="undef" SIGNAME="rgb2ycbcr_0_v_sync_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="centroid_0" PORT="vsync"/>
-            <CONNECTION INSTANCE="wysw_0" PORT="vsync_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="v_sync_1"/>
+            <CONNECTION INSTANCE="wysw_0" PORT="vsync_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="ycbcr_out" RIGHT="0" SIGIS="undef"/>
@@ -3638,8 +3618,8 @@
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="wysw_0" PORT="pixel_in"/>
             <CONNECTION INSTANCE="mux_0" PORT="pixel_in_1"/>
+            <CONNECTION INSTANCE="wysw_0" PORT="pixel_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3668,14 +3648,14 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_out_en"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_rx_hpd"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3692,7 +3672,7 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_hpd"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_tx_hpd"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

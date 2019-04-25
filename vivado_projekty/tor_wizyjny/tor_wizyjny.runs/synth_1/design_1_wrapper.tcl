@@ -18,39 +18,44 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL-1065} -limit 10000
-create_project -in_memory -part xc7z010clg400-1
+create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/wt [current_project]
-set_property parent.project_path /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.xpr [current_project]
+set_property webtalk.parent_dir C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/wt [current_project]
+set_property parent.project_path C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
+set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  /home/inzynier/rzeczy/ip_repo/parameter_register/parameter_register_1.0
-  /home/inzynier/rzeczy/hdmi_vga_ip_repo
-  /home/inzynier/rzeczy/IP_repo
+  c:/konkurs/ip_repo/parameter_register/parameter_register_1.0
+  c:/konkurs/IP_repo/ip_repo_vision
+  c:/konkurs/IP_repo
+  c:/konkurs/IP_repo/ip_repo_vision/if
 } [current_project]
-set_property ip_output_repo /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/ip [current_project]
+set_property ip_output_repo c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-add_files /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+read_verilog -library xil_defaultlib C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_1/src/dvi2rgb.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_1/src/dvi2rgb_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_0/src/rgb2dvi.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -60,15 +65,15 @@ set_property used_in_implementation false [get_files -all /home/inzynier/rzeczy/
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/constrs_1/imports/inne/Zybo_HDMI.xdc
-set_property used_in_implementation false [get_files /home/inzynier/rzeczy/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/constrs_1/imports/inne/Zybo_HDMI.xdc]
+read_xdc C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc
+set_property used_in_implementation false [get_files C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.srcs/constrs_1/imports/vivado_projects/Zybo-Z7-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top design_1_wrapper -part xc7z010clg400-1
+synth_design -top design_1_wrapper -part xc7z020clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
