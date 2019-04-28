@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z020clg400-1
@@ -31,7 +33,11 @@ set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
-set_property ip_repo_paths c:/konkurs/IP_repo [current_project]
+set_property ip_repo_paths {
+  c:/konkurs/IP_repo/split_rgb
+  c:/konkurs/IP_repo/klt_tracker_w10b2_v2
+  c:/konkurs/IP_repo/rgb2ycbcr
+} [current_project]
 set_property ip_output_repo c:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM.xci

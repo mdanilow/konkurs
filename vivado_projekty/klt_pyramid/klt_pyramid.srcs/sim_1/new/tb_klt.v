@@ -66,6 +66,7 @@ module tb_klt(
     wire [11 : 0] latched_x0;
     wire [10 : 0] latched_y0;
     wire [16 : 0] dy_times_window;
+    wire updated_in_this_frame;
     
     wire gray_de;
     wire gray_vsync;
@@ -102,67 +103,72 @@ module tb_klt(
     );
     
     
-    klt_tracker_w10b2_mult_0 #(
+//    klt_tracker_w10b2_mult_0 #(
     
-        .H_SIZE(800)
-    )
-    track(
-    
-        .rx_pclk(rx_pclk),
-        .rx_de(gray_de),
-        .rx_hsync(gray_hsync),
-        .rx_vsync(gray_vsync),
-        .enable_tracking(1'b1),
-        .reset_position(1'b0),
-        .pixel_in(gray_pixel),
-        
-        .pixel_out(klt_tracker_out),
-        .point_x0(point_x0),
-        .point_y0(point_y0)
-    );
-    
-//    klt_tracker tracker(
+//        .H_SIZE(800)
+//    )
+//    track(
     
 //        .rx_pclk(rx_pclk),
-//        .rx_de(rx_de),
-//        .rx_hsync(rx_hsync),
-//        .rx_vsync(rx_vsync),
+//        .rx_de(gray_de),
+//        .rx_hsync(gray_hsync),
+//        .rx_vsync(gray_vsync),
 //        .enable_tracking(1'b1),
 //        .reset_position(1'b0),
-//        .pixel_in(rx_red),
+//        .pixel_in(gray_pixel),
         
 //        .pixel_out(klt_tracker_out),
-//        .context_valid(context_valid),
-//        .center(center),
-//        .x_pos(x_pos),
-//        .y_pos(y_pos),
-//        .in_roi(in_roi),
-//        .in_extended_roi(in_extended_roi),
-//        .dx_valid(dx_valid),
-//        .prev_frame_pixel(prev_frame_pixel),
 //        .point_x0(point_x0),
-//        .point_y0(point_y0),
-//        .G11(G11),
-//        .G12(G12),
-//        .G22(G22),
-//        .b1(b1),
-//        .b2(b2),
-//        .ed_minus_bf(ed_minus_bf),
-//        .af_minus_ec(af_minus_ec),
-//        .ad_minus_bc(ad_minus_bc),
-//        .dx(dx),
-//        .dy(dy),
-//        .write_addr_test(write_addr_test),
-//        .read_addr_test(read_addr_test),
-//        .read_offset(read_offset),
-//        .read_offset_mult(read_offset_mult),
-//        .delta_x0(delta_x0),
-//        .delta_y0(delta_y0),
-//        .first_frame(first_frame),
-//        .latched_x0(latched_x0),
-//        .latched_y0(latched_y0),
-//        .dy_times_window(dy_times_window)
+//        .point_y0(point_y0)
 //    );
+    
+    klt_tracker #(
+    
+        .H_SIZE(1650)
+    )
+    tracker(
+    
+        .rx_pclk(rx_pclk),
+        .rx_de(rx_de),
+        .rx_hsync(rx_hsync),
+        .rx_vsync(rx_vsync),
+        .enable_tracking(1'b1),
+        .reset_position(1'b0),
+        .pixel_in(rx_red),
+        
+        .pixel_out(klt_tracker_out),
+        .context_valid(context_valid),
+        .center(center),
+        .x_pos(x_pos),
+        .y_pos(y_pos),
+        .in_roi(in_roi),
+        .in_extended_roi(in_extended_roi),
+        .dx_valid(dx_valid),
+        .prev_frame_pixel(prev_frame_pixel),
+        .point_x0(point_x0),
+        .point_y0(point_y0),
+        .G11(G11),
+        .G12(G12),
+        .G22(G22),
+        .b1(b1),
+        .b2(b2),
+        .ed_minus_bf(ed_minus_bf),
+        .af_minus_ec(af_minus_ec),
+        .ad_minus_bc(ad_minus_bc),
+        .dx(dx),
+        .dy(dy),
+        .write_addr_test(write_addr_test),
+        .read_addr_test(read_addr_test),
+        .read_offset(read_offset),
+        .read_offset_mult(read_offset_mult),
+        .delta_x0(delta_x0),
+        .delta_y0(delta_y0),
+        .first_frame(first_frame),
+        .latched_x0(latched_x0),
+        .latched_y0(latched_y0),
+        .dy_times_window(dy_times_window),
+        .updated_in_this_frame(updated_in_this_frame)
+    );
     
     
     hdmi_out file_output (

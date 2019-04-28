@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Apr 17 21:59:24 2019
+// Date        : Fri Apr 26 11:44:35 2019
 // Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM_stub.v
@@ -15,10 +15,10 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "blk_mem_gen_v8_4_1,Vivado 2018.2" *)
 module delayLineBRAM(clka, wea, addra, dina, douta)
-/* synthesis syn_black_box black_box_pad_pin="clka,wea[0:0],addra[10:0],dina[16:0],douta[16:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clka,wea[0:0],addra[10:0],dina[10:0],douta[10:0]" */;
   input clka;
   input [0:0]wea;
   input [10:0]addra;
-  input [16:0]dina;
-  output [16:0]douta;
+  input [10:0]dina;
+  output [10:0]douta;
 endmodule

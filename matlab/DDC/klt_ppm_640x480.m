@@ -8,8 +8,10 @@ height = 480;
 
 g = double(zeros(2, 1));
 
-xsc = 300;
-ysc = 300;
+xsc = 700;
+ysc = 500;
+% xsc = 300;
+% ysc = 300;
 winLength = 20;
 winHeight = 20;
 x0 = xsc - winLength/2;
@@ -17,11 +19,13 @@ y0 = ysc - winHeight/2;
 x1 = x0 + winLength;
 y1 = y0 + winHeight;
 
+dxmax = 0;
+
 for f = 1:400
     
     f
     
-    frame = imread(['res_640_480/frame_', num2str(floor(f/100)), num2str(floor(mod(f, 100)/10)), num2str(mod(f,10)), '.ppm']);
+    frame = imread(['res_1280_720/frame_', num2str(floor(f/100)), num2str(floor(mod(f, 100)/10)), num2str(mod(f,10)), '.ppm']);
     
     if f == 1
         
@@ -44,7 +48,7 @@ for f = 1:400
                 
                 row_ = round(row);
                 col_ = round(col);
-%                 display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(prev_gray_frame(row_, col_))]);
+                display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(gray_frame(row_, col_)), ' prev_center: ', num2str(prev_gray_frame(row_, col_))]);
 
                 if(interpolation_on == 1)
                     Ix = (interpolation(col+1, row, prev_gray_frame) - interpolation(col-1, row, prev_gray_frame));
@@ -69,7 +73,7 @@ for f = 1:400
                 G = G + dG;
                 b = b + db;
                 
-                display(['G11: ', num2str(G(1, 1)), ' G12: ', num2str(G(1, 2)), ' G22: ', num2str(G(2, 2)), ' b1: ', num2str(b(1)), ' b2: ', num2str(b(2))]);
+                %display(['G11: ', num2str(G(1, 1)), ' G12: ', num2str(G(1, 2)), ' G22: ', num2str(G(2, 2)), ' b1: ', num2str(b(1)), ' b2: ', num2str(b(2))]);
 
             end
         end
@@ -89,12 +93,16 @@ for f = 1:400
         ad_m_bc = ad - bc;
 
         d(1) = dw_ed_m_bf / ad_m_bc;
-        d(2) = dw_af_m_ec / ad_m_bc
+        d(2) = dw_af_m_ec / ad_m_bc;
         
 %         d = linsolve(G, b)
         
         x0 = x0 + d(1);
         y0 = y0 + d(2);
+        
+        if(d(1) > dxmax)
+            dxmax = d(1)
+        end
         
         x0_ = round(x0) + 10
         y0_ = round(y0) + 10

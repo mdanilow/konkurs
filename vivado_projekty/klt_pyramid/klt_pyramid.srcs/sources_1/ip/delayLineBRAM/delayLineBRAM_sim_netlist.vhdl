@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Apr 17 21:59:24 2019
+-- Date        : Fri Apr 26 11:44:35 2019
 -- Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/delayLineBRAM/delayLineBRAM_sim_netlist.vhdl
@@ -16,10 +16,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity delayLineBRAM_blk_mem_gen_prim_wrapper is
   port (
-    douta : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 10 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -27,7 +27,13 @@ entity delayLineBRAM_blk_mem_gen_prim_wrapper is
 end delayLineBRAM_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of delayLineBRAM_blk_mem_gen_prim_wrapper is
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_20\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_21\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_22\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_29\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_70\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
@@ -231,20 +237,25 @@ begin
       CLKARDCLK => clka,
       CLKBWRCLK => clka,
       DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
-      DIADI(31 downto 16) => B"0000000000000000",
-      DIADI(15 downto 8) => dina(16 downto 9),
-      DIADI(7 downto 0) => dina(7 downto 0),
+      DIADI(31 downto 13) => B"0000000000000000000",
+      DIADI(12 downto 8) => dina(10 downto 6),
+      DIADI(7 downto 6) => B"00",
+      DIADI(5 downto 0) => dina(5 downto 0),
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
-      DIPADIP(3 downto 1) => B"000",
-      DIPADIP(0) => dina(8),
+      DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
       DOADO(31 downto 16) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 16),
-      DOADO(15 downto 8) => douta(16 downto 9),
-      DOADO(7 downto 0) => douta(7 downto 0),
+      DOADO(15) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_20\,
+      DOADO(14) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_21\,
+      DOADO(13) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_22\,
+      DOADO(12 downto 8) => douta(10 downto 6),
+      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\,
+      DOADO(6) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_29\,
+      DOADO(5 downto 0) => douta(5 downto 0),
       DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
       DOPADOP(3 downto 2) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 2),
       DOPADOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_70\,
-      DOPADOP(0) => douta(8),
+      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\,
       DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
       ENARDEN => '1',
@@ -272,10 +283,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity delayLineBRAM_blk_mem_gen_prim_width is
   port (
-    douta : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 10 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -288,8 +299,8 @@ begin
      port map (
       addra(10 downto 0) => addra(10 downto 0),
       clka => clka,
-      dina(16 downto 0) => dina(16 downto 0),
-      douta(16 downto 0) => douta(16 downto 0),
+      dina(10 downto 0) => dina(10 downto 0),
+      douta(10 downto 0) => douta(10 downto 0),
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -299,10 +310,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity delayLineBRAM_blk_mem_gen_generic_cstr is
   port (
-    douta : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 10 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -315,8 +326,8 @@ begin
      port map (
       addra(10 downto 0) => addra(10 downto 0),
       clka => clka,
-      dina(16 downto 0) => dina(16 downto 0),
-      douta(16 downto 0) => douta(16 downto 0),
+      dina(10 downto 0) => dina(10 downto 0),
+      douta(10 downto 0) => douta(10 downto 0),
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -326,10 +337,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity delayLineBRAM_blk_mem_gen_top is
   port (
-    douta : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 10 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -342,8 +353,8 @@ begin
      port map (
       addra(10 downto 0) => addra(10 downto 0),
       clka => clka,
-      dina(16 downto 0) => dina(16 downto 0),
-      douta(16 downto 0) => douta(16 downto 0),
+      dina(10 downto 0) => dina(10 downto 0),
+      douta(10 downto 0) => douta(10 downto 0),
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -353,10 +364,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity delayLineBRAM_blk_mem_gen_v8_4_1_synth is
   port (
-    douta : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 10 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -369,8 +380,8 @@ begin
      port map (
       addra(10 downto 0) => addra(10 downto 0),
       clka => clka,
-      dina(16 downto 0) => dina(16 downto 0),
-      douta(16 downto 0) => douta(16 downto 0),
+      dina(10 downto 0) => dina(10 downto 0),
+      douta(10 downto 0) => douta(10 downto 0),
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -386,16 +397,16 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
     regcea : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 16 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 10 downto 0 );
     clkb : in STD_LOGIC;
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC;
     regceb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 0 to 0 );
     addrb : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dinb : in STD_LOGIC_VECTOR ( 16 downto 0 );
-    doutb : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    dinb : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 10 downto 0 );
     injectsbiterr : in STD_LOGIC;
     injectdbiterr : in STD_LOGIC;
     eccpipece : in STD_LOGIC;
@@ -416,7 +427,7 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 10 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wlast : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC;
@@ -433,7 +444,7 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
     s_axi_arvalid : in STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
     s_axi_rid : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 10 downto 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rlast : out STD_LOGIC;
     s_axi_rvalid : out STD_LOGIC;
@@ -491,7 +502,7 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.862 mW";
+  attribute C_EST_POWER_SUMMARY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.7372 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "zynq";
   attribute C_HAS_AXI_ID : integer;
@@ -545,9 +556,9 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
   attribute C_READ_DEPTH_B : integer;
   attribute C_READ_DEPTH_B of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 2048;
   attribute C_READ_WIDTH_A : integer;
-  attribute C_READ_WIDTH_A of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 17;
+  attribute C_READ_WIDTH_A of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 11;
   attribute C_READ_WIDTH_B : integer;
-  attribute C_READ_WIDTH_B of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 17;
+  attribute C_READ_WIDTH_B of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 11;
   attribute C_RSTRAM_A : integer;
   attribute C_RSTRAM_A of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_RSTRAM_B : integer;
@@ -585,9 +596,9 @@ entity delayLineBRAM_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
-  attribute C_WRITE_WIDTH_A of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 17;
+  attribute C_WRITE_WIDTH_A of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 11;
   attribute C_WRITE_WIDTH_B : integer;
-  attribute C_WRITE_WIDTH_B of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 17;
+  attribute C_WRITE_WIDTH_B of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is 11;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of delayLineBRAM_blk_mem_gen_v8_4_1 : entity is "zynq";
   attribute ORIG_REF_NAME : string;
@@ -600,12 +611,6 @@ architecture STRUCTURE of delayLineBRAM_blk_mem_gen_v8_4_1 is
   signal \<const0>\ : STD_LOGIC;
 begin
   dbiterr <= \<const0>\;
-  doutb(16) <= \<const0>\;
-  doutb(15) <= \<const0>\;
-  doutb(14) <= \<const0>\;
-  doutb(13) <= \<const0>\;
-  doutb(12) <= \<const0>\;
-  doutb(11) <= \<const0>\;
   doutb(10) <= \<const0>\;
   doutb(9) <= \<const0>\;
   doutb(8) <= \<const0>\;
@@ -651,12 +656,6 @@ begin
   s_axi_rdaddrecc(2) <= \<const0>\;
   s_axi_rdaddrecc(1) <= \<const0>\;
   s_axi_rdaddrecc(0) <= \<const0>\;
-  s_axi_rdata(16) <= \<const0>\;
-  s_axi_rdata(15) <= \<const0>\;
-  s_axi_rdata(14) <= \<const0>\;
-  s_axi_rdata(13) <= \<const0>\;
-  s_axi_rdata(12) <= \<const0>\;
-  s_axi_rdata(11) <= \<const0>\;
   s_axi_rdata(10) <= \<const0>\;
   s_axi_rdata(9) <= \<const0>\;
   s_axi_rdata(8) <= \<const0>\;
@@ -687,8 +686,8 @@ inst_blk_mem_gen: entity work.delayLineBRAM_blk_mem_gen_v8_4_1_synth
      port map (
       addra(10 downto 0) => addra(10 downto 0),
       clka => clka,
-      dina(16 downto 0) => dina(16 downto 0),
-      douta(16 downto 0) => douta(16 downto 0),
+      dina(10 downto 0) => dina(10 downto 0),
+      douta(10 downto 0) => douta(10 downto 0),
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -701,8 +700,8 @@ entity delayLineBRAM is
     clka : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 16 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 16 downto 0 )
+    dina : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 10 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of delayLineBRAM : entity is true;
@@ -727,12 +726,12 @@ architecture STRUCTURE of delayLineBRAM is
   signal NLW_U0_s_axi_sbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_wready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_sbiterr_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 16 downto 0 );
+  signal NLW_U0_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_U0_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_U0_s_axi_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_s_axi_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal NLW_U0_s_axi_rdata_UNCONNECTED : STD_LOGIC_VECTOR ( 16 downto 0 );
+  signal NLW_U0_s_axi_rdata_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_U0_s_axi_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_rresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute C_ADDRA_WIDTH : integer;
@@ -782,7 +781,7 @@ architecture STRUCTURE of delayLineBRAM is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.862 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.7372 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "zynq";
   attribute C_HAS_AXI_ID : integer;
@@ -836,9 +835,9 @@ architecture STRUCTURE of delayLineBRAM is
   attribute C_READ_DEPTH_B : integer;
   attribute C_READ_DEPTH_B of U0 : label is 2048;
   attribute C_READ_WIDTH_A : integer;
-  attribute C_READ_WIDTH_A of U0 : label is 17;
+  attribute C_READ_WIDTH_A of U0 : label is 11;
   attribute C_READ_WIDTH_B : integer;
-  attribute C_READ_WIDTH_B of U0 : label is 17;
+  attribute C_READ_WIDTH_B of U0 : label is 11;
   attribute C_RSTRAM_A : integer;
   attribute C_RSTRAM_A of U0 : label is 0;
   attribute C_RSTRAM_B : integer;
@@ -876,9 +875,9 @@ architecture STRUCTURE of delayLineBRAM is
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of U0 : label is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
-  attribute C_WRITE_WIDTH_A of U0 : label is 17;
+  attribute C_WRITE_WIDTH_A of U0 : label is 11;
   attribute C_WRITE_WIDTH_B : integer;
-  attribute C_WRITE_WIDTH_B of U0 : label is 17;
+  attribute C_WRITE_WIDTH_B of U0 : label is 11;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of U0 : label is "zynq";
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
@@ -899,10 +898,10 @@ U0: entity work.delayLineBRAM_blk_mem_gen_v8_4_1
       clkb => '0',
       dbiterr => NLW_U0_dbiterr_UNCONNECTED,
       deepsleep => '0',
-      dina(16 downto 0) => dina(16 downto 0),
-      dinb(16 downto 0) => B"00000000000000000",
-      douta(16 downto 0) => douta(16 downto 0),
-      doutb(16 downto 0) => NLW_U0_doutb_UNCONNECTED(16 downto 0),
+      dina(10 downto 0) => dina(10 downto 0),
+      dinb(10 downto 0) => B"00000000000",
+      douta(10 downto 0) => douta(10 downto 0),
+      doutb(10 downto 0) => NLW_U0_doutb_UNCONNECTED(10 downto 0),
       eccpipece => '0',
       ena => '0',
       enb => '0',
@@ -939,14 +938,14 @@ U0: entity work.delayLineBRAM_blk_mem_gen_v8_4_1
       s_axi_injectdbiterr => '0',
       s_axi_injectsbiterr => '0',
       s_axi_rdaddrecc(10 downto 0) => NLW_U0_s_axi_rdaddrecc_UNCONNECTED(10 downto 0),
-      s_axi_rdata(16 downto 0) => NLW_U0_s_axi_rdata_UNCONNECTED(16 downto 0),
+      s_axi_rdata(10 downto 0) => NLW_U0_s_axi_rdata_UNCONNECTED(10 downto 0),
       s_axi_rid(3 downto 0) => NLW_U0_s_axi_rid_UNCONNECTED(3 downto 0),
       s_axi_rlast => NLW_U0_s_axi_rlast_UNCONNECTED,
       s_axi_rready => '0',
       s_axi_rresp(1 downto 0) => NLW_U0_s_axi_rresp_UNCONNECTED(1 downto 0),
       s_axi_rvalid => NLW_U0_s_axi_rvalid_UNCONNECTED,
       s_axi_sbiterr => NLW_U0_s_axi_sbiterr_UNCONNECTED,
-      s_axi_wdata(16 downto 0) => B"00000000000000000",
+      s_axi_wdata(10 downto 0) => B"00000000000",
       s_axi_wlast => '0',
       s_axi_wready => NLW_U0_s_axi_wready_UNCONNECTED,
       s_axi_wstrb(0) => '0',

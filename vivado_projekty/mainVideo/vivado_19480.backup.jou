@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Apr 28 16:12:06 2019
+# Process ID: 19480
+# Current directory: C:/konkurs/vivado_projekty/mainVideo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9068 C:\konkurs\vivado_projekty\mainVideo\mainVideoProcessing_Zybo-Z20.xpr
+# Log file: C:/konkurs/vivado_projekty/mainVideo/vivado.log
+# Journal file: C:/konkurs/vivado_projekty/mainVideo\vivado.jou
+#-----------------------------------------------------------
+start_gui
