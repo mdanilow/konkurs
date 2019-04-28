@@ -1,3 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/bbox21_0/sim/wysw_box.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wysw_box
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/bbox21_0/sim/bbox21_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bbox21_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim/sim/frame_delay_sim.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module frame_delay_sim
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/delayLineBRAM/sim/delayLineBRAM.v" into library xil_defaultlib
@@ -27,29 +31,29 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyra
 INFO: [VRFC 10-311] analyzing module klt_integrator
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module klt_tracker
-WARNING: [VRFC 10-1315] redeclaration of ansi port center is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:76]
-WARNING: [VRFC 10-1315] redeclaration of ansi port up is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:77]
-WARNING: [VRFC 10-1315] redeclaration of ansi port down is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:78]
-WARNING: [VRFC 10-1315] redeclaration of ansi port left is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:79]
-WARNING: [VRFC 10-1315] redeclaration of ansi port right is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:80]
-WARNING: [VRFC 10-1315] redeclaration of ansi port x_pos is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:82]
-WARNING: [VRFC 10-1315] redeclaration of ansi port y_pos is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:83]
-WARNING: [VRFC 10-1315] redeclaration of ansi port first_frame is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:84]
-WARNING: [VRFC 10-1315] redeclaration of ansi port dx_valid is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:86]
-WARNING: [VRFC 10-1315] redeclaration of ansi port dx is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:87]
-WARNING: [VRFC 10-1315] redeclaration of ansi port dy is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:88]
-WARNING: [VRFC 10-1315] redeclaration of ansi port point_x0 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:90]
-WARNING: [VRFC 10-1315] redeclaration of ansi port point_y0 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:91]
-WARNING: [VRFC 10-1315] redeclaration of ansi port in_extended_roi is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:92]
-WARNING: [VRFC 10-1315] redeclaration of ansi port in_roi is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:93]
-WARNING: [VRFC 10-1315] redeclaration of ansi port roi_end is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:94]
-WARNING: [VRFC 10-1315] redeclaration of ansi port prev_frame_pixel is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:96]
-WARNING: [VRFC 10-1315] redeclaration of ansi port G11 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:99]
-WARNING: [VRFC 10-1315] redeclaration of ansi port G12 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:100]
-WARNING: [VRFC 10-1315] redeclaration of ansi port G21 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:101]
-WARNING: [VRFC 10-1315] redeclaration of ansi port G22 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:102]
-WARNING: [VRFC 10-1315] redeclaration of ansi port b1 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:103]
-WARNING: [VRFC 10-1315] redeclaration of ansi port b2 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:104]
+WARNING: [VRFC 10-1315] redeclaration of ansi port center is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:75]
+WARNING: [VRFC 10-1315] redeclaration of ansi port up is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:76]
+WARNING: [VRFC 10-1315] redeclaration of ansi port down is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:77]
+WARNING: [VRFC 10-1315] redeclaration of ansi port left is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:78]
+WARNING: [VRFC 10-1315] redeclaration of ansi port right is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:79]
+WARNING: [VRFC 10-1315] redeclaration of ansi port x_pos is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:81]
+WARNING: [VRFC 10-1315] redeclaration of ansi port y_pos is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:82]
+WARNING: [VRFC 10-1315] redeclaration of ansi port first_frame is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:83]
+WARNING: [VRFC 10-1315] redeclaration of ansi port dx_valid is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:85]
+WARNING: [VRFC 10-1315] redeclaration of ansi port dx is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:86]
+WARNING: [VRFC 10-1315] redeclaration of ansi port dy is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:87]
+WARNING: [VRFC 10-1315] redeclaration of ansi port point_x0 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:89]
+WARNING: [VRFC 10-1315] redeclaration of ansi port point_y0 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:90]
+WARNING: [VRFC 10-1315] redeclaration of ansi port in_extended_roi is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:91]
+WARNING: [VRFC 10-1315] redeclaration of ansi port in_roi is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:92]
+WARNING: [VRFC 10-1315] redeclaration of ansi port roi_end is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:93]
+WARNING: [VRFC 10-1315] redeclaration of ansi port prev_frame_pixel is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:95]
+WARNING: [VRFC 10-1315] redeclaration of ansi port G11 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:98]
+WARNING: [VRFC 10-1315] redeclaration of ansi port G12 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:99]
+WARNING: [VRFC 10-1315] redeclaration of ansi port G21 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:100]
+WARNING: [VRFC 10-1315] redeclaration of ansi port G22 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:101]
+WARNING: [VRFC 10-1315] redeclaration of ansi port b1 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:102]
+WARNING: [VRFC 10-1315] redeclaration of ansi port b2 is not allowed [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/klt_tracker.v:103]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/new/linsolve.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module linsolve
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/modul_puz.v" into library xil_defaultlib
@@ -66,7 +70,5 @@ WARNING: [VRFC 10-1315] redeclaration of ansi port dy_times_window is not allowe
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/puz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module puz
 WARNING: [VRFC 10-2845] overwriting previous definition of module puz [C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/puz.v:23]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/imports/moduly/wysw_box.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wysw_box
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sim_1/new/tb_720p.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_720p

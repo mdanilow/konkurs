@@ -77,8 +77,8 @@ module context_3x3 #(
     always @(posedge clk)
     begin
         
-//        D11 <= {synch_pixel_in, synch_de_in, synch_h_sync_in, synch_v_sync_in};
-        D11 <= {pixel_in, de_in, h_sync_in, v_sync_in};
+        D11 <= {synch_pixel_in, synch_de_in, synch_h_sync_in, synch_v_sync_in};
+//        D11 <= {pixel_in, de_in, h_sync_in, v_sync_in};
         D12 <= D11;
         D13 <= D12;
         D21 <= line1_out;
@@ -95,7 +95,7 @@ module context_3x3 #(
         .clk(clk),
         .rst(1'b0),
         .ce(1'b1),
-        .h_size(11'd1647),
+        .h_size(11'd1648),
         .din(D13),
         .dout(line1_out)
     );
@@ -106,7 +106,7 @@ module context_3x3 #(
         .clk(clk),
         .rst(1'b0),
         .ce(1'b1),
-        .h_size(11'd1647),
+        .h_size(11'd1648),
         .din(D23),
         .dout(line2_out)
     );

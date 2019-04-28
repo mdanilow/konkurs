@@ -81,6 +81,11 @@ module tb_720p(
     wire gray_hsync;
     wire [8 : 0] gray_pixel;
     
+    wire bbox_de;
+    wire bbox_hsync;
+    wire bbox_vsync;
+    wire [23 : 0] bbox_pixel_out;
+    
     assign center_vsync = center[0];
     assign centerpx = center[10 -: 8];
     assign uppx = up[10 -: 8];
@@ -148,7 +153,6 @@ module tb_720p(
         .reset_position(1'b0),
         .pixel_in(rx_red),
         
-        .pixel_out(klt_tracker_out),
         .center(center),
         .up(up),
         .down(down),
@@ -186,12 +190,29 @@ module tb_720p(
     );
     
     
+    bbox21_0 boundarybox(
+    
+        .clk(rx_pclk),
+        .de_in(rx_de),
+        .hsync_in(rx_hsync),
+        .vsync_in(rx_vsync),
+        .point_x0(point_x0),
+        .point_y0(point_y0),
+        .pixel_in({rx_red, rx_green, rx_blue}),
+        
+        .de_out(bbox_de),
+        .hsync_out(bbox_hsync),
+        .vsync_out(bbox_vsync),
+        .pixel_out(bbox_pixel_out)
+    );
+    
+    
     hdmi_out file_output (
     
         .hdmi_clk(rx_pclk), 
         .hdmi_vs(rx_vsync), 
         .hdmi_de(rx_de), 
-        .hdmi_data({8'b0, klt_tracker_out})
+        .hdmi_data({8'b0, bbox_pixel_out})
     );
 
 endmodule

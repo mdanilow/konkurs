@@ -34,7 +34,6 @@ module klt_tracker #(
     input reset_position,
     input [7 : 0] pixel_in,
     
-    output [23 : 0] pixel_out,
     output [11 : 0] point_x0,       //center of tracked roi
     output [10 : 0] point_y0,
     output [10 : 0] center,
@@ -227,19 +226,19 @@ module klt_tracker #(
     );
     
     
-    wysw_box box(
+//    wysw_box box(
     
-        .clk(rx_pclk),
-        .de_in(rx_de),
-        .hsync_in(rx_hsync),
-        .vsync_in(rx_vsync),
-        .pixel_in({pixel_in, pixel_in, pixel_in}),
-        .x0(point_x0 - 4'd10), //module takes left-up corner of box
-        .y0(point_y0 - 4'd10),
-        .width(11'd21),
-        .height(11'd21),
+//        .clk(rx_pclk),
+//        .de_in(rx_de),
+//        .hsync_in(rx_hsync),
+//        .vsync_in(rx_vsync),
+//        .pixel_in({pixel_in, pixel_in, pixel_in}),
+//        .x0(point_x0 - 4'd10), //module takes left-up corner of box
+//        .y0(point_y0 - 4'd10),
+//        .width(11'd21),
+//        .height(11'd21),
         
-        .pixel_out(pixel_out)
-    );
+//        .pixel_out(pixel_out)
+//    );
     
 endmodule

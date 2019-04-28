@@ -1,5 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../klt_pyramid.srcs/sources_1/ip/bbox21_0/sim/wysw_box.v" \
+"../../../../klt_pyramid.srcs/sources_1/ip/bbox21_0/sim/bbox21_0.v" \
 "../../../../klt_pyramid.srcs/sources_1/ip/frame_delay_sim/sim/frame_delay_sim.v" \
 "../../../../klt_pyramid.srcs/sources_1/ip/delayLineBRAM/sim/delayLineBRAM.v" \
 "../../../../klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0_1/sim/modul_puz.v" \
@@ -18,7 +20,6 @@ verilog xil_defaultlib  \
 "../../../../klt_pyramid.srcs/sources_1/imports/new/pixel_position.v" \
 "../../../../klt_pyramid.srcs/sources_1/imports/new/point_tracker.v" \
 "../../../../klt_pyramid.srcs/sources_1/imports/moduly/puz.v" \
-"../../../../klt_pyramid.srcs/sources_1/imports/moduly/wysw_box.v" \
 "../../../../klt_pyramid.srcs/sim_1/new/tb_720p.v" \
 
 # compile glbl module
