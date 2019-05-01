@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../tor_wizyjny.srcs/sources_1/ip/centroid_0_1/src/divider_32_20_0/src/mult_32_20_lm/sim/mult_32_20_lm.vhd" \
+
+nosort

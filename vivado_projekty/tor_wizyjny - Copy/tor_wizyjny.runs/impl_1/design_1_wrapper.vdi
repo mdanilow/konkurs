@@ -1,0 +1,748 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May  1 03:24:43 2019
+# Process ID: 18780
+# Current directory: C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/konkurs-v/ip_repo/parameter_register/parameter_register_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/konkurs-v/hdmi_vga_ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/konkurs-v/IP_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/konkurs/KLT_2200'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/konkurs/IP_repo/split_rgb'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 353.082 ; gain = 100.402
+Command: link_design -top design_1_wrapper -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 920 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+WARNING: [Chipscope 16-359] Could not find a valid clock port for hub dbg_hub. C_CLK_INPUT_FREQ_HZ will get an empty value in the LTX file
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'design_1_i/dvi2rgb_0/U0'
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'design_1_i/dvi2rgb_0/U0'
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [c:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/constrs_1/imports/inne/Zybo_HDMI.xdc]
+Finished Parsing XDC File [C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/constrs_1/imports/inne/Zybo_HDMI.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 68 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 60 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+15 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1337.711 ; gain = 984.629
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1337.711 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: f7a03581
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1338.488 ; gain = 0.777
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1367.117 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1423c9c78
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:01:55 . Memory (MB): peak = 1367.117 ; gain = 28.629
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 10 inverter(s) to 14 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 167bb2d7b
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:01:57 . Memory (MB): peak = 1367.117 ; gain = 28.629
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: de6de302
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:01:58 . Memory (MB): peak = 1367.117 ; gain = 28.629
+INFO: [Opt 31-389] Phase Constant propagation created 173 cells and removed 550 cells
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: cf039df8
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:02:01 . Memory (MB): peak = 1367.117 ; gain = 28.629
+INFO: [Opt 31-389] Phase Sweep created 4 cells and removed 2576 cells
+
+Phase 5 BUFG optimization
+Phase 5 BUFG optimization | Checksum: cf039df8
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:02:02 . Memory (MB): peak = 1367.117 ; gain = 28.629
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 6 Shift Register Optimization
+Phase 6 Shift Register Optimization | Checksum: 118e6580b
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:02:04 . Memory (MB): peak = 1367.117 ; gain = 28.629
+INFO: [Opt 31-389] Phase Shift Register Optimization created 8 cells and removed 24 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 1deabca26
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:02:04 . Memory (MB): peak = 1367.117 ; gain = 28.629
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1367.117 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 68dbf199
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:02:05 . Memory (MB): peak = 1367.117 ; gain = 28.629
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.148 | TNS=-24.883 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 10 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 20
+Ending PowerOpt Patch Enables Task | Checksum: 377e8dcc
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 377e8dcc
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1643.121 ; gain = 276.004
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 377e8dcc
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+44 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:36 ; elapsed = 00:02:17 . Memory (MB): peak = 1643.121 ; gain = 305.410
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.159 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 2e5abd51
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 8cd59e90
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1510ac48b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1510ac48b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1510ac48b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 11460bfdd
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1f79f5bea
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:28 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 184158374
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:29 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 184158374
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:29 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1d1eb883f
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:31 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1a7f58e65
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:32 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1ab2c35d4
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:32 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 1ab2c35d4
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:32 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 101e22771
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:32 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 11e9d03b7
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 1a38c94fd
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 1ac747325
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 13b6cb2e0
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:42 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 13b6cb2e0
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:42 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 973ff7e2
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-33] Processed net design_1_i/KLT_2200_0/inst/kltboy/synch_comp/genblk1[0].puz_i/CE, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-31] BUFG insertion identified 1 candidate nets, 0 success, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 973ff7e2
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:46 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.100. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 12ac512e9
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 12ac512e9
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 12ac512e9
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 12ac512e9
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 1c6eb21bd
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1c6eb21bd
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Ending Placer Task | Checksum: 13885c58d
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:38 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+71 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:57 ; elapsed = 00:01:42 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.237 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 6974f769 ConstDB: 0 ShapeSum: cf10ce24 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: b66ee6a7
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 7844de19 NumContArr: 3e2a088e Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: b66ee6a7
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: b66ee6a7
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: b66ee6a7
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1643.121 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 12cee3e58
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.668 | TNS=-49.364| WHS=-1.421 | THS=-408.942|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: ef06c58d
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 1643.121 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.668 | TNS=-49.099| WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1b514b406
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 1643.121 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 1d89342e9
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 17ac1c6e0
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:37 . Memory (MB): peak = 1643.121 ; gain = 0.000
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 857
+ Number of Nodes with overlaps = 66
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.401 | TNS=-65.889| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 13df25f84
+
+Time (s): cpu = 00:06:31 ; elapsed = 00:04:12 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.437 | TNS=-81.729| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 99c08295
+
+Time (s): cpu = 00:06:42 ; elapsed = 00:04:19 . Memory (MB): peak = 1809.762 ; gain = 166.641
+Phase 4 Rip-up And Reroute | Checksum: 99c08295
+
+Time (s): cpu = 00:06:42 ; elapsed = 00:04:19 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1137ef4b7
+
+Time (s): cpu = 00:06:44 ; elapsed = 00:04:20 . Memory (MB): peak = 1809.762 ; gain = 166.641
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.401 | TNS=-65.659| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1970c9a44
+
+Time (s): cpu = 00:06:44 ; elapsed = 00:04:20 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1970c9a44
+
+Time (s): cpu = 00:06:44 ; elapsed = 00:04:20 . Memory (MB): peak = 1809.762 ; gain = 166.641
+Phase 5 Delay and Skew Optimization | Checksum: 1970c9a44
+
+Time (s): cpu = 00:06:44 ; elapsed = 00:04:20 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 201e6568e
+
+Time (s): cpu = 00:06:46 ; elapsed = 00:04:21 . Memory (MB): peak = 1809.762 ; gain = 166.641
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.401 | TNS=-65.623| WHS=-0.108 | THS=-0.166 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1bc9d1da3
+
+Time (s): cpu = 00:06:46 ; elapsed = 00:04:21 . Memory (MB): peak = 1809.762 ; gain = 166.641
+WARNING: [Route 35-468] The router encountered 52 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	design_1_i/bin_mask_0/inst/mask2_carry_i_3/I3
+	design_1_i/bin_mask_0/inst/mask2__3_carry_i_1/I1
+	design_1_i/centroid_0/inst/m01_reg[0]/CE
+	design_1_i/centroid_0/inst/m01_reg[10]/CE
+	design_1_i/centroid_0/inst/m01_reg[12]/CE
+	design_1_i/centroid_0/inst/m01_reg[16]/CE
+	design_1_i/centroid_0/inst/m01_reg[20]/CE
+	design_1_i/centroid_0/inst/m01_reg[24]/CE
+	design_1_i/centroid_0/inst/m01_reg[28]/CE
+	design_1_i/centroid_0/inst/m01_reg[4]/CE
+	.. and 42 more pins.
+
+Phase 6 Post Hold Fix | Checksum: 18594f6da
+
+Time (s): cpu = 00:06:46 ; elapsed = 00:04:21 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 7.00422 %
+  Global Horizontal Routing Utilization  = 8.28217 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 59.4595%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 54.0541%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 55.8824%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 61.7647%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 20b41b08b
+
+Time (s): cpu = 00:06:46 ; elapsed = 00:04:21 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 20b41b08b
+
+Time (s): cpu = 00:06:46 ; elapsed = 00:04:21 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 199dfa321
+
+Time (s): cpu = 00:06:47 ; elapsed = 00:04:23 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: d36bb4c1
+
+Time (s): cpu = 00:06:49 ; elapsed = 00:04:24 . Memory (MB): peak = 1809.762 ; gain = 166.641
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.401 | TNS=-65.623| WHS=0.011  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: d36bb4c1
+
+Time (s): cpu = 00:06:49 ; elapsed = 00:04:24 . Memory (MB): peak = 1809.762 ; gain = 166.641
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:06:49 ; elapsed = 00:04:24 . Memory (MB): peak = 1809.762 ; gain = 166.641
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+90 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:56 ; elapsed = 00:04:28 . Memory (MB): peak = 1809.762 ; gain = 166.641
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 1809.762 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1809.762 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1809.762 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1809.762 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+103 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1809.762 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force design_1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ad_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/af_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bc_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/bf_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ec_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTALUMODE is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC DPBU-1] Clock leaf drivers: Invalid connection used for DSP48E1. Unroutable DSP connection found on design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1. Pin design_1_i/KLT_2200_0/inst/disposition/ed_mult/U0/i_mult/gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_dsp.use_dsp48e1.iDSP48E1/RSTCTRL is driven by BUFG/BUFH/BUFR design_1_i/KLT_2200_0/center_BUFG[0]_inst. This can lead to an unroutable situation.
+WARNING: [DRC RTSTAT-10] No routable loads: 25 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, design_1_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], design_1_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14]... and (the first 15 of 23 listed).
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_multadd/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_extra_digits.i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_extra_digits.i_multadd/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[1].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[1].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[2].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[2].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[3].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[3].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[4].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[4].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_quotient_collector/i_typical_case.i_addsub/i_vx5_sp3.i_casc_dsp48.i_lower_addsub/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_estimator/i_multadd/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_extra_digits.i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_extra_digits.i_multadd/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[1].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[1].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[2].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[2].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[3].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[3].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[4].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[4].i_mult/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_quotient_collector/i_typical_case.i_addsub/i_vx5_sp3.i_casc_dsp48.i_lower_addsub/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_extra_digits.i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[1].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[2].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[3].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[4].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/x_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_quotient_collector/i_typical_case.i_addsub/i_vx5_sp3.i_casc_dsp48.i_lower_addsub/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_extra_digits.i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[1].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[2].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[3].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[4].i_add/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/KLT_2200_0/inst/disposition/y_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_quotient_collector/i_typical_case.i_addsub/i_vx5_sp3.i_casc_dsp48.i_lower_addsub/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 43 Warnings, 36 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+158 Infos, 54 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:33 ; elapsed = 00:00:26 . Memory (MB): peak = 2073.887 ; gain = 264.125
+INFO: [Common 17-206] Exiting Vivado at Wed May  1 03:35:18 2019...

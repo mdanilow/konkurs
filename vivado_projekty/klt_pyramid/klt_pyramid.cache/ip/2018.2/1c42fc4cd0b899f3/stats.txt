@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Apr 30 20:05:32 UTC 2019
+VLNV: nsn-intra.net:user:bbox21:1.0
+SynthRuntime: 45

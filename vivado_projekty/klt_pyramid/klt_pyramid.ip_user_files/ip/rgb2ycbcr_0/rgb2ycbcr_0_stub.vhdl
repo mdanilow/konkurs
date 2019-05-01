@@ -1,13 +1,13 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Apr 24 16:39:50 2019
+-- Date        : Tue Apr 30 22:06:50 2019
 -- Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0_1/rgb2ycbcr_0_stub.vhdl
+--               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/rgb2ycbcr_0_1/rgb2ycbcr_0_stub.vhdl
 -- Design      : rgb2ycbcr_0
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7z020clg400-1
+-- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

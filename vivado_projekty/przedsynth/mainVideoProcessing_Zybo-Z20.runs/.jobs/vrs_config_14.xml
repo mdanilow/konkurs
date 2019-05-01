@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="mainBlockDesign_dvi2rgb_0_0_synth_1" LaunchDir="/home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_dvi2rgb_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="mainBlockDesign_dvi2rgb_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="mainBlockDesign_dvi2rgb_0_0_synth_1"/>
+	</Run>
+</Runs>
+

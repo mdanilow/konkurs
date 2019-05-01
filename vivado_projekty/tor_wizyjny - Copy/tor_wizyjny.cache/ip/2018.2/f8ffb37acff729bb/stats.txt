@@ -1,0 +1,4 @@
+NumberHits:1
+Timestamp: Thu Nov 15 18:36:52 UTC 2018
+VLNV: user.org:user:centroid:1.0
+SynthRuntime: 57

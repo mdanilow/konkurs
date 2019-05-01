@@ -1,4 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../klt_pyramid.srcs/sources_1/ip/mult_9t9/sim/mult_9t9.vhd" \
-
-nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Apr 29 18:15:47 2019
+# Process ID: 24168
+# Current directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/xsim.dir/tb_720p_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.sim/sim_1/behav/xsim/xsim.dir/tb_720p_behav/webtalk/xsim_webtalk.tcl -notrace

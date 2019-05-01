@@ -1,0 +1,45 @@
+$date
+        2019-Apr-30 00:06:38
+$end
+$version
+        Vivado v2018.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 11 " mainBlockDesign_i/system_ila_0/inst/probe0_1 [10:0] $end
+$var reg 1 - _TRIGGER $end
+$var reg 1 . _WINDOW $end
+$var reg 1 / _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100 "
+0-
+1.
+0/
+$end
+#8
+b0 "
+#95
+b10 "
+#139
+b0 "
+#287
+b100 "
+#296
+b1100 "
+#311
+b100 "
+#326
+b1100 "
+#332
+b100 "
+#467
+b1100 "
+#491
+b100 "
+#512
+1-

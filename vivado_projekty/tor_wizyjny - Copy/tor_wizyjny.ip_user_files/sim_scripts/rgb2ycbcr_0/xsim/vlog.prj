@@ -1,0 +1,9 @@
+verilog xil_defaultlib  \
+"../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/modul_puz.v" \
+"../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/puz.v" \
+"../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/rgb2ycbcr.v" \
+"../../../../tor_wizyjny.srcs/sources_1/ip/rgb2ycbcr_0/sim/rgb2ycbcr_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

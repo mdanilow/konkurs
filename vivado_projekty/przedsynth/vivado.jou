@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Apr 29 23:16:01 2019
+# Process ID: 8552
+# Current directory: C:/konkurs/vivado_projekty/przedsynth
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9672 C:\konkurs\vivado_projekty\przedsynth\mainVideoProcessing_Zybo-Z20.xpr
+# Log file: C:/konkurs/vivado_projekty/przedsynth/vivado.log
+# Journal file: C:/konkurs/vivado_projekty/przedsynth\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.xpr
+open_bd_design {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
+update_compile_order -fileset sources_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_2/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_3/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_5 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_4/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_6 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_5/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_7 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_6/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq11'bXXX_XXXX_XXXX [get_hw_probes mainBlockDesign_i/system_ila_0/inst/probe0_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_0/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_0/inst/ila_lib"}]]
+open_bd_design {C:/konkurs/vivado_projekty/przedsynth/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
+startgroup
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {7}] [get_bd_cells system_ila_0]
+endgroup
+delete_bd_objs [get_bd_nets down] [get_bd_cells system_ila_1]
+delete_bd_objs [get_bd_nets center] [get_bd_cells system_ila_2]
+delete_bd_objs [get_bd_nets left] [get_bd_cells system_ila_3]
+delete_bd_objs [get_bd_nets right] [get_bd_cells system_ila_4]
+delete_bd_objs [get_bd_nets x_pos] [get_bd_cells system_ila_5]
+delete_bd_objs [get_bd_nets y_pos] [get_bd_cells system_ila_6]
+connect_bd_net [get_bd_pins KLT_van_0/down] [get_bd_pins system_ila_0/probe1]
+connect_bd_net [get_bd_pins KLT_van_0/left] [get_bd_pins system_ila_0/probe2]
+connect_bd_net [get_bd_pins KLT_van_0/right] [get_bd_pins system_ila_0/probe3]
+connect_bd_net [get_bd_pins KLT_van_0/center] [get_bd_pins system_ila_0/probe4]
+connect_bd_net [get_bd_pins KLT_van_0/x_pos] [get_bd_pins system_ila_0/probe5]
+connect_bd_net [get_bd_pins KLT_van_0/y_pos] [get_bd_pins system_ila_0/probe6]
+save_bd_design
+reset_run synth_1
+reset_run mainBlockDesign_system_ila_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1

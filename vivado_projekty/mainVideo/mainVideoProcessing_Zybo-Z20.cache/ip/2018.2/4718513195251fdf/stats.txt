@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Sun Apr 28 14:44:32 UTC 2019
-VLNV: nsn-intra.net:user:KLT:1.0
-SynthRuntime: 372
