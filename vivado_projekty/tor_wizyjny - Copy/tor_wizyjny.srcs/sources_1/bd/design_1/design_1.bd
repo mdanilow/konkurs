@@ -1394,16 +1394,22 @@
         <spirit:name>dvi2rgb_0_vid_pVDE</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="vid_pVDE"/>
         <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="de_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="de_in"/>
+        <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="de_in_0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>dvi2rgb_0_vid_pHSync</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="vid_pHSync"/>
         <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="h_sync_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="hsync_in"/>
+        <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="h_sync_0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>dvi2rgb_0_vid_pVSync</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="vid_pVSync"/>
         <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="v_sync_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="vsync_in"/>
+        <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="v_sync_0"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

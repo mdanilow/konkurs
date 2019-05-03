@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Wed May  1 03:16:14 2019
+//Date        : Wed May  1 14:59:18 2019
 //Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -278,15 +278,15 @@ module design_1
         .y_pos(y_pos));
   design_1_bbox21_0_0 bbox21_0
        (.clk(dvi2rgb_0_PixelClk),
-        .de_in(1'b0),
+        .de_in(dvi2rgb_0_vid_pVDE),
         .de_out(bbox21_0_de_out),
-        .hsync_in(1'b0),
+        .hsync_in(dvi2rgb_0_vid_pHSync),
         .hsync_out(bbox21_0_hsync_out),
         .pixel_in(dvi2rgb_0_vid_pData),
         .pixel_out(bbox21_0_pixel_out),
         .point_x0(KLT_2200_0_point_x0),
         .point_y0(KLT_2200_0_point_y0),
-        .vsync_in(1'b0),
+        .vsync_in(dvi2rgb_0_vid_pVSync),
         .vsync_out(bbox21_0_vsync_out));
   design_1_bin_mask_0_0 bin_mask_0
        (.Cb(rgb2ycbcr_0_cb[7:0]),
@@ -331,7 +331,7 @@ module design_1
         .vid_pVSync(dvi2rgb_0_vid_pVSync));
   design_1_mux_0_0 mux_0
        (.addr(sw_1[2:0]),
-        .de_in_0(1'b0),
+        .de_in_0(dvi2rgb_0_vid_pVDE),
         .de_in_1(rgb2ycbcr_0_de_out),
         .de_in_2(wysw_0_de_out),
         .de_in_3(bbox21_0_de_out),
@@ -340,7 +340,7 @@ module design_1
         .de_in_6(1'b0),
         .de_in_7(1'b0),
         .de_out(mux_0_de_out),
-        .h_sync_0(1'b0),
+        .h_sync_0(dvi2rgb_0_vid_pHSync),
         .h_sync_1(rgb2ycbcr_0_h_sync_out),
         .h_sync_2(wysw_0_hsync_out),
         .h_sync_3(bbox21_0_hsync_out),
@@ -358,7 +358,7 @@ module design_1
         .pixel_in_6({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .pixel_in_7({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .pixel_out(mux_0_pixel_out),
-        .v_sync_0(1'b0),
+        .v_sync_0(dvi2rgb_0_vid_pVSync),
         .v_sync_1(rgb2ycbcr_0_v_sync_out),
         .v_sync_2(wysw_0_vsync_out),
         .v_sync_3(bbox21_0_vsync_out),

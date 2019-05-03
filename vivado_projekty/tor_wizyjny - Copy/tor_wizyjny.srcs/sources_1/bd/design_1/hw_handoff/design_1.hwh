@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May  1 03:16:19 2019" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May  1 14:59:25 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:2.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -283,9 +283,21 @@
             <CONNECTION INSTANCE="dvi2rgb_0" PORT="PixelClk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="de_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="hsync_in" SIGIS="undef"/>
-        <PORT DIR="I" NAME="vsync_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="de_in" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVDE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVDE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_in" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pHSync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pHSync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_in" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVSync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVSync"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="11" NAME="point_x0" RIGHT="0" SIGIS="undef" SIGNAME="KLT_2200_0_point_x0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="KLT_2200_0" PORT="point_x0"/>
@@ -1057,16 +1069,22 @@
         <PORT DIR="O" NAME="vid_pVDE" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVDE">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="de_in"/>
+            <CONNECTION INSTANCE="bbox21_0" PORT="de_in"/>
+            <CONNECTION INSTANCE="mux_0" PORT="de_in_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pHSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pHSync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="h_sync_in"/>
+            <CONNECTION INSTANCE="bbox21_0" PORT="hsync_in"/>
+            <CONNECTION INSTANCE="mux_0" PORT="h_sync_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vid_pVSync" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVSync">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="v_sync_in"/>
+            <CONNECTION INSTANCE="bbox21_0" PORT="vsync_in"/>
+            <CONNECTION INSTANCE="mux_0" PORT="v_sync_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
@@ -1158,7 +1176,11 @@
         <PORT DIR="I" LEFT="23" NAME="pixel_in_5" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="23" NAME="pixel_in_6" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="23" NAME="pixel_in_7" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="de_in_0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="de_in_0" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVDE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVDE"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="de_in_1" SIGIS="undef" SIGNAME="rgb2ycbcr_0_de_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="de_out"/>
@@ -1178,7 +1200,11 @@
         <PORT DIR="I" NAME="de_in_5" SIGIS="undef"/>
         <PORT DIR="I" NAME="de_in_6" SIGIS="undef"/>
         <PORT DIR="I" NAME="de_in_7" SIGIS="undef"/>
-        <PORT DIR="I" NAME="h_sync_0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="h_sync_0" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pHSync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pHSync"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="h_sync_1" SIGIS="undef" SIGNAME="rgb2ycbcr_0_h_sync_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="h_sync_out"/>
@@ -1198,7 +1224,11 @@
         <PORT DIR="I" NAME="h_sync_5" SIGIS="undef"/>
         <PORT DIR="I" NAME="h_sync_6" SIGIS="undef"/>
         <PORT DIR="I" NAME="h_sync_7" SIGIS="undef"/>
-        <PORT DIR="I" NAME="v_sync_0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="v_sync_0" SIGIS="undef" SIGNAME="dvi2rgb_0_vid_pVSync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dvi2rgb_0" PORT="vid_pVSync"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="v_sync_1" SIGIS="undef" SIGNAME="rgb2ycbcr_0_v_sync_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2ycbcr_0" PORT="v_sync_out"/>

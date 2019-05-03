@@ -101,6 +101,14 @@ module tb_pyramid(
     
     wire [10 : 0] center_L1;
     wire [7 : 0] centerpx_L1;
+    wire [7 : 0] leftpx_L1;
+    wire [7 : 0] rightpx_L1;
+    wire [7 : 0] uppx_L1;
+    wire [7 : 0] downpx_L1;
+    wire [7 : 0] prev_leftpx_L1;
+    wire [7 : 0] prev_rightpx_L1;
+    wire [7 : 0] prev_uppx_L1;
+    wire [7 : 0] prev_downpx_L1;
     wire [25 : 0] G11_L1;
     wire [25 : 0] G12_L1;
     wire [25 : 0] G21_L1;
@@ -123,9 +131,8 @@ module tb_pyramid(
     wire [10 : 0] y_pos_L0;
     wire in_roi_L0;
     
-    
+
     assign centerpx = center[10 -: 8];
-    assign centerpx_L1 = center_L1[10 -: 8];
     assign centerpx_L0 = center_L0[10 -: 8];
     assign pyramidal_guess_px = pyramidal_guess_pixel[10 -: 8];
     
@@ -241,7 +248,7 @@ module tb_pyramid(
         .clk(clk_2x),
         .pixel_in(pixel_2x),
         .hsync_in(hsync_2x),
-        .vsync_in(vsync_2x),    //why do we 
+        .vsync_in(vsync_2x),    
         .de_in(de_2x),
         .halt(halt_L1),
         .start(guess_valid_L2),
@@ -262,6 +269,12 @@ module tb_pyramid(
         .rx_hsync(hsync_2x_halted),
         .rx_vsync(vsync_2x_halted),
         .pixel_in(pixel_2x_halted),
+//        .rx_pclk(clk_2x),
+//        .rx_de(de_2x),
+//        .rx_hsync(hsync_2x),
+//        .rx_vsync(vsync_2x),
+//        .pixel_in(pixel_2x),
+        
         .level_x0(point_x0_L1),
         .level_y0(point_y0_L1),
         .pyramidal_guess_x(pyramidal_guess_L2_x),
@@ -274,6 +287,14 @@ module tb_pyramid(
       
 //        .context_valid(context_valid),
         .center(center_L1),
+        .leftpx(leftpx_L1),
+        .rightpx(rightpx_L1),
+        .uppx(uppx_L1),
+        .downpx(downpx_L1),
+        .prev_left_pixel(prev_leftpx_L1),
+        .prev_right_pixel(prev_rightpx_L1),
+        .prev_up_pixel(prev_uppx_L1),
+        .prev_down_pixel(prev_downpx_L1),
         .x_pos(x_pos_L1),
         .y_pos(y_pos_L1),
         .in_roi(in_roi_L1),

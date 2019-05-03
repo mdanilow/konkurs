@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May  1 22:08:53 2019
+# Process ID: 1636
+# Current directory: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/mult_dy_times_window_synth_1
+# Command line: vivado.exe -log mult_dy_times_window.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mult_dy_times_window.tcl
+# Log file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/mult_dy_times_window_synth_1/mult_dy_times_window.vds
+# Journal file: C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.runs/mult_dy_times_window_synth_1\vivado.jou
+#-----------------------------------------------------------
+source mult_dy_times_window.tcl -notrace

@@ -43,6 +43,14 @@ module klt_tracker_level #(
     
     output context_valid,
     output [10 : 0] center,
+    output [7 : 0] leftpx,
+    output [7 : 0] rightpx,
+    output [7 : 0] uppx,
+    output [7 : 0] downpx,
+    output [7 : 0] prev_up_pixel,
+    output [7 : 0] prev_down_pixel,
+    output [7 : 0] prev_left_pixel,
+    output [7 : 0] prev_right_pixel,
     output [10 : 0] pyramidal_guess_pixel,
     output [5 : 0] pyramidal_guess_x_int,
     output [5 : 0] pyramidal_guess_y_int,
@@ -68,6 +76,11 @@ module klt_tracker_level #(
     output first_frame,
     output roi_end
 );
+
+    assign leftpx = left[10 -: 8];
+    assign rightpx = right[10 -: 8];
+    assign uppx = up[10 -: 8];
+    assign downpx = down[10 -: 8];
     
     localparam P_GUESS_INT_WIDTH = 6;
     

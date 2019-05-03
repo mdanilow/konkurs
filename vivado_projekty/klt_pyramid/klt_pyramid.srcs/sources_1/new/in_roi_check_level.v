@@ -81,5 +81,5 @@ module in_roi_check_level #(
     assign roi_end = roi_end_reg;
     assign in_roi = (x_pos >= level_x0 - NEIGH_SIZE) && (x_pos <= level_x0 + NEIGH_SIZE) && (y_pos >= level_y0 - NEIGH_SIZE) && (y_pos <= level_y0 + NEIGH_SIZE) && (roi_ended == 0);
     assign in_extended_roi = (x_pos >= level_x0 - (NEIGH_SIZE + BORDER_WIDTH)) && (x_pos <= level_x0 + (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos >= level_y0 - (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos <= level_y0 + (NEIGH_SIZE + BORDER_WIDTH));
-    assign halt_me_pls = (y_pos == level_y0 - NEIGH_SIZE) && (x_pos >= level_x0 - NEIGH_SIZE - 2);
+    assign halt_me_pls = (y_pos == level_y0 - NEIGH_SIZE) && (x_pos >= level_x0 - NEIGH_SIZE - 3);
 endmodule

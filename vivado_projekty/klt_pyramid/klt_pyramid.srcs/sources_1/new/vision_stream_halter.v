@@ -38,11 +38,12 @@ module vision_stream_halter(
     output de_out
 );  
 
-    wire [10 : 0] read_data;
+    wire [11 : 0] read_data;
 
     reg [2 : 0] state = 0;
     reg write_enable = 0;
     reg read_enable = 0;
+    reg first_clock_after_halt = 0;
 
     always @(posedge clk)
     begin
@@ -63,7 +64,13 @@ module vision_stream_halter(
         //writing
         else if(state == 1)
         begin
+            
+//            assign clk_out = (state == 1 && first_clock_after_halt == 1) ? read_data[0] : clk; //if writing, stop klt tracker
+
+//            if(first_clock_after_halt == 0)
+//                first_clock_after_halt <= 1;
         
+            //start reading
             if(start == 1) 
             begin
                 
@@ -72,13 +79,21 @@ module vision_stream_halter(
             end
         end
         
-        //reading
+        //stop clock for one more cycle due to fifo read latency (1)
         else if(state == 2)
+        begin
+        
+            state <= 3;
+        end
+        
+        //reading
+        else if(state == 3)
         begin
         
             if(reset == 1)
             begin
                 
+                //first_clock_after_halt <= 0;
                 write_enable <= 0;
                 read_enable <= 0;
                 state <= 0;
@@ -90,7 +105,7 @@ module vision_stream_halter(
     stream_halter_fifo fajfo(
     
         .clk(clk),
-        .din({pixel_in, de_in, hsync_in, vsync_in}),
+        .din({pixel_in, de_in, hsync_in, vsync_in, clk}),
         .dout(read_data),
         .wr_en(write_enable),
         .rd_en(read_enable),
@@ -98,9 +113,9 @@ module vision_stream_halter(
     );
 
     
-    assign clk_out = (state == 1) ? 1'b0 : clk; //if writing, stop klt tracker
-    assign pixel_out = (state == 0) ? pixel_in : read_data[10 -: 8];
-    assign de_out = (state == 0) ? de_in : read_data[2];
-    assign hsync_out = (state == 0) ? hsync_in : read_data[1];
-    assign vsync_out = (state == 0) ? vsync_in : read_data[0];
+    assign clk_out = (state == 1 || state == 2 || (state == 0 && halt == 1)) ? 1'b0 : clk; //if writing, stop klt tracker
+    assign pixel_out = (state == 0) ? pixel_in : read_data[4 +: 8];
+    assign de_out = (state == 0) ? de_in : read_data[3];
+    assign hsync_out = (state == 0) ? hsync_in : read_data[2];
+    assign vsync_out = (state == 0) ? vsync_in : read_data[1];
 endmodule

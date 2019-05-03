@@ -83,9 +83,8 @@ for f = 1:400
                     
                     row_ = round(row);
                     col_ = round(col);
-                    display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(level_frame(row_, col_)), ' prev_center: ', num2str(level_prev_frame(row_, col_)), ' guess_pixel: ', num2str(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x))), ]);
+%                     display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(level_frame(row_, col_)), ' prev_center: ', num2str(level_prev_frame(row_, col_)), ' guess_pixel: ', num2str(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x))), ]);
 
-                    
                     if(interpolation_on == 1)
                         Ix = (interpolation(col+1, row, level_prev_frame) - interpolation(col-1, row, level_prev_frame))/2;
                         Iy = (interpolation(col, row+1, level_prev_frame) - interpolation(col, row-1, level_prev_frame))/2;
@@ -105,6 +104,8 @@ for f = 1:400
 
                     G = G + dG;
                     b = b + db;
+                    
+%                     display(['G11: ', num2str(G(1, 1)), ' G12: ', num2str(G(1, 2)), ' G22: ', num2str(G(2, 2)), ' b1: ', num2str(b(1)), ' b2: ', num2str(b(2))]);
                 end
             end
             

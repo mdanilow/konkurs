@@ -54,8 +54,11 @@ module pixel_position(
         
         if(de_in == 1)
         begin
-            valid_pixel_existed <= 1;
-            x_pos <= x_pos + 1;        
+            
+            x_pos <= x_pos + 1;
+            
+            if(valid_pixel_existed == 0)
+                valid_pixel_existed <= 1;         
         end
         
         if(hsync_in == 1 && x_pos != 1)

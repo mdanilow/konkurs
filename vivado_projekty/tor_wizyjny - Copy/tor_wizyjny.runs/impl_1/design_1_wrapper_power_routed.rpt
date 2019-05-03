@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed May  1 03:34:48 2019
+| Date             : Wed May  1 15:21:17 2019
 | Host             : N-5CD6281M34 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.067        |
+| Total On-Chip Power (W)  | 2.068        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.935        |
+| Dynamic (W)              | 1.936        |
 | Device Static (W)        | 0.132        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 61.2         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.029 |       14 |       --- |             --- |
-| Slice Logic              |     0.020 |    18126 |       --- |             --- |
-|   LUT as Logic           |     0.014 |     4901 |     17600 |           27.85 |
-|   Register               |     0.003 |     9324 |     35200 |           26.49 |
-|   LUT as Shift Register  |     0.003 |      597 |      6000 |            9.95 |
-|   CARRY4                 |     0.001 |      505 |      4400 |           11.48 |
+| Slice Logic              |     0.020 |    18181 |       --- |             --- |
+|   LUT as Logic           |     0.014 |     4920 |     17600 |           27.95 |
+|   Register               |     0.003 |     9347 |     35200 |           26.55 |
+|   LUT as Shift Register  |     0.003 |      598 |      6000 |            9.97 |
+|   CARRY4                 |     0.001 |      508 |      4400 |           11.55 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Distributed RAM |    <0.001 |       48 |      6000 |            0.80 |
 |   F7/F8 Muxes            |    <0.001 |       69 |     17600 |            0.39 |
-|   Others                 |    <0.001 |     1401 |       --- |             --- |
-| Signals                  |     0.037 |    15636 |       --- |             --- |
+|   Others                 |    <0.001 |     1400 |       --- |             --- |
+| Signals                  |     0.037 |    15669 |       --- |             --- |
 | Block RAM                |     0.011 |      6.5 |        60 |           10.83 |
 | MMCM                     |     0.106 |        1 |         2 |           50.00 |
 | PLL                      |     0.110 |        1 |         2 |           50.00 |
@@ -70,7 +70,7 @@ Table of Contents
 | I/O                      |     0.032 |       39 |       100 |           39.00 |
 | PS7                      |     1.556 |        1 |       --- |             --- |
 | Static Power             |     0.132 |          |           |                 |
-| Total                    |     2.067 |          |           |                 |
+| Total                    |     2.068 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -167,7 +167,7 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                          | Power (W) |
 +-----------------------------------------------------------------------------------------------+-----------+
-| design_1_wrapper                                                                              |     1.935 |
+| design_1_wrapper                                                                              |     1.936 |
 |   dbg_hub                                                                                     |     0.002 |
 |     inst                                                                                      |     0.002 |
 |       BSCANID.u_xsdbm_id                                                                      |     0.002 |
@@ -255,8 +255,8 @@ Table of Contents
 |         SWITCH_N_EXT_BSCAN.bscan_switch                                                       |    <0.001 |
 |   design_1_i                                                                                  |     1.933 |
 |     KLT_2200_0                                                                                |     0.103 |
-|       inst                                                                                    |     0.102 |
-|         context                                                                               |     0.006 |
+|       inst                                                                                    |     0.103 |
+|         context                                                                               |     0.007 |
 |           line1                                                                               |     0.003 |
 |             BRAM                                                                              |     0.003 |
 |               U0                                                                              |     0.003 |
@@ -375,20 +375,20 @@ Table of Contents
 |                   use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay             |    <0.001 |
 |                   use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay                         |    <0.001 |
 |                   use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay                         |    <0.001 |
-|           ed_mult                                                                             |     0.004 |
-|             U0                                                                                |     0.004 |
-|               i_mult                                                                          |     0.004 |
-|                 gDSP.gDSP_only.iDSP                                                           |     0.004 |
+|           ed_mult                                                                             |     0.003 |
+|             U0                                                                                |     0.003 |
+|               i_mult                                                                          |     0.003 |
+|                 gDSP.gDSP_only.iDSP                                                           |     0.003 |
 |                   use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay             |    <0.001 |
 |                   use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay             |    <0.001 |
 |                   use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay                         |    <0.001 |
 |                   use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay                         |    <0.001 |
-|           x_divider                                                                           |     0.031 |
-|             U0                                                                                |     0.031 |
-|               i_synth                                                                         |     0.031 |
+|           x_divider                                                                           |     0.030 |
+|             U0                                                                                |     0.030 |
+|               i_synth                                                                         |     0.030 |
 |                 i_nd_to_rdy                                                                   |    <0.001 |
-|                 i_nonzero_fract.i_synth                                                       |     0.031 |
-|                   opt_high_radix.i_nonzero_fract.i_high_radix                                 |     0.031 |
+|                 i_nonzero_fract.i_synth                                                       |     0.030 |
+|                   opt_high_radix.i_nonzero_fract.i_high_radix                                 |     0.030 |
 |                     i_denom_est_bypass                                                        |    <0.001 |
 |                     i_est_prescale_balance                                                    |    <0.001 |
 |                     i_estimator                                                               |     0.003 |
@@ -593,11 +593,11 @@ Table of Contents
 |                   pipelining.stages[5].slices[5].laststage.diagonal.diagonal_adder            |    <0.001 |
 |                     i_lut6.i_lut6_addsub                                                      |    <0.001 |
 |                       i_q.i_simple.qreg                                                       |    <0.001 |
-|           y_divider                                                                           |     0.030 |
-|             U0                                                                                |     0.030 |
-|               i_synth                                                                         |     0.030 |
-|                 i_nonzero_fract.i_synth                                                       |     0.030 |
-|                   opt_high_radix.i_nonzero_fract.i_high_radix                                 |     0.030 |
+|           y_divider                                                                           |     0.031 |
+|             U0                                                                                |     0.031 |
+|               i_synth                                                                         |     0.031 |
+|                 i_nonzero_fract.i_synth                                                       |     0.031 |
+|                   opt_high_radix.i_nonzero_fract.i_high_radix                                 |     0.031 |
 |                     i_denom_est_bypass                                                        |    <0.001 |
 |                     i_est_prescale_balance                                                    |    <0.001 |
 |                     i_estimator                                                               |     0.003 |
@@ -669,8 +669,8 @@ Table of Contents
 |                             i_pipe                                                            |    <0.001 |
 |                     i_fixed.i_negate_del                                                      |    <0.001 |
 |                     i_flow_ctrl                                                               |    <0.001 |
-|                     i_iterative_unit                                                          |     0.011 |
-|                       i_est_reg                                                               |    <0.001 |
+|                     i_iterative_unit                                                          |     0.012 |
+|                       i_est_reg                                                               |     0.001 |
 |                       i_extra_digits.i_add                                                    |    <0.001 |
 |                         i_synth_option.i_synth_model                                          |    <0.001 |
 |                           opt_vx7.i_uniwrap                                                   |    <0.001 |
@@ -935,9 +935,9 @@ Table of Contents
 |                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay           |    <0.001 |
 |     clk_wiz_0                                                                                 |     0.110 |
 |       inst                                                                                    |     0.110 |
-|     dvi2rgb_0                                                                                 |     0.145 |
-|       U0                                                                                      |     0.145 |
-|         DataDecoders[0].DecoderX                                                              |     0.011 |
+|     dvi2rgb_0                                                                                 |     0.146 |
+|       U0                                                                                      |     0.146 |
+|         DataDecoders[0].DecoderX                                                              |     0.012 |
 |           ChannelBondX                                                                        |    <0.001 |
 |             pFIFO_reg_0_31_0_5                                                                |    <0.001 |
 |             pFIFO_reg_0_31_6_9                                                                |    <0.001 |
@@ -947,7 +947,7 @@ Table of Contents
 |             SyncAsyncx                                                                        |    <0.001 |
 |           SyncBaseRst                                                                         |    <0.001 |
 |             SyncAsyncx                                                                        |    <0.001 |
-|         DataDecoders[1].DecoderX                                                              |     0.011 |
+|         DataDecoders[1].DecoderX                                                              |     0.012 |
 |           ChannelBondX                                                                        |    <0.001 |
 |             pFIFO_reg_0_31_0_5                                                                |    <0.001 |
 |             pFIFO_reg_0_31_6_9                                                                |    <0.001 |
@@ -988,11 +988,11 @@ Table of Contents
 |         parameter_register_v1_0_S00_AXI_inst                                                  |     0.002 |
 |     processing_system7_0                                                                      |     1.557 |
 |       inst                                                                                    |     1.557 |
-|     ps7_0_axi_periph                                                                          |     0.005 |
-|       s00_couplers                                                                            |     0.005 |
-|         auto_pc                                                                               |     0.005 |
-|           inst                                                                                |     0.005 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s                                              |     0.005 |
+|     ps7_0_axi_periph                                                                          |     0.004 |
+|       s00_couplers                                                                            |     0.004 |
+|         auto_pc                                                                               |     0.004 |
+|           inst                                                                                |     0.004 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                                              |     0.004 |
 |               RD.ar_channel_0                                                                 |     0.001 |
 |                 ar_cmd_fsm_0                                                                  |    <0.001 |
 |                 cmd_translator_0                                                              |    <0.001 |

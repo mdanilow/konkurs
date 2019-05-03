@@ -1003,9 +1003,9 @@ HDL_ATTRIBUTE.DEBUG {true} \
  ] [get_bd_nets downpx]
   connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_pins KLT_2200_0/rx_pclk] [get_bd_pins bbox21_0/clk] [get_bd_pins centroid_0/clk] [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins rgb2vga_0/PixelClk] [get_bd_pins rgb2ycbcr_0/clk] [get_bd_pins system_ila_0/clk] [get_bd_pins wysw_0/clk]
   connect_bd_net -net dvi2rgb_0_vid_pData [get_bd_pins bbox21_0/pixel_in] [get_bd_pins dvi2rgb_0/vid_pData] [get_bd_pins mux_0/pixel_in_0] [get_bd_pins rgb2ycbcr_0/pixel_in] [get_bd_pins split_rgb_0/pixel_in]
-  connect_bd_net -net dvi2rgb_0_vid_pHSync [get_bd_pins dvi2rgb_0/vid_pHSync] [get_bd_pins rgb2ycbcr_0/h_sync_in]
-  connect_bd_net -net dvi2rgb_0_vid_pVDE [get_bd_pins dvi2rgb_0/vid_pVDE] [get_bd_pins rgb2ycbcr_0/de_in]
-  connect_bd_net -net dvi2rgb_0_vid_pVSync [get_bd_pins dvi2rgb_0/vid_pVSync] [get_bd_pins rgb2ycbcr_0/v_sync_in]
+  connect_bd_net -net dvi2rgb_0_vid_pHSync [get_bd_pins bbox21_0/hsync_in] [get_bd_pins dvi2rgb_0/vid_pHSync] [get_bd_pins mux_0/h_sync_0] [get_bd_pins rgb2ycbcr_0/h_sync_in]
+  connect_bd_net -net dvi2rgb_0_vid_pVDE [get_bd_pins bbox21_0/de_in] [get_bd_pins dvi2rgb_0/vid_pVDE] [get_bd_pins mux_0/de_in_0] [get_bd_pins rgb2ycbcr_0/de_in]
+  connect_bd_net -net dvi2rgb_0_vid_pVSync [get_bd_pins bbox21_0/vsync_in] [get_bd_pins dvi2rgb_0/vid_pVSync] [get_bd_pins mux_0/v_sync_0] [get_bd_pins rgb2ycbcr_0/v_sync_in]
   connect_bd_net -net in_roi [get_bd_pins KLT_2200_0/in_roi] [get_bd_pins system_ila_0/probe5]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG {true} \

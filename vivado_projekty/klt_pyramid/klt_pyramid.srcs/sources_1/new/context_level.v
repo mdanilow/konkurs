@@ -47,7 +47,7 @@ module context_level #(
     output [10 : 0] pyramidal_guess_pixel
 );
     
-    //bo nie zapisuje de oraz pixel tak jak trzeba
+ 
     reg synch_de_in = 0;
     reg synch_h_sync_in = 0;
     reg synch_v_sync_in = 0;
@@ -58,7 +58,7 @@ module context_level #(
     wire [10 : 0] bram_lines_out [CONTEXT_SIZE-2 : 0];  //notice that number of lines = context_size - 1, for example, 3x3 context = 2 bram lines
     
     
-    //synchronize input
+//    synchronize input
     always @(negedge clk)
     begin
     
@@ -93,6 +93,7 @@ module context_level #(
     always @(posedge clk)
     begin
     
+//        context[0][0] <= {pixel_in, de_in, h_sync_in, v_sync_in};
         context[0][0] <= {synch_pixel_in, synch_de_in, synch_h_sync_in, synch_v_sync_in};
     end
     
