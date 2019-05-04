@@ -34,8 +34,8 @@ module context_level #(
     input de_in,
     input h_sync_in,
     input v_sync_in,
-    input [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_x_int,
-    input [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_y_int,
+    input signed [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_x_int,
+    input signed [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_y_int,
     
     //relative to center pixel:
     output [10 : 0] center,

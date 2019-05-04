@@ -61,6 +61,8 @@ module tb_pyramid(
     wire [87 : 0] pyramidal_guess_L1_y;
     wire guess_valid_L1;
     
+    wire guess_valid_L0;
+    
     wire halt_L1;
     wire [7 : 0] pixel_2x_halted;
     wire hsync_2x_halted;
@@ -69,6 +71,11 @@ module tb_pyramid(
     wire clk_2x_halted;
     
     wire halt_L0;
+    wire [7 : 0] pixel_halted;
+    wire hsync_halted;
+    wire vsync_halted;
+    wire de_halted;
+    wire clk_halted;
 
     wire [10 : 0] pyramidal_guess_pixel;
     wire [7 : 0] pyramidal_guess_px;
@@ -131,10 +138,18 @@ module tb_pyramid(
     wire [10 : 0] y_pos_L0;
     wire in_roi_L0;
     
+    wire [87 : 0] disposition_L0_x;
+    wire [87 : 0] disposition_L0_y;
+    
+    wire [10 : 0] pyramidal_guess_pixel_L0;
+    wire [7 : 0] pyramidal_guess_pixel_L0_int;
+    wire [7 : 0] prev_center_pixel_L0;
+    wire [5 : 0] pyramidal_guess_L1_x_int;
+    wire [5 : 0] pyramidal_guess_L1_y_int;
 
     assign centerpx = center[10 -: 8];
     assign centerpx_L0 = center_L0[10 -: 8];
-    assign pyramidal_guess_px = pyramidal_guess_pixel[10 -: 8];
+    assign pyramidal_guess_pixel_L0_int = pyramidal_guess_pixel_L0[10 -: 8];
     
     hdmi_in file_input(
 
@@ -199,9 +214,18 @@ module tb_pyramid(
     
     
     pyramidal_position_controller poscon(
-    
+        
+        .clk(rx_pclk),
         .set_x0(12'd300),
         .set_y0(11'd290),
+        .disposition_L0_x(disposition_L0_x),
+        .disposition_L0_y(disposition_L0_y),
+        .pyramidal_guess_L1_x(pyramidal_guess_L1_x),
+        .pyramidal_guess_L1_y(pyramidal_guess_L1_y),
+        .d_ready(guess_valid_L0),
+        .reset(1'b0),
+        .enable(1'b1),
+        .center_vsync_in(rx_vsync),
         
         .point_x0_L0(point_x0_L0),
         .point_y0_L0(point_y0_L0),
@@ -229,9 +253,6 @@ module tb_pyramid(
         .guess_valid(guess_valid_L2),
         
         .center(center),
-        .pyramidal_guess_pixel(pyramidal_guess_pixel),
-        .pyramidal_guess_x_int(pyramidal_guess_x_int),
-        .pyramidal_guess_y_int(pyramidal_guess_y_int),
         .x_pos(x_pos),
         .y_pos(y_pos),
         .in_roi(in_roi),
@@ -306,17 +327,42 @@ module tb_pyramid(
     );
     
     
+    vision_stream_halter L0_halter(
+        
+        .clk(rx_pclk),
+        .pixel_in(rx_red),
+        .hsync_in(rx_hsync),
+        .vsync_in(rx_vsync),    
+        .de_in(rx_de),
+        .halt(halt_L0),
+        .start(guess_valid_L1),
+        .reset(rx_vsync),
+        
+        .clk_out(clk_halted),
+        .pixel_out(pixel_halted),
+        .hsync_out(hsync_halted),
+        .vsync_out(vsync_halted),
+        .de_out(de_halted)
+    );
+    
+    
     klt_tracker_level tracker_L0(
                 
-        .rx_pclk(rx_pclk),
-        .rx_de(rx_de),
-        .rx_hsync(rx_hsync),
-        .rx_vsync(rx_vsync),
-        .pixel_in(rx_red),
+        .rx_pclk(clk_halted),
+        .rx_de(de_halted),
+        .rx_hsync(hsync_halted),
+        .rx_vsync(vsync_halted),
+        .pixel_in(pixel_halted),
+        
         .level_x0(point_x0_L0),
         .level_y0(point_y0_L0),
         .pyramidal_guess_x(pyramidal_guess_L1_x),
         .pyramidal_guess_y(pyramidal_guess_L1_y),
+        
+        .disposition_x(disposition_L0_x),
+        .disposition_y(disposition_L0_y),
+        .guess_valid(guess_valid_L0),
+        .halt_me_pls(halt_L0),
       
         .center(center_L0),
         .x_pos(x_pos_L0),
@@ -326,7 +372,11 @@ module tb_pyramid(
         .G12(G12_L0),
         .G22(G22_L0),
         .b1(b1_L0),
-        .b2(b2_L0)
+        .b2(b2_L0),
+        .pyramidal_guess_pixel(pyramidal_guess_pixel_L0),
+        .prev_center_pixel(prev_center_pixel_L0),
+        .pyramidal_guess_x_int(pyramidal_guess_L1_x_int),
+        .pyramidal_guess_y_int(pyramidal_guess_L1_y_int)
     );
     
 endmodule

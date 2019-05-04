@@ -127,8 +127,8 @@ module in_roi_check #(
         if(reset_position == 1)
         begin
             
-            x0 <= set_x0;
-            y0 <= set_y0;
+            x0 <= {47'd0, set_x0, 29'd0};
+            y0 <= {48'd0, set_y0, 29'd0};
         end
         
         else if(center_vsync_in == 0 && d_ready_del == 1 && enable == 1 && updated_in_this_frame == 0)

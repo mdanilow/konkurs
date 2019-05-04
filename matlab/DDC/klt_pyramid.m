@@ -48,13 +48,13 @@ for f = 1:400
         %piramid loop start
         for L = Lm:-1:0
             
-            L
+            L;
             
             level_x0 = x0/(2^L);
             level_y0 = y0/(2^L);
             
-            level_x0_ = round(level_x0)
-            level_y0_ = round(level_y0)
+            level_x0_ = round(level_x0);
+            level_y0_ = round(level_y0);
             
             switch L
                
@@ -109,8 +109,8 @@ for f = 1:400
                 end
             end
             
-            G
-            b
+            G;
+            b;
 
             ad = G(1, 1)*G(2, 2);
             bc = G(1, 2)*G(2, 1);
@@ -134,13 +134,15 @@ for f = 1:400
                 pyramidal_guess_y = 2*(pyramidal_guess_y + d(2));
             end
             
-            pg_x_ = round(pyramidal_guess_x)
-            pg_y_ = round(pyramidal_guess_y)
+            pg_x_ = round(pyramidal_guess_x);
+            pg_y_ = round(pyramidal_guess_y);
         end
         
         %solution for this frame
         x0 = x0 + d(1) + pyramidal_guess_x;
         y0 = y0 + d(2) + pyramidal_guess_y;
+        x0_ = round(x0)
+        y0_ = round(y0)
 
         if(f == 2 || f == 61 || f == 100 || f == 123 || f == 179 || f == 317)
             

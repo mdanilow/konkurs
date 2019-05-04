@@ -40,6 +40,8 @@ module klt_tracker_level #(
     output reg [87 : 0] guess_out_y = 0,
     output reg guess_valid = 0,
     output halt_me_pls,
+    output [87 : 0] disposition_x,
+    output [87 : 0] disposition_y,
     
     output context_valid,
     output [10 : 0] center,
@@ -86,8 +88,8 @@ module klt_tracker_level #(
     
     reg guess_updated_flag = 0;
     
-    wire [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_x_int; //rounded input pyramidal guess
-    wire [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_y_int;
+    reg [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_x_int = 0; //rounded input pyramidal guess
+    reg [P_GUESS_INT_WIDTH-1 : 0] pyramidal_guess_y_int = 0;
     
     wire [10 : 0] center;   //{pixel, de, h_sync, v_sync}
     wire [10 : 0] up;
@@ -280,10 +282,43 @@ module klt_tracker_level #(
     end
     
     
-    assign pyramidal_guess_x_int = pyramidal_guess_x[28] ? (pyramidal_guess_x[29 +: P_GUESS_INT_WIDTH] + 1) : pyramidal_guess_x[29 +: P_GUESS_INT_WIDTH];
-    assign pyramidal_guess_y_int = pyramidal_guess_y[28] ? (pyramidal_guess_y[29 +: P_GUESS_INT_WIDTH] + 1) : pyramidal_guess_y[29 +: P_GUESS_INT_WIDTH];
+    //rounding input pyramidal guess for context generation module
+    //pyramidal_guess[28] is most significant franction bit
+    always @(*)
+    begin
+    
+        pyramidal_guess_x_int = pyramidal_guess_x[29 +: P_GUESS_INT_WIDTH];
+        pyramidal_guess_y_int = pyramidal_guess_y[29 +: P_GUESS_INT_WIDTH];
+        
+        if(pyramidal_guess_x[28] == 1)
+        begin
+            
+            //if negative
+            if(pyramidal_guess_x[87] == 1)
+                pyramidal_guess_x_int = pyramidal_guess_x[29 +: P_GUESS_INT_WIDTH] - 1;
+            
+            else
+                pyramidal_guess_x_int = pyramidal_guess_x[29 +: P_GUESS_INT_WIDTH] + 1;
+        end
+        
+        if(pyramidal_guess_y[28] == 1)
+        begin
+            
+            //if negative
+            if(pyramidal_guess_y[87] == 1)
+                pyramidal_guess_y_int = pyramidal_guess_y[29 +: P_GUESS_INT_WIDTH] - 1;
+            
+            else
+                pyramidal_guess_y_int = pyramidal_guess_y[29 +: P_GUESS_INT_WIDTH] + 1;
+        end     
+    end
+    
+    //rounding
+//    assign pyramidal_guess_x_int = pyramidal_guess_x[28] ? (pyramidal_guess_x[29 +: P_GUESS_INT_WIDTH] + 1) : pyramidal_guess_x[29 +: P_GUESS_INT_WIDTH];
+//    assign pyramidal_guess_y_int = pyramidal_guess_y[28] ? (pyramidal_guess_y[29 +: P_GUESS_INT_WIDTH] + 1) : pyramidal_guess_y[29 +: P_GUESS_INT_WIDTH];
     
     assign sum_level_guess_x = pyramidal_guess_x + level_guess_x;
     assign sum_level_guess_y = pyramidal_guess_y + level_guess_y;
-    
+    assign disposition_x = level_guess_x;
+    assign disposition_y = level_guess_y;
 endmodule

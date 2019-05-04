@@ -27,8 +27,7 @@ module in_roi_check_level #(
     parameter BORDER_WIDTH = 2
 )
 (  
-    input enable,
-    input reset_position,
+
     input center_vsync_in,
     input clk,
     input [11 : 0] x_pos,
@@ -45,6 +44,8 @@ module in_roi_check_level #(
     reg roi_end_reg = 0;
     reg roi_end_impulse_state = 0;
     reg roi_ended = 0;
+    reg [11 : 0] latched_x0_int = 0;        //x0, y0 are updated a moment after we leave ROI, but we want to have pre-update coords for valid in_extended_roi flag generation
+    reg [10 : 0] latched_y0_int = 0;
 
     
     //roi_end impulse generation
@@ -74,12 +75,17 @@ module in_roi_check_level #(
             roi_ended <= 1;
             
         if(center_vsync_in == 1)
+        begin
+        
+            latched_x0_int <= level_x0;
+            latched_y0_int <= level_y0;
             roi_ended <= 0;
+        end
     end
     
     
     assign roi_end = roi_end_reg;
     assign in_roi = (x_pos >= level_x0 - NEIGH_SIZE) && (x_pos <= level_x0 + NEIGH_SIZE) && (y_pos >= level_y0 - NEIGH_SIZE) && (y_pos <= level_y0 + NEIGH_SIZE) && (roi_ended == 0);
-    assign in_extended_roi = (x_pos >= level_x0 - (NEIGH_SIZE + BORDER_WIDTH)) && (x_pos <= level_x0 + (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos >= level_y0 - (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos <= level_y0 + (NEIGH_SIZE + BORDER_WIDTH));
+    assign in_extended_roi = (x_pos >= latched_x0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (x_pos <= latched_x0_int + (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos >= latched_y0_int - (NEIGH_SIZE + BORDER_WIDTH)) && (y_pos <= latched_y0_int + (NEIGH_SIZE + BORDER_WIDTH));
     assign halt_me_pls = (y_pos == level_y0 - NEIGH_SIZE) && (x_pos >= level_x0 - NEIGH_SIZE - 3);
 endmodule

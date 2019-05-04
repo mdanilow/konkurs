@@ -84,12 +84,12 @@ Compiling module xil_defaultlib.puz(N=3)
 Compiling module xil_defaultlib.modul_puz(N=3)
 Compiling module xil_defaultlib.scale2x
 Compiling module xil_defaultlib.scale2x(CLK_PHASE=1)
+Compiling module xil_defaultlib.puz(N=1)
+Compiling module xil_defaultlib.modul_puz(N=1,DELAY=1)
 Compiling module xil_defaultlib.pyramidal_position_controller
 Compiling module xil_defaultlib.context_level_default
 Compiling module xil_defaultlib.pixel_position
 Compiling module xil_defaultlib.in_roi_check_level
-Compiling module xil_defaultlib.puz(N=1)
-Compiling module xil_defaultlib.modul_puz(N=1,DELAY=1)
 Compiling architecture xilinx of entity mult_gen_v12_0_14.delay_line [\delay_line(c_xdevicefamily="zyn...]
 Compiling architecture xilinx of entity mult_gen_v12_0_14.op_resize [\op_resize(ai_width=11,bi_width=...]
 Compiling architecture xilinx of entity mult_gen_v12_0_14.dsp [\dsp(c_xdevicefamily="zynq",c_a_...]
