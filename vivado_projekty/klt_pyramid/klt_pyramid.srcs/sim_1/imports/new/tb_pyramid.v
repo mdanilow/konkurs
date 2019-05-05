@@ -81,16 +81,13 @@ module tb_pyramid(
     wire [7 : 0] pyramidal_guess_px;
     wire [5 : 0] pyramidal_guess_x_int;
     wire [5 : 0] pyramidal_guess_y_int;
-    wire in_extended_roi;
+    wire in_extended_roi_L2;
     wire [7 : 0] prev_frame_pixel;
-    wire [52 : 0] ed_minus_bf;
-    wire [52 : 0] af_minus_ec;
-    wire [51 : 0] ad_minus_bc;
-    wire [9 : 0] write_addr_test;
-    wire [9 : 0] read_addr_test;
-    wire [9 : 0] read_offset;
-    wire [11 : 0] delta_x0;
-    wire [10 : 0] delta_y0;
+    wire [9 : 0] write_addr_L2;
+    wire [9 : 0] read_addr_L2;
+    wire [9 : 0] read_offset_L2;
+    wire [11 : 0] delta_x0_L2;
+    wire [10 : 0] delta_y0_L2;
     wire center_vsync;
     wire first_frame;
     
@@ -286,7 +283,13 @@ module tb_pyramid(
         .G12(G12),
         .G22(G22),
         .b1(b1),
-        .b2(b2)
+        .b2(b2),
+        .write_addr_test(write_addr_L2),
+        .read_addr_test(read_addr_L2),
+        .read_offset(read_offset_L2),
+        .delta_x0(delta_x0_L2),
+        .delta_y0(delta_y0_L2),
+        .in_extended_roi(in_extended_roi_L2)
     );
     
     

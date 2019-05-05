@@ -83,7 +83,7 @@ for f = 1:400
                     
                     row_ = round(row);
                     col_ = round(col);
-                    display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(level_frame(row_, col_)), ' prev_center: ', num2str(level_prev_frame(row_, col_)), ' guess_pixel: ', num2str(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x))), ]);
+                    display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(level_frame(row_, col_)), ' prev_center: ', num2str(level_prev_frame(row_, col_)), ' guess_pixel: ', num2str(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x))), ' right_pixel: ', num2str(level_prev_frame(row_, col_+1)), ' left_pixel: ', num2str(level_prev_frame(row_, col_-1)), ' up_pixel: ', num2str(level_prev_frame(row_-1, col_)), ' down_pixel: ', num2str(level_prev_frame(row_+1, col_))]);
 
                     if(interpolation_on == 1)
                         Ix = (interpolation(col+1, row, level_prev_frame) - interpolation(col-1, row, level_prev_frame))/2;
