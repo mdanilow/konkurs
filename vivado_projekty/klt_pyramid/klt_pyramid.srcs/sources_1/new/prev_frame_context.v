@@ -23,7 +23,7 @@
 module prev_frame_context #(
     
     parameter NEIGH_SIZE = 6'd10,
-    parameter BORDER_WIDTH = 6'd2
+    parameter BORDER_WIDTH = 6'd5
 )
 (   
 
@@ -54,7 +54,7 @@ module prev_frame_context #(
     output [10 : 0] delta_y0
 );
 
-    localparam WRITE_ADDR_LIM = 624; //( 2*(NEIGH_SIZE+BORDER_WIDTH) + 1 )^2 - 1;
+    localparam WRITE_ADDR_LIM = 960; //( 2*(NEIGH_SIZE+BORDER_WIDTH) + 1 )^2 - 1;
 
     reg [9 : 0] write_addr = 0;
     reg [9 : 0] read_offset = 0;  //because roi position changes from frame to frame, we need to start reading from diffrent location

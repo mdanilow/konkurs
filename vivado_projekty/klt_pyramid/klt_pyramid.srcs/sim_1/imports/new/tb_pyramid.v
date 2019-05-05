@@ -96,6 +96,14 @@ module tb_pyramid(
     
     wire [10 : 0] center;
     wire [7 : 0] centerpx;
+    wire [7 : 0] leftpx_L2;
+    wire [7 : 0] rightpx_L2;
+    wire [7 : 0] uppx_L2;
+    wire [7 : 0] downpx_L2;
+    wire [7 : 0] prev_leftpx_L2;
+    wire [7 : 0] prev_rightpx_L2;
+    wire [7 : 0] prev_uppx_L2;
+    wire [7 : 0] prev_downpx_L2;
     wire [25 : 0] G11;
     wire [25 : 0] G12;
     wire [25 : 0] G21;
@@ -137,6 +145,7 @@ module tb_pyramid(
     wire [11 : 0] x_pos_L0;
     wire [10 : 0] y_pos_L0;
     wire in_roi_L0;
+    wire [2 : 0] updated_in_this_frame;
     
     wire [87 : 0] disposition_L0_x;
     wire [87 : 0] disposition_L0_y;
@@ -146,10 +155,17 @@ module tb_pyramid(
     wire [7 : 0] prev_center_pixel_L0;
     wire [5 : 0] pyramidal_guess_L1_x_int;
     wire [5 : 0] pyramidal_guess_L1_y_int;
+    
+    wire [10 : 0] pyramidal_guess_pixel_L1;
+    wire [7 : 0] pyramidal_guess_pixel_L1_int;
+    wire [7 : 0] prev_center_pixel_L1;
+    wire [5 : 0] pyramidal_guess_L2_x_int;
+    wire [5 : 0] pyramidal_guess_L2_y_int;
 
     assign centerpx = center[10 -: 8];
     assign centerpx_L0 = center_L0[10 -: 8];
     assign pyramidal_guess_pixel_L0_int = pyramidal_guess_pixel_L0[10 -: 8];
+    assign pyramidal_guess_pixel_L1_int = pyramidal_guess_pixel_L1[10 -: 8];
     
     hdmi_in file_input(
 
@@ -232,7 +248,9 @@ module tb_pyramid(
         .point_x0_L1(point_x0_L1),
         .point_y0_L1(point_y0_L1),
         .point_x0_L2(point_x0_L2),
-        .point_y0_L2(point_y0_L2)
+        .point_y0_L2(point_y0_L2),
+        
+        .updated_in_this_frame(updated_in_this_frame)
     );
     
     
@@ -253,6 +271,14 @@ module tb_pyramid(
         .guess_valid(guess_valid_L2),
         
         .center(center),
+        .leftpx(leftpx_L2),
+        .rightpx(rightpx_L2),
+        .uppx(uppx_L2),
+        .downpx(downpx_L2),
+        .prev_left_pixel(prev_leftpx_L2),
+        .prev_right_pixel(prev_rightpx_L2),
+        .prev_up_pixel(prev_uppx_L2),
+        .prev_down_pixel(prev_downpx_L2),
         .x_pos(x_pos),
         .y_pos(y_pos),
         .in_roi(in_roi),
@@ -323,7 +349,11 @@ module tb_pyramid(
         .G12(G12_L1),
         .G22(G22_L1),
         .b1(b1_L1),
-        .b2(b2_L1)
+        .b2(b2_L1),
+        .pyramidal_guess_pixel(pyramidal_guess_pixel_L1),
+        .prev_center_pixel(prev_center_pixel_L1),
+        .pyramidal_guess_x_int(pyramidal_guess_L2_x_int),
+        .pyramidal_guess_y_int(pyramidal_guess_L2_y_int)
     );
     
     

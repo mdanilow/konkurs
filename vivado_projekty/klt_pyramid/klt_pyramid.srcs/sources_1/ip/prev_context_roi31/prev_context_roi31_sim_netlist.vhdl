@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed May  1 22:08:51 2019
+-- Date        : Sun May  5 01:08:29 2019
 -- Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/prev_context_roi31/prev_context_roi31_sim_netlist.vhdl
@@ -770,9 +770,9 @@ entity prev_context_roi31_blk_mem_gen_v8_4_1 is
   attribute C_PRIM_TYPE : integer;
   attribute C_PRIM_TYPE of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 1;
   attribute C_READ_DEPTH_A : integer;
-  attribute C_READ_DEPTH_A of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 961;
+  attribute C_READ_DEPTH_A of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 1024;
   attribute C_READ_DEPTH_B : integer;
-  attribute C_READ_DEPTH_B of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 961;
+  attribute C_READ_DEPTH_B of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 1024;
   attribute C_READ_WIDTH_A : integer;
   attribute C_READ_WIDTH_A of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 40;
   attribute C_READ_WIDTH_B : integer;
@@ -806,9 +806,9 @@ entity prev_context_roi31_blk_mem_gen_v8_4_1 is
   attribute C_WEB_WIDTH : integer;
   attribute C_WEB_WIDTH of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 1;
   attribute C_WRITE_DEPTH_A : integer;
-  attribute C_WRITE_DEPTH_A of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 961;
+  attribute C_WRITE_DEPTH_A of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 1024;
   attribute C_WRITE_DEPTH_B : integer;
-  attribute C_WRITE_DEPTH_B of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 961;
+  attribute C_WRITE_DEPTH_B of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is 1024;
   attribute C_WRITE_MODE_A : string;
   attribute C_WRITE_MODE_A of prev_context_roi31_blk_mem_gen_v8_4_1 : entity is "READ_FIRST";
   attribute C_WRITE_MODE_B : string;
@@ -1108,9 +1108,9 @@ architecture STRUCTURE of prev_context_roi31 is
   attribute C_PRIM_TYPE : integer;
   attribute C_PRIM_TYPE of U0 : label is 1;
   attribute C_READ_DEPTH_A : integer;
-  attribute C_READ_DEPTH_A of U0 : label is 961;
+  attribute C_READ_DEPTH_A of U0 : label is 1024;
   attribute C_READ_DEPTH_B : integer;
-  attribute C_READ_DEPTH_B of U0 : label is 961;
+  attribute C_READ_DEPTH_B of U0 : label is 1024;
   attribute C_READ_WIDTH_A : integer;
   attribute C_READ_WIDTH_A of U0 : label is 40;
   attribute C_READ_WIDTH_B : integer;
@@ -1144,9 +1144,9 @@ architecture STRUCTURE of prev_context_roi31 is
   attribute C_WEB_WIDTH : integer;
   attribute C_WEB_WIDTH of U0 : label is 1;
   attribute C_WRITE_DEPTH_A : integer;
-  attribute C_WRITE_DEPTH_A of U0 : label is 961;
+  attribute C_WRITE_DEPTH_A of U0 : label is 1024;
   attribute C_WRITE_DEPTH_B : integer;
-  attribute C_WRITE_DEPTH_B of U0 : label is 961;
+  attribute C_WRITE_DEPTH_B of U0 : label is 1024;
   attribute C_WRITE_MODE_A : string;
   attribute C_WRITE_MODE_A of U0 : label is "READ_FIRST";
   attribute C_WRITE_MODE_B : string;

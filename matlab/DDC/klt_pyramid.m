@@ -48,13 +48,13 @@ for f = 1:400
         %piramid loop start
         for L = Lm:-1:0
             
-            L;
+            L
             
             level_x0 = x0/(2^L);
             level_y0 = y0/(2^L);
             
-            level_x0_ = round(level_x0);
-            level_y0_ = round(level_y0);
+            level_x0_ = round(level_x0)
+            level_y0_ = round(level_y0)
             
             switch L
                
@@ -83,7 +83,7 @@ for f = 1:400
                     
                     row_ = round(row);
                     col_ = round(col);
-%                     display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(level_frame(row_, col_)), ' prev_center: ', num2str(level_prev_frame(row_, col_)), ' guess_pixel: ', num2str(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x))), ]);
+                    display([num2str(col_), ' ', num2str(row_), ' center: ', num2str(level_frame(row_, col_)), ' prev_center: ', num2str(level_prev_frame(row_, col_)), ' guess_pixel: ', num2str(level_frame(row_ + round(pyramidal_guess_y), col_ + round(pyramidal_guess_x))), ]);
 
                     if(interpolation_on == 1)
                         Ix = (interpolation(col+1, row, level_prev_frame) - interpolation(col-1, row, level_prev_frame))/2;
@@ -105,12 +105,12 @@ for f = 1:400
                     G = G + dG;
                     b = b + db;
                     
-%                     display(['G11: ', num2str(G(1, 1)), ' G12: ', num2str(G(1, 2)), ' G22: ', num2str(G(2, 2)), ' b1: ', num2str(b(1)), ' b2: ', num2str(b(2))]);
+                    display(['G11: ', num2str(G(1, 1)), ' G12: ', num2str(G(1, 2)), ' G22: ', num2str(G(2, 2)), ' b1: ', num2str(b(1)), ' b2: ', num2str(b(2))]);
                 end
             end
             
-            G;
-            b;
+            G
+            b
 
             ad = G(1, 1)*G(2, 2);
             bc = G(1, 2)*G(2, 1);
@@ -134,8 +134,8 @@ for f = 1:400
                 pyramidal_guess_y = 2*(pyramidal_guess_y + d(2));
             end
             
-            pg_x_ = round(pyramidal_guess_x);
-            pg_y_ = round(pyramidal_guess_y);
+            pg_x_ = round(pyramidal_guess_x)
+            pg_y_ = round(pyramidal_guess_y)
         end
         
         %solution for this frame

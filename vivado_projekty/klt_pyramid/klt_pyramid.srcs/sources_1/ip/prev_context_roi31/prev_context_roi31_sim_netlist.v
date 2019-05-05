@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed May  1 22:08:51 2019
+// Date        : Sun May  5 01:08:29 2019
 // Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/prev_context_roi31/prev_context_roi31_sim_netlist.v
@@ -106,8 +106,8 @@ module prev_context_roi31
   (* C_MEM_TYPE = "1" *) 
   (* C_MUX_PIPELINE_STAGES = "0" *) 
   (* C_PRIM_TYPE = "1" *) 
-  (* C_READ_DEPTH_A = "961" *) 
-  (* C_READ_DEPTH_B = "961" *) 
+  (* C_READ_DEPTH_A = "1024" *) 
+  (* C_READ_DEPTH_B = "1024" *) 
   (* C_READ_WIDTH_A = "40" *) 
   (* C_READ_WIDTH_B = "40" *) 
   (* C_RSTRAM_A = "0" *) 
@@ -124,8 +124,8 @@ module prev_context_roi31
   (* C_USE_URAM = "0" *) 
   (* C_WEA_WIDTH = "1" *) 
   (* C_WEB_WIDTH = "1" *) 
-  (* C_WRITE_DEPTH_A = "961" *) 
-  (* C_WRITE_DEPTH_B = "961" *) 
+  (* C_WRITE_DEPTH_A = "1024" *) 
+  (* C_WRITE_DEPTH_B = "1024" *) 
   (* C_WRITE_MODE_A = "READ_FIRST" *) 
   (* C_WRITE_MODE_B = "READ_FIRST" *) 
   (* C_WRITE_WIDTH_A = "40" *) 
@@ -751,13 +751,13 @@ endmodule
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "prev_context_roi31.mem" *) 
 (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) 
 (* C_MEM_TYPE = "1" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
-(* C_READ_DEPTH_A = "961" *) (* C_READ_DEPTH_B = "961" *) (* C_READ_WIDTH_A = "40" *) 
+(* C_READ_DEPTH_A = "1024" *) (* C_READ_DEPTH_B = "1024" *) (* C_READ_WIDTH_A = "40" *) 
 (* C_READ_WIDTH_B = "40" *) (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) 
 (* C_RST_PRIORITY_A = "CE" *) (* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) 
 (* C_USE_BRAM_BLOCK = "0" *) (* C_USE_BYTE_WEA = "0" *) (* C_USE_BYTE_WEB = "0" *) 
 (* C_USE_DEFAULT_DATA = "0" *) (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) 
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
-(* C_WRITE_DEPTH_A = "961" *) (* C_WRITE_DEPTH_B = "961" *) (* C_WRITE_MODE_A = "READ_FIRST" *) 
+(* C_WRITE_DEPTH_A = "1024" *) (* C_WRITE_DEPTH_B = "1024" *) (* C_WRITE_MODE_A = "READ_FIRST" *) 
 (* C_WRITE_MODE_B = "READ_FIRST" *) (* C_WRITE_WIDTH_A = "40" *) (* C_WRITE_WIDTH_B = "40" *) 
 (* C_XDEVICEFAMILY = "zynq" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module prev_context_roi31_blk_mem_gen_v8_4_1

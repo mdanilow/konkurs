@@ -1,0 +1,152 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 6512
+License: Customer
+
+Current time: 	Sat May 04 18:00:55 CEST 2019
+Time zone: 	Central European Time (Europe/Belgrade)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 107 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	danilowi
+User home directory: C:/Users/danilowi
+User working directory: C:/konkurs/vivado_projekty/tor_wizyjny - Copy
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/danilowi/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/danilowi/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/danilowi/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/konkurs/vivado_projekty/tor_wizyjny - Copy/vivado.log
+Vivado journal file location: 	C:/konkurs/vivado_projekty/tor_wizyjny - Copy/vivado.jou
+Engine tmp dir: 	C:/konkurs/vivado_projekty/tor_wizyjny - Copy/.Xil/Vivado-6512-N-5CD6281M34
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 27012@eshwlic52.emea.nsn-net.net;27012@eshwlic51.emea.nsn-net.net;27012@eshwlic50.emea.nsn-net.net;27012@vmlic10.emea.nsn-net.net
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	172 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 479 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 42 MB (+41598kb) [00:00:19]
+// [Engine Memory]: 453 MB (+323705kb) [00:00:19]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\konkurs\vivado_projekty\tor_wizyjny - Copy\tor_wizyjny.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/konkurs/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.xpr} 
+// [GUI Memory]: 66 MB (+22740kb) [00:00:23]
+// [Engine Memory]: 495 MB (+19816kb) [00:00:23]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 495 MB. GUI used memory: 33 MB. Current time: 5/4/19 6:00:58 PM CEST
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 523 MB. GUI used memory: 31 MB. Current time: 5/4/19 6:01:13 PM CEST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 538 MB (+19393kb) [00:00:44]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 579 MB (+14504kb) [00:00:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 580 MB. GUI used memory: 31 MB. Current time: 5/4/19 6:01:33 PM CEST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1028 ms. Increasing delay to 3000 ms.
+// [Engine Memory]: 617 MB (+9840kb) [00:01:08]
+// [Engine Memory]: 653 MB (+5294kb) [00:01:12]
+// Tcl Message: open_project {C:/konkurs/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/konkurs/hdmi_vga_ip_repo'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/konkurs/IP_repo'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/konkurs/KLT_2200'. 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3265 ms. Increasing delay to 4000 ms.
+// Project name: tor_wizyjny; location: C:/konkurs/vivado_projekty/tor_wizyjny - Copy; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 854.004 ; gain = 160.980 
+dismissDialog("Open Project"); // bx (ck)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 574ms to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 43 MB. Current time: 5/4/19 6:01:59 PM CEST
+// a (ck): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 7444 ms. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 42 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+// [GUI Memory]: 70 MB (+362kb) [00:03:24]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 294ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 7877 ms. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2423 ms. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2719 ms. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2587 ms. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5188 ms. Increasing delay to 6000 ms.
+// [GUI Memory]: 73 MB (+457kb) [00:21:33]
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 44 MB. Current time: 5/4/19 6:31:53 PM CEST
+// [GUI Memory]: 77 MB (+350kb) [00:35:30]
+// [GUI Memory]: 82 MB (+364kb) [00:53:32]
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 41 MB. Current time: 5/4/19 7:01:53 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 41 MB. Current time: 5/4/19 7:31:54 PM CEST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 3213 ms. Increasing delay to 7000 ms.
+// [GUI Memory]: 86 MB (+448kb) [01:42:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 40 MB. Current time: 5/4/19 8:01:54 PM CEST
+// [GUI Memory]: 91 MB (+95kb) [02:13:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/4/19 8:31:54 PM CEST
+// [GUI Memory]: 96 MB (+272kb) [02:57:51]
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/4/19 9:01:55 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 41 MB. Current time: 5/4/19 9:31:55 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 41 MB. Current time: 5/4/19 10:01:55 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/4/19 10:31:56 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/4/19 11:01:57 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/4/19 11:31:57 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/5/19 12:01:59 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 40 MB. Current time: 5/5/19 12:31:58 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 41 MB. Current time: 5/5/19 1:01:58 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/5/19 1:31:59 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/5/19 2:01:59 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 42 MB. Current time: 5/5/19 2:32:00 AM CEST

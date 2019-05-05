@@ -24,7 +24,7 @@
 module in_roi_check_level #(
 
     parameter NEIGH_SIZE = 10,
-    parameter BORDER_WIDTH = 2
+    parameter BORDER_WIDTH = 5
 )
 (  
 

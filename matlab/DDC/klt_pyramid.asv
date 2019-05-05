@@ -141,6 +141,8 @@ for f = 1:400
         %solution for this frame
         x0 = x0 + d(1) + pyramidal_guess_x;
         y0 = y0 + d(2) + pyramidal_guess_y;
+        x0_ = round(x0)
+        y0_ = round(y0)
 
         if(f == 2 || f == 61 || f == 100 || f == 123 || f == 179 || f == 317)
             
