@@ -21,24 +21,31 @@
 
 
 module klt_pyramid_tracker #(
-
-    parameter H_SIZE = 2200
+    
+    parameter H_SIZE = 2200,    //800 for 640x480, 1650 for 720p
+    parameter CONTEXT_SIZE = 7,
+    parameter CONTEXT_CENTER = 4
 )
 (
+    
     input rx_pclk,
     input rx_de,
     input rx_hsync,
     input rx_vsync,
-    input enable_tracking,
-    input reset_position,
     input [7 : 0] pixel_in,
+    input [11 : 0] set_x0,
+    input [10 : 0] set_y0,
+    input reset,
+    input enable,
     
-    output [11 : 0] point_x0,       //center of tracked roi
-    output [10 : 0] point_y0
+    output [11 : 0] point_x0_L0,
+    output [10 : 0] point_y0_L0,
+    
+    output [7 : 0] uppx_L0,
+    output [7 : 0] centerpx_L0,
+    output [7 : 0] downpx_L0
 );
-  
     
-
     wire clk_2x;
     wire [7 : 0] pixel_2x;
     wire de_2x;
@@ -97,6 +104,7 @@ module klt_pyramid_tracker #(
     wire first_frame;
     
     wire [10 : 0] center;
+    wire center_vsync_L2;
     wire [7 : 0] centerpx;
     wire [7 : 0] leftpx_L2;
     wire [7 : 0] rightpx_L2;
@@ -118,6 +126,7 @@ module klt_pyramid_tracker #(
     wire roi_end_L2;
     
     wire [10 : 0] center_L1;
+    wire center_vsync_L1;
     wire [7 : 0] centerpx_L1;
     wire [7 : 0] leftpx_L1;
     wire [7 : 0] rightpx_L1;
@@ -144,6 +153,7 @@ module klt_pyramid_tracker #(
     wire roi_end_L1;
     
     wire [10 : 0] center_L0;
+    wire center_vsync_L0;
     wire [7 : 0] centerpx_L0;
     wire [25 : 0] G11_L0;
     wire [25 : 0] G12_L0;
@@ -189,7 +199,11 @@ module klt_pyramid_tracker #(
     assign centerpx_L0 = center_L0[10 -: 8];
     assign pyramidal_guess_pixel_L0_int = pyramidal_guess_pixel_L0[10 -: 8];
     assign pyramidal_guess_pixel_L1_int = pyramidal_guess_pixel_L1[10 -: 8];
+    assign center_vsync_L2 = center[0];
+    assign center_vsync_L1 = center_L1[0];
+    assign center_vsync_L0 = center_L0[0];
     
+
     
     scale2x #(
     
@@ -212,7 +226,7 @@ module klt_pyramid_tracker #(
     
     
     scale2x #(
-        
+    
         .H_SIZE(H_SIZE),
         .CLK_PHASE(1)
     )
@@ -244,15 +258,15 @@ module klt_pyramid_tracker #(
     pyramidal_position_controller poscon(
         
         .clk(rx_pclk),
-        .set_x0(12'd300),
-        .set_y0(11'd290),
+        .set_x0(set_x0),
+        .set_y0(set_y0),
         .disposition_L0_x(disposition_L0_x),
         .disposition_L0_y(disposition_L0_y),
         .pyramidal_guess_L1_x(pyramidal_guess_L1_x),
         .pyramidal_guess_L1_y(pyramidal_guess_L1_y),
         .d_ready(guess_valid_L0),
-        .reset(1'b0),
-        .enable(1'b1),
+        .reset(reset),
+        .enable(enable),
         .center_vsync_in(rx_vsync),
         
         .point_x0_L0(point_x0_L0),
@@ -267,8 +281,10 @@ module klt_pyramid_tracker #(
     
     
     klt_tracker_level #(
-        
-        .H_SIZE(H_SIZE)
+    
+        .H_SIZE(H_SIZE),
+        .CONTEXT_SIZE(CONTEXT_SIZE),
+        .CONTEXT_CENTER(CONTEXT_CENTER)
     )
     tracker_L2(
         
@@ -334,7 +350,9 @@ module klt_pyramid_tracker #(
     
     klt_tracker_level #(
     
-        .H_SIZE(H_SIZE)
+        .H_SIZE(H_SIZE),
+        .CONTEXT_SIZE(CONTEXT_SIZE),
+        .CONTEXT_CENTER(CONTEXT_CENTER)
     )
     tracker_L1(
             
@@ -410,8 +428,10 @@ module klt_pyramid_tracker #(
     
     
     klt_tracker_level #(
-    
-        .H_SIZE(H_SIZE)
+        
+        .H_SIZE(H_SIZE),
+        .CONTEXT_SIZE(CONTEXT_SIZE),
+        .CONTEXT_CENTER(CONTEXT_CENTER)
     )
     tracker_L0(
                 
@@ -453,10 +473,11 @@ module klt_pyramid_tracker #(
         .leftpx(leftpx_L0),
         .rightpx(rightpx_L0),
         .uppx(uppx_L0),
-        .downpx(downpx_L0)
+        .downpx(downpx_L0),
+        .prev_left_pixel(prev_leftpx_L0),
+        .prev_right_pixel(prev_rightpx_L0),
+        .prev_up_pixel(prev_uppx_L0),
+        .prev_down_pixel(prev_downpx_L0)
     );
-    
-    assign point_x0 = point_x0_L0;
-    assign point_y0 = point_y0_L0;
     
 endmodule

@@ -22,7 +22,9 @@
 
 module klt_tracker_level #(
     
-    parameter H_SIZE = 800//800 //83 //1650
+    parameter H_SIZE = 800,//800 //83 //1650
+    parameter CONTEXT_SIZE = 7,
+    parameter CONTEXT_CENTER = 4
 )
 (
     
@@ -127,12 +129,14 @@ module klt_tracker_level #(
     wire [87 : 0] sum_level_guess_x;    //computed level_guess + input pyramidal_guess
     wire [87 : 0] sum_level_guess_y;
     
+    wire [11 : 0] latched_level_x0;
+    wire [10 : 0] latched_level_y0;
     
     context_level #(
     
         .H_SIZE(H_SIZE),
-        .CONTEXT_SIZE(7),
-        .CONTEXT_CENTER(4),
+        .CONTEXT_SIZE(CONTEXT_SIZE),
+        .CONTEXT_CENTER(CONTEXT_CENTER),
         .P_GUESS_INT_WIDTH(P_GUESS_INT_WIDTH)
     )
     context(
@@ -175,7 +179,7 @@ module klt_tracker_level #(
         .y_pos(y_pos),
         .level_x0(level_x0),
         .level_y0(level_y0),
-        
+          
         .in_roi(in_roi),
         .in_extended_roi(in_extended_roi),
         .roi_end(roi_end),

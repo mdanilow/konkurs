@@ -1088,3 +1088,15 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 397, 333); // n (o, ck
 // HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 1:56:46 PM CEST
 // HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 2:26:46 PM CEST
 // WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking 8218ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 4:25:56 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 37 MB. Current time: 5/6/19 4:55:47 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 5:25:47 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 5:55:47 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 6:25:47 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 6:55:48 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 7:25:48 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 37 MB. Current time: 5/6/19 7:55:49 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 8:25:49 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 8:55:49 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 38 MB. Current time: 5/6/19 9:25:49 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 668 MB. GUI used memory: 37 MB. Current time: 5/6/19 9:55:50 PM CEST

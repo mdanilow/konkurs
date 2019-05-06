@@ -12,3 +12,5 @@
 start_gui
 open_project C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+source tb_pyramid.tcl
