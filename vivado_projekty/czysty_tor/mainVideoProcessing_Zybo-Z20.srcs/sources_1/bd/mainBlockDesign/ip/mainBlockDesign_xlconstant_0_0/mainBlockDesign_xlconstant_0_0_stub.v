@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
 // Date        : Tue Apr  2 14:44:43 2019
 // Host        : vision-desktop running 64-bit Ubuntu 18.04.2 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_0/mainBlockDesign_xlconstant_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top mainBlockDesign_xlconstant_0_0 -prefix
+//               mainBlockDesign_xlconstant_0_0_ mainBlockDesign_xlconstant_0_0_stub.v
 // Design      : mainBlockDesign_xlconstant_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

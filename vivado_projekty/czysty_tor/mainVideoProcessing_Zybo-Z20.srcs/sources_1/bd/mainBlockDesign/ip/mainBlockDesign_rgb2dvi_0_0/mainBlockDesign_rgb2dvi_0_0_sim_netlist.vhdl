@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Tue Apr  2 16:08:35 2019
+-- Date        : Tue Apr  2 16:08:34 2019
 -- Host        : vision-desktop running 64-bit Ubuntu 18.04.2 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_rgb2dvi_0_0/mainBlockDesign_rgb2dvi_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mainBlockDesign_rgb2dvi_0_0 -prefix
+--               mainBlockDesign_rgb2dvi_0_0_ mainBlockDesign_rgb2dvi_0_0_sim_netlist.vhdl
 -- Design      : mainBlockDesign_rgb2dvi_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +22,6 @@ entity mainBlockDesign_rgb2dvi_0_0_OutputSERDES is
     PixelClk : in STD_LOGIC;
     aRst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mainBlockDesign_rgb2dvi_0_0_OutputSERDES : entity is "OutputSERDES";
 end mainBlockDesign_rgb2dvi_0_0_OutputSERDES;
 
 architecture STRUCTURE of mainBlockDesign_rgb2dvi_0_0_OutputSERDES is
@@ -659,8 +657,6 @@ entity mainBlockDesign_rgb2dvi_0_0_SyncAsync is
     PixelClk : in STD_LOGIC;
     AS : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mainBlockDesign_rgb2dvi_0_0_SyncAsync : entity is "SyncAsync";
 end mainBlockDesign_rgb2dvi_0_0_SyncAsync;
 
 architecture STRUCTURE of mainBlockDesign_rgb2dvi_0_0_SyncAsync is
@@ -810,8 +806,6 @@ entity mainBlockDesign_rgb2dvi_0_0_TMDS_Encoder is
     vid_pVDE : in STD_LOGIC;
     vid_pData : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mainBlockDesign_rgb2dvi_0_0_TMDS_Encoder : entity is "TMDS_Encoder";
 end mainBlockDesign_rgb2dvi_0_0_TMDS_Encoder;
 
 architecture STRUCTURE of mainBlockDesign_rgb2dvi_0_0_TMDS_Encoder is
@@ -4507,8 +4501,6 @@ entity mainBlockDesign_rgb2dvi_0_0_ResetBridge is
     in0 : in STD_LOGIC;
     PixelClk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mainBlockDesign_rgb2dvi_0_0_ResetBridge : entity is "ResetBridge";
 end mainBlockDesign_rgb2dvi_0_0_ResetBridge;
 
 architecture STRUCTURE of mainBlockDesign_rgb2dvi_0_0_ResetBridge is
@@ -4563,8 +4555,6 @@ entity mainBlockDesign_rgb2dvi_0_0_ClockGen is
     aRst : in STD_LOGIC;
     PixelClk_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mainBlockDesign_rgb2dvi_0_0_ClockGen : entity is "ClockGen";
 end mainBlockDesign_rgb2dvi_0_0_ClockGen;
 
 architecture STRUCTURE of mainBlockDesign_rgb2dvi_0_0_ClockGen is
@@ -4734,8 +4724,6 @@ entity mainBlockDesign_rgb2dvi_0_0_rgb2dvi is
     PixelClk : in STD_LOGIC;
     SerialClk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mainBlockDesign_rgb2dvi_0_0_rgb2dvi : entity is "rgb2dvi";
   attribute kClkPrimitive : string;
   attribute kClkPrimitive of mainBlockDesign_rgb2dvi_0_0_rgb2dvi : entity is "PLL";
   attribute kClkRange : integer;

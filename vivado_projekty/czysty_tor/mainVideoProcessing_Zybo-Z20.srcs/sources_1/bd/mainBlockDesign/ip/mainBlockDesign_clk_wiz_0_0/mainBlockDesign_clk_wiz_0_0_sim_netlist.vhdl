@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
 -- Date        : Tue Apr  2 16:51:48 2019
 -- Host        : vision-desktop running 64-bit Ubuntu 18.04.2 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_clk_wiz_0_0/mainBlockDesign_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mainBlockDesign_clk_wiz_0_0 -prefix
+--               mainBlockDesign_clk_wiz_0_0_ mainBlockDesign_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : mainBlockDesign_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity mainBlockDesign_clk_wiz_0_0_mainBlockDesign_clk_wiz_0_0_clk_wiz is
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mainBlockDesign_clk_wiz_0_0_mainBlockDesign_clk_wiz_0_0_clk_wiz : entity is "mainBlockDesign_clk_wiz_0_0_clk_wiz";
 end mainBlockDesign_clk_wiz_0_0_mainBlockDesign_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of mainBlockDesign_clk_wiz_0_0_mainBlockDesign_clk_wiz_0_0_clk_wiz is

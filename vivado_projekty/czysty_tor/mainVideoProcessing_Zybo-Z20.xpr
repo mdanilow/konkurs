@@ -23,6 +23,9 @@
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../2018.2_IP/vivado-library"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../IP_repo/vivado-library"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../IP_repo/bbox21"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../IP_repo/rgb2ycbcr"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../PYRAMID_TRACKER"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -68,14 +71,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_clk_wiz_0_0/mainBlockDesign_clk_wiz_0_0.xci">
-          <Proxy FileSetName="mainBlockDesign_clk_wiz_0_0"/>
+        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_klt_pyramid_tracker_0_0/mainBlockDesign_klt_pyramid_tracker_0_0.xci">
+          <Proxy FileSetName="mainBlockDesign_klt_pyramid_tracker_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_rgb2dvi_0_0/mainBlockDesign_rgb2dvi_0_0.xci">
-          <Proxy FileSetName="mainBlockDesign_rgb2dvi_0_0"/>
+        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_xlconstant_0_1_1/mainBlockDesign_xlconstant_0_1.xci">
+          <Proxy FileSetName="mainBlockDesign_xlconstant_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_xlconstant_0_0/mainBlockDesign_xlconstant_0_0.xci">
-          <Proxy FileSetName="mainBlockDesign_xlconstant_0_0"/>
+        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_xlconstant_0_2_1/mainBlockDesign_xlconstant_0_2.xci">
+          <Proxy FileSetName="mainBlockDesign_xlconstant_0_2"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/mainBlockDesign/hdl/mainBlockDesign_wrapper.v">
@@ -117,21 +120,21 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
-    <FileSet Name="mainBlockDesign_xlconstant_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_xlconstant_0_0">
+    <FileSet Name="mainBlockDesign_klt_pyramid_tracker_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_klt_pyramid_tracker_0_0">
       <Config>
-        <Option Name="TopModule" Val="mainBlockDesign_xlconstant_0_0"/>
+        <Option Name="TopModule" Val="mainBlockDesign_klt_pyramid_tracker_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="mainBlockDesign_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_clk_wiz_0_0">
+    <FileSet Name="mainBlockDesign_xlconstant_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_xlconstant_0_1">
       <Config>
-        <Option Name="TopModule" Val="mainBlockDesign_clk_wiz_0_0"/>
+        <Option Name="TopModule" Val="mainBlockDesign_xlconstant_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="mainBlockDesign_rgb2dvi_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_rgb2dvi_0_0">
+    <FileSet Name="mainBlockDesign_xlconstant_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_xlconstant_0_2">
       <Config>
-        <Option Name="TopModule" Val="mainBlockDesign_rgb2dvi_0_0"/>
+        <Option Name="TopModule" Val="mainBlockDesign_xlconstant_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -164,27 +167,33 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="mainBlockDesign_xlconstant_0_0_synth_1" Type="Ft3:Synth" SrcSet="mainBlockDesign_xlconstant_0_0" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_xlconstant_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mainBlockDesign_xlconstant_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="mainBlockDesign_klt_pyramid_tracker_0_0_synth_1" Type="Ft3:Synth" SrcSet="mainBlockDesign_klt_pyramid_tracker_0_0" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_klt_pyramid_tracker_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mainBlockDesign_klt_pyramid_tracker_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="mainBlockDesign_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="mainBlockDesign_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_clk_wiz_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mainBlockDesign_clk_wiz_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="mainBlockDesign_xlconstant_0_1_synth_1" Type="Ft3:Synth" SrcSet="mainBlockDesign_xlconstant_0_1" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_xlconstant_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mainBlockDesign_xlconstant_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="mainBlockDesign_rgb2dvi_0_0_synth_1" Type="Ft3:Synth" SrcSet="mainBlockDesign_rgb2dvi_0_0" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_rgb2dvi_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mainBlockDesign_rgb2dvi_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="mainBlockDesign_xlconstant_0_2_synth_1" Type="Ft3:Synth" SrcSet="mainBlockDesign_xlconstant_0_2" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_xlconstant_0_2" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mainBlockDesign_xlconstant_0_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -208,9 +217,11 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="mainBlockDesign_xlconstant_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_xlconstant_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="mainBlockDesign_xlconstant_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="mainBlockDesign_klt_pyramid_tracker_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_klt_pyramid_tracker_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="mainBlockDesign_klt_pyramid_tracker_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -224,9 +235,11 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="mainBlockDesign_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_clk_wiz_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="mainBlockDesign_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="mainBlockDesign_xlconstant_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_xlconstant_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="mainBlockDesign_xlconstant_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -240,9 +253,11 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="mainBlockDesign_rgb2dvi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_rgb2dvi_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="mainBlockDesign_rgb2dvi_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="mainBlockDesign_xlconstant_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mainBlockDesign_xlconstant_0_2" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="mainBlockDesign_xlconstant_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

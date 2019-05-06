@@ -18,4 +18,25 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign
 # IP: bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_0/mainBlockDesign_xlconstant_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_xlconstant_0_0 || ORIG_REF_NAME==mainBlockDesign_xlconstant_0_0} -quiet] -quiet
 
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_rgb2ycbcr_0_0_1/mainBlockDesign_rgb2ycbcr_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_rgb2ycbcr_0_0 || ORIG_REF_NAME==mainBlockDesign_rgb2ycbcr_0_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_bbox21_0_0_1/mainBlockDesign_bbox21_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_bbox21_0_0 || ORIG_REF_NAME==mainBlockDesign_bbox21_0_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_klt_pyramid_tracker_0_0/mainBlockDesign_klt_pyramid_tracker_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_klt_pyramid_tracker_0_0 || ORIG_REF_NAME==mainBlockDesign_klt_pyramid_tracker_0_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_1_1/mainBlockDesign_xlconstant_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_xlconstant_0_1 || ORIG_REF_NAME==mainBlockDesign_xlconstant_0_1} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_2_1/mainBlockDesign_xlconstant_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_xlconstant_0_2 || ORIG_REF_NAME==mainBlockDesign_xlconstant_0_2} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_3/mainBlockDesign_xlconstant_0_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_xlconstant_0_3 || ORIG_REF_NAME==mainBlockDesign_xlconstant_0_3} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_4/mainBlockDesign_xlconstant_0_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_xlconstant_0_4 || ORIG_REF_NAME==mainBlockDesign_xlconstant_0_4} -quiet] -quiet
+
 # XDC: bd/mainBlockDesign/mainBlockDesign_ooc.xdc

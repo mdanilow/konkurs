@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
 -- Date        : Tue Apr  2 16:08:34 2019
 -- Host        : vision-desktop running 64-bit Ubuntu 18.04.2 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_rgb2dvi_0_0/mainBlockDesign_rgb2dvi_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mainBlockDesign_rgb2dvi_0_0 -prefix
+--               mainBlockDesign_rgb2dvi_0_0_ mainBlockDesign_rgb2dvi_0_0_stub.vhdl
 -- Design      : mainBlockDesign_rgb2dvi_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

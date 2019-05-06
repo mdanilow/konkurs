@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue May  7 00:29:50 2019
+| Date         : Tue May  7 00:52:56 2019
 | Host         : N-5CD6281M34 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mainBlockDesign_wrapper_utilization_synth.rpt -pb mainBlockDesign_wrapper_utilization_synth.pb
 | Design       : mainBlockDesign_wrapper
@@ -155,14 +155,21 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+--------------------------------+------+
-|            Ref Name            | Used |
-+--------------------------------+------+
-| mainBlockDesign_xlconstant_0_0 |    1 |
-| mainBlockDesign_rgb2dvi_0_0    |    1 |
-| mainBlockDesign_dvi2rgb_0_0    |    1 |
-| mainBlockDesign_clk_wiz_0_0    |    1 |
-+--------------------------------+------+
++-----------------------------------------+------+
+|                 Ref Name                | Used |
++-----------------------------------------+------+
+| mainBlockDesign_xlconstant_0_4          |    1 |
+| mainBlockDesign_xlconstant_0_3          |    1 |
+| mainBlockDesign_xlconstant_0_2          |    1 |
+| mainBlockDesign_xlconstant_0_1          |    1 |
+| mainBlockDesign_xlconstant_0_0          |    1 |
+| mainBlockDesign_rgb2ycbcr_0_0           |    1 |
+| mainBlockDesign_rgb2dvi_0_0             |    1 |
+| mainBlockDesign_klt_pyramid_tracker_0_0 |    1 |
+| mainBlockDesign_dvi2rgb_0_0             |    1 |
+| mainBlockDesign_clk_wiz_0_0             |    1 |
+| mainBlockDesign_bbox21_0_0              |    1 |
++-----------------------------------------+------+
 
 
 9. Instantiated Netlists

@@ -174,14 +174,62 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_xlconstant_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>rgb2ycbcr_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="rgb2ycbcr" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_rgb2ycbcr_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>bbox21_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="bbox21" spirit:vendor="nsn-intra.net" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_bbox21_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>klt_pyramid_tracker_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="klt_pyramid_tracker" spirit:vendor="nsn-intra.net" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_klt_pyramid_tracker_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_xlconstant_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">640</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_xlconstant_0_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">11</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">360</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_xlconstant_0_3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_4</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">mainBlockDesign_xlconstant_0_4</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
-    <spirit:interconnections>
-      <spirit:interconnection>
-        <spirit:name>dvi2rgb_0_RGB</spirit:name>
-        <spirit:activeInterface spirit:busRef="RGB" spirit:componentRef="rgb2dvi_0"/>
-        <spirit:activeInterface spirit:busRef="RGB" spirit:componentRef="dvi2rgb_0"/>
-      </spirit:interconnection>
-    </spirit:interconnections>
+    <spirit:interconnections/>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
@@ -192,6 +240,9 @@
         <spirit:name>dvi2rgb_0_PixelClk</spirit:name>
         <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="PixelClk"/>
         <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="PixelClk"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_pclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconstant_0_dout</spirit:name>
@@ -202,6 +253,100 @@
         <spirit:name>sys_clock_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="sys_clock"/>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_0_vid_pVDE</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="vid_pVDE"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="de_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="de_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_0_vid_pHSync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="vid_pHSync"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="h_sync_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="hsync_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_0_vid_pVSync</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="vid_pVSync"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="v_sync_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="vsync_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dvi2rgb_0_vid_pData</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dvi2rgb_0" spirit:portRef="vid_pData"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="pixel_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="pixel_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2ycbcr_0_de_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="de_out"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_de"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2ycbcr_0_h_sync_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="h_sync_out"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_hsync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2ycbcr_0_v_sync_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="v_sync_out"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_vsync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>rgb2ycbcr_0_y</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="y"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="pixel_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_1_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_1" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="set_x0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_2_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_2" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="set_y0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_3_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_3" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_4_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_4" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="enable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>klt_pyramid_tracker_0_point_x0_L0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="point_x0_L0"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="point_x0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>klt_pyramid_tracker_0_point_y0_L0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="point_y0_L0"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="point_y0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_0_de_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="de_out"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pVDE"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_0_hsync_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="hsync_out"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pHSync"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_0_pixel_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="pixel_out"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pData"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_0_vsync_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="vsync_out"/>
+        <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="vid_pVSync"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
