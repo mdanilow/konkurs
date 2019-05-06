@@ -12,3 +12,8 @@
 start_gui
 open_project {C:/konkurs/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.xpr}
 update_compile_order -fileset sources_1
+open_project C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+close_project

@@ -92,6 +92,7 @@ module tb_pyramid(
     wire first_frame;
     
     wire [10 : 0] center;
+    wire center_vsync_L2;
     wire [7 : 0] centerpx;
     wire [7 : 0] leftpx_L2;
     wire [7 : 0] rightpx_L2;
@@ -110,8 +111,10 @@ module tb_pyramid(
     wire [11 : 0] x_pos;
     wire [10 : 0] y_pos;
     wire in_roi;
+    wire roi_end_L2;
     
     wire [10 : 0] center_L1;
+    wire center_vsync_L1;
     wire [7 : 0] centerpx_L1;
     wire [7 : 0] leftpx_L1;
     wire [7 : 0] rightpx_L1;
@@ -130,8 +133,15 @@ module tb_pyramid(
     wire [11 : 0] x_pos_L1;
     wire [10 : 0] y_pos_L1;
     wire in_roi_L1;
+    wire [9 : 0] write_addr_L1;
+    wire [9 : 0] read_addr_L1;
+    wire [9 : 0] read_offset_L1;
+    wire [11 : 0] delta_x0_L1;
+    wire [10 : 0] delta_y0_L1;
+    wire roi_end_L1;
     
     wire [10 : 0] center_L0;
+    wire center_vsync_L0;
     wire [7 : 0] centerpx_L0;
     wire [25 : 0] G11_L0;
     wire [25 : 0] G12_L0;
@@ -142,6 +152,20 @@ module tb_pyramid(
     wire [11 : 0] x_pos_L0;
     wire [10 : 0] y_pos_L0;
     wire in_roi_L0;
+    wire [9 : 0] write_addr_L0;
+    wire [9 : 0] read_addr_L0;
+    wire [9 : 0] read_offset_L0;
+    wire [11 : 0] delta_x0_L0;
+    wire [10 : 0] delta_y0_L0;
+    wire roi_end_L0;
+    wire [7 : 0] prev_leftpx_L0;
+    wire [7 : 0] prev_rightpx_L0;
+    wire [7 : 0] prev_uppx_L0;
+    wire [7 : 0] prev_downpx_L0;
+    wire [7 : 0] leftpx_L0;
+    wire [7 : 0] rightpx_L0;
+    wire [7 : 0] uppx_L0;
+    wire [7 : 0] downpx_L0;
     wire [2 : 0] updated_in_this_frame;
     
     wire [87 : 0] disposition_L0_x;
@@ -163,6 +187,9 @@ module tb_pyramid(
     assign centerpx_L0 = center_L0[10 -: 8];
     assign pyramidal_guess_pixel_L0_int = pyramidal_guess_pixel_L0[10 -: 8];
     assign pyramidal_guess_pixel_L1_int = pyramidal_guess_pixel_L1[10 -: 8];
+    assign center_vsync_L2 = center[0];
+    assign center_vsync_L1 = center_L1[0];
+    assign center_vsync_L0 = center_L0[0];
     
     hdmi_in file_input(
 
@@ -289,7 +316,8 @@ module tb_pyramid(
         .read_offset(read_offset_L2),
         .delta_x0(delta_x0_L2),
         .delta_y0(delta_y0_L2),
-        .in_extended_roi(in_extended_roi_L2)
+        .in_extended_roi(in_extended_roi_L2),
+        .roi_end(roi_end_L2)
     );
     
     
@@ -356,7 +384,13 @@ module tb_pyramid(
         .pyramidal_guess_pixel(pyramidal_guess_pixel_L1),
         .prev_center_pixel(prev_center_pixel_L1),
         .pyramidal_guess_x_int(pyramidal_guess_L2_x_int),
-        .pyramidal_guess_y_int(pyramidal_guess_L2_y_int)
+        .pyramidal_guess_y_int(pyramidal_guess_L2_y_int),
+        .write_addr_test(write_addr_L1),
+        .read_addr_test(read_addr_L1),
+        .read_offset(read_offset_L1),
+        .delta_x0(delta_x0_L1),
+        .delta_y0(delta_y0_L1),
+        .roi_end(roi_end_L1)
     );
     
     
@@ -409,7 +443,21 @@ module tb_pyramid(
         .pyramidal_guess_pixel(pyramidal_guess_pixel_L0),
         .prev_center_pixel(prev_center_pixel_L0),
         .pyramidal_guess_x_int(pyramidal_guess_L1_x_int),
-        .pyramidal_guess_y_int(pyramidal_guess_L1_y_int)
+        .pyramidal_guess_y_int(pyramidal_guess_L1_y_int),
+        .write_addr_test(write_addr_L0),
+        .read_addr_test(read_addr_L0),
+        .read_offset(read_offset_L0),
+        .delta_x0(delta_x0_L0),
+        .delta_y0(delta_y0_L0),
+        .roi_end(roi_end_L0),
+        .leftpx(leftpx_L0),
+        .rightpx(rightpx_L0),
+        .uppx(uppx_L0),
+        .downpx(downpx_L0),
+        .prev_left_pixel(prev_leftpx_L0),
+        .prev_right_pixel(prev_rightpx_L0),
+        .prev_up_pixel(prev_uppx_L0),
+        .prev_down_pixel(prev_downpx_L0)
     );
     
 endmodule

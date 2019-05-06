@@ -1,0 +1,111 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun May  5 12:50:43 2019
+# Process ID: 8504
+# Current directory: C:/konkurs/vivado_projekty/klt_pyramid
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12764 C:\konkurs\vivado_projekty\klt_pyramid\klt_pyramid.xpr
+# Log file: C:/konkurs/vivado_projekty/klt_pyramid/vivado.log
+# Journal file: C:/konkurs/vivado_projekty/klt_pyramid\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_pyramid.tcl
+generate_target all [get_files C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim/frame_delay_sim.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/frame_delay_sim/frame_delay_sim.xci]
+generate_target all [get_files C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/accumulator_adder/accumulator_adder.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/ip/accumulator_adder/accumulator_adder.xci]
+launch_runs frame_delay_sim_synth_1
+wait_on_run frame_delay_sim_synth_1
+close_sim
+launch_simulation
+source tb_pyramid.tcl
+close_sim
+launch_simulation
+source tb_pyramid.tcl
+close [ open C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/new/klt_pyramid_tracker.v w ]
+add_files C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sources_1/new/klt_pyramid_tracker.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top klt_pyramid_tracker [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+ipx::package_project -root_dir c:/konkurs/klt_pyramid_tracker -vendor nsn-intra.net -library user -taxonomy /UserIP -import_files -set_current false
+ipx::unload_core c:/konkurs/klt_pyramid_tracker/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory c:/konkurs/klt_pyramid_tracker c:/konkurs/klt_pyramid_tracker/component.xml
+update_compile_order -fileset sources_1
+close_project
+ipx::package_project -root_dir c:/konkurs/klt_pyramid_tracker -vendor nsn-intra.net -library user -taxonomy /UserIP -import_files -set_current false -force
+ipx::unload_core c:/konkurs/klt_pyramid_tracker/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory c:/konkurs/klt_pyramid_tracker c:/konkurs/klt_pyramid_tracker/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {c:/konkurs/klt_pyramid_tracker c:/konkurs/IP_repo/hsize_counter c:/konkurs/KLT_bsyncpar c:/konkurs/KLT_1648 c:/konkurs/KLT_van c:/konkurs/KLT_sim c:/konkurs/IP_repo/bbox21 c:/konkurs/KLT c:/konkurs/IP_repo/klt_1650 c:/konkurs/IP_repo/split_rgb c:/konkurs/IP_repo/klt_tracker_w10b2_v2 c:/konkurs/IP_repo/rgb2ycbcr} [current_project]
+update_ip_catalog
+open_project {C:/konkurs/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.xpr}
+update_compile_order -fileset sources_1
+current_project klt_pyramid
+close_sim
+launch_simulation
+current_project tor_wizyjny
+open_bd_design {C:/konkurs/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.srcs/sources_1/bd/design_1/design_1.bd}
+set_property  ip_repo_paths  {c:/konkurs/ip_repo/parameter_register/parameter_register_1.0 c:/konkurs/hdmi_vga_ip_repo c:/konkurs/IP_repo c:/konkurs/KLT_2200 c:/konkurs/IP_repo/split_rgb C:/konkurs/klt_pyramid_tracker} [current_project]
+update_ip_catalog
+create_bd_cell -type ip -vlnv nsn-intra.net:user:klt_pyramid_tracker:1.0 klt_pyramid_tracker_0
+set_property location {9 2852 640} [get_bd_cells klt_pyramid_tracker_0]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/enable_tracking] [get_bd_pins xlconstant_3/dout]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/reset_position] [get_bd_pins xlconstant_4/dout]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/pixel_in] [get_bd_pins rgb2ycbcr_0/y]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_pclk] [get_bd_pins dvi2rgb_0/PixelClk]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_de] [get_bd_pins rgb2ycbcr_0/de_out]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_hsync] [get_bd_pins rgb2ycbcr_0/h_sync_out]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_vsync] [get_bd_pins rgb2ycbcr_0/v_sync_out]
+copy_bd_objs /  [get_bd_cells {wysw_0}]
+connect_bd_net [get_bd_pins wysw_1/vsync_in] [get_bd_pins klt_pyramid_tracker_0/point_x0]
+connect_bd_net [get_bd_pins wysw_1/y] [get_bd_pins klt_pyramid_tracker_0/point_y0]
+set_property location {9 2928 1247} [get_bd_cells wysw_1]
+connect_bd_net [get_bd_pins wysw_1/clk] [get_bd_pins dvi2rgb_0/PixelClk]
+connect_bd_net [get_bd_pins wysw_1/de_in] [get_bd_pins rgb2ycbcr_0/de_out]
+connect_bd_net [get_bd_pins wysw_1/hsync_in] [get_bd_pins rgb2ycbcr_0/h_sync_out]
+delete_bd_objs [get_bd_nets klt_pyramid_tracker_0_point_x0]
+delete_bd_objs [get_bd_nets klt_pyramid_tracker_0_point_y0]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/point_x0] [get_bd_pins wysw_1/x]
+connect_bd_net [get_bd_pins klt_pyramid_tracker_0/point_y0] [get_bd_pins wysw_1/y]
+connect_bd_net [get_bd_pins wysw_1/vsync_in] [get_bd_pins rgb2ycbcr_0/v_sync_out]
+connect_bd_net [get_bd_pins wysw_1/pixel_in] [get_bd_pins xlconcat_0/dout]
+delete_bd_objs [get_bd_nets klt_pyramid_tracker_0_point_x0] [get_bd_nets klt_pyramid_tracker_0_point_y0] [get_bd_cells wysw_1]
+copy_bd_objs /  [get_bd_cells {bbox21_0}]
+set_property location {9 2978 1250} [get_bd_cells bbox21_1]
+connect_bd_net [get_bd_pins bbox21_1/point_x0] [get_bd_pins klt_pyramid_tracker_0/point_x0]
+connect_bd_net [get_bd_pins bbox21_1/point_y0] [get_bd_pins klt_pyramid_tracker_0/point_y0]
+connect_bd_net [get_bd_pins bbox21_1/clk] [get_bd_pins dvi2rgb_0/PixelClk]
+connect_bd_net [get_bd_pins bbox21_1/de_in] [get_bd_pins rgb2ycbcr_0/de_out]
+connect_bd_net [get_bd_pins bbox21_1/hsync_in] [get_bd_pins rgb2ycbcr_0/h_sync_out]
+connect_bd_net [get_bd_pins bbox21_1/vsync_in] [get_bd_pins rgb2ycbcr_0/v_sync_out]
+connect_bd_net [get_bd_pins bbox21_1/pixel_in] [get_bd_pins xlconcat_0/dout]
+connect_bd_net [get_bd_pins bbox21_1/vsync_out] [get_bd_pins mux_0/pixel_in_4]
+delete_bd_objs [get_bd_nets bbox21_1_vsync_out]
+connect_bd_net [get_bd_pins bbox21_1/vsync_out] [get_bd_pins mux_0/pixel_in_4]
+delete_bd_objs [get_bd_nets bbox21_1_vsync_out]
+connect_bd_net [get_bd_pins bbox21_1/pixel_out] [get_bd_pins mux_0/pixel_in_4]
+connect_bd_net [get_bd_pins bbox21_1/vsync_out] [get_bd_pins mux_0/v_sync_4]
+connect_bd_net [get_bd_pins bbox21_1/hsync_out] [get_bd_pins mux_0/h_sync_4]
+connect_bd_net [get_bd_pins bbox21_1/de_out] [get_bd_pins mux_0/de_in_4]
+regenerate_bd_layout
+write_bd_tcl -force C:/ddcboys/ddctracking/src/bd/design_1.tcl
+current_project klt_pyramid
+launch_simulation
+source tb_pyramid.tcl
+close_sim
+close_project
