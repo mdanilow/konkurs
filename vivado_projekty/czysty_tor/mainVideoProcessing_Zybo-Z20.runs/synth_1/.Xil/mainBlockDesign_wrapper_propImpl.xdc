@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc rfile:../../../mainVideoProcessing_Zybo-Z20.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc rfile:../../../mainVideoProcessing_Zybo-Z20.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { sys_clock }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
 set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]

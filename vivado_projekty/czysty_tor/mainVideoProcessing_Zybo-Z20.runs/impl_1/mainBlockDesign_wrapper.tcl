@@ -65,23 +65,25 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.cache/wt [current_project]
-  set_property parent.project_path /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.xpr [current_project]
-  set_property ip_repo_paths /home/vision/Documents/Vivado/2018.2_IP/vivado-library [current_project]
-  set_property ip_output_repo /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.cache/wt [current_project]
+  set_property parent.project_path C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.xpr [current_project]
+  set_property ip_repo_paths {
+  C:/konkurs/2018.2_IP/vivado-library
+  C:/konkurs/IP_repo/vivado-library
+} [current_project]
+  set_property ip_output_repo C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.runs/synth_1/mainBlockDesign_wrapper.dcp
+  add_files -quiet C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/synth_1/mainBlockDesign_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd
+  add_files C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd
   set_param project.isImplRun false
-  read_xdc /home/vision/Documents/Vivado/2018.2_Projects/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc
+  read_xdc C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc
   set_param project.isImplRun true
   link_design -top mainBlockDesign_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false

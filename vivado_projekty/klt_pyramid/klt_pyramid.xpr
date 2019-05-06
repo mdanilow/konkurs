@@ -21,6 +21,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../PYRAMID_TRACKER"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../klt_pyramid_tracker"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../IP_repo/hsize_counter"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../KLT_bsyncpar"/>
@@ -255,7 +256,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../klt_pyramid_tracker/component.xml">
+      <File Path="$PPRDIR/../../PYRAMID_TRACKER/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>

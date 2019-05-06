@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/konkurs-v/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1'
+HD_PWD='C:/konkurs/vivado_projekty/tor_wizyjny - Copy/tor_wizyjny.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

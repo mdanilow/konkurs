@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/konkurs/vivado_projekty/mainVideoProcessing_Zybo-Z20/mainVideoProcessing_Zybo-Z20.xpr">
+<Project Version="7" Minor="38" Path="C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="3ca617dd3ecf458f97d1ceafb9d01a80"/>
@@ -68,14 +68,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_xlconstant_0_0/mainBlockDesign_xlconstant_0_0.xci">
-          <Proxy FileSetName="mainBlockDesign_xlconstant_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_clk_wiz_0_0/mainBlockDesign_clk_wiz_0_0.xci">
           <Proxy FileSetName="mainBlockDesign_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_rgb2dvi_0_0/mainBlockDesign_rgb2dvi_0_0.xci">
           <Proxy FileSetName="mainBlockDesign_rgb2dvi_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mainBlockDesign.bd" FileRelPathName="ip/mainBlockDesign_xlconstant_0_0/mainBlockDesign_xlconstant_0_0.xci">
+          <Proxy FileSetName="mainBlockDesign_xlconstant_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/mainBlockDesign/hdl/mainBlockDesign_wrapper.v">

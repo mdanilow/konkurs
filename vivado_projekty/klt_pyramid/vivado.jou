@@ -14,3 +14,24 @@ open_project C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.xpr
 update_compile_order -fileset sources_1
 launch_simulation
 source tb_pyramid.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tb_pyramid.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sim_1/new/tb_integrated_pyramid.v w ]
+add_files -fileset sim_1 C:/konkurs/vivado_projekty/klt_pyramid/klt_pyramid.srcs/sim_1/new/tb_integrated_pyramid.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_integrated_pyramid [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source tb_integrated_pyramid.tcl

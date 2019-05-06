@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xCB045CB9F23B1D1D" bd:device="xc7z010clg400-1" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xCB045CB9F23B1D1D" bd:device="xc7z010clg400-1" bd:synthFlowMode="None" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -30,133 +30,14 @@
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="ddrx" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="ddrx_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>CAN_DEBUG</spirit:name>
-            <spirit:value>false</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>TIMEPERIOD_PS</spirit:name>
-            <spirit:value>1250</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>MEMORY_TYPE</spirit:name>
-            <spirit:value>COMPONENTS</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>DATA_WIDTH</spirit:name>
-            <spirit:value>8</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CS_ENABLED</spirit:name>
-            <spirit:value>true</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>DATA_MASK_ENABLED</spirit:name>
-            <spirit:value>true</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>SLOT</spirit:name>
-            <spirit:value>Single</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>MEM_ADDR_MAP</spirit:name>
-            <spirit:value>ROW_COLUMN_BANK</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>BURST_LENGTH</spirit:name>
-            <spirit:value>8</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>AXI_ARBITRATION_SCHEME</spirit:name>
-            <spirit:value>TDM</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CAS_LATENCY</spirit:name>
-            <spirit:value>11</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>CAS_WRITE_LATENCY</spirit:name>
-            <spirit:value>11</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
+        <spirit:parameters/>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>FIXED_IO</spirit:name>
         <spirit:master/>
         <spirit:busType spirit:library="display_processing_system7" spirit:name="fixedio" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="display_processing_system7" spirit:name="fixedio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>CAN_DEBUG</spirit:name>
-            <spirit:value>false</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-        </spirit:parameters>
+        <spirit:parameters/>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>CLK.SYS_CLOCK</spirit:name>
@@ -179,29 +60,10 @@
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
             <spirit:value>125000000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="user"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>PHASE</spirit:name>
-            <spirit:value>0.000</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="default"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>CLK_DOMAIN</spirit:name>
             <spirit:value>design_1_clk</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="user"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -1034,18 +896,35 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>system_ila_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="system_ila" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:instanceName>klt_pyramid_tracker_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="klt_pyramid_tracker" spirit:vendor="nsn-intra.net" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_system_ila_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE5_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_TYPE">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">6</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_MON_TYPE">NATIVE</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_klt_pyramid_tracker_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_5</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xlconstant_3_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">640</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_6</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xlconstant_3_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">11</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">360</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>bbox21_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="bbox21" spirit:vendor="nsn-intra.net" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_bbox21_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1083,7 +962,8 @@
         <spirit:internalPortReference spirit:componentRef="wysw_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="rx_pclk"/>
         <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="clk"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_pclk"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconstant_1_dout</spirit:name>
@@ -1132,16 +1012,17 @@
         <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="pixel_in_0"/>
         <spirit:internalPortReference spirit:componentRef="split_rgb_0" spirit:portRef="pixel_in"/>
         <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="pixel_in"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="pixel_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK0"/>
         <spirit:internalPortReference spirit:componentRef="parameter_register_0" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="slowest_sync_clk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="rst_ps7_0_100M" spirit:portRef="slowest_sync_clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
@@ -1216,6 +1097,7 @@
         <spirit:internalPortReference spirit:componentRef="wysw_0" spirit:portRef="de_in"/>
         <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="de_in_1"/>
         <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="rx_de"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_de"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rgb2ycbcr_0_h_sync_out</spirit:name>
@@ -1224,6 +1106,7 @@
         <spirit:internalPortReference spirit:componentRef="wysw_0" spirit:portRef="hsync_in"/>
         <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="h_sync_1"/>
         <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="rx_hsync"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_hsync"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rgb2ycbcr_0_v_sync_out</spirit:name>
@@ -1232,6 +1115,7 @@
         <spirit:internalPortReference spirit:componentRef="wysw_0" spirit:portRef="vsync_in"/>
         <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="v_sync_1"/>
         <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="rx_vsync"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="rx_vsync"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>centroid_0_x</spirit:name>
@@ -1325,70 +1209,19 @@
         <spirit:name>xlconstant_3_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconstant_3" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="enable_tracking"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="enable"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconstant_4_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconstant_4" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="reset_position"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>centerpx</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="centerpx"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="probe0"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>uppx</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="uppx"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="probe1"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>downpx</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="downpx"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="probe2"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>x_pos</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="x_pos"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="probe3"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>y_pos</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="y_pos"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="probe4"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>in_roi</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="in_roi"/>
-        <spirit:internalPortReference spirit:componentRef="system_ila_0" spirit:portRef="probe5"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="reset"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rgb2ycbcr_0_y</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="y"/>
         <spirit:internalPortReference spirit:componentRef="KLT_2200_0" spirit:portRef="pixel_in"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="pixel_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>dvi2rgb_0_vid_pVDE</spirit:name>
@@ -1396,6 +1229,7 @@
         <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="de_in"/>
         <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="de_in"/>
         <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="de_in_0"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="de_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>dvi2rgb_0_vid_pHSync</spirit:name>
@@ -1403,6 +1237,7 @@
         <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="h_sync_in"/>
         <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="hsync_in"/>
         <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="h_sync_0"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="hsync_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>dvi2rgb_0_vid_pVSync</spirit:name>
@@ -1410,6 +1245,47 @@
         <spirit:internalPortReference spirit:componentRef="rgb2ycbcr_0" spirit:portRef="v_sync_in"/>
         <spirit:internalPortReference spirit:componentRef="bbox21_0" spirit:portRef="vsync_in"/>
         <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="v_sync_0"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="vsync_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_5_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_5" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="set_x0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_6_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_6" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="set_y0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_1_de_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="de_out"/>
+        <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="de_in_4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_1_hsync_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="hsync_out"/>
+        <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="h_sync_4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_1_vsync_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="vsync_out"/>
+        <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="v_sync_4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>bbox21_1_pixel_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="pixel_out"/>
+        <spirit:internalPortReference spirit:componentRef="mux_0" spirit:portRef="pixel_in_4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>klt_pyramid_tracker_0_point_x0_L0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="point_x0_L0"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="point_x0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>klt_pyramid_tracker_0_point_y0_L0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="klt_pyramid_tracker_0" spirit:portRef="point_y0_L0"/>
+        <spirit:internalPortReference spirit:componentRef="bbox21_1" spirit:portRef="point_y0"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
