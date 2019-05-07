@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue May  7 00:55:15 2019
+| Date         : Tue May  7 23:28:50 2019
 | Host         : N-5CD6281M34 running 64-bit major release  (build 9200)
 | Command      : report_drc -file mainBlockDesign_wrapper_drc_opted.rpt -pb mainBlockDesign_wrapper_drc_opted.pb -rpx mainBlockDesign_wrapper_drc_opted.rpx
 | Design       : mainBlockDesign_wrapper
@@ -24,14 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 162
+             Violations found: 161
 +-------------+----------+-------------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                       | Violations |
 +-------------+----------+-------------------------------------------------------------------+------------+
 | DPIP-1      | Warning  | Input pipelining                                                  | 33         |
 | DPOP-2      | Warning  | MREG Output pipelining                                            | 18         |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations       | 2          |
-| ZPS7-1      | Warning  | PS7 block required                                                | 1          |
 | AVAL-4      | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 72         |
 | AVAL-5      | Advisory | enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND   | 36         |
 +-------------+----------+-------------------------------------------------------------------+------------+
@@ -321,11 +320,6 @@ A LUT mainBlockDesign_i/klt_pyramid_tracker_0/inst/L1_halter/__4/i_ is driving c
     mainBlockDesign_i/klt_pyramid_tracker_0/inst/tracker_L1/context/context_reg[0][0][8] {FDRE}
     mainBlockDesign_i/klt_pyramid_tracker_0/inst/tracker_L1/context/context_reg[0][0][9] {FDRE}
 
-Related violations: <none>
-
-ZPS7-1#1 Warning
-PS7 block required  
-The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
 Related violations: <none>
 
 AVAL-4#1 Advisory

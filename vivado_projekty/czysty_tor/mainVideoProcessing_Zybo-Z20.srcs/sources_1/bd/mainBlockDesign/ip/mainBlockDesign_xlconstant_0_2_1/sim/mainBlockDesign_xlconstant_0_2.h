@@ -57,7 +57,7 @@
 #include "systemc.h"
 class mainBlockDesign_xlconstant_0_2 : public sc_module {
   public:
-  xlconstant_v1_1_5<11,360> mod;
+  xlconstant_v1_1_5<11,540> mod;
   sc_out< sc_bv<11> > dout;
 mainBlockDesign_xlconstant_0_2 (sc_core::sc_module_name name) :sc_module(name), mod("mod") {
     mod.dout(dout);

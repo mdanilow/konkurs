@@ -1,0 +1,23 @@
+$date
+        2019-May-07 18:15:02
+$end
+$version
+        Vivado v2018.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 8 " mainBlockDesign_i/system_ila_0/inst/probe0_1 [7:0] $end
+$var reg 8 * mainBlockDesign_i/system_ila_0/inst/probe1_1 [7:0] $end
+$var reg 8 2 mainBlockDesign_i/system_ila_0/inst/probe2_1 [7:0] $end
+$var reg 12 : mainBlockDesign_i/system_ila_0/inst/probe3_1 [11:0] $end
+$var reg 12 F mainBlockDesign_i/system_ila_0/inst/probe4_1 [11:0] $end
+$var reg 1 R mainBlockDesign_i/system_ila_0/inst/probe5_1 $end
+$var reg 12 S mainBlockDesign_i/system_ila_0/inst/probe6_1 [11:0] $end
+$var reg 12 _ mainBlockDesign_i/system_ila_0/inst/probe7_1 [11:0] $end
+$var reg 1 k _TRIGGER $end
+$var reg 1 l _WINDOW $end
+$var reg 1 m _GAP $end
+$upscope $end
+$enddefinitions $end

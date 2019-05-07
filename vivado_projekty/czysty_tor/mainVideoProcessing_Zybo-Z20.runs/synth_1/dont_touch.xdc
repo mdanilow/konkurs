@@ -39,4 +39,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign
 # IP: bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_4/mainBlockDesign_xlconstant_0_4.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_xlconstant_0_4 || ORIG_REF_NAME==mainBlockDesign_xlconstant_0_4} -quiet] -quiet
 
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_deconcat_0_0_1/mainBlockDesign_deconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_deconcat_0_0 || ORIG_REF_NAME==mainBlockDesign_deconcat_0_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_processing_system7_0_0/mainBlockDesign_processing_system7_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_processing_system7_0_0 || ORIG_REF_NAME==mainBlockDesign_processing_system7_0_0} -quiet] -quiet
+
 # XDC: bd/mainBlockDesign/mainBlockDesign_ooc.xdc

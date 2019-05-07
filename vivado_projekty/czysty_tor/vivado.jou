@@ -2,20 +2,66 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue May  7 00:27:59 2019
-# Process ID: 7680
+# Start of session at: Tue May  7 22:55:18 2019
+# Process ID: 7912
 # Current directory: C:/konkurs/vivado_projekty/czysty_tor
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16076 C:\konkurs\vivado_projekty\czysty_tor\mainVideoProcessing_Zybo-Z20.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent212 C:\konkurs\vivado_projekty\czysty_tor\mainVideoProcessing_Zybo-Z20.xpr
 # Log file: C:/konkurs/vivado_projekty/czysty_tor/vivado.log
 # Journal file: C:/konkurs/vivado_projekty/czysty_tor\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.xpr
+open_bd_design {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
 update_compile_order -fileset sources_1
 open_bd_design {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
+set_property  ip_repo_paths  {c:/konkurs/2018.2_IP/vivado-library c:/konkurs/IP_repo/vivado-library c:/konkurs/IP_repo/bbox21 c:/konkurs/IP_repo/rgb2ycbcr c:/konkurs/PYRAMID_TRACKER C:/konkurs/IP_repo/split_sw} [current_project]
+update_ip_catalog
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {860}] [get_bd_cells xlconstant_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {540}] [get_bd_cells xlconstant_2]
+endgroup
+create_bd_cell -type ip -vlnv nsn-intra.net:user:deconcat:1.0 deconcat_0
+set_property location {2 281 360} [get_bd_cells deconcat_0]
+startgroup
+create_bd_port -dir I -from 3 -to 0 sw
+connect_bd_net [get_bd_pins /deconcat_0/SW] [get_bd_ports sw]
+endgroup
+create_bd_port -dir I -from 3 -to 0 led
+delete_bd_objs [get_bd_ports led]
+create_bd_port -dir O -from 3 -to 0 led
+set_property location {2088 304} [get_bd_ports led]
+connect_bd_net [get_bd_ports led] [get_bd_ports sw]
+delete_bd_objs [get_bd_nets xlconstant_3_dout]
+delete_bd_objs [get_bd_nets xlconstant_4_dout]
+connect_bd_net [get_bd_pins deconcat_0/SW0] [get_bd_pins klt_pyramid_tracker_0/reset]
+delete_bd_objs [get_bd_nets deconcat_0_SW0]
+connect_bd_net [get_bd_pins deconcat_0/SW0] [get_bd_pins klt_pyramid_tracker_0/enable]
+connect_bd_net [get_bd_pins deconcat_0/SW1] [get_bd_pins klt_pyramid_tracker_0/reset]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property -dict [list CONFIG.preset {Default}] [get_bd_cells processing_system7_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {0} CONFIG.PCW_SD0_PERIPHERAL_ENABLE {0} CONFIG.PCW_USB0_PERIPHERAL_ENABLE {0} CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {0}] [get_bd_cells processing_system7_0]
+endgroup
+validate_bd_design
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+validate_bd_design
+save_bd_design
 reset_run synth_1
+reset_run mainBlockDesign_xlconstant_0_1_synth_1
+reset_run mainBlockDesign_xlconstant_0_2_synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
+file mkdir C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.sdk
+file copy -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.sysdef C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.sdk/mainBlockDesign_wrapper.hdf
+
 open_hw
 connect_hw_server
 open_hw_target
@@ -27,68 +73,5 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
 set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
 program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-set_property  ip_repo_paths  {c:/konkurs/2018.2_IP/vivado-library c:/konkurs/IP_repo/vivado-library C:/konkurs/IP_repo/bbox21 C:/konkurs/IP_repo/rgb2ycbcr} [current_project]
-update_ip_catalog
-set_property  ip_repo_paths  {c:/konkurs/2018.2_IP/vivado-library c:/konkurs/IP_repo/vivado-library c:/konkurs/IP_repo/bbox21 c:/konkurs/IP_repo/rgb2ycbcr C:/konkurs/PYRAMID_TRACKER} [current_project]
-update_ip_catalog
+launch_sdk -workspace C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.sdk -hwspec C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.sdk/mainBlockDesign_wrapper.hdf
 open_bd_design {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:rgb2ycbcr:1.0 rgb2ycbcr_0
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv nsn-intra.net:user:bbox21:1.0 bbox21_0
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv nsn-intra.net:user:klt_pyramid_tracker:1.0 klt_pyramid_tracker_0
-endgroup
-set_property location {2.5 503 52} [get_bd_cells dvi2rgb_0]
-delete_bd_objs [get_bd_intf_nets dvi2rgb_0_RGB]
-connect_bd_net [get_bd_pins rgb2ycbcr_0/clk] [get_bd_pins dvi2rgb_0/PixelClk]
-connect_bd_net [get_bd_pins rgb2ycbcr_0/de_in] [get_bd_pins dvi2rgb_0/vid_pVDE]
-connect_bd_net [get_bd_pins rgb2ycbcr_0/h_sync_in] [get_bd_pins dvi2rgb_0/vid_pHSync]
-connect_bd_net [get_bd_pins rgb2ycbcr_0/v_sync_in] [get_bd_pins dvi2rgb_0/vid_pVSync]
-connect_bd_net [get_bd_pins rgb2ycbcr_0/pixel_in] [get_bd_pins dvi2rgb_0/vid_pData]
-set_property location {4 740 -301} [get_bd_cells bbox21_0]
-connect_bd_net [get_bd_pins bbox21_0/clk] [get_bd_pins dvi2rgb_0/PixelClk]
-connect_bd_net [get_bd_pins bbox21_0/de_in] [get_bd_pins dvi2rgb_0/vid_pVDE]
-connect_bd_net [get_bd_pins bbox21_0/hsync_in] [get_bd_pins dvi2rgb_0/vid_pHSync]
-connect_bd_net [get_bd_pins bbox21_0/vsync_in] [get_bd_pins dvi2rgb_0/vid_pVSync]
-connect_bd_net [get_bd_pins bbox21_0/pixel_in] [get_bd_pins dvi2rgb_0/vid_pData]
-set_property location {4.5 1126 -180} [get_bd_cells klt_pyramid_tracker_0]
-connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_pclk] [get_bd_pins dvi2rgb_0/PixelClk]
-connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_de] [get_bd_pins rgb2ycbcr_0/de_out]
-connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_hsync] [get_bd_pins rgb2ycbcr_0/h_sync_out]
-connect_bd_net [get_bd_pins klt_pyramid_tracker_0/rx_vsync] [get_bd_pins rgb2ycbcr_0/v_sync_out]
-connect_bd_net [get_bd_pins klt_pyramid_tracker_0/pixel_in] [get_bd_pins rgb2ycbcr_0/y]
-copy_bd_objs /  [get_bd_cells {xlconstant_0}]
-copy_bd_objs /  [get_bd_cells {xlconstant_0}]
-copy_bd_objs /  [get_bd_cells {xlconstant_0}]
-copy_bd_objs /  [get_bd_cells {xlconstant_0}]
-set_property -dict [list CONFIG.CONST_WIDTH {12} CONFIG.CONST_VAL {640}] [get_bd_cells xlconstant_1]
-connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins klt_pyramid_tracker_0/set_x0]
-set_property -dict [list CONFIG.CONST_WIDTH {11} CONFIG.CONST_VAL {360}] [get_bd_cells xlconstant_2]
-connect_bd_net [get_bd_pins xlconstant_2/dout] [get_bd_pins klt_pyramid_tracker_0/set_y0]
-set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_3]
-connect_bd_net [get_bd_pins xlconstant_3/dout] [get_bd_pins klt_pyramid_tracker_0/reset]
-connect_bd_net [get_bd_pins xlconstant_4/dout] [get_bd_pins klt_pyramid_tracker_0/enable]
-connect_bd_net [get_bd_pins klt_pyramid_tracker_0/point_x0_L0] [get_bd_pins bbox21_0/point_x0]
-connect_bd_net [get_bd_pins klt_pyramid_tracker_0/point_y0_L0] [get_bd_pins bbox21_0/point_y0]
-set_property location {5 1430 -200} [get_bd_cells bbox21_0]
-connect_bd_net [get_bd_pins bbox21_0/de_out] [get_bd_pins rgb2dvi_0/vid_pVDE]
-connect_bd_net [get_bd_pins bbox21_0/hsync_out] [get_bd_pins rgb2dvi_0/vid_pHSync]
-connect_bd_net [get_bd_pins bbox21_0/vsync_out] [get_bd_pins rgb2dvi_0/vid_pVSync]
-connect_bd_net [get_bd_pins bbox21_0/vsync_out] [get_bd_pins rgb2dvi_0/vid_pData]
-delete_bd_objs [get_bd_nets bbox21_0_vsync_out]
-connect_bd_net [get_bd_pins bbox21_0/vsync_out] [get_bd_pins rgb2dvi_0/vid_pVSync]
-connect_bd_net [get_bd_pins bbox21_0/vsync_out] [get_bd_pins rgb2dvi_0/vid_pData]
-delete_bd_objs [get_bd_nets bbox21_0_vsync_out]
-connect_bd_net [get_bd_pins rgb2dvi_0/vid_pData] [get_bd_pins bbox21_0/pixel_out]
-connect_bd_net [get_bd_pins bbox21_0/vsync_out] [get_bd_pins rgb2dvi_0/vid_pVSync]
-regenerate_bd_layout
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-report_ip_status -name ip_status 
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1

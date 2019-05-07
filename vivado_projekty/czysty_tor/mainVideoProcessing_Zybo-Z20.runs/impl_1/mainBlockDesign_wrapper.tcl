@@ -65,7 +65,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -77,11 +76,12 @@ set rc [catch {
   c:/konkurs/IP_repo/vivado-library
   c:/konkurs/IP_repo/bbox21
   c:/konkurs/IP_repo/rgb2ycbcr
-  C:/konkurs/PYRAMID_TRACKER
+  c:/konkurs/PYRAMID_TRACKER
+  C:/konkurs/IP_repo/split_sw
 } [current_project]
   set_property ip_output_repo C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   add_files -quiet C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/synth_1/mainBlockDesign_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
@@ -170,7 +170,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force mainBlockDesign_wrapper.mmi }
   write_bitstream -force mainBlockDesign_wrapper.bit 
   catch { write_sysdef -hwdef mainBlockDesign_wrapper.hwdef -bitfile mainBlockDesign_wrapper.bit -meminfo mainBlockDesign_wrapper.mmi -file mainBlockDesign_wrapper.sysdef }

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue May  7 00:45:04 2019
+// Date        : Tue May  7 23:23:42 2019
 // Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_1_1/mainBlockDesign_xlconstant_0_1_sim_netlist.v
+//               C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_1_1/mainBlockDesign_xlconstant_0_1_sim_netlist.v
 // Design      : mainBlockDesign_xlconstant_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,13 +24,13 @@ module mainBlockDesign_xlconstant_0_1
   assign dout[11] = \<const0> ;
   assign dout[10] = \<const0> ;
   assign dout[9] = \<const1> ;
-  assign dout[8] = \<const0> ;
-  assign dout[7] = \<const1> ;
-  assign dout[6] = \<const0> ;
+  assign dout[8] = \<const1> ;
+  assign dout[7] = \<const0> ;
+  assign dout[6] = \<const1> ;
   assign dout[5] = \<const0> ;
-  assign dout[4] = \<const0> ;
-  assign dout[3] = \<const0> ;
-  assign dout[2] = \<const0> ;
+  assign dout[4] = \<const1> ;
+  assign dout[3] = \<const1> ;
+  assign dout[2] = \<const1> ;
   assign dout[1] = \<const0> ;
   assign dout[0] = \<const0> ;
   GND GND

@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue May 07 10:21:01 UTC 2019
+VLNV: nsn-intra.net:user:hsize_counter:1.0
+SynthRuntime: 48

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue May  7 00:58:07 2019
+| Date         : Tue May  7 23:32:31 2019
 | Host         : N-5CD6281M34 running 64-bit major release  (build 9200)
 | Command      : report_drc -file mainBlockDesign_wrapper_drc_routed.rpt -pb mainBlockDesign_wrapper_drc_routed.pb -rpx mainBlockDesign_wrapper_drc_routed.rpx
 | Design       : mainBlockDesign_wrapper
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 165
+             Violations found: 164
 +-------------+----------+-------------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                       | Violations |
 +-------------+----------+-------------------------------------------------------------------+------------+
@@ -33,7 +33,6 @@ Table of Contents
 | PDRC-153    | Warning  | Gated clock check                                                 | 2          |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations       | 2          |
 | RTSTAT-10   | Warning  | No routable loads                                                 | 1          |
-| ZPS7-1      | Warning  | PS7 block required                                                | 1          |
 | AVAL-4      | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 72         |
 | AVAL-5      | Advisory | enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND   | 36         |
 +-------------+----------+-------------------------------------------------------------------+------------+
@@ -338,11 +337,6 @@ Related violations: <none>
 RTSTAT-10#1 Warning
 No routable loads  
 8 net(s) have no routable loads. The problem bus(es) and/or net(s) are mainBlockDesign_i/klt_pyramid_tracker_0/inst/L0_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, mainBlockDesign_i/klt_pyramid_tracker_0/inst/L1_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, mainBlockDesign_i/klt_pyramid_tracker_0/inst/L0_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, mainBlockDesign_i/klt_pyramid_tracker_0/inst/L1_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, mainBlockDesign_i/klt_pyramid_tracker_0/inst/L0_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, mainBlockDesign_i/klt_pyramid_tracker_0/inst/L1_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, mainBlockDesign_i/klt_pyramid_tracker_0/inst/L0_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i, mainBlockDesign_i/klt_pyramid_tracker_0/inst/L1_halter/fajfo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i.
-Related violations: <none>
-
-ZPS7-1#1 Warning
-PS7 block required  
-The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
 Related violations: <none>
 
 AVAL-4#1 Advisory
