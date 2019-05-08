@@ -217,8 +217,14 @@ proc create_root_design { parentCell } {
    CONFIG.kRstActiveHigh {true} \
  ] $dvi2rgb_0
 
+  # Create instance: hsize_counter_0, and set properties
+  set hsize_counter_0 [ create_bd_cell -type ip -vlnv nsn-intra.net:user:hsize_counter:1.0 hsize_counter_0 ]
+
   # Create instance: klt_pyramid_tracker_0, and set properties
   set klt_pyramid_tracker_0 [ create_bd_cell -type ip -vlnv nsn-intra.net:user:klt_pyramid_tracker:1.0 klt_pyramid_tracker_0 ]
+
+  # Create instance: parameter_register_0, and set properties
+  set parameter_register_0 [ create_bd_cell -type ip -vlnv user.org:user:parameter_register:1.0 parameter_register_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -694,6 +700,12 @@ proc create_root_design { parentCell } {
    CONFIG.preset {Default} \
  ] $processing_system7_0
 
+  # Create instance: ps7_0_axi_periph, and set properties
+  set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
+  set_property -dict [ list \
+   CONFIG.NUM_MI {1} \
+ ] $ps7_0_axi_periph
+
   # Create instance: rgb2dvi_0, and set properties
   set rgb2dvi_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2dvi:1.4 rgb2dvi_0 ]
   set_property -dict [ list \
@@ -704,6 +716,20 @@ proc create_root_design { parentCell } {
 
   # Create instance: rgb2ycbcr_0, and set properties
   set rgb2ycbcr_0 [ create_bd_cell -type ip -vlnv user.org:user:rgb2ycbcr:1.0 rgb2ycbcr_0 ]
+
+  # Create instance: rst_ps7_0_50M, and set properties
+  set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
+
+  # Create instance: system_ila_0, and set properties
+  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_MON_TYPE {NATIVE} \
+   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_PROBE0_TYPE {0} \
+   CONFIG.C_PROBE1_TYPE {0} \
+   CONFIG.C_PROBE2_TYPE {0} \
+   CONFIG.C_PROBE3_TYPE {0} \
+ ] $system_ila_0
 
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
@@ -736,6 +762,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net hdmi_rx_1 [get_bd_intf_ports hdmi_rx] [get_bd_intf_pins dvi2rgb_0/TMDS]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
+  connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins parameter_register_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net rgb2dvi_0_TMDS [get_bd_intf_ports hdmi_tx] [get_bd_intf_pins rgb2dvi_0/TMDS]
 
   # Create port connections
@@ -743,28 +771,48 @@ proc create_root_design { parentCell } {
   connect_bd_net -net bbox21_0_hsync_out [get_bd_pins bbox21_0/hsync_out] [get_bd_pins rgb2dvi_0/vid_pHSync]
   connect_bd_net -net bbox21_0_pixel_out [get_bd_pins bbox21_0/pixel_out] [get_bd_pins rgb2dvi_0/vid_pData]
   connect_bd_net -net bbox21_0_vsync_out [get_bd_pins bbox21_0/vsync_out] [get_bd_pins rgb2dvi_0/vid_pVSync]
+  connect_bd_net -net centerpx_L0 [get_bd_pins klt_pyramid_tracker_0/centerpx_L0] [get_bd_pins system_ila_0/probe2]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets centerpx_L0]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins dvi2rgb_0/RefClk]
   connect_bd_net -net deconcat_0_SW0 [get_bd_pins deconcat_0/SW0] [get_bd_pins klt_pyramid_tracker_0/enable]
   connect_bd_net -net deconcat_0_SW1 [get_bd_pins deconcat_0/SW1] [get_bd_pins klt_pyramid_tracker_0/reset]
-  connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_pins bbox21_0/clk] [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins klt_pyramid_tracker_0/rx_pclk] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins rgb2ycbcr_0/clk]
+  connect_bd_net -net downpx_L0 [get_bd_pins klt_pyramid_tracker_0/downpx_L0] [get_bd_pins system_ila_0/probe3]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets downpx_L0]
+  connect_bd_net -net dvi2rgb_0_PixelClk [get_bd_pins bbox21_0/clk] [get_bd_pins dvi2rgb_0/PixelClk] [get_bd_pins hsize_counter_0/clk] [get_bd_pins klt_pyramid_tracker_0/rx_pclk] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins rgb2ycbcr_0/clk] [get_bd_pins system_ila_0/clk]
   connect_bd_net -net dvi2rgb_0_vid_pData [get_bd_pins bbox21_0/pixel_in] [get_bd_pins dvi2rgb_0/vid_pData] [get_bd_pins rgb2ycbcr_0/pixel_in]
-  connect_bd_net -net dvi2rgb_0_vid_pHSync [get_bd_pins bbox21_0/hsync_in] [get_bd_pins dvi2rgb_0/vid_pHSync] [get_bd_pins rgb2ycbcr_0/h_sync_in]
-  connect_bd_net -net dvi2rgb_0_vid_pVDE [get_bd_pins bbox21_0/de_in] [get_bd_pins dvi2rgb_0/vid_pVDE] [get_bd_pins rgb2ycbcr_0/de_in]
-  connect_bd_net -net dvi2rgb_0_vid_pVSync [get_bd_pins bbox21_0/vsync_in] [get_bd_pins dvi2rgb_0/vid_pVSync] [get_bd_pins rgb2ycbcr_0/v_sync_in]
-  connect_bd_net -net klt_pyramid_tracker_0_point_x0_L0 [get_bd_pins bbox21_0/point_x0] [get_bd_pins klt_pyramid_tracker_0/point_x0_L0]
-  connect_bd_net -net klt_pyramid_tracker_0_point_y0_L0 [get_bd_pins bbox21_0/point_y0] [get_bd_pins klt_pyramid_tracker_0/point_y0_L0]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net dvi2rgb_0_vid_pHSync [get_bd_pins bbox21_0/hsync_in] [get_bd_pins dvi2rgb_0/vid_pHSync] [get_bd_pins hsize_counter_0/hsync] [get_bd_pins rgb2ycbcr_0/h_sync_in]
+  connect_bd_net -net dvi2rgb_0_vid_pVDE [get_bd_pins bbox21_0/de_in] [get_bd_pins dvi2rgb_0/vid_pVDE] [get_bd_pins hsize_counter_0/de] [get_bd_pins rgb2ycbcr_0/de_in]
+  connect_bd_net -net dvi2rgb_0_vid_pVSync [get_bd_pins bbox21_0/vsync_in] [get_bd_pins dvi2rgb_0/vid_pVSync] [get_bd_pins hsize_counter_0/vsync] [get_bd_pins rgb2ycbcr_0/v_sync_in]
+  connect_bd_net -net klt_pyramid_tracker_0_point_x0_L0 [get_bd_pins bbox21_0/point_x0] [get_bd_pins klt_pyramid_tracker_0/point_x0_L0] [get_bd_pins parameter_register_0/x]
+  connect_bd_net -net klt_pyramid_tracker_0_point_y0_L0 [get_bd_pins bbox21_0/point_y0] [get_bd_pins klt_pyramid_tracker_0/point_y0_L0] [get_bd_pins parameter_register_0/y]
+  connect_bd_net -net max [get_bd_pins hsize_counter_0/max] [get_bd_pins system_ila_0/probe0]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets max]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins parameter_register_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rgb2ycbcr_0_de_out [get_bd_pins klt_pyramid_tracker_0/rx_de] [get_bd_pins rgb2ycbcr_0/de_out]
   connect_bd_net -net rgb2ycbcr_0_h_sync_out [get_bd_pins klt_pyramid_tracker_0/rx_hsync] [get_bd_pins rgb2ycbcr_0/h_sync_out]
   connect_bd_net -net rgb2ycbcr_0_v_sync_out [get_bd_pins klt_pyramid_tracker_0/rx_vsync] [get_bd_pins rgb2ycbcr_0/v_sync_out]
   connect_bd_net -net rgb2ycbcr_0_y [get_bd_pins klt_pyramid_tracker_0/pixel_in] [get_bd_pins rgb2ycbcr_0/y]
-  connect_bd_net -net sw_1 [get_bd_ports led] [get_bd_ports sw] [get_bd_pins deconcat_0/SW]
+  connect_bd_net -net rst_ps7_0_50M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_50M/interconnect_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins parameter_register_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net sw_1 [get_bd_ports led] [get_bd_ports sw] [get_bd_pins deconcat_0/SW] [get_bd_pins parameter_register_0/sw]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net uppx_L0 [get_bd_pins klt_pyramid_tracker_0/uppx_L0] [get_bd_pins system_ila_0/probe1]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets uppx_L0]
   connect_bd_net -net xlconstant_0_dout [get_bd_ports hdmi_rx_hpd] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins klt_pyramid_tracker_0/set_x0] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins klt_pyramid_tracker_0/set_y0] [get_bd_pins xlconstant_2/dout]
 
   # Create address segments
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs parameter_register_0/S00_AXI/S00_AXI_reg] SEG_parameter_register_0_S00_AXI_reg
 
 
   # Restore current instance

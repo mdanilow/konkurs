@@ -7674,3 +7674,20 @@ con
 19:19:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
 19:19:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B4CBA" && level==0} -index 1' command is executed.
 19:19:22 ERROR : bitstream is not compatible with the target
+00:33:39 INFO  : Registering command handlers for SDK TCF services
+00:33:41 INFO  : Launching XSCT server: xsct.bat -interactive C:\konkurs\vivado_projekty\tor_wizyjny\tor_wizyjny.sdk\temp_xsdb_launch_script.tcl
+00:33:49 INFO  : XSCT server has started successfully.
+00:33:51 INFO  : Successfully done setting XSCT server connection channel  
+00:33:51 INFO  : Successfully done setting SDK workspace  
+00:33:51 INFO  : Processing command line option -hwspec C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.sdk/design_1_wrapper.hdf.
+00:33:52 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_3.
+00:34:03 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1556127554141,  Project:1556125376390
+00:34:03 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_3' is different from C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.sdk/design_1_wrapper.hdf.
+00:34:11 INFO  : Copied contents of C:/konkurs/vivado_projekty/tor_wizyjny/tor_wizyjny.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_3\system.hdf.
+00:34:17 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:34:18 INFO  : Clearing existing target manager status.
+00:34:18 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:34:18 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+00:49:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:49:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A6B4CBA" && level==0} -index 1' command is executed.
+00:49:12 ERROR : bitstream is not compatible with the target

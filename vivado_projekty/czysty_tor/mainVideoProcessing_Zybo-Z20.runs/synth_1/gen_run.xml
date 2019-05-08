@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1557264147">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1557307829">
   <File Type="PA-TCL" Name="mainBlockDesign_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mainBlockDesign_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mainBlockDesign_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="mainBlockDesign_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="mainBlockDesign_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mainBlockDesign_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mainBlockDesign_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mainBlockDesign_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mainBlockDesign_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/mainBlockDesign/mainBlockDesign.bd">
@@ -49,8 +46,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_klt_pyramid_tracker_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_xlconstant_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_xlconstant_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_system_ila_0_0"/>
 </GenRun>

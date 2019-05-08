@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -29,7 +28,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.cache/wt [current_project]
 set_property parent.project_path C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
@@ -41,17 +40,17 @@ set_property ip_repo_paths {
   c:/konkurs/PYRAMID_TRACKER
   c:/konkurs/IP_repo/split_sw
   c:/konkurs/IP_repo/hsize_counter
-  c:/konkurs/IP_repo/split_rgb
+  c:/konkurs/IP_repo/parameter_register
 } [current_project]
 set_property ip_output_repo c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0.xci
-set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/bd_0/ip/ip_0/bd_ebcc_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/bd_0/bd_ebcc_ooc.xdc]
+read_ip -quiet c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0.xci
+set_property used_in_synthesis false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/bd_0/ip/ip_0/bd_ebcc_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/bd_0/bd_ebcc_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -106,32 +105,32 @@ write_checkpoint -force -noxdef mainBlockDesign_system_ila_0_0.dcp
 create_report "mainBlockDesign_system_ila_0_0_synth_1_synth_report_utilization_0" "report_utilization -file mainBlockDesign_system_ila_0_0_utilization_synth.rpt -pb mainBlockDesign_system_ila_0_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0.dcp c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0.dcp
+  file copy -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0.dcp c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_stub.v
+  write_verilog -force -mode synth_stub c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -141,32 +140,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0.dcp c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0.dcp
+  file copy -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0.dcp c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_stub.v c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_stub.v
+  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_stub.v c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_stub.vhdl c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_stub.vhdl
+  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_stub.vhdl c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_sim_netlist.v c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_sim_netlist.v
+  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_sim_netlist.v c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_sim_netlist.vhdl c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_sim_netlist.vhdl
+  file rename -force C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/mainBlockDesign_system_ila_0_0_synth_1/mainBlockDesign_system_ila_0_0_sim_netlist.vhdl c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -175,13 +174,13 @@ if { [catch {
 
 if {[file isdir C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.ip_user_files/ip/mainBlockDesign_system_ila_0_0]} {
   catch { 
-    file copy -force c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_stub.v C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.ip_user_files/ip/mainBlockDesign_system_ila_0_0
+    file copy -force c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_stub.v C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.ip_user_files/ip/mainBlockDesign_system_ila_0_0
   }
 }
 
 if {[file isdir C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.ip_user_files/ip/mainBlockDesign_system_ila_0_0]} {
   catch { 
-    file copy -force c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0_stub.vhdl C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.ip_user_files/ip/mainBlockDesign_system_ila_0_0
+    file copy -force c:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0_stub.vhdl C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.ip_user_files/ip/mainBlockDesign_system_ila_0_0
   }
 }
 file delete __synthesis_is_running__

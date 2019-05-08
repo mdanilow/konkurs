@@ -1,0 +1,63 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y -40 -defaultsOSRD
+preplace port hdmi_rx -pg 1 -y 450 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 510 -defaultsOSRD
+preplace port hdmi_rx_ddc -pg 1 -y 510 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y -20 -defaultsOSRD
+preplace port hdmi_tx -pg 1 -y 390 -defaultsOSRD
+preplace portBus sw -pg 1 -y 670 -defaultsOSRD
+preplace portBus hdmi_rx_hpd -pg 1 -y 590 -defaultsOSRD
+preplace portBus led -pg 1 -y 530 -defaultsOSRD
+preplace inst klt_pyramid_tracker_0 -pg 1 -lvl 5 -y 260 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 7 -y 590 -defaultsOSRD
+preplace inst deconcat_0 -pg 1 -lvl 4 -y 620 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 4 -y 160 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 4 -y 420 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 2 -y 610 -defaultsOSRD
+preplace inst xlconstant_4 -pg 1 -lvl 2 -y 730 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 7 -y 390 -defaultsOSRD
+preplace inst bbox21_0 -pg 1 -lvl 6 -y 380 -defaultsOSRD
+preplace inst rgb2ycbcr_0 -pg 1 -lvl 4 -y 0 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 510 -defaultsOSRD
+preplace inst dvi2rgb_0 -pg 1 -lvl 3 -y 480 -defaultsOSRD
+preplace inst hsize_counter_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 10 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 7 410J -130 NJ -130 NJ -130 1240J -40 NJ -40 NJ -40 NJ
+preplace netloc xlconstant_1_dout 1 4 1 1170J
+preplace netloc bbox21_0_hsync_out 1 6 1 N
+preplace netloc xlconstant_2_dout 1 4 1 1180J
+preplace netloc rgb2ycbcr_0_y 1 4 1 1180
+preplace netloc rgb2ycbcr_0_h_sync_out 1 4 1 1200
+preplace netloc hdmi_rx_1 1 0 3 NJ 450 NJ 450 NJ
+preplace netloc rgb2ycbcr_0_v_sync_out 1 4 1 1190
+preplace netloc rgb2ycbcr_0_de_out 1 4 1 1210
+preplace netloc dvi2rgb_0_vid_pVDE 1 3 3 870 520 NJ 520 1540
+preplace netloc deconcat_0_SW0 1 4 1 1230
+preplace netloc bbox21_0_vsync_out 1 6 1 N
+preplace netloc sys_clock_1 1 0 2 NJ 510 N
+preplace netloc rgb2dvi_0_TMDS 1 7 1 NJ
+preplace netloc deconcat_0_SW1 1 4 1 1210
+preplace netloc dvi2rgb_0_DDC 1 3 5 880J 500 NJ 500 1530J 510 NJ 510 NJ
+preplace netloc dvi2rgb_0_vid_pHSync 1 3 3 890 510 NJ 510 1520
+preplace netloc xlconstant_0_dout 1 7 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 7 420J -120 NJ -120 NJ -120 1220J -20 NJ -20 NJ -20 NJ
+preplace netloc klt_pyramid_tracker_0_point_x0_L0 1 5 1 1560
+preplace netloc dvi2rgb_0_vid_pData 1 3 3 910 490 NJ 490 1560
+preplace netloc dvi2rgb_0_vid_pVSync 1 3 3 900 480 NJ 480 1510
+preplace netloc clk_wiz_0_clk_out1 1 2 1 600J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 0 -90 400
+preplace netloc sw_1 1 0 8 NJ 670 NJ 670 NJ 670 900 530 NJ 530 NJ 530 NJ 530 NJ
+preplace netloc bbox21_0_de_out 1 6 1 1820
+preplace netloc bbox21_0_pixel_out 1 6 1 1830
+preplace netloc klt_pyramid_tracker_0_point_y0_L0 1 5 1 1530
+preplace netloc dvi2rgb_0_PixelClk 1 3 4 860 -140 1230 120 1550 500 1830
+levelinfo -pg 1 -20 200 510 730 1040 1380 1690 1960 2110 -top -160 -bot 790
+",
+}
+{
+   da_board_cnt: "1",
+   da_ps7_cnt: "1",
+}

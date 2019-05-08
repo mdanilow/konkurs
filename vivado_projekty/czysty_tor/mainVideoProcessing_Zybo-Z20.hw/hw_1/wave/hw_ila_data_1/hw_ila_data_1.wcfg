@@ -10,19 +10,19 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1218774fs"></ZoomEndTime>
+      <ZoomEndTime time="2363403fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="156"></NameColumnWidth>
+      <NameColumnWidth column_width="152"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe0_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe0_1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">probe0_1[7:0]</obj_property>
-      <obj_property name="label">uppx_L0</obj_property>
+      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe0_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[11:0]</obj_property>
+      <obj_property name="label">max</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -31,7 +31,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe1_1[7:0]</obj_property>
       <obj_property name="ObjectShortName">probe1_1[7:0]</obj_property>
-      <obj_property name="label">centerpx_L0</obj_property>
+      <obj_property name="label">uppx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -40,34 +40,25 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe2_1[7:0]</obj_property>
       <obj_property name="ObjectShortName">probe2_1[7:0]</obj_property>
-      <obj_property name="label">downpx_L0</obj_property>
+      <obj_property name="label">centerpx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe3_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe3_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe3_1[11:0]</obj_property>
-      <obj_property name="label">counter</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe4_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe4_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe4_1[11:0]</obj_property>
-      <obj_property name="label">max</obj_property>
+      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
+      <obj_property name="label">downpx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe0_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe0_1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">probe0_1[7:0]</obj_property>
-      <obj_property name="label">uppx_L0</obj_property>
+      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe0_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[11:0]</obj_property>
+      <obj_property name="label">max</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -76,7 +67,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe1_1[7:0]</obj_property>
       <obj_property name="ObjectShortName">probe1_1[7:0]</obj_property>
-      <obj_property name="label">centerpx_L0</obj_property>
+      <obj_property name="label">uppx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -85,60 +76,25 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe2_1[7:0]</obj_property>
       <obj_property name="ObjectShortName">probe2_1[7:0]</obj_property>
-      <obj_property name="label">downpx_L0</obj_property>
+      <obj_property name="label">centerpx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe3_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe3_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe3_1[11:0]</obj_property>
-      <obj_property name="label">counter</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe4_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe4_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe4_1[11:0]</obj_property>
-      <obj_property name="label">max</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe5_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe5_1</obj_property>
-      <obj_property name="ObjectShortName">probe5_1</obj_property>
-      <obj_property name="label">dvi2rgb_0_vid_pHSync</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe6_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe6_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe6_1[11:0]</obj_property>
-      <obj_property name="label">counter_1</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe7_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe7_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe7_1[11:0]</obj_property>
-      <obj_property name="label">max_1</obj_property>
+      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
+      <obj_property name="label">downpx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe0_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe0_1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">probe0_1[7:0]</obj_property>
-      <obj_property name="label">uppx_L0</obj_property>
+      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe0_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">probe0_1[11:0]</obj_property>
+      <obj_property name="label">max</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -147,7 +103,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe1_1[7:0]</obj_property>
       <obj_property name="ObjectShortName">probe1_1[7:0]</obj_property>
-      <obj_property name="label">centerpx_L0</obj_property>
+      <obj_property name="label">uppx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -156,51 +112,16 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe2_1[7:0]</obj_property>
       <obj_property name="ObjectShortName">probe2_1[7:0]</obj_property>
-      <obj_property name="label">downpx_L0</obj_property>
+      <obj_property name="label">centerpx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe3_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe3_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe3_1[11:0]</obj_property>
-      <obj_property name="label">counter</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe4_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe4_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe4_1[11:0]</obj_property>
-      <obj_property name="label">max</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe5_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe5_1</obj_property>
-      <obj_property name="ObjectShortName">probe5_1</obj_property>
-      <obj_property name="label">dvi2rgb_0_vid_pHSync</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe6_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe6_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe6_1[11:0]</obj_property>
-      <obj_property name="label">counter_1</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="mainBlockDesign_i/system_ila_0/inst/probe7_1" type="array">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe7_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">probe7_1[11:0]</obj_property>
-      <obj_property name="label">max_1</obj_property>
+      <obj_property name="ElementShortName">mainBlockDesign_i/system_ila_0/inst/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
+      <obj_property name="label">downpx_L0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

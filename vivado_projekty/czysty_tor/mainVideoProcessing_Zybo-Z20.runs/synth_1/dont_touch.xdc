@@ -45,4 +45,22 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign
 # IP: bd/mainBlockDesign/ip/mainBlockDesign_processing_system7_0_0/mainBlockDesign_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_processing_system7_0_0 || ORIG_REF_NAME==mainBlockDesign_processing_system7_0_0} -quiet] -quiet
 
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_hsize_counter_0_0_1/mainBlockDesign_hsize_counter_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_hsize_counter_0_0 || ORIG_REF_NAME==mainBlockDesign_hsize_counter_0_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_parameter_register_0_0/mainBlockDesign_parameter_register_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_parameter_register_0_0 || ORIG_REF_NAME==mainBlockDesign_parameter_register_0_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_ps7_0_axi_periph_0/mainBlockDesign_ps7_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_ps7_0_axi_periph_0 || ORIG_REF_NAME==mainBlockDesign_ps7_0_axi_periph_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_rst_ps7_0_50M_0/mainBlockDesign_rst_ps7_0_50M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_rst_ps7_0_50M_0 || ORIG_REF_NAME==mainBlockDesign_rst_ps7_0_50M_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_system_ila_0_0 || ORIG_REF_NAME==mainBlockDesign_system_ila_0_0} -quiet] -quiet
+
+# IP: bd/mainBlockDesign/ip/mainBlockDesign_auto_pc_0/mainBlockDesign_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mainBlockDesign_auto_pc_0 || ORIG_REF_NAME==mainBlockDesign_auto_pc_0} -quiet] -quiet
+
 # XDC: bd/mainBlockDesign/mainBlockDesign_ooc.xdc

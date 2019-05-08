@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May  8 14:15:43 2019
+# Process ID: 17840
+# Current directory: C:/konkurs/vivado_projekty/sam pyramid z20 procek
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4700 C:\konkurs\vivado_projekty\sam pyramid z20 procek\mainVideoProcessing_Zybo-Z20.xpr
+# Log file: C:/konkurs/vivado_projekty/sam pyramid z20 procek/vivado.log
+# Journal file: C:/konkurs/vivado_projekty/sam pyramid z20 procek\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/konkurs/vivado_projekty/sam pyramid z20 procek/mainVideoProcessing_Zybo-Z20.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/konkurs/vivado_projekty/sam pyramid z20 procek/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/sam pyramid z20 procek/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/sam pyramid z20 procek/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_bd_design {C:/konkurs/vivado_projekty/sam pyramid z20 procek/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
+open_project C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"mainBlockDesign_i/system_ila_0/inst/ila_lib"}]]
+set_property PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_bd_design {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/mainBlockDesign.bd}
+set_property PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.runs/impl_1/mainBlockDesign_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+save_wave_config {C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw

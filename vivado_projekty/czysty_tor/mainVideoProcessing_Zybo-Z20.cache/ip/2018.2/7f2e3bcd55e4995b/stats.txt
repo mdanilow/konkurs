@@ -1,4 +1,4 @@
-NumberHits:1
-Timestamp: Mon May 06 22:43:43 UTC 2019
+NumberHits:2
+Timestamp: Wed May 08 09:29:43 UTC 2019
 VLNV: xilinx.com:ip:clk_wiz:6.0
 SynthRuntime: 29

@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 // Date        : Tue May  7 23:23:42 2019
 // Host        : N-5CD6281M34 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/konkurs/vivado_projekty/czysty_tor/mainVideoProcessing_Zybo-Z20.srcs/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_xlconstant_0_1_1/mainBlockDesign_xlconstant_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top mainBlockDesign_xlconstant_0_1 -prefix
+//               mainBlockDesign_xlconstant_0_1_ mainBlockDesign_xlconstant_0_1_sim_netlist.v
 // Design      : mainBlockDesign_xlconstant_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

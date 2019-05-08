@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="mainBlockDesign_system_ila_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1557223103">
+<GenRun Id="mainBlockDesign_system_ila_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1557307829">
   <File Type="PA-TCL" Name="mainBlockDesign_system_ila_0_0.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mainBlockDesign_system_ila_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mainBlockDesign_system_ila_0_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="mainBlockDesign_system_ila_0_0.vds"/>
   <File Type="RDS-UTIL" Name="mainBlockDesign_system_ila_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mainBlockDesign_system_ila_0_0_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mainBlockDesign_system_ila_0_0.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mainBlockDesign_system_ila_0_0_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mainBlockDesign_system_ila_0_0_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_system_ila_0_0">
-    <File Path="$PSRCDIR/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0.xci">
+    <File Path="$PSRCDIR/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -23,7 +20,7 @@
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mainBlockDesign_system_ila_0_0">
-    <File Path="$PSRCDIR/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0/mainBlockDesign_system_ila_0_0.xci">
+    <File Path="$PSRCDIR/sources_1/bd/mainBlockDesign/ip/mainBlockDesign_system_ila_0_0_1/mainBlockDesign_system_ila_0_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -36,9 +33,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

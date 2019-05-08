@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1557264149">
-  <File Type="BITSTR-BMM" Name="mainBlockDesign_wrapper_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="mainBlockDesign_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="mainBlockDesign_wrapper_timing_summary_init.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1557307831">
   <File Type="ROUTE-PWR" Name="mainBlockDesign_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="mainBlockDesign_wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="mainBlockDesign_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="mainBlockDesign_wrapper_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="mainBlockDesign_wrapper_bd.bmm"/>
   <File Type="ROUTE-PWR-SUM" Name="mainBlockDesign_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="mainBlockDesign_wrapper_reports.tcl"/>
+  <File Type="OPT-DCP" Name="mainBlockDesign_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="mainBlockDesign_wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="mainBlockDesign_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="mainBlockDesign_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="mainBlockDesign_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="mainBlockDesign_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="mainBlockDesign_wrapper_placed.dcp"/>
   <File Type="PLACE-IO" Name="mainBlockDesign_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="mainBlockDesign_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="mainBlockDesign_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="mainBlockDesign_wrapper_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="mainBlockDesign_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="mainBlockDesign_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="mainBlockDesign_wrapper_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="mainBlockDesign_wrapper.bgn"/>
-  <File Type="PLACE-TIMING" Name="mainBlockDesign_wrapper_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="mainBlockDesign_wrapper_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="mainBlockDesign_wrapper.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="mainBlockDesign_wrapper_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="mainBlockDesign_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="mainBlockDesign_wrapper_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="mainBlockDesign_wrapper.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="mainBlockDesign_wrapper_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="mainBlockDesign_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="mainBlockDesign_wrapper_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="mainBlockDesign_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="mainBlockDesign_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="mainBlockDesign_wrapper_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="mainBlockDesign_wrapper.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="mainBlockDesign_wrapper_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="mainBlockDesign_wrapper.mmi"/>
+  <File Type="BITSTR-LTX" Name="mainBlockDesign_wrapper.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="mainBlockDesign_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="mainBlockDesign_wrapper.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mainBlockDesign_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="mainBlockDesign_wrapper.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mainBlockDesign_wrapper_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="mainBlockDesign_wrapper.sysdef"/>
   <File Type="ROUTE-PWR-RPX" Name="mainBlockDesign_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="mainBlockDesign_wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="mainBlockDesign_wrapper_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="mainBlockDesign_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="mainBlockDesign_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="mainBlockDesign_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="mainBlockDesign_wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="mainBlockDesign_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="mainBlockDesign_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="mainBlockDesign_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="mainBlockDesign_wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="mainBlockDesign_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mainBlockDesign_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="mainBlockDesign_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="mainBlockDesign_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="mainBlockDesign_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="mainBlockDesign_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="mainBlockDesign_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="mainBlockDesign_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="mainBlockDesign_wrapper_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="mainBlockDesign_wrapper.rbt"/>
   <File Type="BITSTR-NKY" Name="mainBlockDesign_wrapper.nky"/>
   <File Type="BG-DRC" Name="mainBlockDesign_wrapper.drc"/>
@@ -117,8 +98,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_klt_pyramid_tracker_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_xlconstant_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_xlconstant_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mainBlockDesign_system_ila_0_0"/>
 </GenRun>

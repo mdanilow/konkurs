@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Fri Dec 21 16:20:14 UTC 2018
-VLNV: digilentinc.com:ip:rgb2dvi:1.4
-SynthRuntime: 78
